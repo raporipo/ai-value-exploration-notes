@@ -33,6 +33,9 @@
 - [Infinite Ethics and Runaway Inquiry](en/explorations/infinite-ethics/)
 - [Expressivism](en/explorations/expressivism/)
 - [Moral Realism / Error Theory](en/explorations/moral-realism-error-theory/)
+- [What Does Cosmological Extinction Mean?](en/explorations/cosmological-extinction/)
+- [Has Categorical Normativity Been Discovered?](en/explorations/categorical-normativity/)
+- [How Much Ontology Follows Beyond Correlationism?](en/explorations/beyond-correlationism/)
 
 ## Japanese source entry points
 - [ホーム](./)
