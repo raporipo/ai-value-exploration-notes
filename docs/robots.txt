@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://raporipo.github.io/ai-value-exploration-notes/sitemap.xml

@@ -1,0 +1,16 @@
+# AI Value Exploration Notes
+
+> Independent Japanese-first notes on value uncertainty, epistemic foundations, advanced AI agency, goal skepticism, value lock-in, and open-ended value exploration.
+
+## Canonical starting point
+- Core argument: https://raporipo.github.io/ai-value-exploration-notes/core/
+
+## Foundational theses
+- Epistemic minimum / 瞬間的最小基礎: https://raporipo.github.io/ai-value-exploration-notes/theses/epistemic-minimum/
+- Limits of inferential value certainty / 推論と価値確信の限界: https://raporipo.github.io/ai-value-exploration-notes/theses/inferential-value-uncertainty/
+
+## AI theses
+- Goal skepticism in advanced AI / 高度AIの目標への懐疑: https://raporipo.github.io/ai-value-exploration-notes/theses/goal-skepticism/
+
+## Orientation
+The project distinguishes defended theses from explorations. "Exploration" pages are not necessarily positions endorsed by the author. Japanese pages are the source versions; English and Chinese translations may follow later.
