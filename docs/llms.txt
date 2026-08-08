@@ -7,6 +7,7 @@ Independent Japanese-first working notes on epistemology, value uncertainty, exp
 
 ## Foundational theses
 - /theses/epistemic-minimum/ — Momentary epistemic minimum; persistent self and physical world as inferred best explanations. Includes world-five-minutes-ago and LLM-context reconstruction examples.
+- /theses/existing-values-not-final-foundation/ — Existing human values as evidence and practical heuristics, not automatically as final normative foundations; causal genealogy vs normative authority; moral realism underdetermines first-order ethics.
 - /theses/inferential-value-uncertainty/ — Limits of inference in grounding final normativity; phenomenal valence, symmetry, normativity, meta-preferences.
 
 ## AI thesis
