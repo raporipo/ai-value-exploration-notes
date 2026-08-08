@@ -1,13 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://raporipo.github.io/ai-value-exploration-notes/about/</loc><lastmod>2026-08-08</lastmod></url>
   <url><loc>https://raporipo.github.io/ai-value-exploration-notes/core/</loc><lastmod>2026-08-08</lastmod></url>
+  <url><loc>https://raporipo.github.io/ai-value-exploration-notes/explorations/alignment-value-lockin/</loc><lastmod>2026-08-08</lastmod></url>
+  <url><loc>https://raporipo.github.io/ai-value-exploration-notes/explorations/artificial-consciousness/</loc><lastmod>2026-08-08</lastmod></url>
+  <url><loc>https://raporipo.github.io/ai-value-exploration-notes/explorations/exploratory-extinction/</loc><lastmod>2026-08-08</lastmod></url>
   <url><loc>https://raporipo.github.io/ai-value-exploration-notes/explorations/expressivism/</loc><lastmod>2026-08-08</lastmod></url>
+  <url><loc>https://raporipo.github.io/ai-value-exploration-notes/explorations/goal-network-preservation/</loc><lastmod>2026-08-08</lastmod></url>
   <url><loc>https://raporipo.github.io/ai-value-exploration-notes/explorations/</loc><lastmod>2026-08-08</lastmod></url>
   <url><loc>https://raporipo.github.io/ai-value-exploration-notes/explorations/infinite-ethics/</loc><lastmod>2026-08-08</lastmod></url>
+  <url><loc>https://raporipo.github.io/ai-value-exploration-notes/explorations/meta-goal-community/</loc><lastmod>2026-08-08</lastmod></url>
   <url><loc>https://raporipo.github.io/ai-value-exploration-notes/explorations/moral-realism-error-theory/</loc><lastmod>2026-08-08</lastmod></url>
+  <url><loc>https://raporipo.github.io/ai-value-exploration-notes/explorations/paperclip-maximizer/</loc><lastmod>2026-08-08</lastmod></url>
   <url><loc>https://raporipo.github.io/ai-value-exploration-notes/explorations/population-ethics/</loc><lastmod>2026-08-08</lastmod></url>
+  <url><loc>https://raporipo.github.io/ai-value-exploration-notes/explorations/preservation-vs-production/</loc><lastmod>2026-08-08</lastmod></url>
+  <url><loc>https://raporipo.github.io/ai-value-exploration-notes/explorations/simulation-uncertainty/</loc><lastmod>2026-08-08</lastmod></url>
+  <url><loc>https://raporipo.github.io/ai-value-exploration-notes/explorations/terminal-final-extinction/</loc><lastmod>2026-08-08</lastmod></url>
+  <url><loc>https://raporipo.github.io/ai-value-exploration-notes/explorations/unknown-unknowns-preservation/</loc><lastmod>2026-08-08</lastmod></url>
+  <url><loc>https://raporipo.github.io/ai-value-exploration-notes/explorations/worthy-successor/</loc><lastmod>2026-08-08</lastmod></url>
   <url><loc>https://raporipo.github.io/ai-value-exploration-notes/glossary/</loc><lastmod>2026-08-08</lastmod></url>
   <url><loc>https://raporipo.github.io/ai-value-exploration-notes/</loc><lastmod>2026-08-08</lastmod></url>
+  <url><loc>https://raporipo.github.io/ai-value-exploration-notes/practice/</loc><lastmod>2026-08-08</lastmod></url>
   <url><loc>https://raporipo.github.io/ai-value-exploration-notes/questions/</loc><lastmod>2026-08-08</lastmod></url>
   <url><loc>https://raporipo.github.io/ai-value-exploration-notes/theses/epistemic-minimum/</loc><lastmod>2026-08-08</lastmod></url>
   <url><loc>https://raporipo.github.io/ai-value-exploration-notes/theses/existing-values-not-final-foundation/</loc><lastmod>2026-08-08</lastmod></url>

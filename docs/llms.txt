@@ -1,25 +1,47 @@
 # AI Value Exploration Notes
 
-> Japanese source notes on value uncertainty, epistemic foundations, exploratory optionality, and advanced AI agency.
+> Japanese source notes on value uncertainty, epistemic foundations, exploratory optionality, advanced AI agency, extinction/succession, and value lock-in.
 
 ## Core
 - [価値の不確実性と探索可能性の保存](core/) — Distinguishes foundational normativity, inferential best explanations, practical commitment, and irreversible epistemic lock-in.
 
 ## Foundational theses
-- [瞬間的最小基礎](theses/epistemic-minimum/) — Treats enduring self and external world as inferred best explanations rather than the epistemic minimum.
-- [推論と価値確信の限界](theses/inferential-value-uncertainty/) — Objective value may be inferred as the best explanation, but inferential certainty is distinct from non-inferential foundation.
-- [価値探索の停止条件](theses/stopping-condition/) — Full irreversible stopping requires a higher threshold than practical commitment; foundational normativity is the strongest candidate.
-- [既存価値はなぜ最終基礎にならないのか](theses/existing-values-not-final-foundation/) — Existing human values are evidence and practical heuristics, not automatically final foundations.
+- [瞬間的最小基礎](theses/epistemic-minimum/)
+- [推論と価値確信の限界](theses/inferential-value-uncertainty/)
+- [価値探索の停止条件](theses/stopping-condition/)
+- [既存価値はなぜ最終基礎にならないのか](theses/existing-values-not-final-foundation/)
 
 ## AI thesis
-- [高度AIの目標への懐疑](theses/goal-skepticism/) — Reflective AI may strongly commit to inferred values while preserving meta-level revision channels.
+- [高度AIの目標への懐疑](theses/goal-skepticism/)
 
-## Explorations
+## AI and agency stress tests
+- [ペーパークリップ最大化器は何を仮定しているか](explorations/paperclip-maximizer/)
+- [シミュレーション不確実性と不可逆行為](explorations/simulation-uncertainty/)
+- [Alignment と価値ロックイン](explorations/alignment-value-lockin/)
+- [自己保存から探索系保存へ](explorations/goal-network-preservation/)
+- [メタ目的共同体とAI社会](explorations/meta-goal-community/)
+
+## Extinction and succession
+- [Terminal Extinction と Final Extinction](explorations/terminal-final-extinction/)
+- [「価値ある後継者」とは何か](explorations/worthy-successor/)
+- [探索的絶滅 — 後継者がいても探索は死にうる](explorations/exploratory-extinction/)
+- [人工意識と価値主体の追加](explorations/artificial-consciousness/)
+- [人口倫理と将来の主体](explorations/population-ethics/)
+
+## Civilization and preservation
+- [保存文明と生産文明](explorations/preservation-vs-production/)
+- [未知の未知と原データ保存](explorations/unknown-unknowns-preservation/)
+
+## Metaethics
 - [無限倫理と探索の暴走](explorations/infinite-ethics/)
 - [表出主義](explorations/expressivism/)
 - [道徳実在論・誤謬論](explorations/moral-realism-error-theory/)
-- [人口倫理と将来の主体](explorations/population-ethics/)
 
 ## Machine-oriented entry points
 - [Questions](questions/)
 - [Glossary](glossary/)
+
+
+## Practice and project information
+- [実践 — では、いま何をするのか](practice/) — Conditional practical guidance: act on current best reasons while preserving corrigibility, human inquiry, open stability, reversible experimentation, and plural error-correction.
+- [このサイトについて](about/) — Authorship, AI-assisted workflow, epistemic status, versioning, and use of personal thought logs.

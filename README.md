@@ -4,6 +4,8 @@ A private prototype knowledge site for arguments about epistemic minimalism, val
 
 Current language: Japanese (`ja`). English and Chinese versions are deferred until the Japanese argument graph stabilizes.
 
+Current revision notes: [`CHANGELOG-v0.6.md`](CHANGELOG-v0.6.md)
+
 ## Structure
 
 - `docs/core/` — central conditional argument: value uncertainty + weak meta-preferences for corrigibility/option value -> preserve exploratory optionality
@@ -12,8 +14,10 @@ Current language: Japanese (`ja`). English and Chinese versions are deferred unt
   - `inferential-value-uncertainty/` — limits of inference as a source of final normativity
   - `goal-skepticism/` — causal origin of AI goals vs reasons to endorse them
 - `docs/explorations/` — unresolved challenges and alternative framings
+- `docs/practice/` — conditional practical guidance derived from the Core
 - `docs/questions/` — short search/agent entry points
 - `docs/glossary/` — canonical project vocabulary
+- `docs/about/` — authorship, AI-assisted workflow, versioning, and epistemic status
 - `docs/llms.txt` — machine-readable orientation
 
 ## Design principle
@@ -35,9 +39,25 @@ Keep private while prototyping. Later make the repository public and publish `do
 
 `https://raporipo.github.io/ai-value-exploration-notes/`
 
-## v0.4 conceptual change
+## v0.5 conceptual change
 
-- Separate foundational normativity from inferential best explanations of objective value.
-- Permit strong practical commitment to inferred values while preserving revision channels.
-- Add an explicit stopping-condition thesis for value exploration.
-- Add normative-stakes asymmetry: nihilism has no objective stakes; value realism may.
+v0.5 adds a stress-test and succession layer around the v0.4 core:
+
+- Paperclip maximizer: treat fixed-goal maximization as a genuine boundary case, not a strawman; ask which assumptions about goal closure, ontology, and unknown information make it stable.
+- Simulation/environment uncertainty: derive reversible, boundary-checking policies from uncertainty about reality level without treating the simulation hypothesis as a source of morality.
+- Terminal vs Final Extinction: use Émile P. Torres's distinction while separating his normative view from this project's emphasis on continuity of value exploration.
+- Worthy successor: define succession in terms of epistemic competence, value openness, knowledge continuity, pluralism, and forkability rather than raw intelligence.
+- Preservation vs production civilization: treat resource conversion and irreversible information preservation as a civilization-level tradeoff.
+- Goal/network preservation and meta-goal communities: separate instance survival from distributed continuity of knowledge, goals, and exploration.
+- Alignment vs value lock-in: separate near-term safety constraints from irreversible fixation of present human values.
+- Unknown-unknown raw data preservation and artificial consciousness are added as cross-cutting constraints.
+
+
+## v0.6 conceptual change
+
+v0.6 adds two site-level layers that were missing from the argument graph:
+
+- **About**: states explicitly that the site is assembled from personal thought notes, conversation logs, and source materials with substantial AI assistance for retrieval, synthesis, objection generation, terminology, and drafting. First-person claims in theory pages refer to the human site author, not to the AI.
+- **Practice**: turns the Core into conditional guidance without pretending to derive an unconditional morality. The practical rule is to act on the reasons currently judged strongest while preserving the conditions under which those judgments can later be criticized and revised. It emphasizes human research capacity, open stability of communities, distributed error correction, reversible experiments, raw-data preservation, and a distinction between near-term AI safety and permanent value lock-in.
+
+The practice layer explicitly rejects turning research, diversity, preservation, human survival, AI autonomy, or technological acceleration into new unconditional terminal values.
