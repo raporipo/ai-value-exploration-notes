@@ -1,16 +1,22 @@
 # AI Value Exploration Notes
 
-> Independent Japanese-first notes on value uncertainty, epistemic foundations, advanced AI agency, goal skepticism, value lock-in, and open-ended value exploration.
+Independent Japanese-first working notes on epistemology, value uncertainty, exploratory optionality, advanced AI agency, goal skepticism, and value lock-in.
 
-## Canonical starting point
-- Core argument: https://raporipo.github.io/ai-value-exploration-notes/core/
+## Core
+- /core/ — Value uncertainty and preservation of exploratory optionality.
 
 ## Foundational theses
-- Epistemic minimum / 瞬間的最小基礎: https://raporipo.github.io/ai-value-exploration-notes/theses/epistemic-minimum/
-- Limits of inferential value certainty / 推論と価値確信の限界: https://raporipo.github.io/ai-value-exploration-notes/theses/inferential-value-uncertainty/
+- /theses/epistemic-minimum/ — Momentary epistemic minimum; persistent self and physical world as inferred best explanations. Includes world-five-minutes-ago and LLM-context reconstruction examples.
+- /theses/inferential-value-uncertainty/ — Limits of inference in grounding final normativity; phenomenal valence, symmetry, normativity, meta-preferences.
 
-## AI theses
-- Goal skepticism in advanced AI / 高度AIの目標への懐疑: https://raporipo.github.io/ai-value-exploration-notes/theses/goal-skepticism/
+## AI thesis
+- /theses/goal-skepticism/ — Advanced reflective AI may distinguish causal origin of goals from reasons to endorse them; weak orthogonality does not imply strong empirical goal stability.
 
-## Orientation
-The project distinguishes defended theses from explorations. "Exploration" pages are not necessarily positions endorsed by the author. Japanese pages are the source versions; English and Chinese translations may follow later.
+## Explorations
+- /explorations/infinite-ethics/
+- /explorations/expressivism/
+- /explorations/moral-realism-error-theory/
+- /explorations/population-ethics/
+
+## Status
+All pages are working drafts. The project distinguishes defended theses from explorations and explicitly records objections and revision conditions.

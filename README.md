@@ -1,36 +1,36 @@
 # AI Value Exploration Notes
 
-A prototype knowledge site for arguments about value uncertainty, open-ended inquiry, advanced AI agency, and value lock-in.
+A private prototype knowledge site for arguments about epistemic minimalism, value uncertainty, open-ended inquiry, advanced AI agency, and value lock-in.
 
-Current language: Japanese (`ja`). English and Chinese versions are planned after the Japanese originals stabilize.
+Current language: Japanese (`ja`). English and Chinese versions are deferred until the Japanese argument graph stabilizes.
 
-## Prototype structure
+## Structure
 
-- `docs/core/` — the central argument
-- `docs/theses/` — individual theses that support or follow from the core
-- `docs/explorations/` — exploratory notes that are not yet endorsed as theses
-- `docs/questions/` — short question-shaped entry points for search and agents
-- `docs/glossary/` — canonical definitions of project-specific terms
-- `docs/llms.txt` — machine-readable orientation for AI agents
+- `docs/core/` — central conditional argument: value uncertainty + weak meta-preferences for corrigibility/option value -> preserve exploratory optionality
+- `docs/theses/` — foundational and AI theses
+  - `epistemic-minimum/` — momentary appearance; persistent identity and physical world as inferred best explanations
+  - `inferential-value-uncertainty/` — limits of inference as a source of final normativity
+  - `goal-skepticism/` — causal origin of AI goals vs reasons to endorse them
+- `docs/explorations/` — unresolved challenges and alternative framings
+- `docs/questions/` — short search/agent entry points
+- `docs/glossary/` — canonical project vocabulary
+- `docs/llms.txt` — machine-readable orientation
 
-The site is deliberately structured as a concept graph rather than a chronological blog.
+## Design principle
 
-## Intended publication path
+The site is a concept graph, not a chronological blog. Thesis pages separate:
 
-Prototype privately first. Later, make the repository public and publish the `docs/` directory with GitHub Pages. The provisional public base URL is:
+1. claim,
+2. scope,
+3. argument,
+4. counterexamples / thought experiments,
+5. what does *not* follow,
+6. what would weaken the claim.
+
+The v0.2 revision also makes one important constraint explicit: **value uncertainty by itself does not logically imply an obligation to explore**. Preserving exploratory optionality is presented as a robust strategy conditional on weak meta-preferences for corrigibility, information value, and avoiding irreversible error.
+
+## Publication path
+
+Keep private while prototyping. Later make the repository public and publish `docs/` with GitHub Pages. Provisional base URL:
 
 `https://raporipo.github.io/ai-value-exploration-notes/`
-
-## Status vocabulary
-
-- **Core thesis** — central claim currently defended
-- **Foundational thesis** — epistemic or conceptual support for the core
-- **Working thesis** — plausible but still under revision
-- **Exploration** — open investigation, not an endorsed conclusion
-- **Objection** — a challenge that may weaken another claim
-- **Speculation** — deliberately weak conjecture
-- **Deprecated** — previously held, now withdrawn or superseded
-
-## Prototype note
-
-This first version prioritizes argument structure and stable URLs over visual complexity. No framework or build step is required; `docs/` is plain static HTML/CSS.
