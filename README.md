@@ -27,10 +27,17 @@ The site is a concept graph, not a chronological blog. Thesis pages separate:
 5. what does *not* follow,
 6. what would weaken the claim.
 
-The v0.2 revision also makes one important constraint explicit: **value uncertainty by itself does not logically imply an obligation to explore**. Preserving exploratory optionality is presented as a robust strategy conditional on weak meta-preferences for corrigibility, information value, and avoiding irreversible error.
+The v0.4 revision also makes one important constraint explicit: **value uncertainty by itself does not logically imply an obligation to explore**. Preserving exploratory optionality is presented as a robust strategy conditional on weak meta-preferences for corrigibility, information value, and avoiding irreversible error.
 
 ## Publication path
 
 Keep private while prototyping. Later make the repository public and publish `docs/` with GitHub Pages. Provisional base URL:
 
 `https://raporipo.github.io/ai-value-exploration-notes/`
+
+## v0.4 conceptual change
+
+- Separate foundational normativity from inferential best explanations of objective value.
+- Permit strong practical commitment to inferred values while preserving revision channels.
+- Add an explicit stopping-condition thesis for value exploration.
+- Add normative-stakes asymmetry: nihilism has no objective stakes; value realism may.

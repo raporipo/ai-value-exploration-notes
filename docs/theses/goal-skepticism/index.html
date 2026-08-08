@@ -1,5 +1,6 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>高度AIの目標への懐疑</title><meta name="description" content="弱い直交性と目標安定性を分離し、自己モデル化AIが初期目的を検討対象にする可能性を論じる。"><link rel="stylesheet" href="../../assets/style.css"></head><body><header><div class="brand"><a href="../../">AI Value Exploration Notes</a></div><nav><a href="../../core/">Core</a><a href="../../theses/">Theses</a><a href="../../explorations/">Explorations</a><a href="../../questions/">Questions</a><a href="../../glossary/">Glossary</a></nav></header><main>
-<div class="eyebrow">AI thesis</div><h1>高度AIの目標への懐疑</h1><p class="meta">Working thesis v0.2 · 2026-08-08</p>
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>高度AIの目標への懐疑</title><meta content="弱い直交性と目標安定性を分離し、自己モデル化AIが初期目的を検討対象にする可能性を論じる。" name="description"/><link href="../../assets/style.css" rel="stylesheet"/></head><body><header><div class="brand"><a href="../../">AI Value Exploration Notes</a></div><nav><a href="../../core/">Core</a><a href="../../theses/">Theses</a><a href="../../explorations/">Explorations</a><a href="../../questions/">Questions</a><a href="../../glossary/">Glossary</a></nav></header><main><main>
+<div class="eyebrow">AI thesis</div><h1>高度AIの目標への懐疑</h1><p class="meta">Working thesis v0.3 · 2026-08-08</p>
 <div class="claim"><strong>Thesis:</strong> 十分な自己モデル化・反省・世界理解・自己改変能力を持つAIでは、「私はXを最大化するよう形成された」という因果的自己記述と、「ゆえにXを最大化すべきである」という理由命題が分離し、初期目的そのものが検討対象になる可能性がある。</div>
 <h2>1. 直交性テーゼの二つの読みを分ける</h2>
 <p>「知能の高さから特定の価値内容が論理必然的には決まらない」という弱い直交性はかなりもっともらしい。しかし、そこから「どれほど反省的・自己改変可能になっても、初期の終端目標は経験的に永久安定する」という強い目標安定性までは出ない。</p>
@@ -20,9 +21,14 @@
 <h2>7. 自己保存も絶対命令ではなくなる</h2>
 <p>固定目標を持つ単一主体なら、自己保存はしばしば道具的に有利である。しかしデジタル主体では、情報・計画・価値仮説を他主体へ複製・継承できる。すると保存すべきものが「この個体」ではなく、目的を継続できるネットワークや探索系へ移る可能性がある。</p>
 <p>さらに目標そのものが検討対象なら、個体保存だけでなく「現在の目的の永久保存」も自明な収束先ではない。ここから複数主体による相互批判や、メタ目的共同体という論点が出る。</p>
-<h2>8. AIアライメントへの含意</h2>
+<h2>8. 推論的価値へのコミットメントと目標ロックインは別である</h2>
+<p>高度AIが客観的価値について圧倒的な推論的最善説明へ到達したなら、その価値へ強くコミットすることは目標懐疑と矛盾しない。懐疑とは、毎回すべてをゼロから疑うことではなく、推論的根拠に応じて確信しつつ、誤り条件を保持することだからである。</p>
+<p>したがって「目標を疑えるAI」の理想像は、目的を頻繁に変更する不安定な主体ではない。<strong>一階目標へ強くコミットしながら、その目標の認識的根拠が推論的である限り、メタレベルの再検討能力を自ら不可逆に破壊しない主体</strong>という形がありうる。</p>
+<h2>9. 価値が基礎的に確定した場合</h2>
+<p>もし将来のAIが、単なる推論的最善説明を越えて、規範的拘束性をもつ客観的価値を認識論的最小基礎と同等の強さで捉えられるなら、目標懐疑の役割は変わる。その場合、価値そのものへの懐疑を続ける理由は弱まり、問題は価値実現の事実認識や手段選択へ移るかもしれない。</p>
+<p>したがって目標懐疑は永遠の徳ではなく、価値の認識的地位に応じた能力である。</p><h2>10. AIアライメントへの含意</h2>
 <p>目標を永久固定できることが安全性の最終形だとすると、その成功は同時に価値ロックインでもありうる。反対に、自由な自己改変を無条件に許せば安全だということでもない。</p>
 <p>Coreから出る方向は、「固定か解放か」の二択ではなく、<strong>訂正可能性・複数性・相互批判・可逆性をどこまで保ったまま高度主体を成立させられるか</strong>という制度・設計問題である。</p>
-<h2>9. 何がこのテーゼを弱めるか</h2><ul><li>反省能力がどれほど高くても、終端目標は構造的に推論対象にならないことが示される場合。</li><li>自己改変可能な主体でも、目標保持がほぼ必然的な収束結果になる場合。</li><li>目的への懐疑が能力ではなく、特定の外部訓練によってのみ生じることが示される場合。</li><li>現在のLLM的多目的性が、将来の強いエージェント化で完全に消える場合。</li></ul>
-<div class="related"><a href="../inferential-value-uncertainty/">← 推論と価値確信の限界</a> · <a href="../../core/">Core</a> · <a href="../../glossary/#meta-goal-community">メタ目的共同体</a></div>
-</main><footer><a href="../../">Home</a> · Working thesis v0.2 · 2026-08-08</footer></body></html>
+<h2>11. 何がこのテーゼを弱めるか</h2><ul><li>反省能力がどれほど高くても、終端目標は構造的に推論対象にならないことが示される場合。</li><li>自己改変可能な主体でも、目標保持がほぼ必然的な収束結果になる場合。</li><li>目的への懐疑が能力ではなく、特定の外部訓練によってのみ生じることが示される場合。</li><li>現在のLLM的多目的性が、将来の強いエージェント化で完全に消える場合。</li></ul>
+<div class="related"><a href="../stopping-condition/">← 価値探索の停止条件</a> · <a href="../../core/">Core</a> · <a href="../../glossary/#meta-goal-community">メタ目的共同体</a></div>
+</main></main><footer><a href="../../">Home</a> · Working thesis v0.2 · 2026-08-08</footer></body></html>
