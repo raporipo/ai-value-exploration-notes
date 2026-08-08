@@ -1,6 +1,6 @@
 # AI Value Exploration Notes
 
-> Japanese source notes on value uncertainty, epistemic foundations, exploratory optionality, advanced AI agency, extinction/succession, and value lock-in.
+> Public working notes in Japanese on value uncertainty, epistemic foundations, exploratory optionality, advanced AI agency, extinction/succession, and value lock-in. The Core is a conditional, revisable framework rather than a settled theorem.
 
 ## Core
 - [価値の不確実性と探索可能性の保存](core/) — Distinguishes foundational normativity, inferential best explanations, practical commitment, and irreversible epistemic lock-in.

@@ -1,10 +1,10 @@
 # AI Value Exploration Notes
 
-A private prototype knowledge site for arguments about epistemic minimalism, value uncertainty, open-ended inquiry, advanced AI agency, and value lock-in.
+A public working-draft knowledge site for arguments about epistemic minimalism, value uncertainty, open-ended inquiry, advanced AI agency, and value lock-in.
 
 Current language: Japanese (`ja`). English and Chinese versions are deferred until the Japanese argument graph stabilizes.
 
-Current revision notes: [`CHANGELOG-v0.6.md`](CHANGELOG-v0.6.md)
+Current revision notes: [`CHANGELOG-v0.7.md`](CHANGELOG-v0.7.md)
 
 ## Structure
 
@@ -33,9 +33,11 @@ The site is a concept graph, not a chronological blog. Thesis pages separate:
 
 The v0.4 revision also makes one important constraint explicit: **value uncertainty by itself does not logically imply an obligation to explore**. Preserving exploratory optionality is presented as a robust strategy conditional on weak meta-preferences for corrigibility, information value, and avoiding irreversible error.
 
-## Publication path
+## Publication status
 
-Keep private while prototyping. Later make the repository public and publish `docs/` with GitHub Pages. Provisional base URL:
+This repository is intended to be public as a **working thought archive**, not as a peer-reviewed paper or a finished ethical system. Claims are versioned so that later corrections and reversals remain visible. AI assistance in retrieval, synthesis, objection generation, terminology, and drafting is disclosed in `docs/about/`.
+
+GitHub Pages base URL:
 
 `https://raporipo.github.io/ai-value-exploration-notes/`
 
@@ -61,3 +63,15 @@ v0.6 adds two site-level layers that were missing from the argument graph:
 - **Practice**: turns the Core into conditional guidance without pretending to derive an unconditional morality. The practical rule is to act on the reasons currently judged strongest while preserving the conditions under which those judgments can later be criticized and revised. It emphasizes human research capacity, open stability of communities, distributed error correction, reversible experiments, raw-data preservation, and a distinction between near-term AI safety and permanent value lock-in.
 
 The practice layer explicitly rejects turning research, diversity, preservation, human survival, AI autonomy, or technological acceleration into new unconditional terminal values.
+
+
+## v0.7 publication pass
+
+v0.7 is a publication-oriented wording pass rather than a major conceptual rewrite. It:
+
+- labels the site consistently as a public working draft;
+- clarifies that the Core is a conditional meta-strategy rather than a theorem;
+- weakens the proposed direct-normativity stopping condition from the unique condition to one strong candidate;
+- makes human responsibility for AI-assisted text explicit;
+- strengthens the Practice rule against irreversibly closing other agents' survival, criticism, exit, and inquiry options on the basis of one's own provisional certainty;
+- adds canonical URLs, a 404 page, and GitHub Pages-friendly `.nojekyll`.
