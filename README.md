@@ -2,9 +2,9 @@
 
 A public working-draft knowledge site for arguments about epistemic minimalism, value uncertainty, open-ended inquiry, advanced AI agency, and value lock-in.
 
-Current language: Japanese (`ja`). English and Chinese versions are deferred until the Japanese argument graph stabilizes.
+Languages: Japanese (`ja`) is the source text. A complete English working translation (`en`) is available under `docs/en/`. A Chinese version is deferred.
 
-Current revision notes: [`CHANGELOG-v0.7.md`](CHANGELOG-v0.7.md)
+Current revision notes: [`CHANGELOG-v0.8.md`](CHANGELOG-v0.8.md)
 
 ## Structure
 
@@ -18,7 +18,8 @@ Current revision notes: [`CHANGELOG-v0.7.md`](CHANGELOG-v0.7.md)
 - `docs/questions/` — short search/agent entry points
 - `docs/glossary/` — canonical project vocabulary
 - `docs/about/` — authorship, AI-assisted workflow, versioning, and epistemic status
-- `docs/llms.txt` — machine-readable orientation
+- `docs/en/` — English working translation mirroring the Japanese argument graph
+- `docs/llms.txt` — machine-readable bilingual orientation
 
 ## Design principle
 
@@ -75,3 +76,8 @@ v0.7 is a publication-oriented wording pass rather than a major conceptual rewri
 - makes human responsibility for AI-assisted text explicit;
 - strengthens the Practice rule against irreversibly closing other agents' survival, criticism, exit, and inquiry options on the basis of one's own provisional certainty;
 - adds canonical URLs, a 404 page, and GitHub Pages-friendly `.nojekyll`.
+
+
+## v0.8 translation layer
+
+v0.8 adds a complete English working translation under `docs/en/`, with bidirectional language links and `hreflang` metadata. Japanese remains the source language. The translation aims to preserve argumentative structure and epistemic strength rather than mechanically mirror Japanese syntax.

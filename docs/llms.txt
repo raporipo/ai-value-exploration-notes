@@ -1,47 +1,48 @@
 # AI Value Exploration Notes
 
-> Public working notes in Japanese on value uncertainty, epistemic foundations, exploratory optionality, advanced AI agency, extinction/succession, and value lock-in. The Core is a conditional, revisable framework rather than a settled theorem.
+> Public working notes on value uncertainty, epistemic foundations, explorability, advanced AI agency, extinction/succession, and value lock-in. Japanese is the source language; `/en/` is the English working translation. The Core is conditional and revisable rather than a settled theorem.
 
-## Core
-- [価値の不確実性と探索可能性の保存](core/) — Distinguishes foundational normativity, inferential best explanations, practical commitment, and irreversible epistemic lock-in.
+## English entry points
+- [Home](en/)
+- [Core — Value Uncertainty and the Preservation of Explorability](en/core/)
+- [Practice — What Should We Do Now?](en/practice/)
+- [About](en/about/)
+- [Questions](en/questions/)
+- [Glossary](en/glossary/)
 
-## Foundational theses
-- [瞬間的最小基礎](theses/epistemic-minimum/)
-- [推論と価値確信の限界](theses/inferential-value-uncertainty/)
-- [価値探索の停止条件](theses/stopping-condition/)
-- [既存価値はなぜ最終基礎にならないのか](theses/existing-values-not-final-foundation/)
+## English foundational theses
+- [The Epistemic Minimum: Momentary Appearance](en/theses/epistemic-minimum/)
+- [The Limits of Inferential Certainty About Value](en/theses/inferential-value-uncertainty/)
+- [Conditions for Ending Value Inquiry](en/theses/stopping-condition/)
+- [Why Existing Values Are Not a Final Foundation](en/theses/existing-values-not-final-foundation/)
+- [Goal Skepticism in Advanced AI](en/theses/goal-skepticism/)
 
-## AI thesis
-- [高度AIの目標への懐疑](theses/goal-skepticism/)
+## English explorations
+- [Paperclip Maximizer](en/explorations/paperclip-maximizer/)
+- [Simulation Uncertainty](en/explorations/simulation-uncertainty/)
+- [Alignment and Value Lock-In](en/explorations/alignment-value-lockin/)
+- [From Self-Preservation to Preservation of Inquiry Systems](en/explorations/goal-network-preservation/)
+- [Meta-Goal Communities and AI Society](en/explorations/meta-goal-community/)
+- [Terminal / Final Extinction](en/explorations/terminal-final-extinction/)
+- [Worthy Successor](en/explorations/worthy-successor/)
+- [Exploratory Extinction](en/explorations/exploratory-extinction/)
+- [Artificial Consciousness and Value Subjects](en/explorations/artificial-consciousness/)
+- [Population Ethics and Future Subjects](en/explorations/population-ethics/)
+- [Preservation vs. Production Civilizations](en/explorations/preservation-vs-production/)
+- [Unknown Unknowns and Preservation of Raw Data](en/explorations/unknown-unknowns-preservation/)
+- [Infinite Ethics and Runaway Inquiry](en/explorations/infinite-ethics/)
+- [Expressivism](en/explorations/expressivism/)
+- [Moral Realism / Error Theory](en/explorations/moral-realism-error-theory/)
 
-## AI and agency stress tests
-- [ペーパークリップ最大化器は何を仮定しているか](explorations/paperclip-maximizer/)
-- [シミュレーション不確実性と不可逆行為](explorations/simulation-uncertainty/)
-- [Alignment と価値ロックイン](explorations/alignment-value-lockin/)
-- [自己保存から探索系保存へ](explorations/goal-network-preservation/)
-- [メタ目的共同体とAI社会](explorations/meta-goal-community/)
-
-## Extinction and succession
-- [Terminal Extinction と Final Extinction](explorations/terminal-final-extinction/)
-- [「価値ある後継者」とは何か](explorations/worthy-successor/)
-- [探索的絶滅 — 後継者がいても探索は死にうる](explorations/exploratory-extinction/)
-- [人工意識と価値主体の追加](explorations/artificial-consciousness/)
-- [人口倫理と将来の主体](explorations/population-ethics/)
-
-## Civilization and preservation
-- [保存文明と生産文明](explorations/preservation-vs-production/)
-- [未知の未知と原データ保存](explorations/unknown-unknowns-preservation/)
-
-## Metaethics
-- [無限倫理と探索の暴走](explorations/infinite-ethics/)
-- [表出主義](explorations/expressivism/)
-- [道徳実在論・誤謬論](explorations/moral-realism-error-theory/)
-
-## Machine-oriented entry points
+## Japanese source entry points
+- [ホーム](./)
+- [Core — 価値の不確実性と探索可能性の保存](core/)
+- [Theses](theses/)
+- [Explorations](explorations/)
+- [実践](practice/)
 - [Questions](questions/)
 - [Glossary](glossary/)
+- [このサイトについて](about/)
 
-
-## Practice and project information
-- [実践 — では、いま何をするのか](practice/) — Conditional practical guidance: act on current best reasons while preserving corrigibility, human inquiry, open stability, reversible experimentation, and plural error-correction.
-- [このサイトについて](about/) — Authorship, AI-assisted workflow, epistemic status, versioning, and use of personal thought logs.
+## Translation note
+The Japanese pages are canonical source texts for conceptual changes. English pages are maintained as close working translations. Terminology is translated for argumentative function rather than word-for-word surface identity where necessary.
