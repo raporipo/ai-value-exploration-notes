@@ -36,6 +36,7 @@
 - [What Does Cosmological Extinction Mean?](en/explorations/cosmological-extinction/)
 - [Has Categorical Normativity Been Discovered?](en/explorations/categorical-normativity/)
 - [How Much Ontology Follows Beyond Correlationism?](en/explorations/beyond-correlationism/)
+- [Can Self-Locating Probability Select the Physical World?](en/explorations/ssa-sia-doomsday/)
 
 ## Japanese source entry points
 - [ホーム](./)
