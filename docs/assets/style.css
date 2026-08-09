@@ -61,3 +61,9 @@ dd { margin: .35rem 0 0 0; color: #3d3b37; }
 .cards { display: grid; gap: 12px; margin: 22px 0; }
 .cards > .card { display: block; text-decoration: none; color: var(--text); }
 .cards > .card span { display: block; color: var(--muted); margin-top: 5px; font-family: ui-sans-serif, system-ui, sans-serif; font-size: 14px; line-height: 1.55; }
+
+.practice-position { margin: 2.2rem 0 2.8rem; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); overflow: hidden; }
+.practice-position summary { cursor: pointer; padding: 16px 18px; font-family: ui-sans-serif, system-ui, sans-serif; font-weight: 700; list-style-position: inside; }
+.practice-position[open] summary { border-bottom: 1px solid var(--line); background: var(--soft); }
+.practice-position-body { padding: 4px 20px 20px; }
+.practice-position-body h3 { margin-top: 1.7rem; }
