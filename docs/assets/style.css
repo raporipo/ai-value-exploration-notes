@@ -67,3 +67,9 @@ dd { margin: .35rem 0 0 0; color: #3d3b37; }
 .practice-position[open] summary { border-bottom: 1px solid var(--line); background: var(--soft); }
 .practice-position-body { padding: 4px 20px 20px; }
 .practice-position-body h3 { margin-top: 1.7rem; }
+
+.accordion { margin: 2.2rem 0 2.8rem; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); overflow: hidden; }
+.accordion summary { cursor: pointer; padding: 16px 18px; font-family: ui-sans-serif, system-ui, sans-serif; font-weight: 700; list-style-position: inside; }
+.accordion[open] summary { border-bottom: 1px solid var(--line); background: var(--soft); }
+.accordion-body { padding: 4px 20px 20px; }
+.accordion-body h3 { margin-top: 1.7rem; }
