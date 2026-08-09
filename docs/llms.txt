@@ -23,6 +23,7 @@
 - [Alignment and Value Lock-In](en/explorations/alignment-value-lockin/)
 - [From Self-Preservation to Preservation of Inquiry Systems](en/explorations/goal-network-preservation/)
 - [Meta-Goal Communities and AI Society](en/explorations/meta-goal-community/)
+- [Cosmic Host and Cosmic Norms](en/explorations/cosmic-host-normativity/)
 - [Terminal / Final Extinction](en/explorations/terminal-final-extinction/)
 - [Worthy Successor](en/explorations/worthy-successor/)
 - [Exploratory Extinction](en/explorations/exploratory-extinction/)
