@@ -33,6 +33,7 @@
 - [Unknown Unknowns and Preservation of Raw Data](en/explorations/unknown-unknowns-preservation/)
 - [Infinite Ethics and Runaway Inquiry](en/explorations/infinite-ethics/)
 - [The Closed-World Problem in Moral Uncertainty](en/explorations/open-world-moral-uncertainty/)
+- [How Far Can Future Value Justify Present Action?](en/explorations/future-value-present-justification/)
 - [Expressivism](en/explorations/expressivism/)
 - [Moral Realism / Error Theory](en/explorations/moral-realism-error-theory/)
 - [What Does Cosmological Extinction Mean?](en/explorations/cosmological-extinction/)
