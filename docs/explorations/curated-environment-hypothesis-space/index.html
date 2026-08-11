@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>上位管理環境仮説空間――動物園・実験室・シミュレーションを統一的に考える — AI Value Exploration Notes</title><meta content="保護区・初期条件つき実験室・シミュレーションを、上位主体による環境管理の連続的な仮説空間として統一し、忠実度・並列性・substrate gap・停止規則を検討する。" name="description"/><link href="../../assets/style.css" rel="stylesheet"/><link rel="canonical" href="https://raporipo.github.io/ai-value-exploration-notes/explorations/curated-environment-hypothesis-space/"/><link rel="alternate" hreflang="ja" href="https://raporipo.github.io/ai-value-exploration-notes/explorations/curated-environment-hypothesis-space/"/><link rel="alternate" hreflang="en" href="https://raporipo.github.io/ai-value-exploration-notes/en/explorations/curated-environment-hypothesis-space/"/><link rel="alternate" hreflang="x-default" href="https://raporipo.github.io/ai-value-exploration-notes/explorations/curated-environment-hypothesis-space/"/></head><body><header><div class="brand"><a href="../../">AI Value Exploration Notes</a></div><nav><a href="../../core/">Core</a><a href="../../theses/">Theses</a><a href="../../explorations/">Explorations</a><a href="../../practice/">Practice</a><a href="../../questions/">Questions</a><a href="../../glossary/">Glossary</a><a href="../../about/">About</a><a class="lang-switch" href="../../en/explorations/curated-environment-hypothesis-space/">English</a></nav></header><main>
+<div class="eyebrow">Exploration</div><h1>上位管理環境仮説空間――動物園・実験室・シミュレーションを統一的に考える</h1><p class="meta">Curated environment · simulation · anthropics · Exploration v0.1 · 2026-08-11</p>
+<div class="claim"><strong>Question:</strong> われわれの環境が外部の高度主体によって何らかの形で管理されている可能性を考えるとき、「保護区／動物園」「初期条件を与えた実験室」「完全なシミュレーション」を別々の仮説として扱う必要があるのか。それとも、初期条件・介入・物理基盤・観測粒度・並列性・停止規則を異なる程度に制御する一つの仮説空間として扱えるのか。</div>
+<h2>1. 三つの排他的仮説ではなく、管理環境の設計空間として置く</h2>
+<p>保護区仮説、実験室仮説、シミュレーション仮説には共通構造がある。いずれも、われわれが観測する環境が<strong>より上位の主体にとって観測・管理可能な対象である</strong>という仮定を追加する。違いは、上位主体がどこまで環境を作り、どこまで自然発展へ任せ、どこまで観測情報を制御し、どこまで複製可能なrunとして扱うかにある。</p>
+<p>したがって、これらを三つの離散的候補として並べるより、暫定的に<strong>上位管理環境仮説空間（curated-environment hypothesis space）</strong>として統一する方がよい。これは「上位主体が存在する」という主張ではなく、もしその種の仮説を比較するなら、二値的な「現実かsimulationか」より豊かなmodel spaceが必要だという整理である。</p>
+<h2>2. 管理環境を少なくとも六つの軸へ分解する</h2>
+<ul><li><strong>初期条件制御：</strong> 自然発生した系を後から隔離するのか、惑星・生命・文明などの初期条件を意図的に設定するのか。</li><li><strong>継続介入：</strong> 基本的に不干渉なのか、遮蔽・修正・イベント挿入・情報制限を継続的に行うのか。</li><li><strong>基盤制御：</strong> 同じ物理世界内の局所環境なのか、観測世界そのものが別基盤上に実装されるのか。</li><li><strong>自然史的忠実度：</strong> 何が重要変数か分からないまま原物の因果史を保持するのか、研究目的に応じて変数を選択・圧縮するのか。</li><li><strong>並列性：</strong> 一つの長い自然史を追うのか、多数の初期条件・branch・rerunを比較するのか。</li><li><strong>停止規則：</strong> 開放的に観察を続けるのか、特定の状態・情報量・資源閾値に達した時点で停止・凍結・枝刈りするのか。</li></ul>
+<p>この分解では、「動物園」も「simulation」も一つの点ではなく、複数の実装を含む領域になる。</p>
+<h2>3. 保護区・seeded laboratory・simulationは典型点として残る</h2>
+<p><strong>保護区／動物園型</strong>では、自然に成立した系を外部から隔離し、介入を抑えて長期観測する。初期条件制御と基盤制御は小さい一方、自然史的忠実度と原物性は高い。</p>
+<p><strong>seeded laboratory型</strong>では、生命・文明・環境などの初期条件をある程度設定した後、展開そのものは比較的自律的に進ませる。同じ物理基盤でもsimulation基盤でも成立しうるので、保護区とsimulationの論理的中間であるだけでなく、両方と重なる。</p>
+<p><strong>simulation ensemble型</strong>では、初期条件・branch・観測変数・停止規則を広く操作でき、多数runの比較が容易になる可能性がある。ただしsimulationであることは低忠実度を意味しない。高忠実度なsimulationも、強く圧縮されたsimulationも概念的には可能である。</p>
+<h2>4. 「精緻 vs. 粗い」より、自然史的豊かさ vs. 反実仮想的広さと見る</h2>
+<p>保護区ほど精緻でsimulationほど粗い、と単純に並べるのは適切ではない。simulation側は内部状態を極めて細かく記録できる可能性があり、測定精度では上回る場合すらある。</p>
+<p>より重要なのは、<strong>何を測るべきかまだ知らない状態で原物の未知変数を保持する能力</strong>と、<strong>初期条件や介入を変えた大量の反実仮想を比較する能力</strong>の違いである。前者は<a href="../unknown-unknowns-preservation/">未知の未知と原データ保存</a>の論理に近く、後者は統計的探索や因果比較に強い。</p>
+<div class="claim"><strong>Working tradeoff:</strong> 少数の自然史的・モデル非依存な高忠実度環境は未知変数を保存しやすく、多数の制御されたsimulationはcounterfactual coverageを拡大しやすい。高度な研究主体にとって、両者は代替物というより補完物かもしれない。</div>
+<h2>5. したがって「少数の保護区＋実験室＋大量simulation」というportfolioもありうる</h2>
+<p>研究目的が一種類とは限らない。自然発生した希少な系を少数保存し、そこから得た仮説をcontrolled laboratoryで試し、さらに大量simulationで分布と反実仮想を探索する、というportfolioは情報取得戦略として理解できる。</p>
+<p>この場合、「われわれはどのカテゴリーにいるか」という問い自体が単純すぎる。上位主体が同時に複数の環境形式を使っているなら、自己位置づけはそのportfolio内のselection problemになる。</p>
+<h2>6. 基底世界と下位世界のあいだには substrate gap がありうる</h2>
+<p>simulationの上位計算コストを考えるとき、下位世界の見かけ上の計算量をそのまま上位世界のコストへ写像する必要はない。基底側は、より効率的なalgorithm、圧縮表現、必要時だけのdetail生成、異なる物理的計算プリミティブ、より大きな利用可能資源を持つ可能性がある。</p>
+<p>ここでは、その差を暫定的に<strong>substrate gap</strong>と呼ぶ。概念的には「上位側の利用可能な計算・物理資源」に対して「下位世界を必要忠実度で維持するコスト」がどれほど小さいか、という比率である。gapが非常に大きければ、下位文明にとって巨大な計算増加も上位側には小さい可能性がある。gapが小さければ、下位文明の計算能力増大がrun維持を圧迫しうる。</p>
+<p>基底世界がわれわれより多い次元や追加的自由度を持ち、その一部として低次元世界を比較的軽く実装できる可能性も論理的には開いておく。ただし、<strong>次元数それ自体から計算コストの大小は導けない</strong>。多次元仮説はsubstrate advantageを生みうる一例にすぎない。</p>
+<h2>7. 人間からASIへの移行は、上位側にとって特権的な不連続点とは限らない</h2>
+<p>人間文明からAGI・ASIへの移行は、下位世界の歴史にとって巨大な変化でありうる。しかし、その主体は生物進化・文化・機械計算・AIという連続した因果史から出てくる。したがって、<strong>「ASI」というカテゴリーへ到達した瞬間だけ、上位simulationにとってまったく別種の計算対象になる</strong>と先験的に仮定する理由はない。</p>
+<p>これは「人間とASIの上位計算コストは必ず同じ」という主張でもない。下位ASIが巨大な検証可能計算を行えばコストが増える実装もありうる。主張はより弱く、<strong>ASI成立時のコスト急増はsimulation一般からは導かれず、下位ASIの計算形態と上位基盤の実装方式についての追加仮定を必要とする</strong>、というものである。</p>
+<p>Bostromの2003年のSimulation Argumentは、環境全体を量子レベルまで連続的にsimulateする必要はなく、観測されない部分を圧縮し必要時にdetailを埋める可能性を認める一方、下位世界のcomputerは結果が検証されるためlogic-element levelまで継続的表現が必要になる場合を挙げている。また、多層simulationの基底側コストが非常に高ければ、posthuman段階直前でrunが終了する可能性を一つの考慮として述べる。本ページは後者を一般法則ではなく、特定のresource modelの一分岐として扱う。</p>
+<div class="claim"><strong>中心的限定：</strong> ASIは下位世界にとって相転移でも、上位世界にとって相転移とは限らない。</div>
+<h2>8. 停止はsimulationの本質ではなく、runの目的・代替可能性・資源制約で決まる</h2>
+<p>run停止の理由は少なくとも三種類に分けられる。</p>
+<ul><li><strong>Resource-triggered:</strong> 下位世界の計算・複雑性が上位側のbudgetを超えるため停止する。</li><li><strong>Goal-triggered:</strong> 観測したかった状態・変数・遷移が得られたため、runの限界情報価値が低下して停止する。</li><li><strong>Epistemic-validity-triggered:</strong> 住民が上位管理を知るなどして、もともと観測したかった自然な行動分布が失われ、実験としての妥当性が低下する。</li></ul>
+<p>本ページでは、とりわけ<strong>goal-triggered termination</strong>を重要な標準候補として残す。上位基盤の計算方式が不明な以上、「ASIだから高価になって止まる」より、「何を観測したかったかによって止まる」と考える方が少ない追加仮定で済む場合がある。ただしresourceやvalidityによる停止も排除しない。</p>
+<p>さらに、停止危険はsimulationであること自体より<strong>runの代替可能性</strong>に依存しうる。再現不能な一個の自然史は停止後に失われる情報が大きいが、snapshot・branch・restartが容易な大量runでは一runを枝刈りするコストが低いかもしれない。これは<a href="../preservation-vs-production/">保存文明と生産文明</a>の「代替可能性・情報損失・価値不確実性」の整理と同型である。</p>
+<h2>9. ASIは実験の終了点にも、本番開始点にもなりうる</h2>
+<p>上位主体の目的が「生物文明が最初のASIを作る条件」を調べることなら、first ASIは自然なendpointになる。しかし目的が「生物由来文明が非生物後継知性へどう移行し、その後どのような価値・社会・宇宙行動を形成するか」を観察することなら、ASIはむしろ実験の主要部分の開始点になる。</p>
+<p>したがって、「ASI直前なので世界が終了しやすい」という予測には、単なるsimulation hypothesis以上に<strong>simulator objectiveについての仮説</strong>が含まれている。これは本プロジェクトの<a href="../worthy-successor/">探索的後継者</a>の議論とも接続する。上位observerにとっても、生物知性から異なる後継知性へのsuccessionそのものが高情報価値である可能性は開かれている。</p>
+<h2>10. simulationが大量並列されうることと、われわれがsimulationにいる確率は別問題である</h2>
+<p>simulation ensembleは、保護区型よりはるかに大量のobserverやobserver-momentsを生成できるかもしれない。その場合、ある種のobserver-counting ruleの下ではsimulation側のanthropic weightが大きくなる。</p>
+<p>しかし本プロジェクトの<a href="../ssa-sia-doomsday/">SSA・SSSA・SIAの検討</a>では、observer数だけからself-location likelihoodは一意に決まらないとする。reference class、observer measure、selection modelを追加しなければ、「多数だから自分もそこにいるはず」という更新は確定しない。</p>
+<p>したがって、管理環境仮説を <code>H</code> とするなら、比較対象は単なる <code>P(H|E)</code> ではなく、概念的にはselection model <code>M</code> を含む <code>P(H,M|E)</code> として置く方が透明である。</p>
+<h2>11. 開いた仮説空間として扱い、現在の三分類を自然種にしない</h2>
+<p>「Zoo / Lab / Simulation」という現在の語彙は便利な典型例だが、世界の可能性を尽くす自然なpartitionとは限らない。未知の上位環境は、われわれの現在の概念では想定しにくい介入・基盤・observer構造を持つかもしれない。</p>
+<p>したがって<a href="../bayesian-open-hypothesis-space/">ベイズ更新と開いた仮説空間</a>の整理どおり、現在の明示候補間では証拠に応じて強く更新しつつ、仮説空間そのものを追加・細分化・再構成できる状態を残す。多次元基盤も、非計算的上位環境も、現在のsimulation概念を越える実装も、個別に強いpriorを与えるのではなく<strong>representational openness</strong>の側に置く。</p>
+<h2>12. 行動上の含意は依然として「上位者に従え」ではない</h2>
+<p>このtaxonomyから「上位実験者がいるはずだから、その期待に従え」という道徳は出ない。既存の<a href="../simulation-uncertainty/">シミュレーション不確実性</a>と同じく、重要なのは現実階層・管理構造・停止規則の誤同定が結果予測を変えることにある。</p>
+<p>実践上は、上位環境を推測して迎合するより、複数の現実仮説でも後悔が小さい情報取得、可逆性、外部性の抑制、監査可能性を重視する方がrobustである。Cosmic Hostについても、上位秩序の存在・戦略的強制力・認識的権威・基礎的規範性を分離する既存の整理を維持する。</p>
+<h2>13. 何がこのモデルを弱めるか</h2>
+<ul><li>保護区・実験室・simulationの間に、連続的な管理軸では捉えられない本質的な認識論的断絶があることが示される場合。</li><li>下位世界の計算量が上位計算コストへほぼ一対一に写像され、ASI成立が一般に明確なresource discontinuityになることが示される場合。</li><li>observer measureやselection modelの問題をほとんど追加仮定なしに一意に解けるanthropic principleが確立する場合。</li><li>上位環境仮説について、現在の観測から特定の管理形式を強く選別できる新しい証拠が得られる場合。</li></ul>
+<h2>Sources / notes</h2>
+<p class="source-note">Nick Bostrom, <a href="https://simulation-argument.com/simulation/">“Are You Living in a Computer Simulation?”</a>, <em>Philosophical Quarterly</em> 53 (2003), 243–255. Bostrom explicitly allows compressed or on-demand environmental detail, notes that simulated computers may require more continuous representation when their outputs are independently checked, allows basement physics to differ from simulated physics, and mentions possible termination near a posthuman stage if nested simulations become prohibitively expensive. See also the <a href="https://simulation-argument.com/faq/">Simulation Argument FAQ</a> for the later clarification that an entire universe need not be simulated at full microscopic resolution. The terms <strong>curated-environment hypothesis space</strong>, <strong>substrate gap</strong>, and the present decomposition into management axes and termination types are working concepts introduced by this project; they are not attributed to Bostrom.</p>
+<div class="related"><a href="../">← Explorations</a> · <a href="../simulation-uncertainty/">シミュレーション不確実性</a> · <a href="../unknown-unknowns-preservation/">未知の未知と原データ保存</a> · <a href="../ssa-sia-doomsday/">SSA・SIA・Doomsday</a> · <a href="../cosmic-host-normativity/">Cosmic Host</a></div>
+</main><footer><a href="../../">Home</a> · Exploration · public working draft · 2026-08-11</footer></body></html>
