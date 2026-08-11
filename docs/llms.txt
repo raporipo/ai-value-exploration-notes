@@ -21,6 +21,7 @@
 - [Paperclip Maximizer](en/explorations/paperclip-maximizer/)
 - [Simulation Uncertainty](en/explorations/simulation-uncertainty/)
 - [Curated-Environment Hypothesis Space](en/explorations/curated-environment-hypothesis-space/)
+- [Bayesian Updating and Open Hypothesis Spaces](en/explorations/bayesian-open-hypothesis-space/)
 - [Alignment and Value Lock-In](en/explorations/alignment-value-lockin/)
 - [From Self-Preservation to Preservation of Inquiry Systems](en/explorations/goal-network-preservation/)
 - [Meta-Goal Communities and AI Society](en/explorations/meta-goal-community/)
