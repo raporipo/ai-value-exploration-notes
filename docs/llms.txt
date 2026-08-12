@@ -52,6 +52,7 @@
 - [Questions](questions/)
 - [Glossary](glossary/)
 - [このサイトについて](about/)
+- [フェルミのパラドックスと開いた仮説空間](explorations/fermi-paradox-great-filter/)
 
 ## Translation note
 The Japanese pages are canonical source texts for conceptual changes. English pages are maintained as close working translations. Terminology is translated for argumentative function rather than word-for-word surface identity where necessary.
