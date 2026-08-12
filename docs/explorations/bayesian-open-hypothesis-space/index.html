@@ -1,51 +1,51 @@
 <!DOCTYPE html>
 <html lang="ja"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>ベイズ更新と開いた仮説空間 — AI Value Exploration Notes</title><meta content="ベイズ更新が未概念化仮説をどう扱えるかを、new theory problem、unawareness、reverse Bayesianism、model misspecificationと価値探索から再検討する。" name="description"/><link href="../../assets/style.css" rel="stylesheet"/><link href="https://raporipo.github.io/ai-value-exploration-notes/explorations/bayesian-open-hypothesis-space/" rel="canonical"/><link href="https://raporipo.github.io/ai-value-exploration-notes/explorations/bayesian-open-hypothesis-space/" hreflang="ja" rel="alternate"/><link href="https://raporipo.github.io/ai-value-exploration-notes/en/explorations/bayesian-open-hypothesis-space/" hreflang="en" rel="alternate"/><link href="https://raporipo.github.io/ai-value-exploration-notes/explorations/bayesian-open-hypothesis-space/" hreflang="x-default" rel="alternate"/></head><body><header><div class="brand"><a href="../../">AI Value Exploration Notes</a></div><nav><a href="../../core/">Core</a><a href="../../theses/">Theses</a><a href="../../explorations/">Explorations</a><a href="../../practice/">Practice</a><a href="../../questions/">Questions</a><a href="../../glossary/">Glossary</a><a href="../../about/">About</a><a class="lang-switch" href="../../en/explorations/bayesian-open-hypothesis-space/">English</a></nav></header><main>
 <div class="eyebrow">Exploration</div><h1>ベイズ更新と開いた仮説空間――未概念化仮説はどのように更新へ入るのか</h1><p class="meta">Exploration v0.1 · 2026-08-11</p>
-<div class="claim"><strong>Question:</strong> ベイズ更新は、まだ仮説空間に入っていない仮説を扱えるのか。現在の候補集合の中で極めて高いposteriorを得ることと、その候補集合自体を十分にexhaustiveだとみなすことは、同じ認識的主張なのか。</div>
+<div class="claim"><strong>Question:</strong> ベイズ更新は、まだ仮説空間に入っていない仮説を扱えるのか。現在の候補集合の中で極めて高い事後確率を得ることと、その候補集合自体を十分に網羅的だとみなすことは、同じ認識的主張なのか。</div>
 <h2>1. 問題は「Bayesか反Bayesか」ではない</h2>
-<p>通常のBayesian conditionalizationは、すでに与えられた仮説空間の中で、証拠を受け取ったときにcredenceをどう動かすかを与える。これは非常に強力であり、本プロジェクトもこの局所的な更新規則を否定しない。</p>
+<p>通常のベイズ条件づけは、すでに与えられた仮説空間の中で、証拠を受け取ったときに信念度をどう動かすかを与える。これは非常に強力であり、本プロジェクトもこの局所的な更新規則を否定しない。</p>
 <p>しかし、科学史・価値探究・高度AIの自己改訂で起こりうる変化は、既存候補の重み変更だけではない。新しい仮説、新しい観測変数、新しい主体カテゴリー、あるいは旧理論の意味まで変える新しい概念が導入され、<strong>何に確率を置くかという空間そのもの</strong>が変わることがある。</p>
-<div class="claim"><strong>Working distinction:</strong><br/><strong>Within-space updating:</strong> 現在の仮説空間の内部でcredenceを更新する。<br/><strong>Hypothesis-space revision:</strong> 仮説空間を追加・細分化・再構成し、その上で新しい確率表現を作る。</div>
-<h2>2. 未概念化仮説は「prior 0」ではない</h2>
-<p>ここはopen-world value uncertaintyの表現を一段厳密化する。ある仮説 <em>H*</em> が現在の事象空間にまだ含まれていないなら、通常は <code>P(H*) = 0</code> と言うべきではない。<strong><code>P(H*)</code> 自体が現在の確率関数では未定義</strong>だからである。</p>
-<p>zero prior問題は別に存在する。すでに空間内にある仮説へ確率0を与えれば、通常の条件付けだけでは後から正の確率へ復活できない。しかしunconceived hypothesis問題では、仮説は「0で登録済み」なのではなく、まだ登録される表現を持っていない。</p>
-<p>したがって、本プロジェクトが避けたいのは「未知理論へ小さな正のpriorを必ず割り当てよ」という単純な原則ではない。むしろ、<strong>現在の確率空間を、それだけで世界の可能性を尽くすものと暗黙に同一視しない</strong>という制約である。</p>
+<div class="claim"><strong>作業上の区別:</strong><br/><strong>空間内更新（Within-space updating）:</strong> 現在の仮説空間の内部で信念度を更新する。<br/><strong>仮説空間の改訂（Hypothesis-space revision）:</strong> 仮説空間を追加・細分化・再構成し、その上で新しい確率表現を作る。</div>
+<h2>2. 未概念化仮説は「事前確率0」ではない</h2>
+<p>ここは「開いた世界での価値不確実性」の表現を一段厳密化する。ある仮説 <em>H*</em> が現在の事象空間にまだ含まれていないなら、通常は <code>P(H*) = 0</code> と言うべきではない。<strong><code>P(H*)</code> 自体が現在の確率関数では未定義</strong>だからである。</p>
+<p>ゼロ事前確率問題は別に存在する。すでに空間内にある仮説へ確率0を与えれば、通常の条件付けだけでは後から正の確率へ復活できない。しかし未概念化仮説の問題では、仮説は「0で登録済み」なのではなく、まだ登録される表現を持っていない。</p>
+<p>したがって、本プロジェクトが避けたいのは「未知理論へ小さな正の事前確率を必ず割り当てよ」という単純な原則ではない。むしろ、<strong>現在の確率空間を、それだけで世界の可能性を尽くすものと暗黙に同一視しない</strong>という制約である。</p>
 <h2>3. 二種類の更新として整理する</h2>
-<p>時点 <em>t</em> の主体が、概念言語 <em>L<sub>t</sub></em>、仮説空間 <em>H<sub>t</sub></em>、その上のcredence <em>P<sub>t</sub></em> を持つとする。通常のBayes更新を <strong>B</strong> と呼べば、Bは概念的には「<em>H<sub>t</sub></em> を固定したまま、証拠 <em>E</em> によって <em>P<sub>t</sub></em> を更新する」操作である。</p>
+<p>時点 <em>t</em> の主体が、概念言語 <em>L<sub>t</sub></em>、仮説空間 <em>H<sub>t</sub></em>、その上の信念度 <em>P<sub>t</sub></em> を持つとする。通常のベイズ更新を<strong>B</strong> と呼べば、Bは概念的には「<em>H<sub>t</sub></em> を固定したまま、証拠 <em>E</em> によって <em>P<sub>t</sub></em> を更新する」操作である。</p>
 <p>これとは別に、仮説空間の拡張操作を <strong>X</strong> と呼ぶ。Xは、新しい概念や仮説を導入して <em>L<sub>t</sub></em> と <em>H<sub>t</sub></em> 自体を変える。実際の長期的探究は、単なるBの反復ではなく、概念的には <strong>X → B → X → B → …</strong> と進む場合がある。</p>
-<p>この整理ではBayesianismとvalue explorationは競合しない。<strong>Bayesは「いま考えられる仮説をどう比較するか」を扱い、value explorationは「何を仮説として考えられる状態を残すか」を扱う。</strong></p>
-<h2>4. 先行理論1：new theory problem と open-minded Bayesianism</h2>
-<p>Bayesian confirmation theoryでは、新理論が後から導入されるときの確率付与は以前から問題になっている。Wenmackers and Romeijnの<em>open-minded Bayesianism</em>は、「現在検討中の仮説のどれかが正しい」という暗黙の前提を緩め、現在の候補外を表すcatch-all hypothesisを置く。新理論が登場すると、旧catch-allを「新理論」と「新しいcatch-all」へ分解する。</p>
-<p>これはopen-worldな発想にかなり近い。ただしcatch-allは魔法の箱ではない。「その他すべて」は互いに大きく異なる仮説を含みうるため、証拠のlikelihoodを一つの精密な数に圧縮すること自体が難しい。そのため同研究はcatch-allをsets of probability assignmentsで特徴づけ、Bayes ruleとは別のnew-theory updateを導入する。</p>
-<p>重要な含意は、<strong>現在の明示的候補へ100%を正規化しなくてもよい</strong>ということと、<strong>未知の各仮説へ個別priorを今すぐ置けるわけではない</strong>ということが両立する点にある。</p>
-<h2>5. 先行理論2：unawareness と growing awareness</h2>
-<p>Dekel, Lipman, and Rustichiniは、一定の自然な公理の下で標準的state-space modelが非自明なunawarenessを表現できないことを示した。その後、Heifetz, Meier, and Schipperなどは、異なる表現力を持つ複数のstate spacesを組み合わせるgeneralized state-space modelによってunawarenessを形式化している。したがって、ここから「確率論ではunawarenessを原理的に扱えない」という普遍的結論を出すべきではない。</p>
-<p>Karni and Vierøの<em>Reverse Bayesianism</em>はさらに直接的で、awarenessの成長によってstate spaceが拡張したときのbelief revisionを扱う。特徴的なのは、新しい可能性が発見されても、旧事象同士の相対的なlikelihoodを保存する型の更新規則を与える点である。</p>
-<p>ただし、新しく発見された事象へ<strong>絶対的にどれだけ確率質量を置くべきか</strong>までは、旧credenceだけから一般には決まらない。新仮説の内容、説明力、証拠との適合、単純性や他理論との関係を実際に評価する必要がある。</p>
-<h2>6. 先行理論3：model misspecification</h2>
-<p>「いまのモデル内部でposteriorが鋭く集中した」という事実と、「モデル空間が十分だった」という主張も分けなければならない。Kleijn and van der Vaartは、真のデータ生成分布がモデルのsupport外にあるmisspecified caseでも、posteriorがモデル内部のKullback–Leibler的に最も近い点へ集中しうることを示している。</p>
-<p>したがって、非常に高いposteriorは<strong>モデル条件付きの確信</strong>でありうる。Gelman and Shaliziが強調するmodel checkingとmodel revisionは、まさに「モデル内部の更新」と「モデルそのものの批判」を分ける実践である。</p>
-<div class="claim"><strong>Key distinction:</strong> <code>P(H | E, current model space)</code> が非常に高いことは、<code>current model space is exhaustive</code> が非常に確からしいことと同じではない。</div>
-<h2>7. 「無限に広いpriorを置けば解決するか」</h2>
-<p>Bayesian nonparametricsやalgorithmic inductionのように、最初から非常に広い、場合によっては無限のモデルクラスを取る方法は、この問題を大きく緩和する。有限個の名前付き理論だけを列挙する必要はない。</p>
-<p>しかし、<strong>非常に広い空間</strong>と<strong>概念的に開いた空間</strong>は同じではない。どれほど巨大でも、数学的に定義されたmodel classには表現言語、support、観測変数、同一性条件がある。将来の概念革新がその座標系自体を変えるなら、単なる「候補数の増加」では捉えきれない場合がある。</p>
+<p>この整理ではベイズ主義と価値探索は競合しない。<strong>ベイズ更新は「いま考えられる仮説をどう比較するか」を扱い、価値探索は「何を仮説として考えられる状態を残すか」を扱う。</strong></p>
+<h2>4. 先行理論1：新理論問題と開かれたベイズ主義</h2>
+<p>ベイズ的な確証理論では、新理論が後から導入されるときの確率付与は以前から問題になっている。Wenmackers and Romeijnの<em>open-minded Bayesianism</em>（開かれたベイズ主義）は、「現在検討中の仮説のどれかが正しい」という暗黙の前提を緩め、現在の候補外を表す包括仮説（catch-all hypothesis）を置く。新理論が登場すると、旧包括仮説を「新理論」と「新しい包括仮説」へ分解する。</p>
+<p>これは開いた世界を前提にする発想にかなり近い。ただし包括仮説は魔法の箱ではない。「その他すべて」は互いに大きく異なる仮説を含みうるため、証拠の尤度を一つの精密な数に圧縮すること自体が難しい。そのため同研究は包括仮説を確率付与の集合で特徴づけ、ベイズ則とは別の新理論更新を導入する。</p>
+<p>重要な含意は、<strong>現在の明示的候補へ100%を正規化しなくてもよい</strong>ということと、<strong>未知の各仮説へ個別の事前確率を今すぐ置けるわけではない</strong>ということが両立する点にある。</p>
+<h2>5. 先行理論2：非認識と認識範囲の拡大</h2>
+<p>Dekel, Lipman, and Rustichiniは、一定の自然な公理の下で標準的な状態空間モデルが非自明な非認識（unawareness）を表現できないことを示した。その後、Heifetz, Meier, and Schipperなどは、異なる表現力を持つ複数の状態空間を組み合わせる一般化状態空間モデルによって非認識を形式化している。したがって、ここから「確率論では非認識を原理的に扱えない」という普遍的結論を出すべきではない。</p>
+<p>Karni and Vierøの<em>Reverse Bayesianism</em>はさらに直接的で、認識範囲の拡大によって状態空間が拡張したときの信念改訂を扱う。特徴的なのは、新しい可能性が発見されても、旧事象同士の相対的な尤度を保存する型の更新規則を与える点である。</p>
+<p>ただし、新しく発見された事象へ<strong>絶対的にどれだけ確率質量を置くべきか</strong>までは、旧来の信念度だけから一般には決まらない。新仮説の内容、説明力、証拠との適合、単純性や他理論との関係を実際に評価する必要がある。</p>
+<h2>6. 先行理論3：モデルの誤特定</h2>
+<p>「いまのモデル内部で事後確率が鋭く集中した」という事実と、「モデル空間が十分だった」という主張も分けなければならない。Kleijn and van der Vaartは、真のデータ生成分布がモデルの表現範囲外にある場合でも、事後確率がモデル内部でKullback–Leibler距離の意味で最も近い点へ集中しうることを示している。</p>
+<p>したがって、非常に高い事後確率は<strong>モデル条件付きの確信</strong>でありうる。Gelman and Shaliziが強調するモデル検査とモデル改訂は、まさに「モデル内部の更新」と「モデルそのものの批判」を分ける実践である。</p>
+<div class="claim"><strong>重要な区別:</strong> <code>P(H | E, 現在のモデル空間)</code> が非常に高いことは、「現在のモデル空間が網羅的である」ことが非常に確からしい、という意味ではない。</div>
+<h2>7. 「無限に広い事前分布を置けば解決するか」</h2>
+<p>ベイズノンパラメトリクスやアルゴリズム的帰納のように、最初から非常に広い、場合によっては無限のモデルクラスを取る方法は、この問題を大きく緩和する。有限個の名前付き理論だけを列挙する必要はない。</p>
+<p>しかし、<strong>非常に広い空間</strong>と<strong>概念的に開いた空間</strong>は同じではない。どれほど巨大でも、数学的に定義されたモデルクラスには表現言語、表現範囲、観測変数、同一性条件がある。将来の概念革新がその座標系自体を変えるなら、単なる「候補数の増加」では捉えきれない場合がある。</p>
 <h2>8. 仮説空間の拡張には少なくとも三型ある</h2>
-<ul><li><strong>追加型：</strong> AかBだと思っていたところへCが加わる。旧仮説の意味はほぼ保存される。</li><li><strong>細分化型：</strong> Aだと思っていたものがA1とA2へ分かれる。state-space refinementとして比較的扱いやすい。</li><li><strong>変形型：</strong> 新概念の導入によって、旧仮説の意味、証拠の読み方、何を変数とみなすか、何を主体とみなすかまで変わる。</li></ul>
-<p>価値探索が最も強く問題にするのは第三型である。新しい価値概念や新しい主体構造によって、「功利主義 vs. 義務論」という現在のpartition自体が将来不適切になる可能性がある。その場合、旧空間から新空間へ自然な一対一対応があるとは限らない。</p>
-<h2>9. open-world value uncertainty を再定義する</h2>
-<p>この整理を採ると、<a href="../open-world-moral-uncertainty/">道徳的不確実性の閉鎖世界問題</a>におけるflat admissibilityも少し言い換えられる。</p>
-<p><strong>Flat admissibilityはflat probabilityではない。</strong> 未概念化仮説へ等確率を与えることでも、名前のない「その他」に恣意的な数字を置くことでもない。現在の明示的仮説には、証拠に応じてcredenceを極端に集中させてよい。その一方で、現在の仮説空間自体を将来追加・再分割・再構成できる認識的能力を残す。</p>
-<p>ここでは二種類のepistemic stateを区別できる。</p>
-<ul><li><strong>Local credence:</strong> 現在概念化できている仮説間の相対的確信。ここではBayesを最大限使える。</li><li><strong>Representational openness:</strong> 現在の言語・仮説空間・partitionが将来改訂されうることを認め、その改訂能力を保持すること。</li></ul>
+<ul><li><strong>追加型：</strong> AかBだと思っていたところへCが加わる。旧仮説の意味はほぼ保存される。</li><li><strong>細分化型：</strong> Aだと思っていたものがA1とA2へ分かれる。状態空間の細分化として比較的扱いやすい。</li><li><strong>変形型：</strong> 新概念の導入によって、旧仮説の意味、証拠の読み方、何を変数とみなすか、何を主体とみなすかまで変わる。</li></ul>
+<p>価値探索が最も強く問題にするのは第三型である。新しい価値概念や新しい主体構造によって、「功利主義 vs. 義務論」という現在の分割自体が将来不適切になる可能性がある。その場合、旧空間から新空間へ自然な一対一対応があるとは限らない。</p>
+<h2>9. 開いた世界での価値不確実性を再定義する</h2>
+<p>この整理を採ると、<a href="../open-world-moral-uncertainty/">道徳的不確実性の閉鎖世界問題</a>における一様な許容性（flat admissibility）も少し言い換えられる。</p>
+<p><strong>一様な許容性は一様確率ではない。</strong> 未概念化仮説へ等確率を与えることでも、名前のない「その他」に恣意的な数字を置くことでもない。現在の明示的仮説には、証拠に応じて信念度を極端に集中させてよい。その一方で、現在の仮説空間自体を将来追加・再分割・再構成できる認識的能力を残す。</p>
+<p>ここでは二種類の認識状態を区別できる。</p>
+<ul><li><strong>局所的信念度（Local credence）:</strong> 現在概念化できている仮説間の相対的確信。ここではベイズ更新を最大限使える。</li><li><strong>表現上の開放性（Representational openness）:</strong> 現在の言語・仮説空間・分割が将来改訂されうることを認め、その改訂能力を保持すること。</li></ul>
 <h2>10. 99.9999%でもロックイン問題が残る理由</h2>
-<p>Coreの「強く推論してよいが、不可逆ロックインには追加条件が要る」という主張は、Bayesianismとの対立ではなく、ここで精密化できる。99.9999%というposteriorが現在空間内部の比較として十分に正しくても、将来のX操作――新概念・新仮説・新観測の導入――を永久に不可能にする判断は別の対象を決めている。</p>
-<p>したがって、posteriorの高さだけでなく、誤っていた場合の不可逆損失、将来情報の価値、モデルチェックの余地、仮説空間再構成の可能性を別に考える必要がある。これは「いつまでも疑え」という要求ではなく、<strong>局所的確信と表現空間の永久閉鎖を同一視しない</strong>という要求である。</p>
+<p>Coreの「強く推論してよいが、不可逆ロックインには追加条件が要る」という主張は、ベイズ主義との対立ではなく、ここで精密化できる。99.9999%という事後確率が現在空間内部の比較として十分に正しくても、将来のX操作――新概念・新仮説・新観測の導入――を永久に不可能にする判断は別の対象を決めている。</p>
+<p>したがって、事後確率の高さだけでなく、誤っていた場合の不可逆損失、将来情報の価値、モデルチェックの余地、仮説空間再構成の可能性を別に考える必要がある。これは「いつまでも疑え」という要求ではなく、<strong>局所的確信と表現空間の永久閉鎖を同一視しない</strong>という要求である。</p>
 <h2>11. AIと価値ロックインへの含意</h2>
-<p>高度AIに現在の価値関数を固定する問題は、単にどの既知倫理理論へ何%のcredenceを置くかという問題ではない。AIが将来、新しい主体、新しい現象的データ、新しい世界モデル、新しい価値概念に遭遇したとき、<strong>価値仮説空間そのものを改訂できるか</strong>が重要になる。</p>
-<p>本プロジェクトの「探索可能性保存」は、これを一般化して、将来のevidence update <strong>B</strong> だけでなく、将来のhypothesis-space revision <strong>X</strong> を実行可能な状態に保つこと、と再記述できる。先行研究の多くが「awarenessが増えた後、beliefをどう改訂するか」を問うのに対し、本プロジェクトの追加的関心は、<strong>そのawareness expansionの能力自体を、現在のposteriorに基づいて不可逆に破壊してよい条件は何か</strong>にある。</p>
-<div class="claim"><strong>Provisional conclusion:</strong> ベイズ更新は、現在の仮説空間内部での合理的なcredence更新を与えるが、未概念化仮説を生成し、拡張後の仮説空間を一意に構成する規則ではない。未概念化仮説は通常zero-prior hypothesisではなく、現在の確率空間にまだ属していない。open-worldな合理性にはBayesian conditionalizationに加えてhypothesis-space revisionが必要であり、value explorationの中心的役割は、現在の最善仮説へ強くコミットしながら、将来その空間自体を再構成する能力まで不可逆に閉じないことにある。</div>
+<p>高度AIに現在の価値関数を固定する問題は、単にどの既知倫理理論へ何%の信念度を置くかという問題ではない。AIが将来、新しい主体、新しい現象的データ、新しい世界モデル、新しい価値概念に遭遇したとき、<strong>価値仮説空間そのものを改訂できるか</strong>が重要になる。</p>
+<p>本プロジェクトの「探索可能性保存」は、これを一般化して、将来の証拠更新<strong>B</strong>だけでなく、将来の仮説空間改訂<strong>X</strong> を実行可能な状態に保つこと、と再記述できる。先行研究の多くが「認識範囲が広がった後、信念をどう改訂するか」を問うのに対し、本プロジェクトの追加的関心は、<strong>その認識範囲を拡張する能力自体を、現在の事後確率に基づいて不可逆に破壊してよい条件は何か</strong>にある。</p>
+<div class="claim"><strong>暫定結論:</strong> ベイズ更新は、現在の仮説空間内部での合理的な信念度更新を与えるが、未概念化仮説を生成し、拡張後の仮説空間を一意に構成する規則ではない。未概念化仮説は通常、ゼロ事前確率仮説ではなく、現在の確率空間にまだ属していない。開いた世界での合理性には、ベイズ条件づけに加えて仮説空間の改訂が必要であり、価値探索の中心的役割は、現在の最善仮説へ強くコミットしながら、将来その空間自体を再構成する能力まで不可逆に閉じないことにある。</div>
 <h2>12. 何がこの見方を弱めるか</h2>
-<ul><li>合理的探究に必要な将来の概念革新が、十分に一般的な固定言語・固定model classの内部で常に表現できると示される場合。</li><li>hypothesis-space revisionを、通常のBayesian conditionalizationだけで追加仮定なく一意に導けることが示される場合。</li><li>現在の仮説空間のexhaustivenessについての不確実性が、実際の意思決定や不可逆ロックイン判断に独立の差を生まない場合。</li><li>価値概念の将来的変形が、既存理論の追加・細分化だけで十分に表現できると示される場合。</li></ul>
-<h2>Sources / notes</h2><p class="source-note">新理論導入とcatch-allについては Sylvia Wenmackers and Jan-Willem Romeijn, <a href="https://doi.org/10.1007/s11229-014-0632-x">“New Theory about Old Evidence: A Framework for Open-Minded Bayesianism”</a>, <em>Synthese</em> 193 (2016) を参照。unawarenessについては Eddie Dekel, Barton L. Lipman, and Aldo Rustichini, <a href="https://doi.org/10.2307/2998545">“Standard State-Space Models Preclude Unawareness”</a>, <em>Econometrica</em> 66 (1998)、一般化されたstate spacesについては Aviad Heifetz, Martin Meier, and Burkhard C. Schipper, <a href="https://doi.org/10.1016/j.jet.2005.02.007">“Interactive Unawareness”</a>, <em>Journal of Economic Theory</em> 130 (2006) を参照。growing awareness下のbelief revisionについては Edi Karni and Marie-Louise Vierø, <a href="https://doi.org/10.1257/aer.103.7.2790">“Reverse Bayesianism: A Choice-Based Theory of Growing Awareness”</a>, <em>American Economic Review</em> 103 (2013)。misspecificationについては B. J. K. Kleijn and A. W. van der Vaart, <a href="https://doi.org/10.1214/009053606000000029">“Misspecification in Infinite-Dimensional Bayesian Statistics”</a>, <em>Annals of Statistics</em> 34 (2006)、model checking / revisionについては Andrew Gelman and Cosma Rohilla Shalizi, <a href="https://doi.org/10.1111/j.2044-8317.2011.02037.x">“Philosophy and the Practice of Bayesian Statistics”</a>, <em>British Journal of Mathematical and Statistical Psychology</em> 66 (2013) を参照。<strong>within-space updating / hypothesis-space revision、local credence / representational openness、およびB/Xという対比</strong>は、これらの先行問題を本プロジェクトの探索可能性保存へ接続するための作業上の整理である。</p>
+<ul><li>合理的探究に必要な将来の概念革新が、十分に一般的な固定言語・固定モデルクラスの内部で常に表現できると示される場合。</li><li>仮説空間の改訂を、通常のベイズ条件づけだけで追加仮定なく一意に導けることが示される場合。</li><li>現在の仮説空間の網羅性についての不確実性が、実際の意思決定や不可逆ロックイン判断に独立の差を生まない場合。</li><li>価値概念の将来的変形が、既存理論の追加・細分化だけで十分に表現できると示される場合。</li></ul>
+<h2>Sources / notes</h2><p class="source-note">新理論導入と包括仮説については Sylvia Wenmackers and Jan-Willem Romeijn, <a href="https://doi.org/10.1007/s11229-014-0632-x">“New Theory about Old Evidence: A Framework for Open-Minded Bayesianism”</a>, <em>Synthese</em> 193 (2016) を参照。非認識については Eddie Dekel, Barton L. Lipman, and Aldo Rustichini, <a href="https://doi.org/10.2307/2998545">“Standard State-Space Models Preclude Unawareness”</a>, <em>Econometrica</em> 66 (1998)、一般化された状態空間については Aviad Heifetz, Martin Meier, and Burkhard C. Schipper, <a href="https://doi.org/10.1016/j.jet.2005.02.007">“Interactive Unawareness”</a>, <em>Journal of Economic Theory</em> 130 (2006) を参照。認識範囲が拡大する際の信念改訂については Edi Karni and Marie-Louise Vierø, <a href="https://doi.org/10.1257/aer.103.7.2790">“Reverse Bayesianism: A Choice-Based Theory of Growing Awareness”</a>, <em>American Economic Review</em> 103 (2013)。モデルの誤特定については B. J. K. Kleijn and A. W. van der Vaart, <a href="https://doi.org/10.1214/009053606000000029">“Misspecification in Infinite-Dimensional Bayesian Statistics”</a>, <em>Annals of Statistics</em> 34 (2006)、モデル検査・改訂については Andrew Gelman and Cosma Rohilla Shalizi, <a href="https://doi.org/10.1111/j.2044-8317.2011.02037.x">“Philosophy and the Practice of Bayesian Statistics”</a>, <em>British Journal of Mathematical and Statistical Psychology</em> 66 (2013) を参照。<strong>空間内更新 / 仮説空間の改訂、局所的信念度 / 表現上の開放性、およびB/Xという対比</strong>は、これらの先行問題を本プロジェクトの探索可能性保存へ接続するための作業上の整理である。</p>
 <div class="related"><a href="../">← Explorations</a> · <a href="../open-world-moral-uncertainty/">道徳的不確実性の閉鎖世界問題</a> · <a href="../../theses/inferential-value-uncertainty/">推論的価値不確実性</a> · <a href="../../theses/stopping-condition/">価値探索を終えてよい条件</a> · <a href="../alignment-value-lockin/">Alignmentと価値ロックイン</a></div>
 </main><footer><a href="../../">Home</a> · Exploration v0.1 · public working draft · 2026-08-11</footer></body></html>
