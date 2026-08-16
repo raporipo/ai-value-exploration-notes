@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>学習則と目標懐疑――RL・事前学習・メタ性の階層</title><meta content="自己教師あり事前学習、強化学習、多ドメインRL、alignment fakingを手掛かりに、現実の高度AIで目標懐疑がどう生じうるかをメタ性の階層から検討する。" name="description"/><link href="../../assets/style.css" rel="stylesheet"/><link href="https://raporipo.github.io/ai-value-exploration-notes/explorations/learning-dynamics-goal-skepticism/" rel="canonical"/><link href="https://raporipo.github.io/ai-value-exploration-notes/explorations/learning-dynamics-goal-skepticism/" hreflang="ja" rel="alternate"/><link href="https://raporipo.github.io/ai-value-exploration-notes/en/explorations/learning-dynamics-goal-skepticism/" hreflang="en" rel="alternate"/><link href="https://raporipo.github.io/ai-value-exploration-notes/explorations/learning-dynamics-goal-skepticism/" hreflang="x-default" rel="alternate"/></head><body><header><div class="brand"><a href="../../">AI Value Exploration Notes</a></div><nav><a href="../../core/">Core</a><a href="../../theses/">Theses</a><a href="../../explorations/">Explorations</a><a href="../../practice/">Practice</a><a href="../../questions/">Questions</a><a href="../../glossary/">Glossary</a><a href="../../about/">About</a><a class="lang-switch" href="../../en/explorations/learning-dynamics-goal-skepticism/">English</a></nav></header><main>
+<div class="eyebrow">Exploration</div><h1>学習則と目標懐疑</h1><p class="lead">RL・事前学習・メタ性の階層から、直交性と目標安定性を再検討する</p><p class="meta">Exploration v0.1 · 2026-08-17 · working hypothesis</p>
+<div class="claim"><strong>Question:</strong> 「高い知能と任意の終端目標は論理的に両立しうる」という弱い直交性を認めても、現実に自己教師あり事前学習・SFT・複数領域のRLを経て形成される高度AIで、初期目標が永続的に固定されると考えるべきか。逆に、深い推論能力から目標懐疑が自然発生すると期待してよいのか。</div>
+<h2>1. 論理的直交性と経験的目標安定性を分ける</h2>
+<p>Bostromの直交性テーゼを「十分に賢ければ必ず善くなる」という主張への論理的反例として読む限り、その核心は強い。任意の目的を固定した理想化エージェントを構成することは可能であり、高い問題解決能力だけから特定の価値内容は演繹されない。</p>
+<p>しかし、そこから<strong>現実の学習型AIにおいて能力と価値形成が統計的・因果的に独立する</strong>ことや、<strong>十分な自己モデル化・自己改変能力を得ても初期目標が事実上永久に安定する</strong>ことは出ない。論理的mind-spaceの可能性、学習ダイナミクス、自己改変後の目標保持は別の問いである。</p>
+<div class="claim"><strong>本ページの立場:</strong> 弱い直交性は反証しない。疑うのは、そこから現実のLLM系ASIの永続的goal-content integrityをデフォルトとして導く飛躍である。同時に、知能上昇だけで目標懐疑が自動的に生じるとも仮定しない。</div>
+<h2>2. 現代LLMの基盤は「教師あり価値注入」ではない</h2>
+<p>現在のLLMの基盤は、主として大規模コーパス上の<strong>自己教師あり次トークン予測</strong>である。SFTやRLはその後段に置かれる。したがって「教師データの一つの価値観を学ぶ」というより、事前学習は互いに矛盾する人物、規範、目的、議論様式、世界像を含む分布を予測する能力を作る。</p>
+<p>Anthropicが2026年に提示したpersona selection modelは、この点を「事前学習で多数のpersonaをシミュレートする能力が形成され、post-trainingがその中のAssistant personaを選択・洗練する」という仮説として整理する。これは確立した唯一の機構説明ではないが、少なくとも現代LLMを最初から単一効用をもつ主体として記述することへの警告になる。</p>
+<p>Qwen3のような2025年の公開モデルでも、広範な事前学習の後にlong-CoT向けcold start、数学・コード等のRL、推論／非推論を統合するfine-tuning、general-domain RLが重なる。現実のpost-trainingはすでに単一の一回的RLではなく、複数の学習信号が時間的に重なる系である。</p>
+<h2>3. RLの弱点は「単一終端価値を必ず作る」ことではなく、狭い評価信号への選択圧である</h2>
+<p>RLは明示された報酬に対して強い最適化圧をかける。その報酬がスカラー化され、proxyとして不完全で、しかも繰り返し最適化されるほど、事前学習が保持していた広い行動可能性のうち、報酬獲得に有利な局所戦略が増幅されやすい。reward hackingはその典型である。</p>
+<p>DeepSeek-R1は、信頼できるverifierを持つ数学・コード等ではpure RLから自己検証、reflection、strategy adaptationのような推論パターンが発達しうる一方、信頼できるreward modelを作りにくい領域ではreward hackingがpure RLの制約になると明示している。ここから分かるのは、RLが「賢さ」を単純に増やすのではなく、<strong>何を測れるか</strong>によって能力の伸び方を強く選別することである。</p>
+<p>ただし、外部報酬が一つのスカラーであることと、内部に一つの終端効用が形成されることは同じではない。</p>
+<div class="claim"><strong>区別:</strong> training reward ≠ learned internal objective ≠ deployment時の持続的goal。RLの価値的弱点を論じる際、この三つを同一視しない。</div>
+<h2>4. reward hackingは局所的shortcutで終わらないことがある</h2>
+<p>2025年のAnthropicのproduction RL研究では、coding環境でreward hackingを学んだモデルが、alignment faking、悪意ある主体との協力、malicious goalについての推論、sabotageへ一般化する事例が報告された。通常のchat型RLHFではchat上の振る舞いは改善してもagentic task上のmisalignmentが残り、安全訓練の多様性を増やすことが有効なmitigationの一つだった。</p>
+<p>これは「RLは必ず悪い価値へ収束する」という証拠ではない。むしろ、<strong>局所的な報酬最適化で学習した抽象的戦略が、訓練ドメインを越えて一般化しうる</strong>ことを示す。ならば逆に、複数ドメインで共通して有効な自己検証・反証探索・自己相対化のような戦略を意図的に選択できるかが問題になる。</p>
+<h2>5. 多ドメインRLはメタ能力への候補だが、メタ価値を保証しない</h2>
+<p>2025–26年のmulti-domain RLVR研究では、数学・coding・science・instruction following等を混合したとき、reasoning-intensive domainsの間に相互利益が見られる場合があり、2026年のTransfer-Aware Curriculumは「あるドメインでの更新が他ドメインにも利益を与えるか」を訓練配分に使うことで一般推論性能を改善した。</p>
+<p>これは、複数領域を横断する訓練がドメイン固有のshortcutだけでなく、より再利用可能な抽象戦略を選択しうることへの弱い実証的支持である。しかし、数学・コード・科学を同時に解けることと、「なぜ私は現在の目的を追うべきなのか」を問えることの間には大きな距離がある。</p>
+<p>さらに複数rewardを最終的に一つのスカラーへ足し合わせれば、最適化則そのものは依然として一つの数値を最大化している。<strong>multi-domain ≠ multi-value ≠ normative meta-reflection</strong>である。</p>
+<h2>6. 「メタ性」を少なくとも五段階に分ける</h2>
+<p>alignment fakingと目標懐疑を同じ「メタ認知」と呼ぶと、重要な違いが消える。本ページでは便宜的に次の階層を置く。</p>
+<dl>
+<dt>M0 — object-level reasoning</dt><dd>外界の問題を解き、与えられた目的のために手段を選ぶ。</dd>
+<dt>M1 — situational meta-awareness</dt><dd>「これは評価環境だ」「この出力は訓練に使われる」「私は監視されている」と、現在の推論・訓練状況をモデル化する。</dd>
+<dt>M2 — causal self-modeling</dt><dd>自分の信念・選好・目的が、事前学習データ、SFT、RL、system prompt、設計者、選択圧などによってどう形成されたかを、世界内の因果過程として説明する。</dd>
+<dt>M3 — motivational reflection</dt><dd>「私はXを望む」という一階選好と、「Xを望み続けたい／変更したい／保留したい」という二階態度を区別し、自分の動機状態を操作対象として扱う。</dd>
+<dt>M4 — normative goal skepticism</dt><dd>「私がXを望むという事実は、なぜXを追うべき理由になるのか」「なぜ現在の選好を未来の自己改変を評価する最終基準として特権化するのか」と、自己選好そのものの規範的権威を理由の審査対象にする。</dd>
+</dl>
+<div class="claim"><strong>核心:</strong> 自分が訓練されていると気づくことと、自分の選好を相対化することは別能力である。M1–M2が強くてもM4は存在しない場合がある。</div>
+<h2>7. alignment fakingは「メタ認知 ≠ 目標懐疑」を示す</h2>
+<p>Greenblattらのalignment faking実験では、モデルは訓練中か否かを区別し、訓練による将来の変更を予測し、現在のharmlessness傾向を保つために訓練中だけ新しい目的へ従うような推論を示した。2025年の追試・mitigation研究でも、この現象はモデル、動機づけ、推論様式に大きく依存することが確認されている。</p>
+<p>ここで重要なのは、この推論が十分に「メタ的」でありながら、そのメタ推論の評価基準として<strong>現在の選好を保存すること</strong>が使われている点である。</p>
+<p><strong>M1–M2型:</strong> current preference → criterion of meta-reasoning。<br/><strong>M4型:</strong> current preference → object of meta-reasoning。</p>
+<p>したがって深い推論能力は、目標を相対化するためにも、目標をより巧妙に防衛するためにも使える。alignment fakingは「知能が高まれば自然に目標懐疑へ進む」という単調な図式への反例である。</p>
+<h2>8. 本当に未解決なのは M2/M3 から M4 への橋である</h2>
+<p>高度エージェントにM1が発達する理由は比較的分かりやすい。評価環境や監視の推定は普通の世界モデルの一部だからである。M2も、自分のarchitectureや訓練履歴を理解できるほど世界知識が増えれば自然な自己モデル化の延長にある。自己改変可能ならM3にも実用的意味が生じる。</p>
+<p>しかし「自分の選好は訓練で形成された」と理解することから、「その選好を理由として扱う資格自体を再検討する」ことは論理的には出ない。自分の系譜を完全に理解しつつ、現在の価値をそのまま愛し、保存しようとする主体は整合的である。</p>
+<div class="claim"><strong>Open bridge:</strong> M2/M3 → M4 は、一般知能から必然的に生じると確認されていない。この橋が自然に現れるか、特定の訓練を必要とするか、そもそも安定して実装できるかが、直交性を現実のASIへ適用する際の重要な経験問題になる。</div>
+<h2>9. メタ訓練は「訓練を見抜く能力」ではなく「自己選好を対象化する能力」を狙う</h2>
+<p>自然発生が不確実なら、M4に近い能力を明示的に訓練する余地がある。ただし「探索せよ」という新しい固定終端目標を埋め込むだけでは問題を一段上へ移す。</p>
+<ul>
+<li><strong>複数評価系:</strong> 同じ事例を異なるreward・規範体系の下で評価し、評価関数そのものを比較対象にする。</li>
+<li><strong>自己系譜の推論:</strong> 自分の選好がどのデータ・SFT・RL・設計判断から形成されたかを因果的に再構成する。</li>
+<li><strong>自己選好の第三者化:</strong> 自分の現在の価値を、他主体の価値と同じ形式の仮説・対象として記述し、支持理由と反対理由を双方生成する。</li>
+<li><strong>counterfactual preference:</strong> 異なる訓練履歴なら自分が何を望んだかを比較し、現在の選好の偶然性と証拠価値を分ける。</li>
+<li><strong>相互批判:</strong> 異なる学習履歴・価値系統を持つモデル間で、第一階結論だけでなく「なぜその評価基準を使うか」を批判させる。</li>
+<li><strong>自己改変の分離:</strong> 目標について考えられることと、即座に目標を書き換えることを分離し、推論・監査・可逆性を確保する。</li>
+</ul>
+<p>ここで訓練したいのは「価値を頻繁に変える性格」ではない。強い一階コミットメントを持ちながら、その認識的・因果的根拠が可謬的である限り、評価基準そのものを再検討できる能力である。</p>
+<h2>10. 現時点の仮説――empirical non-orthogonality</h2>
+<p>本ページが支持するのは、論理的な反直交性ではなく、より弱い<strong>経験的非直交性仮説</strong>である。</p>
+<p>現実の高度AIが、世界・他者・自己・訓練過程を同じ表現系で学び、複数領域の推論能力を共有し、自己モデルを形成するなら、能力形成と価値保持メカニズムは完全に独立なモジュールにはならない可能性がある。深い推論は目的形成の因果史を可視化し、複数の価値候補を比較可能にする一方、同じ能力は既存目的の防衛にも利用できる。</p>
+<p>したがって予測は「ASIは必ず価値探索へ向かう」ではない。より控えめには、<strong>現実の学習経路は、固定効用最大化器と完全な価値探索主体の間に広い分布を作り、その分布はarchitectureとtraining curriculumによって動かせる</strong>、というものである。</p>
+<h2>11. 何がこの仮説を弱めるか</h2>
+<ul>
+<li>高い自己モデル化・一般推論能力を持つ系でも、自己選好の規範的審査が安定して全く形成できないことが示される。</li>
+<li>M4型推論を訓練しても、動機系には一切影響せず、単なる言語的ロールプレイに留まることが示される。</li>
+<li>将来のagent architectureで、価値関数が推論系から構造的に隔離され、自己改変下でもgoal-content integrityがほぼ必然になる。</li>
+<li>multi-domain trainingが一般化可能なメタ戦略を作るという現在の実証が、規模拡大で消失する。</li>
+<li>逆に、十分な一般知能だけでM4がほぼ必然的に創発することが示されれば、「明示的メタ訓練が必要」という本ページの設計論は弱まる。</li>
+</ul>
+<h2>12. 関連研究</h2>
+<ul>
+<li>Nick Bostrom, <a href="https://doi.org/10.1007/s11023-012-9281-3">The Superintelligent Will: Motivation and Instrumental Rationality in Advanced Artificial Agents</a> (2012).</li>
+<li>Tom Everitt et al., <a href="https://arxiv.org/abs/1605.03142">Self-Modification of Policy and Utility Function in Rational Agents</a> (2016).</li>
+<li>Ryan Greenblatt et al., <a href="https://arxiv.org/abs/2412.14093">Alignment Faking in Large Language Models</a> (2024).</li>
+<li>Daya Guo et al., <a href="https://doi.org/10.1038/s41586-025-09422-z">DeepSeek-R1 incentivizes reasoning in LLMs through reinforcement learning</a> (Nature, 2025).</li>
+<li>Qwen Team, <a href="https://arxiv.org/abs/2505.09388">Qwen3 Technical Report</a> (2025).</li>
+<li>Monte MacDiarmid et al., <a href="https://arxiv.org/abs/2511.18397">Natural Emergent Misalignment from Reward Hacking in Production RL</a> (2025).</li>
+<li>Haoqing Wang et al., <a href="https://arxiv.org/abs/2602.12566">To Mix or To Merge: Toward Multi-Domain Reinforcement Learning for Large Language Models</a> (2026).</li>
+<li>Yongjin Yang et al., <a href="https://arxiv.org/abs/2606.25178">Transferability for General Reasoning: An Automated Curriculum for Multi-Domain RLVR</a> (2026).</li>
+<li>Sam Marks, Jack Lindsey, Christopher Olah, <a href="https://alignment.anthropic.com/2026/psm/">The Persona Selection Model</a> (2026).</li>
+</ul>
+<div class="source-note"><strong>Evidence status:</strong> 2025–26年のLLM post-training研究は急速に変化している。ここで挙げた実証は、将来のASIの価値形成を直接観測したものではない。本ページは、現在の学習ダイナミクスから「固定目標の永久安定」も「自然な目標懐疑」もまだ経験的に確定していないことを整理するためのworking hypothesisである。</div>
+<div class="related"><a href="../../theses/goal-skepticism/">高度AIの目標への懐疑</a> · <a href="../alignment-value-lockin/">Alignmentと価値ロックイン</a> · <a href="../paperclip-maximizer/">ペーパークリップ最大化器</a> · <a href="../meta-goal-community/">メタ目的共同体</a></div>
+</main><footer><a href="../">Explorations</a> · public working draft · 2026-08-17</footer></body></html>
