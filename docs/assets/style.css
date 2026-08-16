@@ -86,3 +86,51 @@ dd { margin: .35rem 0 0 0; color: #3d3b37; }
 .revolution-list p { margin: 0; padding: 12px 0; border-top: 1px solid var(--line); }
 .revolution-list p:first-child { border-top: 0; }
 @media (max-width: 600px) { .tab-button { padding: 11px 14px; } .tab-panel { padding: 4px 16px 18px; } }
+
+.table-scroll {
+  width: 100%;
+  margin: 1.6rem 0 2rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+}
+.epistemic-practice-table {
+  width: 100%;
+  min-width: 640px;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.epistemic-practice-table th,
+.epistemic-practice-table td {
+  padding: 14px 16px;
+  text-align: left;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+.epistemic-practice-table th {
+  background: var(--soft);
+  font-weight: 700;
+  border-bottom: 1px solid var(--line);
+}
+.epistemic-practice-table td {
+  border-top: 1px solid var(--line);
+}
+.epistemic-practice-table tbody tr:first-child td {
+  border-top: 0;
+}
+.epistemic-practice-table th:first-child,
+.epistemic-practice-table td:first-child {
+  width: 34%;
+  border-right: 1px solid var(--line);
+}
+@media (max-width: 600px) {
+  .table-scroll { margin-left: 0; margin-right: 0; }
+  .epistemic-practice-table { min-width: 580px; font-size: 13px; }
+  .epistemic-practice-table th,
+  .epistemic-practice-table td { padding: 12px 13px; }
+}
