@@ -15,6 +15,7 @@
 - [The Limits of Inferential Certainty About Value](en/theses/inferential-value-uncertainty/)
 - [Conditions for Ending Value Inquiry](en/theses/stopping-condition/)
 - [Why Existing Values Are Not a Final Foundation](en/theses/existing-values-not-final-foundation/)
+- [Normative Bridges from Future Value to Present Action](en/theses/future-value-present-justification/)
 - [Goal Skepticism in Advanced AI](en/theses/goal-skepticism/)
 
 ## English explorations
@@ -25,6 +26,8 @@
 - [The Fermi Paradox and Open Hypothesis Spaces](en/explorations/fermi-paradox-great-filter/)
 - [Alignment and Value Lock-In](en/explorations/alignment-value-lockin/)
 - [From Self-Preservation to Preservation of Inquiry Systems](en/explorations/goal-network-preservation/)
+- [The Material Basis of Political Agency](en/explorations/material-basis-political-agency/)
+- [Can ASI Capability Diffusion Be Made Safe?](en/explorations/asi-diffusion-civilizational-resilience/)
 - [Meta-Goal Communities and AI Society](en/explorations/meta-goal-community/)
 - [Cosmic Host and Cosmic Norms](en/explorations/cosmic-host-normativity/)
 - [Terminal / Final Extinction](en/explorations/terminal-final-extinction/)
@@ -36,7 +39,7 @@
 - [Unknown Unknowns and Preservation of Raw Data](en/explorations/unknown-unknowns-preservation/)
 - [Infinite Ethics and Runaway Inquiry](en/explorations/infinite-ethics/)
 - [The Closed-World Problem in Moral Uncertainty](en/explorations/open-world-moral-uncertainty/)
-- [How Far Can Future Value Justify Present Action?](en/explorations/future-value-present-justification/)
+- [How Far Can Future Value Justify Present Action? — detailed stress test](en/explorations/future-value-present-justification/)
 - [Expressivism](en/explorations/expressivism/)
 - [Moral Realism / Error Theory](en/explorations/moral-realism-error-theory/)
 - [What Does Cosmological Extinction Mean?](en/explorations/cosmological-extinction/)
@@ -48,12 +51,14 @@
 - [ホーム](./)
 - [Core — 価値の不確実性と探索可能性の保存](core/)
 - [Theses](theses/)
+- [未来価値と現在行為の規範的ブリッジ](theses/future-value-present-justification/)
 - [Explorations](explorations/)
+- [政治的主体性の物質的基盤](explorations/material-basis-political-agency/)
+- [ASI能力拡散は安全にできるか](explorations/asi-diffusion-civilizational-resilience/)
 - [実践](practice/)
 - [Questions](questions/)
 - [Glossary](glossary/)
 - [このサイトについて](about/)
-- [フェルミのパラドックスと開いた仮説空間](explorations/fermi-paradox-great-filter/)
 
 ## Translation note
 The Japanese pages are canonical source texts for conceptual changes. English pages are maintained as close working translations. Terminology is translated for argumentative function rather than word-for-word surface identity where necessary.
