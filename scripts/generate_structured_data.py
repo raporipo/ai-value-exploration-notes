@@ -6,6 +6,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 import json
 import re
+import subprocess
 
 DOCS = Path("docs")
 BASE_URL = "https://raporipo.github.io/ai-value-exploration-notes/"
@@ -18,7 +19,12 @@ STRUCTURED_DATA_RE = re.compile(
     r'<script\s+id=["\']structured-data["\']\s+type=["\']application/ld\+json["\']>.*?</script>\s*',
     re.IGNORECASE | re.DOTALL,
 )
-DATE_RE = re.compile(r"\b20\d{2}-\d{2}-\d{2}\b")
+
+# Generated commits update JSON-LD and sitemap metadata, not the human-visible
+# article content. Exclude them when deriving Article.dateModified.
+GENERATED_COMMIT_SUBJECTS = {
+    "Update structured data and sitemap",
+}
 
 SECTION_LABELS = {
     "about": "About",
@@ -37,14 +43,11 @@ class PageMetadataParser(HTMLParser):
         self.lang = ""
         self.title_parts: list[str] = []
         self.h1_parts: list[str] = []
-        self.meta_parts: list[str] = []
         self.description = ""
         self.canonical = ""
         self._in_title = False
         self._in_h1 = False
         self._captured_h1 = False
-        self._in_page_meta = False
-        self._captured_page_meta = False
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         values = dict(attrs)
@@ -63,10 +66,6 @@ class PageMetadataParser(HTMLParser):
             if "canonical" in rel:
                 self.canonical = values.get("href") or ""
 
-        classes = (values.get("class") or "").split()
-        if "meta" in classes and not self._captured_page_meta:
-            self._in_page_meta = True
-
     def handle_endtag(self, tag: str) -> None:
         tag = tag.lower()
         if tag == "title":
@@ -74,17 +73,12 @@ class PageMetadataParser(HTMLParser):
         elif tag == "h1" and self._in_h1:
             self._in_h1 = False
             self._captured_h1 = True
-        elif self._in_page_meta:
-            self._in_page_meta = False
-            self._captured_page_meta = True
 
     def handle_data(self, data: str) -> None:
         if self._in_title:
             self.title_parts.append(data)
         if self._in_h1:
             self.h1_parts.append(data)
-        if self._in_page_meta:
-            self.meta_parts.append(data)
 
     @property
     def title(self) -> str:
@@ -94,11 +88,29 @@ class PageMetadataParser(HTMLParser):
     def h1(self) -> str:
         return " ".join("".join(self.h1_parts).split())
 
-    @property
-    def modified_date(self) -> str | None:
-        text = " ".join("".join(self.meta_parts).split())
-        match = DATE_RE.search(text)
-        return match.group(0) if match else None
+
+def content_modified_datetime(page: Path) -> str | None:
+    """Return the newest non-generated commit time for a page as ISO 8601."""
+    output = subprocess.check_output(
+        [
+            "git",
+            "log",
+            "--format=%cI%x09%s",
+            "--",
+            page.as_posix(),
+        ],
+        text=True,
+    )
+
+    for line in output.splitlines():
+        if not line.strip():
+            continue
+        timestamp, _, subject = line.partition("\t")
+        if subject in GENERATED_COMMIT_SUBJECTS:
+            continue
+        return timestamp.strip() or None
+
+    return None
 
 
 def localized_segments(page: Path) -> tuple[str, list[str]]:
@@ -223,8 +235,11 @@ def build_graph(page: Path, meta: PageMetadataParser) -> dict:
         }
         if description:
             article["description"] = description
-        if meta.modified_date:
-            article["dateModified"] = meta.modified_date
+
+        modified = content_modified_datetime(page)
+        if modified:
+            article["dateModified"] = modified
+
         graph.append(article)
 
     insert_at = 1 if graph and graph[0].get("@type") == "WebSite" else 0
@@ -267,8 +282,11 @@ def main() -> None:
 
     for page in pages:
         _, segments = localized_segments(page)
-        articles += int(is_article(segments))
+        article = is_article(segments)
+        articles += int(article)
         changed += int(update_page(page))
+        if article:
+            print(f"{page}: dateModified={content_modified_datetime(page)}")
 
     print(
         f"Structured data processed for {len(pages)} pages "
