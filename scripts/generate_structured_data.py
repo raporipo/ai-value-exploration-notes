@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from html.parser import HTMLParser
 from pathlib import Path
+import html
 import json
 import re
 import subprocess
@@ -19,11 +20,16 @@ STRUCTURED_DATA_RE = re.compile(
     r'<script\s+id=["\']structured-data["\']\s+type=["\']application/ld\+json["\']>.*?</script>\s*',
     re.IGNORECASE | re.DOTALL,
 )
+SOCIAL_META_RE = re.compile(
+    r'<!-- generated-social-meta:start -->.*?<!-- generated-social-meta:end -->\s*',
+    re.IGNORECASE | re.DOTALL,
+)
 
-# Generated commits update JSON-LD and sitemap metadata, not the human-visible
+# Generated commits update machine-readable metadata, not the human-visible
 # article content. Exclude them when deriving Article.dateModified.
 GENERATED_COMMIT_SUBJECTS = {
     "Update structured data and sitemap",
+    "Update site metadata and sitemap",
 }
 
 SECTION_LABELS = {
@@ -36,6 +42,11 @@ SECTION_LABELS = {
     "theses": "Theses",
 }
 
+OG_LOCALES = {
+    "ja": "ja_JP",
+    "en": "en_US",
+}
+
 
 class PageMetadataParser(HTMLParser):
     def __init__(self) -> None:
@@ -45,6 +56,7 @@ class PageMetadataParser(HTMLParser):
         self.h1_parts: list[str] = []
         self.description = ""
         self.canonical = ""
+        self.alternate_languages: set[str] = set()
         self._in_title = False
         self._in_h1 = False
         self._captured_h1 = False
@@ -65,6 +77,10 @@ class PageMetadataParser(HTMLParser):
             rel = (values.get("rel") or "").lower().split()
             if "canonical" in rel:
                 self.canonical = values.get("href") or ""
+            if "alternate" in rel:
+                hreflang = (values.get("hreflang") or "").lower()
+                if hreflang and hreflang != "x-default":
+                    self.alternate_languages.add(hreflang)
 
     def handle_endtag(self, tag: str) -> None:
         tag = tag.lower()
@@ -248,19 +264,74 @@ def build_graph(page: Path, meta: PageMetadataParser) -> dict:
     return {"@context": "https://schema.org", "@graph": graph}
 
 
-def render_block(data: dict) -> str:
+def render_structured_data(data: dict) -> str:
     payload = json.dumps(data, ensure_ascii=False, indent=2)
     payload = payload.replace("</", "<\\/")
     return f'<script id="structured-data" type="application/ld+json">\n{payload}\n</script>\n'
 
 
+def meta_tag(*, property_name: str | None = None, name: str | None = None, content: str) -> str:
+    if (property_name is None) == (name is None):
+        raise ValueError("Provide exactly one of property_name or name")
+    attribute = (
+        f'property="{html.escape(property_name, quote=True)}"'
+        if property_name is not None
+        else f'name="{html.escape(name, quote=True)}"'
+    )
+    return f'<meta {attribute} content="{html.escape(content, quote=True)}"/>'
+
+
+def render_social_meta(page: Path, meta: PageMetadataParser) -> str:
+    lang, segments = localized_segments(page)
+    canonical = meta.canonical.strip()
+    title = meta.h1 or meta.title or SITE_NAME
+    description = meta.description.strip()
+    og_type = "article" if is_article(segments) else "website"
+    locale = OG_LOCALES.get(lang)
+
+    if not canonical:
+        raise ValueError(f"Missing canonical URL: {page}")
+
+    lines = [
+        "<!-- generated-social-meta:start -->",
+        meta_tag(property_name="og:title", content=title),
+    ]
+    if description:
+        lines.append(meta_tag(property_name="og:description", content=description))
+    lines.extend(
+        [
+            meta_tag(property_name="og:url", content=canonical),
+            meta_tag(property_name="og:type", content=og_type),
+            meta_tag(property_name="og:site_name", content=SITE_NAME),
+        ]
+    )
+    if locale:
+        lines.append(meta_tag(property_name="og:locale", content=locale))
+
+    for alternate in sorted(meta.alternate_languages - {lang}):
+        alternate_locale = OG_LOCALES.get(alternate)
+        if alternate_locale:
+            lines.append(meta_tag(property_name="og:locale:alternate", content=alternate_locale))
+
+    # X/Twitter can fall back to Open Graph for title/description, but an
+    # explicit summary card makes the intended card type deterministic.
+    lines.append(meta_tag(name="twitter:card", content="summary"))
+    lines.append("<!-- generated-social-meta:end -->")
+    lines.append("")
+    return "\n".join(lines)
+
+
 def update_page(page: Path) -> bool:
     text = page.read_text(encoding="utf-8")
-    clean = STRUCTURED_DATA_RE.sub("", text)
+    clean = SOCIAL_META_RE.sub("", text)
+    clean = STRUCTURED_DATA_RE.sub("", clean)
 
     parser = PageMetadataParser()
     parser.feed(clean)
-    block = render_block(build_graph(page, parser))
+
+    social_block = render_social_meta(page, parser)
+    structured_block = render_structured_data(build_graph(page, parser))
+    block = social_block + structured_block
 
     match = re.search(r"</head>", clean, re.IGNORECASE)
     if match is None:
@@ -289,7 +360,7 @@ def main() -> None:
             print(f"{page}: dateModified={content_modified_datetime(page)}")
 
     print(
-        f"Structured data processed for {len(pages)} pages "
+        f"Site metadata processed for {len(pages)} pages "
         f"({articles} Article pages); {changed} files changed"
     )
 
