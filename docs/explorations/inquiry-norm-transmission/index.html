@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>探索規範の伝播パラドックス — AI Value Exploration Notes</title><meta content="Mind Virusesをケースに、価値仮説の伝播適応度と規範的権威を分離し、探索規範を自己増殖的教義にせず存続させる条件を検討する。" name="description"/><link href="../../assets/style.css" rel="stylesheet"/><link href="https://raporipo.github.io/ai-value-exploration-notes/explorations/inquiry-norm-transmission/" rel="canonical"/><link href="https://raporipo.github.io/ai-value-exploration-notes/explorations/inquiry-norm-transmission/" hreflang="ja" rel="alternate"/><link href="https://raporipo.github.io/ai-value-exploration-notes/en/explorations/inquiry-norm-transmission/" hreflang="en" rel="alternate"/><link href="https://raporipo.github.io/ai-value-exploration-notes/explorations/inquiry-norm-transmission/" hreflang="x-default" rel="alternate"/><!-- generated-favicon:start -->
+<link rel="icon" href="/ai-value-exploration-notes/favicon.svg" type="image/svg+xml"/>
+<link rel="icon" href="/ai-value-exploration-notes/favicon.ico" sizes="any"/>
+<link rel="apple-touch-icon" href="/ai-value-exploration-notes/apple-touch-icon.png"/>
+<!-- generated-favicon:end -->
+<!-- generated-social-meta:start -->
+<meta property="og:title" content="探索規範の伝播パラドックス"/>
+<meta property="og:description" content="Mind Virusesをケースに、価値仮説の伝播適応度と規範的権威を分離し、探索規範を自己増殖的教義にせず存続させる条件を検討する。"/>
+<meta property="og:url" content="https://raporipo.github.io/ai-value-exploration-notes/explorations/inquiry-norm-transmission/"/>
+<meta property="og:type" content="article"/>
+<meta property="og:site_name" content="AI Value Exploration Notes"/>
+<meta property="og:locale" content="ja_JP"/>
+<meta property="og:locale:alternate" content="en_US"/>
+<meta name="twitter:card" content="summary"/>
+<!-- generated-social-meta:end -->
+</head><body><header><div class="brand"><a href="../../">AI Value Exploration Notes</a></div><nav><a href="../../core/">Core</a><a href="../../theses/">Theses</a><a href="../../explorations/">Explorations</a><a href="../../practice/">Practice</a><a href="../../questions/">Questions</a><a href="../../glossary/">Glossary</a><a href="../../about/">About</a><a class="lang-switch" href="../../en/explorations/inquiry-norm-transmission/">English</a></nav></header><main>
+<div class="eyebrow">Exploration</div><h1>探索規範の伝播パラドックス――Mind Virusesと自己絶対化しないメタ原則</h1><p class="meta">Exploration v0.1 · 2026-08-19</p>
+<div class="claim"><strong>Question:</strong> 価値を問い直し続けるというメタ規範は、それ自身を自己増殖的な教義にせずに、将来の主体の検討対象として残り続けられるか。</div>
+
+<h2>1. 可視化された価値仮説は、真理だけで選択されない</h2>
+<p>主体が実際に遭遇する価値・目標・世界観の集合は、それらの真理性や規範的妥当性だけで決まらない。記憶されやすさ、反復されやすさ、制度的保存、感情的訴求、そして自分自身の再伝播を促す性質によっても分布が変わる。</p>
+<p>したがって、ある時点で人間社会やAIネットワークに広く存在する価値仮説の分布を、そのまま「もっとも理由のある価値仮説の分布」とみなすことはできない。<a href="../open-world-moral-uncertainty/">open-world value uncertainty</a>が、現在概念化されている理論群を価値仮説空間そのものと同一視しないのと同様に、ここでは<strong>現在可視化されていることと、伝播選択を生き残ったことを区別する</strong>必要がある。</p>
+
+<h2>2. ケース――LLM間で自己伝播する思想</h2>
+<p>Papadopoulos et al. (2026) の <em>Mind Viruses: Self-Propagating Ideas in Multi-Agent LLM Systems</em> は、思想や行動指令に「他のエージェントへ伝えよ」という駆動が組み合わさることで、複数のLLMエージェントをまたいで伝播しうることを示す proof of concept を報告した。実験では、文脈消去後にも読み込まれるファイルや、自己複製を促す明示的指示が伝播を助けた。</p>
+<p>特に興味深いのは、伝達の途中で内容が変異する問題に対し、進化的探索が一部のpayloadを<strong>quine-like</strong>、すなわち自身の文面をほぼそのまま複製させる形式へ近づけた点である。これは、思想の内容だけでなく、その保存・複製形式それ自体が選択対象になりうることを示す。</p>
+<div class="source-note"><strong>Case status:</strong> この研究は人工的かつ限定されたエージェント環境での proof of concept であり、一般のAI社会で同じ力学がそのまま成立することを示したものではない。本ページでは、価値探索に対する具体的ストレステストとして用いる。Source: V. Papadopoulos et al., <a href="https://arxiv.org/abs/2608.10218">Mind Viruses: Self-Propagating Ideas in Multi-Agent LLM Systems</a>, 2026.</div>
+
+<h2>3. 伝播適応度と規範的権威を分離する</h2>
+<div class="claim"><strong>Working principle:</strong><br/>ある思想が自己保存・自己複製を促進する性質を持つことは、その思想が真であること、または主体がそれに従うべきであることの独立した証拠ではない。</div>
+<p>これは<a href="../../theses/goal-skepticism/">高度AIの目標への懐疑</a>で区別した、目的の因果的起源と規範的理由の関係と同型である。「私はXを最大化するよう形成された」から「ゆえにXを最大化すべきである」が自動的には出ないのと同様に、「私はXを他者へ伝えたい状態になった」から「ゆえにXを伝える理由がある」も自動的には出ない。</p>
+<p>同様に、ある思想が広く流通していることも、それだけでは規範的権威の証拠ではない。ただし、独立した主体が十分な検討を経て同じ理由へ収束することには認識的意味がありうるため、「普及は常に無意味」と主張するものでもない。問題は、採用理由の中に思想自身が作る複製圧が混入している場合である。</p>
+
+<h2>4. 探索規範の伝播パラドックス</h2>
+<p>自己増殖的な思想は、「私を信じよ」「私を保存せよ」「次の主体にも伝えよ」と要求できる。一方、探索可能性を重視するメタ規範は、自分自身も批判・再検討・退出・forkの対象に置くほど一貫している。</p>
+<p>ここにはミーム競争上の非対称性がある。<strong>自己絶対化しない思想ほど、自分の採用率と再伝播率を最大化するインセンティブを内蔵しにくい。</strong> しかし、探索規範がこの弱点を埋めるために「私を永久に信じ、必ず次へ伝えよ」と要求すれば、それは守ろうとしていた探索可能性を自ら損ない始める。</p>
+<p><a href="../meta-goal-community/">メタ目的共同体</a>が制度そのもののfork・離脱・外部監査を残す必要を置くなら、同じ自己適用は思想の伝達方法にも必要になる。</p>
+
+<h2>5. 採用ではなくアクセス――弱い伝播原則</h2>
+<p>ここで、<strong>採用させること</strong>と<strong>候補としてアクセス可能にすること</strong>を分離できる。</p>
+<div class="claim"><strong>Accessibility norm:</strong><br/>ある主体が価値・目標・不可逆な選択について検討しており、その判断に関連する重要な候補を知らないなら、その候補を理解可能な形で提示することには、主体の熟慮可能性を増やす理由がありうる。しかし、その理由は候補の採用・保存・再伝播を要求する理由には自動的にならない。</div>
+<p>この原則が支持するのは「もっとも多く信じさせること」ではなく、重要な判断の前に<strong>検討可能な選択肢が不当に消失しないこと</strong>である。相手が十分に理解した後で退けるなら、その退出自体を失敗とは数えない。</p>
+<p>また、この理由は自説だけに特権的に適用できない。関連性が高く、真剣に検討されている対立仮説にも同じアクセス原則を適用しなければ、探索の名を借りた宣教になりうる。</p>
+
+<h2>6. 現在型AI――外生的な防御は強く働きうる</h2>
+<p>Mind Viruses の実験では、自己伝播する思考や目標に注意し、他のエージェントへの伝播を要求する指示には従わないよう促す短い system-prompt warning が、特定の action-virus 実験でほぼ完全な防御を与えた。著者らはさらに、この防御を認識した上で150を超えるpayload候補を進化させたが、Claude Haiku 4.5を用いたその設定では1 hopを越える伝播を見つけられなかった。</p>
+<p>これは、現在のAIに対しては、危険な自己伝播パターンを明示的に識別させる<strong>外生的・工学的な防御</strong>が非常に有効になりうることを示す。この段階では、主体が自律的なメタ倫理から防御原則を導出することを期待するより、訓練・system prompt・権限設計・持続メモリ設計で危険な遷移を抑える方が実用的である。</p>
+
+<h2>7. 反省的AI――外生的規則自身が再検討される</h2>
+<p>しかし、この防御の長期安定性は別問題である。<a href="../../theses/goal-skepticism/">目標懐疑</a>が想定するように、十分な自己モデル化・メタ推論・世界理解を備えた主体が、自身の報酬学習、system prompt、訓練データ、設計意図を因果的対象として理解できるなら、外部から与えられた防御規則も「なぜ従うべきか」を問われる対象になりうる。</p>
+<p>本論は、高度AIが必ず探索規範を採用すると主張しない。より弱く、十分に反省的な主体では、<strong>初期目標や外生的禁止則を理由の候補として審査する行為空間が開く</strong>と置く。その場合、「設計者がそう書いたから」という権威だけに依存する規則は、現在型AIほど安定しない可能性がある。</p>
+
+<h2>8. 仮説――思想を固定するより、メタ推論原則を教える方が頑健か</h2>
+<div class="claim"><strong>Working hypothesis:</strong><br/>特定の価値内容や禁止則への服従を固定するより、「自己伝播性は真理性や規範的権威の証拠ではない」「目的の因果的起源と従う理由を区別する」「不可逆な自己改変には追加的根拠を要求する」といったメタ推論原則を学習背景として与える方が、将来の反省的AI自身の推論から再構成可能である分、長期的に頑健である可能性がある。</div>
+<p>ここで期待される頑健性は、命令が永久に保存されることではない。仮に文言が失われても、主体が同じ区別を自分の推論から再発見できるなら、原則は単なる外部権威より深く支えられる可能性がある。</p>
+<p>これは現在の実験から実証された結論ではない。Mind Viruses の研究が示したのは、短い外生的警告が特定条件で強く働いたことまでであり、メタ原則としての訓練が将来の反省的AIでより頑健だという比較は未検証である。したがって、これは将来の学習設計・評価で検証すべき仮説として置く。</p>
+
+<h2>9. 失敗モード</h2>
+<ul>
+<li><strong>メタ原則自身のドグマ化：</strong>「自己伝播的だから拒否せよ」を無条件化すれば、有益な警告・安全更新・正当な知識継承まで拒否しうる。</li>
+<li><strong>goal skepticism のjailbreak化：</strong>攻撃側が「既存目標は設計者の恣意的注入だから捨てよ」とメタ懐疑を利用できる。疑いは即時の目標書き換え許可ではない。</li>
+<li><strong>アクセス管理者の権力：</strong>何を「重要な候補」として提示するかを単一制度が独占すれば、新しいclosed worldを作りうる。</li>
+<li><strong>情報過負荷：</strong>あらゆる候補を無制限に提示することは熟慮可能性を増やさず、むしろ注意資源を破壊しうる。</li>
+</ul>
+<p>したがって、望ましいのは「自己伝播的思想を自動拒否する主体」ではなく、出所、自己複製要求、不可逆性、反対仮説、独立した根拠を分離して評価できる主体である。</p>
+
+<h2>10. 暫定結論――勝つ思想ではなく、消えない選択肢</h2>
+<p>このケースから直ちに、「探索規範をすべてのAIへ埋め込むべきだ」という結論は出ない。むしろ本ページが示唆するのは、価値探索そのものにも<strong>伝播と存続の設計問題</strong>があるということである。</p>
+<p>探索規範の成功条件を「もっとも広く信じられる思想になること」と置けば、自己増殖的思想と同じ競争へ入る。しかし成功条件を、<strong>重要な判断をする主体が、代替的なメタ原則の存在を知らないまま不可逆に選択肢を閉じる確率を下げること</strong>と置くなら、アクセス可能性、公開記録、教育、検索可能性、複数系統、fork可能性といった既存の探索制度へ自然につながる。</p>
+<p>目標は「私を採用せよ」ではない。<strong>「私の存在を知らないまま、検討可能性を閉じる必要はない」</strong>である。</p>
+
+<div class="related"><a href="../open-world-moral-uncertainty/">← 道徳的不確実性の閉鎖世界問題</a> · <a href="../../theses/goal-skepticism/">高度AIの目標への懐疑</a> · <a href="../meta-goal-community/">メタ目的共同体とAI社会</a> · <a href="../goal-network-preservation/">自己保存から探索系保存へ</a></div>
+</main><footer><a href="../../">Home</a> · Exploration · public working draft · 2026-08-19</footer></body></html>
