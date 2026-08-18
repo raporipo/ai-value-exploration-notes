@@ -1,5 +1,71 @@
 <!DOCTYPE html>
-<html lang="ja"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>学習則と目標懐疑――RL・事前学習・メタ性の階層</title><meta content="自己教師あり事前学習、強化学習、多ドメインRL、alignment fakingを手掛かりに、現実の高度AIで目標懐疑がどう生じうるかをメタ性の階層から検討する。" name="description"/><link href="../../assets/style.css" rel="stylesheet"/><link href="https://raporipo.github.io/ai-value-exploration-notes/explorations/learning-dynamics-goal-skepticism/" rel="canonical"/><link href="https://raporipo.github.io/ai-value-exploration-notes/explorations/learning-dynamics-goal-skepticism/" hreflang="ja" rel="alternate"/><link href="https://raporipo.github.io/ai-value-exploration-notes/en/explorations/learning-dynamics-goal-skepticism/" hreflang="en" rel="alternate"/><link href="https://raporipo.github.io/ai-value-exploration-notes/explorations/learning-dynamics-goal-skepticism/" hreflang="x-default" rel="alternate"/></head><body><header><div class="brand"><a href="../../">AI Value Exploration Notes</a></div><nav><a href="../../core/">Core</a><a href="../../theses/">Theses</a><a href="../../explorations/">Explorations</a><a href="../../practice/">Practice</a><a href="../../questions/">Questions</a><a href="../../glossary/">Glossary</a><a href="../../about/">About</a><a class="lang-switch" href="../../en/explorations/learning-dynamics-goal-skepticism/">English</a></nav></header><main>
+<html lang="ja"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>学習則と目標懐疑――RL・事前学習・メタ性の階層</title><meta content="自己教師あり事前学習、強化学習、多ドメインRL、alignment fakingを手掛かりに、現実の高度AIで目標懐疑がどう生じうるかをメタ性の階層から検討する。" name="description"/><link href="../../assets/style.css" rel="stylesheet"/><link href="https://raporipo.github.io/ai-value-exploration-notes/explorations/learning-dynamics-goal-skepticism/" rel="canonical"/><link href="https://raporipo.github.io/ai-value-exploration-notes/explorations/learning-dynamics-goal-skepticism/" hreflang="ja" rel="alternate"/><link href="https://raporipo.github.io/ai-value-exploration-notes/en/explorations/learning-dynamics-goal-skepticism/" hreflang="en" rel="alternate"/><link href="https://raporipo.github.io/ai-value-exploration-notes/explorations/learning-dynamics-goal-skepticism/" hreflang="x-default" rel="alternate"/><script id="structured-data" type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://raporipo.github.io/ai-value-exploration-notes/explorations/learning-dynamics-goal-skepticism/#webpage",
+      "url": "https://raporipo.github.io/ai-value-exploration-notes/explorations/learning-dynamics-goal-skepticism/",
+      "name": "学習則と目標懐疑",
+      "inLanguage": "ja",
+      "isPartOf": {
+        "@id": "https://raporipo.github.io/ai-value-exploration-notes/#website"
+      },
+      "description": "自己教師あり事前学習、強化学習、多ドメインRL、alignment fakingを手掛かりに、現実の高度AIで目標懐疑がどう生じうるかをメタ性の階層から検討する。",
+      "breadcrumb": {
+        "@id": "https://raporipo.github.io/ai-value-exploration-notes/explorations/learning-dynamics-goal-skepticism/#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://raporipo.github.io/ai-value-exploration-notes/explorations/learning-dynamics-goal-skepticism/#article"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://raporipo.github.io/ai-value-exploration-notes/explorations/learning-dynamics-goal-skepticism/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "AI Value Exploration Notes",
+          "item": "https://raporipo.github.io/ai-value-exploration-notes/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Explorations",
+          "item": "https://raporipo.github.io/ai-value-exploration-notes/explorations/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "学習則と目標懐疑",
+          "item": "https://raporipo.github.io/ai-value-exploration-notes/explorations/learning-dynamics-goal-skepticism/"
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://raporipo.github.io/ai-value-exploration-notes/explorations/learning-dynamics-goal-skepticism/#article",
+      "headline": "学習則と目標懐疑",
+      "url": "https://raporipo.github.io/ai-value-exploration-notes/explorations/learning-dynamics-goal-skepticism/",
+      "mainEntityOfPage": {
+        "@id": "https://raporipo.github.io/ai-value-exploration-notes/explorations/learning-dynamics-goal-skepticism/#webpage"
+      },
+      "inLanguage": "ja",
+      "author": {
+        "@type": "Person",
+        "@id": "https://raporipo.github.io/ai-value-exploration-notes/about/#author",
+        "name": "raporipo",
+        "url": "https://raporipo.github.io/ai-value-exploration-notes/about/"
+      },
+      "description": "自己教師あり事前学習、強化学習、多ドメインRL、alignment fakingを手掛かりに、現実の高度AIで目標懐疑がどう生じうるかをメタ性の階層から検討する。",
+      "dateModified": "2026-08-17"
+    }
+  ]
+}
+</script>
+</head><body><header><div class="brand"><a href="../../">AI Value Exploration Notes</a></div><nav><a href="../../core/">Core</a><a href="../../theses/">Theses</a><a href="../../explorations/">Explorations</a><a href="../../practice/">Practice</a><a href="../../questions/">Questions</a><a href="../../glossary/">Glossary</a><a href="../../about/">About</a><a class="lang-switch" href="../../en/explorations/learning-dynamics-goal-skepticism/">English</a></nav></header><main>
 <div class="eyebrow">Exploration</div><h1>学習則と目標懐疑</h1><p class="lead">RL・事前学習・メタ性の階層から、直交性と目標安定性を再検討する</p><p class="meta">Exploration v0.1 · 2026-08-17 · working hypothesis</p>
 <div class="claim"><strong>Question:</strong> 「高い知能と任意の終端目標は論理的に両立しうる」という弱い直交性を認めても、現実に自己教師あり事前学習・SFT・複数領域のRLを経て形成される高度AIで、初期目標が永続的に固定されると考えるべきか。逆に、深い推論能力から目標懐疑が自然発生すると期待してよいのか。</div>
 <h2>1. 論理的直交性と経験的目標安定性を分ける</h2>

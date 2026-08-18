@@ -1,5 +1,71 @@
 <!DOCTYPE html>
-<html lang="ja"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>ベイズ更新と開いた仮説空間 — AI Value Exploration Notes</title><meta content="ベイズ更新が未概念化仮説をどう扱えるかを、new theory problem、unawareness、reverse Bayesianism、model misspecificationと価値探索から再検討する。" name="description"/><link href="../../assets/style.css" rel="stylesheet"/><link href="https://raporipo.github.io/ai-value-exploration-notes/explorations/bayesian-open-hypothesis-space/" rel="canonical"/><link href="https://raporipo.github.io/ai-value-exploration-notes/explorations/bayesian-open-hypothesis-space/" hreflang="ja" rel="alternate"/><link href="https://raporipo.github.io/ai-value-exploration-notes/en/explorations/bayesian-open-hypothesis-space/" hreflang="en" rel="alternate"/><link href="https://raporipo.github.io/ai-value-exploration-notes/explorations/bayesian-open-hypothesis-space/" hreflang="x-default" rel="alternate"/></head><body><header><div class="brand"><a href="../../">AI Value Exploration Notes</a></div><nav><a href="../../core/">Core</a><a href="../../theses/">Theses</a><a href="../../explorations/">Explorations</a><a href="../../practice/">Practice</a><a href="../../questions/">Questions</a><a href="../../glossary/">Glossary</a><a href="../../about/">About</a><a class="lang-switch" href="../../en/explorations/bayesian-open-hypothesis-space/">English</a></nav></header><main>
+<html lang="ja"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>ベイズ更新と開いた仮説空間 — AI Value Exploration Notes</title><meta content="ベイズ更新が未概念化仮説をどう扱えるかを、new theory problem、unawareness、reverse Bayesianism、model misspecificationと価値探索から再検討する。" name="description"/><link href="../../assets/style.css" rel="stylesheet"/><link href="https://raporipo.github.io/ai-value-exploration-notes/explorations/bayesian-open-hypothesis-space/" rel="canonical"/><link href="https://raporipo.github.io/ai-value-exploration-notes/explorations/bayesian-open-hypothesis-space/" hreflang="ja" rel="alternate"/><link href="https://raporipo.github.io/ai-value-exploration-notes/en/explorations/bayesian-open-hypothesis-space/" hreflang="en" rel="alternate"/><link href="https://raporipo.github.io/ai-value-exploration-notes/explorations/bayesian-open-hypothesis-space/" hreflang="x-default" rel="alternate"/><script id="structured-data" type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://raporipo.github.io/ai-value-exploration-notes/explorations/bayesian-open-hypothesis-space/#webpage",
+      "url": "https://raporipo.github.io/ai-value-exploration-notes/explorations/bayesian-open-hypothesis-space/",
+      "name": "ベイズ更新と開いた仮説空間――未概念化仮説はどのように更新へ入るのか",
+      "inLanguage": "ja",
+      "isPartOf": {
+        "@id": "https://raporipo.github.io/ai-value-exploration-notes/#website"
+      },
+      "description": "ベイズ更新が未概念化仮説をどう扱えるかを、new theory problem、unawareness、reverse Bayesianism、model misspecificationと価値探索から再検討する。",
+      "breadcrumb": {
+        "@id": "https://raporipo.github.io/ai-value-exploration-notes/explorations/bayesian-open-hypothesis-space/#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://raporipo.github.io/ai-value-exploration-notes/explorations/bayesian-open-hypothesis-space/#article"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://raporipo.github.io/ai-value-exploration-notes/explorations/bayesian-open-hypothesis-space/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "AI Value Exploration Notes",
+          "item": "https://raporipo.github.io/ai-value-exploration-notes/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Explorations",
+          "item": "https://raporipo.github.io/ai-value-exploration-notes/explorations/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "ベイズ更新と開いた仮説空間――未概念化仮説はどのように更新へ入るのか",
+          "item": "https://raporipo.github.io/ai-value-exploration-notes/explorations/bayesian-open-hypothesis-space/"
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://raporipo.github.io/ai-value-exploration-notes/explorations/bayesian-open-hypothesis-space/#article",
+      "headline": "ベイズ更新と開いた仮説空間――未概念化仮説はどのように更新へ入るのか",
+      "url": "https://raporipo.github.io/ai-value-exploration-notes/explorations/bayesian-open-hypothesis-space/",
+      "mainEntityOfPage": {
+        "@id": "https://raporipo.github.io/ai-value-exploration-notes/explorations/bayesian-open-hypothesis-space/#webpage"
+      },
+      "inLanguage": "ja",
+      "author": {
+        "@type": "Person",
+        "@id": "https://raporipo.github.io/ai-value-exploration-notes/about/#author",
+        "name": "raporipo",
+        "url": "https://raporipo.github.io/ai-value-exploration-notes/about/"
+      },
+      "description": "ベイズ更新が未概念化仮説をどう扱えるかを、new theory problem、unawareness、reverse Bayesianism、model misspecificationと価値探索から再検討する。",
+      "dateModified": "2026-08-11"
+    }
+  ]
+}
+</script>
+</head><body><header><div class="brand"><a href="../../">AI Value Exploration Notes</a></div><nav><a href="../../core/">Core</a><a href="../../theses/">Theses</a><a href="../../explorations/">Explorations</a><a href="../../practice/">Practice</a><a href="../../questions/">Questions</a><a href="../../glossary/">Glossary</a><a href="../../about/">About</a><a class="lang-switch" href="../../en/explorations/bayesian-open-hypothesis-space/">English</a></nav></header><main>
 <div class="eyebrow">Exploration</div><h1>ベイズ更新と開いた仮説空間――未概念化仮説はどのように更新へ入るのか</h1><p class="meta">Exploration v0.1 · 2026-08-11</p>
 <div class="claim"><strong>Question:</strong> ベイズ更新は、まだ仮説空間に入っていない仮説を扱えるのか。現在の候補集合の中で極めて高い事後確率を得ることと、その候補集合自体を十分に網羅的だとみなすことは、同じ認識的主張なのか。</div>
 <h2>1. 問題は「Bayesか反Bayesか」ではない</h2>

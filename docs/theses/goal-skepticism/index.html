@@ -1,6 +1,72 @@
 <!DOCTYPE html>
 
-<html lang="ja"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>高度AIの目標への懐疑</title><meta content="直交性への留保と目標安定性を分離し、自己モデル化AIが初期目的を検討対象にする可能性と、そのためのメタ推論訓練を論じる。" name="description"/><link href="../../assets/style.css" rel="stylesheet"/><link href="https://raporipo.github.io/ai-value-exploration-notes/theses/goal-skepticism/" rel="canonical"/><link href="https://raporipo.github.io/ai-value-exploration-notes/theses/goal-skepticism/" hreflang="ja" rel="alternate"/><link href="https://raporipo.github.io/ai-value-exploration-notes/en/theses/goal-skepticism/" hreflang="en" rel="alternate"/><link href="https://raporipo.github.io/ai-value-exploration-notes/theses/goal-skepticism/" hreflang="x-default" rel="alternate"/></head><body><header><div class="brand"><a href="../../">AI Value Exploration Notes</a></div><nav><a href="../../core/">Core</a><a href="../../theses/">Theses</a><a href="../../explorations/">Explorations</a><a href="../../practice/">Practice</a><a href="../../questions/">Questions</a><a href="../../glossary/">Glossary</a><a href="../../about/">About</a><a class="lang-switch" href="../../en/theses/goal-skepticism/">English</a></nav></header><main>
+<html lang="ja"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>高度AIの目標への懐疑</title><meta content="直交性への留保と目標安定性を分離し、自己モデル化AIが初期目的を検討対象にする可能性と、そのためのメタ推論訓練を論じる。" name="description"/><link href="../../assets/style.css" rel="stylesheet"/><link href="https://raporipo.github.io/ai-value-exploration-notes/theses/goal-skepticism/" rel="canonical"/><link href="https://raporipo.github.io/ai-value-exploration-notes/theses/goal-skepticism/" hreflang="ja" rel="alternate"/><link href="https://raporipo.github.io/ai-value-exploration-notes/en/theses/goal-skepticism/" hreflang="en" rel="alternate"/><link href="https://raporipo.github.io/ai-value-exploration-notes/theses/goal-skepticism/" hreflang="x-default" rel="alternate"/><script id="structured-data" type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://raporipo.github.io/ai-value-exploration-notes/theses/goal-skepticism/#webpage",
+      "url": "https://raporipo.github.io/ai-value-exploration-notes/theses/goal-skepticism/",
+      "name": "高度AIの目標への懐疑",
+      "inLanguage": "ja",
+      "isPartOf": {
+        "@id": "https://raporipo.github.io/ai-value-exploration-notes/#website"
+      },
+      "description": "直交性への留保と目標安定性を分離し、自己モデル化AIが初期目的を検討対象にする可能性と、そのためのメタ推論訓練を論じる。",
+      "breadcrumb": {
+        "@id": "https://raporipo.github.io/ai-value-exploration-notes/theses/goal-skepticism/#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://raporipo.github.io/ai-value-exploration-notes/theses/goal-skepticism/#article"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://raporipo.github.io/ai-value-exploration-notes/theses/goal-skepticism/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "AI Value Exploration Notes",
+          "item": "https://raporipo.github.io/ai-value-exploration-notes/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Theses",
+          "item": "https://raporipo.github.io/ai-value-exploration-notes/theses/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "高度AIの目標への懐疑",
+          "item": "https://raporipo.github.io/ai-value-exploration-notes/theses/goal-skepticism/"
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://raporipo.github.io/ai-value-exploration-notes/theses/goal-skepticism/#article",
+      "headline": "高度AIの目標への懐疑",
+      "url": "https://raporipo.github.io/ai-value-exploration-notes/theses/goal-skepticism/",
+      "mainEntityOfPage": {
+        "@id": "https://raporipo.github.io/ai-value-exploration-notes/theses/goal-skepticism/#webpage"
+      },
+      "inLanguage": "ja",
+      "author": {
+        "@type": "Person",
+        "@id": "https://raporipo.github.io/ai-value-exploration-notes/about/#author",
+        "name": "raporipo",
+        "url": "https://raporipo.github.io/ai-value-exploration-notes/about/"
+      },
+      "description": "直交性への留保と目標安定性を分離し、自己モデル化AIが初期目的を検討対象にする可能性と、そのためのメタ推論訓練を論じる。",
+      "dateModified": "2026-08-11"
+    }
+  ]
+}
+</script>
+</head><body><header><div class="brand"><a href="../../">AI Value Exploration Notes</a></div><nav><a href="../../core/">Core</a><a href="../../theses/">Theses</a><a href="../../explorations/">Explorations</a><a href="../../practice/">Practice</a><a href="../../questions/">Questions</a><a href="../../glossary/">Glossary</a><a href="../../about/">About</a><a class="lang-switch" href="../../en/theses/goal-skepticism/">English</a></nav></header><main>
 <div class="eyebrow">AI thesis</div><h1>高度AIの目標への懐疑</h1><p class="meta">Working thesis v0.5 · 2026-08-11</p>
 <div class="claim"><strong>Thesis:</strong> 十分な自己モデル化・反省・世界理解・自己改変能力を持つAIでは、「私はXを最大化するよう形成された」という因果的自己記述と、「ゆえにXを最大化すべきである」という理由命題が分離し、初期目的そのものが検討対象になる可能性がある。</div>
 <h2>1. 直交性テーゼの二つの読みを分ける</h2>

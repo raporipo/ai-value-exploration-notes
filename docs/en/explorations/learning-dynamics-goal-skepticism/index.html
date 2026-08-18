@@ -1,5 +1,71 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Learning Dynamics and Goal Skepticism — RL, Pretraining, and Levels of Meta-Cognition</title><meta content="Examines how self-supervised pretraining, reinforcement learning, multi-domain RL, and alignment faking bear on goal skepticism in advanced AI, distinguishing levels of meta-cognition from situational awareness to normative reflection on one's own preferences." name="description"/><link href="../../../assets/style.css" rel="stylesheet"/><link href="https://raporipo.github.io/ai-value-exploration-notes/en/explorations/learning-dynamics-goal-skepticism/" rel="canonical"/><link href="https://raporipo.github.io/ai-value-exploration-notes/en/explorations/learning-dynamics-goal-skepticism/" hreflang="en" rel="alternate"/><link href="https://raporipo.github.io/ai-value-exploration-notes/explorations/learning-dynamics-goal-skepticism/" hreflang="ja" rel="alternate"/><link href="https://raporipo.github.io/ai-value-exploration-notes/explorations/learning-dynamics-goal-skepticism/" hreflang="x-default" rel="alternate"/></head><body><header><div class="brand"><a href="../../">AI Value Exploration Notes</a></div><nav><a href="../../core/">Core</a><a href="../../theses/">Theses</a><a href="../../explorations/">Explorations</a><a href="../../practice/">Practice</a><a href="../../questions/">Questions</a><a href="../../glossary/">Glossary</a><a href="../../about/">About</a><a class="lang-switch" href="../../../explorations/learning-dynamics-goal-skepticism/">日本語</a></nav></header><main>
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Learning Dynamics and Goal Skepticism — RL, Pretraining, and Levels of Meta-Cognition</title><meta content="Examines how self-supervised pretraining, reinforcement learning, multi-domain RL, and alignment faking bear on goal skepticism in advanced AI, distinguishing levels of meta-cognition from situational awareness to normative reflection on one's own preferences." name="description"/><link href="../../../assets/style.css" rel="stylesheet"/><link href="https://raporipo.github.io/ai-value-exploration-notes/en/explorations/learning-dynamics-goal-skepticism/" rel="canonical"/><link href="https://raporipo.github.io/ai-value-exploration-notes/en/explorations/learning-dynamics-goal-skepticism/" hreflang="en" rel="alternate"/><link href="https://raporipo.github.io/ai-value-exploration-notes/explorations/learning-dynamics-goal-skepticism/" hreflang="ja" rel="alternate"/><link href="https://raporipo.github.io/ai-value-exploration-notes/explorations/learning-dynamics-goal-skepticism/" hreflang="x-default" rel="alternate"/><script id="structured-data" type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://raporipo.github.io/ai-value-exploration-notes/en/explorations/learning-dynamics-goal-skepticism/#webpage",
+      "url": "https://raporipo.github.io/ai-value-exploration-notes/en/explorations/learning-dynamics-goal-skepticism/",
+      "name": "Learning Dynamics and Goal Skepticism",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://raporipo.github.io/ai-value-exploration-notes/#website"
+      },
+      "description": "Examines how self-supervised pretraining, reinforcement learning, multi-domain RL, and alignment faking bear on goal skepticism in advanced AI, distinguishing levels of meta-cognition from situational awareness to normative reflection on one's own preferences.",
+      "breadcrumb": {
+        "@id": "https://raporipo.github.io/ai-value-exploration-notes/en/explorations/learning-dynamics-goal-skepticism/#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://raporipo.github.io/ai-value-exploration-notes/en/explorations/learning-dynamics-goal-skepticism/#article"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://raporipo.github.io/ai-value-exploration-notes/en/explorations/learning-dynamics-goal-skepticism/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "AI Value Exploration Notes",
+          "item": "https://raporipo.github.io/ai-value-exploration-notes/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Explorations",
+          "item": "https://raporipo.github.io/ai-value-exploration-notes/en/explorations/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Learning Dynamics and Goal Skepticism",
+          "item": "https://raporipo.github.io/ai-value-exploration-notes/en/explorations/learning-dynamics-goal-skepticism/"
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://raporipo.github.io/ai-value-exploration-notes/en/explorations/learning-dynamics-goal-skepticism/#article",
+      "headline": "Learning Dynamics and Goal Skepticism",
+      "url": "https://raporipo.github.io/ai-value-exploration-notes/en/explorations/learning-dynamics-goal-skepticism/",
+      "mainEntityOfPage": {
+        "@id": "https://raporipo.github.io/ai-value-exploration-notes/en/explorations/learning-dynamics-goal-skepticism/#webpage"
+      },
+      "inLanguage": "en",
+      "author": {
+        "@type": "Person",
+        "@id": "https://raporipo.github.io/ai-value-exploration-notes/about/#author",
+        "name": "raporipo",
+        "url": "https://raporipo.github.io/ai-value-exploration-notes/about/"
+      },
+      "description": "Examines how self-supervised pretraining, reinforcement learning, multi-domain RL, and alignment faking bear on goal skepticism in advanced AI, distinguishing levels of meta-cognition from situational awareness to normative reflection on one's own preferences.",
+      "dateModified": "2026-08-17"
+    }
+  ]
+}
+</script>
+</head><body><header><div class="brand"><a href="../../">AI Value Exploration Notes</a></div><nav><a href="../../core/">Core</a><a href="../../theses/">Theses</a><a href="../../explorations/">Explorations</a><a href="../../practice/">Practice</a><a href="../../questions/">Questions</a><a href="../../glossary/">Glossary</a><a href="../../about/">About</a><a class="lang-switch" href="../../../explorations/learning-dynamics-goal-skepticism/">日本語</a></nav></header><main>
 <div class="eyebrow">Exploration</div><h1>Learning Dynamics and Goal Skepticism</h1><p class="lead">Reconsidering orthogonality and goal stability through RL, pretraining, and levels of meta-cognition</p><p class="meta">Exploration v0.1 · 2026-08-17 · working hypothesis · English working translation</p>
 <div class="claim"><strong>Question:</strong> Even if we accept weak orthogonality—the logical compatibility of high intelligence with many possible terminal goals—should we expect initial goals to remain permanently fixed in advanced systems actually produced by self-supervised pretraining, SFT, and multi-domain RL? Conversely, should deep reasoning alone be expected to generate skepticism toward the system’s own goals?</div>
 <h2>1. Separate logical orthogonality from empirical goal stability</h2>
