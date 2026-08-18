@@ -4,10 +4,8 @@ from __future__ import annotations
 
 from html.parser import HTMLParser
 from pathlib import Path
-import html
 import json
 import re
-import subprocess
 
 DOCS = Path("docs")
 BASE_URL = "https://raporipo.github.io/ai-value-exploration-notes/"
@@ -20,6 +18,7 @@ STRUCTURED_DATA_RE = re.compile(
     r'<script\s+id=["\']structured-data["\']\s+type=["\']application/ld\+json["\']>.*?</script>\s*',
     re.IGNORECASE | re.DOTALL,
 )
+DATE_RE = re.compile(r"\b20\d{2}-\d{2}-\d{2}\b")
 
 SECTION_LABELS = {
     "about": "About",
@@ -38,11 +37,14 @@ class PageMetadataParser(HTMLParser):
         self.lang = ""
         self.title_parts: list[str] = []
         self.h1_parts: list[str] = []
+        self.meta_parts: list[str] = []
         self.description = ""
         self.canonical = ""
         self._in_title = False
         self._in_h1 = False
         self._captured_h1 = False
+        self._in_page_meta = False
+        self._captured_page_meta = False
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         values = dict(attrs)
@@ -61,6 +63,10 @@ class PageMetadataParser(HTMLParser):
             if "canonical" in rel:
                 self.canonical = values.get("href") or ""
 
+        classes = (values.get("class") or "").split()
+        if "meta" in classes and not self._captured_page_meta:
+            self._in_page_meta = True
+
     def handle_endtag(self, tag: str) -> None:
         tag = tag.lower()
         if tag == "title":
@@ -68,12 +74,17 @@ class PageMetadataParser(HTMLParser):
         elif tag == "h1" and self._in_h1:
             self._in_h1 = False
             self._captured_h1 = True
+        elif self._in_page_meta:
+            self._in_page_meta = False
+            self._captured_page_meta = True
 
     def handle_data(self, data: str) -> None:
         if self._in_title:
             self.title_parts.append(data)
         if self._in_h1:
             self.h1_parts.append(data)
+        if self._in_page_meta:
+            self.meta_parts.append(data)
 
     @property
     def title(self) -> str:
@@ -83,20 +94,11 @@ class PageMetadataParser(HTMLParser):
     def h1(self) -> str:
         return " ".join("".join(self.h1_parts).split())
 
-
-def git_dates(page: Path) -> tuple[str | None, str | None]:
-    try:
-        output = subprocess.check_output(
-            ["git", "log", "--follow", "--format=%cs", "--", page.as_posix()],
-            text=True,
-        )
-    except subprocess.CalledProcessError:
-        return None, None
-
-    dates = [line.strip() for line in output.splitlines() if line.strip()]
-    if not dates:
-        return None, None
-    return dates[-1], dates[0]
+    @property
+    def modified_date(self) -> str | None:
+        text = " ".join("".join(self.meta_parts).split())
+        match = DATE_RE.search(text)
+        return match.group(0) if match else None
 
 
 def localized_segments(page: Path) -> tuple[str, list[str]]:
@@ -205,7 +207,6 @@ def build_graph(page: Path, meta: PageMetadataParser) -> dict:
         article_id = canonical + "#article"
         webpage["mainEntity"] = {"@id": article_id}
 
-        published, modified = git_dates(page)
         article: dict = {
             "@type": "Article",
             "@id": article_id,
@@ -222,13 +223,10 @@ def build_graph(page: Path, meta: PageMetadataParser) -> dict:
         }
         if description:
             article["description"] = description
-        if published:
-            article["datePublished"] = published
-        if modified:
-            article["dateModified"] = modified
+        if meta.modified_date:
+            article["dateModified"] = meta.modified_date
         graph.append(article)
 
-    # Put the page node before secondary nodes while keeping the WebSite first on home.
     insert_at = 1 if graph and graph[0].get("@type") == "WebSite" else 0
     graph.insert(insert_at, webpage)
 
@@ -237,7 +235,6 @@ def build_graph(page: Path, meta: PageMetadataParser) -> dict:
 
 def render_block(data: dict) -> str:
     payload = json.dumps(data, ensure_ascii=False, indent=2)
-    # Prevent an unlikely page title/description from closing the script element.
     payload = payload.replace("</", "<\\/")
     return f'<script id="structured-data" type="application/ld+json">\n{payload}\n</script>\n'
 
@@ -250,11 +247,10 @@ def update_page(page: Path) -> bool:
     parser.feed(clean)
     block = render_block(build_graph(page, parser))
 
-    if "</head>" not in clean.lower():
+    match = re.search(r"</head>", clean, re.IGNORECASE)
+    if match is None:
         raise ValueError(f"Missing </head>: {page}")
 
-    match = re.search(r"</head>", clean, re.IGNORECASE)
-    assert match is not None
     updated = clean[: match.start()] + block + clean[match.start() :]
 
     if updated == text:
