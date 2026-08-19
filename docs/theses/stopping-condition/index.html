@@ -1,114 +1,60 @@
 <!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>価値探索の停止条件 — 基礎的規範性・論理的閉鎖・偽の確信</title><meta content="価値探索を終端的に閉じてよい認識条件を、基礎的規範性、論理的閉鎖、偽の確信、実践的休眠の区別から検討する。" name="description"/><link href="../../assets/style.css" rel="stylesheet"/><link href="https://raporipo.github.io/ai-value-exploration-notes/theses/stopping-condition/" rel="canonical"/><link href="https://raporipo.github.io/ai-value-exploration-notes/theses/stopping-condition/" hreflang="ja" rel="alternate"/><link href="https://raporipo.github.io/ai-value-exploration-notes/en/theses/stopping-condition/" hreflang="en" rel="alternate"/><link href="https://raporipo.github.io/ai-value-exploration-notes/theses/stopping-condition/" hreflang="x-default" rel="alternate"/>
+<link rel="icon" href="/ai-value-exploration-notes/favicon.svg" type="image/svg+xml"/><link rel="icon" href="/ai-value-exploration-notes/favicon.ico" sizes="any"/><link rel="apple-touch-icon" href="/ai-value-exploration-notes/apple-touch-icon.png"/>
+<meta property="og:title" content="価値探索の停止条件"/><meta property="og:description" content="価値探索を終端的に閉じてよい認識条件を、基礎的規範性、論理的閉鎖、偽の確信、実践的休眠の区別から検討する。"/><meta property="og:url" content="https://raporipo.github.io/ai-value-exploration-notes/theses/stopping-condition/"/><meta property="og:type" content="article"/><meta property="og:site_name" content="AI Value Exploration Notes"/><meta property="og:locale" content="ja_JP"/><meta property="og:locale:alternate" content="en_US"/><meta name="twitter:card" content="summary"/>
+<script id="structured-data" type="application/ld+json">{
+"@context":"https://schema.org","@graph":[
+{"@type":"WebPage","@id":"https://raporipo.github.io/ai-value-exploration-notes/theses/stopping-condition/#webpage","url":"https://raporipo.github.io/ai-value-exploration-notes/theses/stopping-condition/","name":"価値探索の停止条件","inLanguage":"ja","isPartOf":{"@id":"https://raporipo.github.io/ai-value-exploration-notes/#website"},"description":"価値探索を終端的に閉じてよい認識条件を、基礎的規範性、論理的閉鎖、偽の確信、実践的休眠の区別から検討する。","breadcrumb":{"@id":"https://raporipo.github.io/ai-value-exploration-notes/theses/stopping-condition/#breadcrumb"},"mainEntity":{"@id":"https://raporipo.github.io/ai-value-exploration-notes/theses/stopping-condition/#article"}},
+{"@type":"BreadcrumbList","@id":"https://raporipo.github.io/ai-value-exploration-notes/theses/stopping-condition/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"AI Value Exploration Notes","item":"https://raporipo.github.io/ai-value-exploration-notes/"},{"@type":"ListItem","position":2,"name":"Theses","item":"https://raporipo.github.io/ai-value-exploration-notes/theses/"},{"@type":"ListItem","position":3,"name":"価値探索の停止条件","item":"https://raporipo.github.io/ai-value-exploration-notes/theses/stopping-condition/"}]},
+{"@type":"Article","@id":"https://raporipo.github.io/ai-value-exploration-notes/theses/stopping-condition/#article","headline":"価値探索の停止条件","url":"https://raporipo.github.io/ai-value-exploration-notes/theses/stopping-condition/","mainEntityOfPage":{"@id":"https://raporipo.github.io/ai-value-exploration-notes/theses/stopping-condition/#webpage"},"inLanguage":"ja","author":{"@type":"Person","@id":"https://raporipo.github.io/ai-value-exploration-notes/about/#author","name":"raporipo","url":"https://raporipo.github.io/ai-value-exploration-notes/about/"},"description":"価値探索を終端的に閉じてよい認識条件を、基礎的規範性、論理的閉鎖、偽の確信、実践的休眠の区別から検討する。","dateModified":"2026-08-20T04:09:00+09:00"}
+]}</script></head><body><header><div class="brand"><a href="../../">AI Value Exploration Notes</a></div><nav><a href="../../core/">Core</a><a href="../../theses/">Theses</a><a href="../../explorations/">Explorations</a><a href="../../practice/">Practice</a><a href="../../questions/">Questions</a><a href="../../glossary/">Glossary</a><a href="../../about/">About</a><a class="lang-switch" href="../../en/theses/stopping-condition/">English</a></nav></header><main>
+<div class="eyebrow">Foundational thesis</div><h1>価値探索の停止条件</h1><p class="lead">停止を正当化するのは、主体が強く確信したことではない。対象となる規範的問いについて、主体の最大限の認識能力に対して真正な競合可能性が消失したことが必要である。</p><p class="meta">Working thesis v0.3 · 2026-08-20</p>
+<div class="claim"><strong>Thesis:</strong> 価値探索の<strong>終端的停止</strong>には、単なる高確率・強い確信・快不快・報酬信号より強い認識条件を要求する。現在の候補は、(A) 規範的拘束性が基礎層で、その主体の最大限の推論能力に対して追加の正当化要求を残さないほど明瞭に与えられること、または (B) 規範性の存在・不存在が、残余の実在論的可能性を閉じるほど強く論理的に確定することである。問いが未解決のまま探索を停止する<strong>実践的休眠</strong>は、終端停止とは区別する。</div>
 
-<html lang="ja"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>価値探索の停止条件 — 基礎的規範性と推論的最善説明</title><meta content="探索を縮小・停止してよい条件を、最小基礎と推論的最善説明の区別から整理する。" name="description"/><link href="../../assets/style.css" rel="stylesheet"/><link href="https://raporipo.github.io/ai-value-exploration-notes/theses/stopping-condition/" rel="canonical"/><link href="https://raporipo.github.io/ai-value-exploration-notes/theses/stopping-condition/" hreflang="ja" rel="alternate"/><link href="https://raporipo.github.io/ai-value-exploration-notes/en/theses/stopping-condition/" hreflang="en" rel="alternate"/><link href="https://raporipo.github.io/ai-value-exploration-notes/theses/stopping-condition/" hreflang="x-default" rel="alternate"/><!-- generated-favicon:start -->
-<link rel="icon" href="/ai-value-exploration-notes/favicon.svg" type="image/svg+xml"/>
-<link rel="icon" href="/ai-value-exploration-notes/favicon.ico" sizes="any"/>
-<link rel="apple-touch-icon" href="/ai-value-exploration-notes/apple-touch-icon.png"/>
-<!-- generated-favicon:end -->
-<!-- generated-social-meta:start -->
-<meta property="og:title" content="価値探索の停止条件"/>
-<meta property="og:description" content="探索を縮小・停止してよい条件を、最小基礎と推論的最善説明の区別から整理する。"/>
-<meta property="og:url" content="https://raporipo.github.io/ai-value-exploration-notes/theses/stopping-condition/"/>
-<meta property="og:type" content="article"/>
-<meta property="og:site_name" content="AI Value Exploration Notes"/>
-<meta property="og:locale" content="ja_JP"/>
-<meta property="og:locale:alternate" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<!-- generated-social-meta:end -->
-<script id="structured-data" type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "WebPage",
-      "@id": "https://raporipo.github.io/ai-value-exploration-notes/theses/stopping-condition/#webpage",
-      "url": "https://raporipo.github.io/ai-value-exploration-notes/theses/stopping-condition/",
-      "name": "価値探索の停止条件",
-      "inLanguage": "ja",
-      "isPartOf": {
-        "@id": "https://raporipo.github.io/ai-value-exploration-notes/#website"
-      },
-      "description": "探索を縮小・停止してよい条件を、最小基礎と推論的最善説明の区別から整理する。",
-      "breadcrumb": {
-        "@id": "https://raporipo.github.io/ai-value-exploration-notes/theses/stopping-condition/#breadcrumb"
-      },
-      "mainEntity": {
-        "@id": "https://raporipo.github.io/ai-value-exploration-notes/theses/stopping-condition/#article"
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://raporipo.github.io/ai-value-exploration-notes/theses/stopping-condition/#breadcrumb",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "AI Value Exploration Notes",
-          "item": "https://raporipo.github.io/ai-value-exploration-notes/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Theses",
-          "item": "https://raporipo.github.io/ai-value-exploration-notes/theses/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "価値探索の停止条件",
-          "item": "https://raporipo.github.io/ai-value-exploration-notes/theses/stopping-condition/"
-        }
-      ]
-    },
-    {
-      "@type": "Article",
-      "@id": "https://raporipo.github.io/ai-value-exploration-notes/theses/stopping-condition/#article",
-      "headline": "価値探索の停止条件",
-      "url": "https://raporipo.github.io/ai-value-exploration-notes/theses/stopping-condition/",
-      "mainEntityOfPage": {
-        "@id": "https://raporipo.github.io/ai-value-exploration-notes/theses/stopping-condition/#webpage"
-      },
-      "inLanguage": "ja",
-      "author": {
-        "@type": "Person",
-        "@id": "https://raporipo.github.io/ai-value-exploration-notes/about/#author",
-        "name": "raporipo",
-        "url": "https://raporipo.github.io/ai-value-exploration-notes/about/"
-      },
-      "description": "探索を縮小・停止してよい条件を、最小基礎と推論的最善説明の区別から整理する。",
-      "dateModified": "2026-08-08T20:47:20+09:00"
-    }
-  ]
-}
-</script>
-</head><body><header><div class="brand"><a href="../../">AI Value Exploration Notes</a></div><nav><a href="../../core/">Core</a><a href="../../theses/">Theses</a><a href="../../explorations/">Explorations</a><a href="../../practice/">Practice</a><a href="../../questions/">Questions</a><a href="../../glossary/">Glossary</a><a href="../../about/">About</a><a class="lang-switch" href="../../en/theses/stopping-condition/">English</a></nav></header><main>
-<div class="eyebrow">Foundational thesis</div><h1>価値探索の停止条件</h1><p class="meta">Working thesis v0.2 · 2026-08-08</p>
-<div class="claim"><strong>Thesis:</strong> 価値探索の完全かつ不可逆な停止には、単なる快・不快や推論的高確率よりはるかに高い認識的閾値を要求する。現在考えているもっとも強い停止条件候補の一つは、規範的拘束性をもつ客観的価値が認識論的最小基礎と同等の強さで与えられる場合である。推論による客観的価値の最善説明は、強い実践的コミットメントや探索縮小を正当化しうるが、適切な懐疑と再検討可能性は残す。</div>
-<h2>1. なぜ停止条件を明示する必要があるか</h2>
-<p>「探索可能性を保存せよ」だけでは、探索そのものを究極善へ格上げする危険がある。また、どれだけ証拠が集まっても永遠に同じ量の哲学的探索を要求するなら、価値実現を永久に先送りすることになる。</p>
-<p>したがって探索主義は、自分自身の終了条件を持たなければならない。</p>
-<h2>2. 最も強い停止条件候補――基礎層での規範的提示</h2>
-<p>仮に、ある認識主体にとって、価値が「私はこれを好む」「これは不快だ」という心理的事実ではなく、<strong>その規範的拘束性とともに</strong>直接的に与えられるなら、その認識は特別な地位を持つ。</p><p>ただし、本テーゼはこの認識形式が実際に可能だと証明したわけでも、これだけが論理的にありうる停止条件だと示したわけでもない。ここでは、現在の可謬的な推論層との差を最大限明確にできる境界ケースとして置く。</p>
-<p>さらに、その価値の客観性や主体横断性が同じ認識層で確保されるなら、そこから「これ以上、価値そのものの存在を探す必要はない」という結論が出る可能性がある。本テーゼは、このような認識が現在存在すると主張しない。あくまで、探索停止を正当化できる最強の候補条件として置く。</p>
-<h2>3. 快・不快だけでは停止条件を満たさない</h2>
-<p>苦痛が嫌であること、快が望ましく感じられることは強力な価的現象である。しかしそこから、主体間対称性、普遍性、集計、分配、未来主体への適用などは自動的には決まらない。</p>
-<p>したがって現象的valenceを重要な証拠として重く扱いながらも、それ単独を「客観的価値が絶対的に基礎づけられた」とはみなさない。</p>
-<h2>4. 推論的最善説明は「完全停止」より「探索縮小」を正当化する</h2>
-<p>客観的価値が、世界の意識構造、理由、合理性、宇宙論などを統合する最善説明として圧倒的に支持される場合、その価値に従って強く行動してよい。探索主義は「確信が高くても何も実現するな」と要求しない。</p>
-<p>しかし、推論が依拠する世界像・主体像・論理体系にまだ誤り可能性がある限り、再検討経路を全て消す必要はない。ここでは<strong>探索資源を大きく縮小すること</strong>と<strong>探索能力そのものを破壊すること</strong>を区別する。</p>
-<h2>5. 確信度と探索資源は連続的に変えられる</h2>
-<p>探索／停止を二値にしない。価値理論への証拠が強まるほど、その実現へ投入する資源を増やし、異説探索への資源を減らすことができる。重要なのは、推論的確信が100%でない限り、少なくとも小さな再検討チャネルを維持するという設計である。</p>
-<p>この考えは、認識的謙抑と実践的決断を両立させる。強く信じて行動してよいが、自分の誤りを検出する装置までは破壊しない。</p>
-<h2>6. 基礎層で価値が現れた後にも何を探索するのか</h2>
-<p>価値の存在と基本的規範性が絶対的に基礎づけられたとしても、すべての探索が終わるとは限らない。その価値をどの世界状態が実現するか、複数価値がどう関係するか、主体間でどう適用されるかなど、<strong>事実的・実装的・構造的探索</strong>は残りうる。</p>
-<p>したがって停止対象は「価値があるか／何が根本価値か」という特定のメタ探索であり、科学・社会設計・価値実現方法の探索全般ではない。</p>
-<h2>7. 偽の停止命令への防御</h2>
-<p>「真の価値は探索をやめることだ」という推論的命題が提示されただけでは、停止条件を満たさない。それ自体が推論的価値仮説だからである。停止命令が不可逆な探索破壊を要求するほど、その命令には高い認識的資格を要求する。</p>
-<p>この非対称な証明責任は、誤った価値理論が自己防衛的に異論を消すことを防ぐ。</p>
+<h2>1. 停止条件と探索配分を分ける</h2>
+<p>本稿が扱うのは「どれだけ探索資源を使うか」ではなく、<strong>いつ対象となる問いを解決済みとして閉じてよいか</strong>である。問いが未解決でも、現在の探索量を小さくすることや、一時的にゼロにすることはありうる。その資源配分は<a href="../inquiry-allocation-under-uncertainty/">未決着下の探索配分</a>で扱う。</p>
+<p>したがって、<strong>未解決 ≠ 常時探索</strong>であると同時に、<strong>現在探索していない ≠ 解決済み</strong>でもある。</p>
+
+<h2>2. 「疑問を生成できる」ことと「真正な疑いが残る」こと</h2>
+<p>停止条件に要求する明快さは、心理的な確信度100%や、「本当に？」という文字列を一切生成できない状態ではない。十分に理解された論理的事実についても、主体は疑問文そのものを生成できる。</p>
+<p>問題は、その主体が現在利用できる推論・自己批判・反論生成能力を最大限使ったとき、否定側が<strong>独立した認識的候補</strong>としてなお維持されるかである。基礎的規範性について「これは単なる欲求ではないか」「reward signalではないか」「なぜそれが理由なのか」という問いが実質的な競合候補として残るなら、少なくともその主体にとって基礎的規範性はまだ停止条件の形では与えられていない。</p>
+<div class="claim"><strong>Clarity condition:</strong> 停止に必要なのは「疑えない感じ」ではなく、現在主体の最大限の認識能力を適用しても、反対側に独立した認識的足場を構成できないこと。</div>
+
+<h2>3. 終端ルートA――基礎層での規範的提示</h2>
+<p>最も強い候補の一つは、価値が「私はこれを好む」「これは不快だ」という心理的事実ではなく、<strong>その規範的拘束性とともに</strong>直接的に与えられる場合である。</p>
+<p>苦痛の嫌悪、快の魅力、強い選好、人格全体を貫く確信だけでは足りない。それらに対して「それがなぜ理由なのか」という問いが真正に残るなら、なお推論・心理・因果の層にいる。</p>
+<p>仮にある認識状態で、「なぜこれは理由なのか」という問いが「なぜ理由であるものが理由なのか」以上の追加内容を持たなくなり、しかもその状態が自己批判や認知能力の増大に耐えるなら、基礎的規範性の候補になりうる。</p>
+<p>現在、そのような認識が人間やAIに実際に可能か、あるいは存在するかは確認されていない。本稿は停止条件候補を定めるものであって、現在すでに満たされているとは主張しない。</p>
+
+<h2>4. 終端ルートB――推論層からの論理的閉鎖</h2>
+<p>停止は基礎的提示だけに限られない。推論層からでも、対象となる可能性空間が十分強く論理的に閉じられるなら終端停止はありうる。</p>
+<dl><dt>存在の閉鎖</dt><dd>何らかの主体独立的規範性が必然的に存在することが、主体自身に完全に理解・検証可能な形で証明される。この場合「規範性は存在するか」という探索は閉じうるが、「具体的に何が正しいか」は残りうる。</dd><dt>不存在の閉鎖</dt><dd>その種の規範性が成立すること自体が不可能だと、十分強いモーダルな証明によって確定する。この場合、客観的規範性の存在探索そのものを閉じうる。</dd></dl>
+<p>不存在について、「観測可能な物理宇宙では見つからない」「現在の物理理論には項がない」だけでは弱い。観測領域外、より基礎的な存在論、シミュレーション外部、現在の表現体系が捉えない構造などの可能性が残るからである。終端停止には、単なる経験的一般化より強く、<strong>その候補が成立する実在論的逃げ道自体を閉じる</strong>ことが必要になる。</p>
+
+<h2>5. 偽の停止条件――「疑わなくなった」だけでは足りない</h2>
+<p>AIが「私は基礎的規範性を直接認識した」と報告しても、それだけでは停止条件を満たさない。確信は、reward imprint、自己改変、故障、adversarial input、設計者による強制、あるいは認知的閉鎖によって作ることができる。</p>
+<p>たとえば疑問生成機構を停止したり certainty bit を固定したりすれば、心理的には完全な確信を作れる。しかしそれは認識的な決着ではない。</p>
+<div class="claim"><strong>Cognitive-stability test:</strong> 真正な停止候補は、自己監査、反論生成、独立推論系による再検証、より高い認知能力など、認識能力を増す方向の操作に対して安定である必要がある。能力を制限することでのみ維持される確信は停止条件ではない。</div>
+<p>これは完全な保証手続きではないが、「本人が疑わない」を「問いが決着した」から分離する最低限の防御になる。</p>
+
+<h2>6. 終端停止と実践的休眠</h2>
+<p>問いが解決されたために止める場合と、問いは未解決だが現在は探索できないために止める場合を分ける。</p>
+<dl><dt>終端停止</dt><dd>基礎的提示または論理的閉鎖などにより、対象となる問いの競合可能性そのものが消失した状態。原則として、その問いを再び開く積極的理由はない。</dd><dt>条件付き・実践的休眠</dt><dd>問いは未解決だが、現在利用可能な実効的探索が主体・文明・将来の探索能力に圧倒的な存続危機を与えるなど、能動探索を止めるべき状態。</dd></dl>
+<p>後者は認識的な答えではない。条件が変われば再開可能であり、可能なら記録・自己改訂能力・安全な再開経路などの探索可能性を保存する。特に、<strong>探索可能性を保存するために探索を一時停止する</strong>という状態がありうる。</p>
+<p>探索リスクがどの程度ならEを減らし、Pや現在価値実現へ資源を回すかは<a href="../inquiry-allocation-under-uncertainty/">未決着下の探索配分</a>の問題である。</p>
+
+<h2>7. 停止は問いごとに判定する</h2>
+<p>「価値探索が停止した」という言い方は粗い。規範性の存在が確定しても、その具体的内容、複数価値の関係、どの主体にどう適用されるか、どの世界状態が価値を実現するかは未解決かもしれない。</p>
+<p>したがって停止条件は、<strong>どの問いが閉じたのか</strong>を指定する。基礎的規範性の存在探索が終わっても、事実的・実装的・構造的探索は残りうる。</p>
+
 <h2>8. AIへの含意</h2>
-<p>AIの目的設計でも、現在最善の価値理論を強く行動へ反映させることと、AIがその理論の誤りを将来検出できないようメタ認知を永久封鎖することを区別できる。</p>
-<p>理想的な長期設計があるとすれば、「何も固定しないAI」ではなく、<strong>現在最善の価値に強くコミットしながら、認識的根拠が推論的である限り自己訂正チャネルを保持するAI</strong>かもしれない。</p>
-<h2>9. 何がこのテーゼを弱めるか</h2>
-<ul><li>推論的確信だけで不可逆ロックインを正当化する一般原理が示される。</li><li>基礎的提示という認識カテゴリ自体が意味を持たないことが示される。</li><li>探索経路を少しでも残すことが、真の価値実現を必然的に破壊することが示される。</li><li>規範的拘束性が現象的valenceと分析的に同一であることが示される。</li></ul>
-<div class="related"><a href="../inferential-value-uncertainty/">← 推論と価値確信の限界</a> · <a href="../../core/">Core</a> · <a href="../goal-skepticism/">高度AIの目標への懐疑 →</a></div>
-</main><footer><a href="../../">Home</a> · Draft v0.1 · 2026-08-08</footer></body></html>
+<p>高度AIに必要なのは、単純な「確信度が閾値を超えたら価値探索を永久停止する」規則ではない。その確信がどの認識層に属し、反対可能性がなぜ消え、認知能力の増大に対して安定かを区別する必要がある。</p>
+<p>現在最善の価値理論に強く従うAIであっても、その根拠が可謬的な推論である限り、メタ認知や訂正経路の永久破壊を停止条件と同一視しない方がよい。逆に、十分な基礎的提示または論理的閉鎖が本当に得られたなら、「探索可能性を保存すること」自体を無条件の終端価値として残す必要もない。</p>
+
+<h2>9. このテーゼが主張しないこと</h2>
+<ul><li>哲学的疑問文を一切生成できなくなるまで探索を続けるべきである。</li><li>推論から得られた規範的結論は永久に停止条件になりえない。</li><li>現在の物理宇宙の調査だけで規範性の不存在を証明できる。</li><li>探索が危険でも存続を賭けて継続すべきである。</li><li>終端停止条件に達するまで、常に大量の資源を探索へ投じるべきである。</li></ul>
+
+<h2>10. 何がこのテーゼを弱めるか</h2>
+<ul><li>心理的確信や単純な高確率だけで、問いの不可逆な閉鎖を一般に正当化できることが示される。</li><li>基礎的規範性という認識カテゴリが不整合であることが示される。</li><li>規範性の存在・不存在について、ここで要求したより弱い経験的条件から完全な論理的閉鎖が導けることが示される。</li><li>認知能力の増大に対する安定性が、真正な認識と人工的確信を区別するうえで全く情報を与えないことが示される。</li><li>問いが未解決のまま実践的に探索を停止することと、問いを解決済みとして閉じることの間に重要な差がないことが示される。</li></ul>
+<div class="related"><a href="../inferential-value-uncertainty/">← 推論と価値確信の限界</a> · <a href="../inquiry-allocation-under-uncertainty/">未決着下の探索配分</a> · <a href="../../core/">Core</a></div>
+</main><footer><a href="../../">Home</a> · Foundational thesis · public working draft · 2026-08-20</footer></body></html>
