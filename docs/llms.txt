@@ -16,6 +16,7 @@
 - [Conditions for Ending Value Inquiry](en/theses/stopping-condition/)
 - [Why Existing Values Are Not a Final Foundation](en/theses/existing-values-not-final-foundation/)
 - [Normative Bridges from Future Value to Present Action](en/theses/future-value-present-justification/)
+- [Reflective Uncertainty and Irreversible Commitment](en/theses/reflective-uncertainty-irreversible-commitment/)
 - [Goal Skepticism in Advanced AI](en/theses/goal-skepticism/)
 
 ## English explorations
@@ -52,6 +53,7 @@
 - [Core — 価値の不確実性と探索可能性の保存](core/)
 - [Theses](theses/)
 - [未来価値と現在行為の規範的ブリッジ](theses/future-value-present-justification/)
+- [反省的不確実性と不可逆コミットメント](theses/reflective-uncertainty-irreversible-commitment/)
 - [Explorations](explorations/)
 - [政治的主体性の物質的基盤](explorations/material-basis-political-agency/)
 - [ASI能力拡散は安全にできるか](explorations/asi-diffusion-civilizational-resilience/)
