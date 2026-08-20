@@ -38,7 +38,7 @@ Claims are versioned so that later corrections and reversals remain visible. AI 
 
 GitHub Pages base URL:
 
-`https://raporipo.github.io/ai-value-exploration-notes/`
+`https://fuminose.com/ai-value-exploration-notes/`
 
 ## Intellectual provenance
 

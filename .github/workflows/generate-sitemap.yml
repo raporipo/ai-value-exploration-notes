@@ -8,6 +8,7 @@ on:
       - "docs/**/*.html"
       - "scripts/generate_structured_data.py"
       - "scripts/generate_favicon_metadata.py"
+      - "scripts/normalize_public_domain.py"
       - ".github/workflows/generate-sitemap.yml"
   workflow_dispatch:
 
@@ -43,7 +44,7 @@ jobs:
 
           docs = Path("docs")
           output = docs / "sitemap.xml"
-          base_url = "https://raporipo.github.io/ai-value-exploration-notes/"
+          base_url = "https://fuminose.com/ai-value-exploration-notes/"
 
           pages = sorted(docs.rglob("index.html"))
 
@@ -81,6 +82,9 @@ jobs:
 
           output.write_text("\n".join(lines), encoding="utf-8")
           print(f"Generated {output} with {len(entries)} URLs")
+
+      - name: Normalize public URLs to fuminose.com
+        run: python scripts/normalize_public_domain.py
 
       - name: Commit generated metadata if changed
         run: |
