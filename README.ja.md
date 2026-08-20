@@ -36,9 +36,9 @@
 
 後から修正・撤回した場合にも変遷が残るようバージョンを記録します。過去ログの検索、論点整理、反論生成、用語整理、草稿作成にはAIを相当に利用しています。詳しくは [`docs/about/`](docs/about/) に記します。何を採用し公開するか、そして公開内容に対する最終的な責任は人間側の作成者にあります。
 
-GitHub Pages予定URL:
+GitHub Pages公開URL:
 
-`https://raporipo.github.io/ai-value-exploration-notes/`
+`https://fuminose.com/ai-value-exploration-notes/`
 
 ## 知的な来歴について
 
