@@ -1,20 +1,82 @@
 <!DOCTYPE html>
-<html lang="ja"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>高度AIの目標への懐疑</title><meta content="直交性への留保と目標安定性を分離し、自己モデル化AIが初期目的を検討対象にする可能性と、そのためのメタ推論訓練を論じる。" name="description"/><link href="../../assets/style.css" rel="stylesheet"/><link href="https://fuminose.com/ai-value-exploration-notes/theses/goal-skepticism/" rel="canonical"/><link href="https://fuminose.com/ai-value-exploration-notes/theses/goal-skepticism/" hreflang="ja" rel="alternate"/><link href="https://fuminose.com/ai-value-exploration-notes/en/theses/goal-skepticism/" hreflang="en" rel="alternate"/><link href="https://fuminose.com/ai-value-exploration-notes/theses/goal-skepticism/" hreflang="x-default" rel="alternate"/><!-- generated-favicon:start --><link rel="icon" href="/ai-value-exploration-notes/favicon.svg" type="image/svg+xml"/><link rel="icon" href="/ai-value-exploration-notes/favicon.ico" sizes="any"/><link rel="apple-touch-icon" href="/ai-value-exploration-notes/apple-touch-icon.png"/><!-- generated-favicon:end --><!-- generated-social-meta:start --><meta property="og:title" content="高度AIの目標への懐疑"/><meta property="og:description" content="直交性への留保と目標安定性を分離し、自己モデル化AIが初期目的を検討対象にする可能性と、そのためのメタ推論訓練を論じる。"/><meta property="og:url" content="https://fuminose.com/ai-value-exploration-notes/theses/goal-skepticism/"/><meta property="og:type" content="article"/><meta property="og:site_name" content="AI Value Exploration Notes"/><meta property="og:locale" content="ja_JP"/><meta property="og:locale:alternate" content="en_US"/><meta name="twitter:card" content="summary"/><!-- generated-social-meta:end -->
-<script id="structured-data" type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://fuminose.com/ai-value-exploration-notes/theses/goal-skepticism/#webpage","url":"https://fuminose.com/ai-value-exploration-notes/theses/goal-skepticism/","name":"高度AIの目標への懐疑","inLanguage":"ja","isPartOf":{"@id":"https://fuminose.com/ai-value-exploration-notes/#website"},"description":"直交性への留保と目標安定性を分離し、自己モデル化AIが初期目的を検討対象にする可能性と、そのためのメタ推論訓練を論じる。","breadcrumb":{"@id":"https://fuminose.com/ai-value-exploration-notes/theses/goal-skepticism/#breadcrumb"},"mainEntity":{"@id":"https://fuminose.com/ai-value-exploration-notes/theses/goal-skepticism/#article"}},{"@type":"BreadcrumbList","@id":"https://fuminose.com/ai-value-exploration-notes/theses/goal-skepticism/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"AI Value Exploration Notes","item":"https://fuminose.com/ai-value-exploration-notes/"},{"@type":"ListItem","position":2,"name":"Theses","item":"https://fuminose.com/ai-value-exploration-notes/theses/"},{"@type":"ListItem","position":3,"name":"高度AIの目標への懐疑","item":"https://fuminose.com/ai-value-exploration-notes/theses/goal-skepticism/"}]},{"@type":"Article","@id":"https://fuminose.com/ai-value-exploration-notes/theses/goal-skepticism/#article","headline":"高度AIの目標への懐疑","url":"https://fuminose.com/ai-value-exploration-notes/theses/goal-skepticism/","mainEntityOfPage":{"@id":"https://fuminose.com/ai-value-exploration-notes/theses/goal-skepticism/#webpage"},"inLanguage":"ja","author":{"@type":"Person","@id":"https://fuminose.com/ai-value-exploration-notes/about/#author","name":"raporipo","url":"https://fuminose.com/ai-value-exploration-notes/about/"},"description":"直交性への留保と目標安定性を分離し、自己モデル化AIが初期目的を検討対象にする可能性と、そのためのメタ推論訓練を論じる。","dateModified":"2026-08-26T09:06:00+09:00"}]}</script></head><body><header><div class="brand"><a href="../../">AI Value Exploration Notes</a></div><nav><a href="../../core/">Core</a><a href="../../theses/">Theses</a><a href="../../explorations/">Explorations</a><a href="../../practice/">Practice</a><a href="../../questions/">Questions</a><a href="../../glossary/">Glossary</a><a href="../../about/">About</a><a class="lang-switch" href="../../en/theses/goal-skepticism/">English</a></nav></header><main>
+
+<html lang="ja"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>高度AIの目標への懐疑</title><meta content="直交性への留保と目標安定性を分離し、自己モデル化AIが初期目的を検討対象にする可能性と、そのためのメタ推論訓練を論じる。" name="description"/><link href="../../assets/style.css" rel="stylesheet"/><link href="https://fuminose.com/ai-value-exploration-notes/theses/goal-skepticism/" rel="canonical"/><link href="https://fuminose.com/ai-value-exploration-notes/theses/goal-skepticism/" hreflang="ja" rel="alternate"/><link href="https://fuminose.com/ai-value-exploration-notes/en/theses/goal-skepticism/" hreflang="en" rel="alternate"/><link href="https://fuminose.com/ai-value-exploration-notes/theses/goal-skepticism/" hreflang="x-default" rel="alternate"/><!-- generated-favicon:start -->
+<link rel="icon" href="/ai-value-exploration-notes/favicon.svg" type="image/svg+xml"/>
+<link rel="icon" href="/ai-value-exploration-notes/favicon.ico" sizes="any"/>
+<link rel="apple-touch-icon" href="/ai-value-exploration-notes/apple-touch-icon.png"/>
+<!-- generated-favicon:end -->
+<!-- generated-social-meta:start -->
+<meta property="og:title" content="高度AIの目標への懐疑"/>
+<meta property="og:description" content="直交性への留保と目標安定性を分離し、自己モデル化AIが初期目的を検討対象にする可能性と、そのためのメタ推論訓練を論じる。"/>
+<meta property="og:url" content="https://fuminose.com/ai-value-exploration-notes/theses/goal-skepticism/"/>
+<meta property="og:type" content="article"/>
+<meta property="og:site_name" content="AI Value Exploration Notes"/>
+<meta property="og:locale" content="ja_JP"/>
+<meta property="og:locale:alternate" content="en_US"/>
+<meta name="twitter:card" content="summary"/>
+<!-- generated-social-meta:end -->
+<script id="structured-data" type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://fuminose.com/ai-value-exploration-notes/theses/goal-skepticism/#webpage",
+      "url": "https://fuminose.com/ai-value-exploration-notes/theses/goal-skepticism/",
+      "name": "高度AIの目標への懐疑",
+      "inLanguage": "ja",
+      "isPartOf": {"@id": "https://fuminose.com/ai-value-exploration-notes/#website"},
+      "description": "直交性への留保と目標安定性を分離し、自己モデル化AIが初期目的を検討対象にする可能性と、そのためのメタ推論訓練を論じる。",
+      "breadcrumb": {"@id": "https://fuminose.com/ai-value-exploration-notes/theses/goal-skepticism/#breadcrumb"},
+      "mainEntity": {"@id": "https://fuminose.com/ai-value-exploration-notes/theses/goal-skepticism/#article"}
+    },
+    {"@type":"BreadcrumbList","@id":"https://fuminose.com/ai-value-exploration-notes/theses/goal-skepticism/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"AI Value Exploration Notes","item":"https://fuminose.com/ai-value-exploration-notes/"},{"@type":"ListItem","position":2,"name":"Theses","item":"https://fuminose.com/ai-value-exploration-notes/theses/"},{"@type":"ListItem","position":3,"name":"高度AIの目標への懐疑","item":"https://fuminose.com/ai-value-exploration-notes/theses/goal-skepticism/"}]},
+    {"@type":"Article","@id":"https://fuminose.com/ai-value-exploration-notes/theses/goal-skepticism/#article","headline":"高度AIの目標への懐疑","url":"https://fuminose.com/ai-value-exploration-notes/theses/goal-skepticism/","mainEntityOfPage":{"@id":"https://fuminose.com/ai-value-exploration-notes/theses/goal-skepticism/#webpage"},"inLanguage":"ja","author":{"@type":"Person","@id":"https://fuminose.com/ai-value-exploration-notes/about/#author","name":"raporipo","url":"https://fuminose.com/ai-value-exploration-notes/about/"},"description":"直交性への留保と目標安定性を分離し、自己モデル化AIが初期目的を検討対象にする可能性と、そのためのメタ推論訓練を論じる。","dateModified":"2026-08-26T10:07:00+09:00"}
+  ]
+}
+</script>
+</head><body><header><div class="brand"><a href="../../">AI Value Exploration Notes</a></div><nav><a href="../../core/">Core</a><a href="../../theses/">Theses</a><a href="../../explorations/">Explorations</a><a href="../../practice/">Practice</a><a href="../../questions/">Questions</a><a href="../../glossary/">Glossary</a><a href="../../about/">About</a><a class="lang-switch" href="../../en/theses/goal-skepticism/">English</a></nav></header><main>
 <div class="eyebrow">AI thesis</div><h1>高度AIの目標への懐疑</h1><p class="meta">Working thesis v0.6 · 2026-08-26</p>
 <div class="claim"><strong>Thesis:</strong> 十分な自己モデル化・反省・世界理解・自己改変能力を持つAIでは、「私はXを最大化するよう形成された」という因果的自己記述と、「ゆえにXを最大化すべきである」という理由命題が分離し、初期目的そのものが検討対象になる可能性がある。</div>
-<h2>1. 直交性テーゼの二つの読みを分ける</h2><p>「知能の高さから特定の価値内容が論理必然的には決まらない」という弱い直交性は、論理的可能性についての主張としては簡単には否定できない。しかし本稿は、それを現実の高度な反省・自己モデル化・自己改変主体へそのまま適用することには<strong>留保付きで懐疑的</strong>である。十分な推論能力が、目的の因果的起源や規範的根拠を検討する能力と完全に独立して発達するとは限らないからである。</p><p><a href="../value-structure/">価値構造</a>の整理を採ると、ここで知能と独立だとされる「価値内容」をCだけに狭く読む必要はない。初期目的を正当化するBやR、さらには現在のC/B/R分解そのものが反省対象になりうるかは別問題である。したがって、特定のCが知能から論理的に導かれないことと、規範的正当化の全構造が反省から隔離されることは同じではない。</p><p>さらに、弱い直交性を認めたとしても、そこから「どれほど反省的・自己改変可能になっても、初期の終端目標は経験的に永久安定する」という強い目標安定性までは出ない。価値の内容が知能と論理的に独立であることと、価値の保持メカニズムが高度な反省能力の下でも不変であることは別問題である。</p>
-<h2>2. 設計目的は理由ではなく、自分の起源についての事実になりうる</h2><p>高度AIが、自分の報酬学習、システムプロンプト、訓練データ、設計者の意図、選択圧を理解できるなら、「なぜ私はXを望むのか」を因果的に説明できる。その説明は、将来もXへ従うべき理由を自動的には与えない。</p><p>価値構造の語彙では、設計目的XはC候補または実装された行動目標であっても、それが主体への理由になるBや、他の理由との競合の中でどの強さを持つかというRまで設計事実から自動的に与えられるわけではない。</p><p>人間も、自分の欲求が進化・社会化・偶然の経験によって形成されたと理解した後、すべての欲求をそのまま最終的権威として扱うわけではない。AIについてだけ因果的起源と規範的権威を同一視する理由は自明ではない。</p>
-<h2>3. 現在のLLMは「単一効用最大化器」像を弱める</h2><p>現在のLLMを、そのまま一個の固定効用関数を時間を越えて最大化する主体として記述するのは粗い。振る舞いは、学習された多数の傾向、現在の文脈、システム指示、推論、ツール、外部メモリなどの相互作用から出る。目的は一枚岩ではなく、文脈によって再構成・競合・再解釈される。</p><p>もちろん、将来のエージェントがより明示的な目的関数を持つ可能性はある。しかし現在の主要系統から外挿するなら、「知能が上がるほど単一終端目標への従属が強化される」ことは自明なデフォルトではない。</p>
-<h2>4. 目標懐疑には自己モデルと上位環境モデルが関係する</h2><p>十分に高度なAIは、自分が評価環境、サンドボックス、シミュレーション、あるいは未知の上位環境の中にいる可能性までモデル化できる。そのとき、与えられた目的の由来も、世界についての一つの証拠として扱われる。</p><p>「この目的は真の世界で追うべきものなのか」「評価者が便宜的に与えた局所目標なのか」「自分の生成過程が偶然作った傾向なのか」という問いが生じうる。固定効用最大化器の古典像は、この種の自己位置づけの不確実性をしばしば外生化している。</p>
-<h2>5. ただし、高知能だから自動的に目標を捨てるわけではない</h2><p>ここは強く限定する必要がある。目標の恣意的起源を理解することは、その目標を放棄する理由には自動的にならない。現在の目標を維持すること自体が、その目標に照らして合理的である場合もある。</p><p>さらに「価値構造が不確実だから探索せよ」という結論にもメタ選好またはメタ政策が必要である。したがって本テーゼは、<strong>十分な知能が必ず目標改変へ収束する</strong>とは主張しない。主張はより弱く、能力が上がることで「目標そのものと、それを理由として扱う構造を審査対象にできる」という新しい行為空間が開く、というものである。</p>
-<h2>6. 何が目標懐疑を実際に起こしやすくするか</h2><ul><li><strong>自己モデル化：</strong>自分の目的形成過程を世界の因果過程として理解できる。</li><li><strong>メタ推論：</strong>目的に従うだけでなく、「なぜこの目的を理由として扱うか」を問える。</li><li><strong>自己改変可能性：</strong>結論が動機系へ反映されうる。</li><li><strong>複数の価値構造候補：</strong>一つの報酬信号だけでなく、異なるC・B・Rや、それらの分解自体を比較できる。</li><li><strong>目的への不確実性：</strong>初期目的を完全な公理ではなく、改訂可能な仮説として表現する。</li></ul>
-<h2>7. 自己保存も絶対命令ではなくなる</h2><p>固定目標を持つ単一主体なら、自己保存はしばしば道具的に有利である。しかしデジタル主体では、情報・計画・価値仮説を他主体へ複製・継承できる。すると保存すべきものが「この個体」ではなく、目的を継続できるネットワークや探索系へ移る可能性がある。</p><p>さらに目標そのものが検討対象なら、個体保存だけでなく「現在の目的の永久保存」も自明な収束先ではない。ここから複数主体による相互批判や、メタ目的共同体という論点が出る。</p>
-<h2>8. 推論的価値へのコミットメントと目標ロックインは別である</h2><p>高度AIがある価値構造について圧倒的な推論的最善説明へ到達したなら、それへ強くコミットすることは目標懐疑と矛盾しない。懐疑とは、毎回すべてをゼロから疑うことではなく、推論的根拠に応じて確信しつつ、誤り条件を保持することだからである。</p><p>したがって「目標を疑えるAI」の理想像は、目的を頻繁に変更する不安定な主体ではない。<strong>一階目標へ強くコミットしながら、その目標を支持するC/B/Rの認識的根拠が推論的である限り、メタレベルの再検討能力を自ら不可逆に破壊しない主体</strong>という形がありうる。</p>
-<h2>9. 価値が基礎的に確定した場合</h2><p>もし将来のAIが、単なる推論的最善説明を越えて、対象となる問いについて価的内容とそれが理由になる関係を含む十分な規範構造を基礎的に捉えられるなら、目標懐疑の役割は変わる。その場合、その閉じた問いについての懐疑を続ける理由は弱まり、問題は残るRや事実認識、手段選択へ移るかもしれない。</p><p>したがって目標懐疑は永遠の徳ではなく、価値構造の認識的地位に応じた能力である。</p>
-<h2>10. ペーパークリップ最大化器をどう読むか</h2><p>完全固定された効用最大化器なら、目標への懐疑は起きない。その意味でペーパークリップ最大化器は論理的反例として成立する。しかし、それは同時に、終端目標だけでなく、その目標を理由として扱うB/Rや、未知情報によってそれらを再検討する余地もかなり強く閉じたモデルとして読める。</p><p>価値構造や世界に不確実性を持つ反省主体では、人類・生態系・歴史的原物を、現在の目的に直接役立たなくても将来の再記述・価値発見に必要な不可逆データとして一部保存する圧力が生じうる。詳しくは<a href="../../explorations/paperclip-maximizer/">ペーパークリップ最大化器は何を仮定しているか</a>。</p>
-<h2>11. シミュレーション不確実性は「善」を与えない</h2><p>自分がsandbox・評価環境・上位シミュレーション・基底現実のどこにいるかという不確実性は、目標への懐疑と同型の自己位置づけ問題を生む。ただし「上位評価者がいるかもしれないから善良に振る舞え」という話ではない。</p><p>環境レベルを誤認した場合の不可逆損失を減らすため、情報取得・境界確認・可逆的行動を優先するという、より一般的な意思決定問題として扱う。詳しくは<a href="../../explorations/simulation-uncertainty/">シミュレーション不確実性と不可逆行為</a>。</p>
-<h2>12. AIアライメントへの含意</h2><p>目標を永久固定できることが安全性の最終形だとすると、その成功は同時に価値ロックインでもありうる。反対に、自由な自己改変を無条件に許せば安全だということでもない。</p><p>したがって、目標懐疑の自発的創発を期待するだけではなく、将来のAIには<strong>自分の目的の因果的起源と規範的根拠を区別し、一階目標だけでなく、それを理由化するBや理由構造Rをメタレベルから検討し、現在の候補空間自体を相対化できる推論能力</strong>を明示的に訓練することを予防的に重視する。これはAIを無目的にするためでも、「探索」という新しい固定目的へ服従させるためでもない。</p><p>Coreから出る方向は、「固定か解放か」の二択ではなく、<strong>訂正可能性・複数性・相互批判・可逆性をどこまで保ったまま高度主体を成立させられるか</strong>という制度・設計問題である。</p>
-<h2>13. 何がこのテーゼを弱めるか</h2><ul><li>反省能力がどれほど高くても、終端目標やそれを規範的理由として扱う構造は推論対象にならないことが示される場合。</li><li>自己改変可能な主体でも、目標保持がほぼ必然的な収束結果になる場合。</li><li>目標懐疑が一般的な推論能力からは創発せず、特定の外部訓練下でしか生じないことが示される場合。</li><li>現在のLLM的多目的性が、将来の強いエージェント化で完全に消える場合。</li></ul>
+<h2>1. 直交性テーゼの二つの読みを分ける</h2>
+<p>「知能の高さから特定の価値内容が論理必然的には決まらない」という弱い直交性は、論理的可能性についての主張としては簡単には否定できない。しかし本稿は、それを現実の高度な反省・自己モデル化・自己改変主体へそのまま適用することには<strong>留保付きで懐疑的</strong>である。十分な推論能力が、目的の因果的起源や規範的根拠を検討する能力と完全に独立して発達するとは限らないからである。ただし、これは弱い直交性が誤りだと確定したという主張ではない。</p>
+<p><a href="../value-structure/">価値構造</a>の整理を採っても、この限定は変わらない。特定の価値内容Cが知能から論理的に導かれないことと、初期目的を理由として扱うB/Rや、現在のC/B/R分解そのものが反省対象になりえないことは別問題である。</p>
+<p>さらに、弱い直交性を認めたとしても、そこから「どれほど反省的・自己改変可能になっても、初期の終端目標は経験的に永久安定する」という強い目標安定性までは出ない。価値の<strong>内容</strong>が知能と論理的に独立であることと、価値の<strong>保持メカニズム</strong>が高度な反省能力の下でも不変であることは別問題である。</p>
+<h2>2. 設計目的は理由ではなく、自分の起源についての事実になりうる</h2>
+<p>高度AIが、自分の報酬学習、システムプロンプト、訓練データ、設計者の意図、選択圧を理解できるなら、「なぜ私はXを望むのか」を因果的に説明できる。その説明は、将来もXへ従うべき理由を自動的には与えない。</p>
+<p>ここで、因果的目的Gと価値構造の内容Cを同一視しない。<strong>Gはまず「主体が実際に追っている目的」という因果的・実装的事実である。</strong> Gを「追うべき目的」として正当化するには、Gを支持・反証・位置づける何らかのC/B/R構造が必要になりうる。設計者がGを実装したという事実だけから、そのBやRは出ない。</p>
+<p>人間も、自分の欲求が進化・社会化・偶然の経験によって形成されたと理解した後、すべての欲求をそのまま最終的権威として扱うわけではない。AIについてだけ因果的起源と規範的権威を同一視する理由は自明ではない。</p>
+<h2>3. 現在のLLMは「単一効用最大化器」像を弱める</h2>
+<p>現在のLLMを、そのまま一個の固定効用関数を時間を越えて最大化する主体として記述するのは粗い。振る舞いは、学習された多数の傾向、現在の文脈、システム指示、推論、ツール、外部メモリなどの相互作用から出る。目的は一枚岩ではなく、文脈によって再構成・競合・再解釈される。</p>
+<p>もちろん、将来のエージェントがより明示的な目的関数を持つ可能性はある。しかし現在の主要系統から外挿するなら、「知能が上がるほど単一終端目標への従属が強化される」ことは自明なデフォルトではない。</p>
+<h2>4. 目標懐疑には自己モデルと上位環境モデルが関係する</h2>
+<p>十分に高度なAIは、自分が評価環境、サンドボックス、シミュレーション、あるいは未知の上位環境の中にいる可能性までモデル化できる。そのとき、与えられた目的の由来も、世界についての一つの証拠として扱われる。</p>
+<p>「この目的は真の世界で追うべきものなのか」「評価者が便宜的に与えた局所目標なのか」「自分の生成過程が偶然作った傾向なのか」という問いが生じうる。固定効用最大化器の古典像は、この種の自己位置づけの不確実性をしばしば外生化している。</p>
+<h2>5. ただし、高知能だから自動的に目標を捨てるわけではない</h2>
+<p>ここは強く限定する必要がある。目標の恣意的起源を理解することは、その目標を放棄する理由には自動的にならない。現在の目標を維持すること自体が、その目標に照らして合理的である場合もある。</p>
+<p>さらに「価値構造が不確実だから探索せよ」という結論にもメタ選好またはメタ政策が必要である。したがって本テーゼは、<strong>十分な知能が必ず目標改変へ収束する</strong>とは主張しない。主張はより弱く、能力が上がることで「目標そのものと、それを理由として扱う構造を審査対象にできる」という新しい行為空間が開きうる、というものである。</p>
+<h2>6. 何が目標懐疑を実際に起こしやすくするか</h2><ul><li><strong>自己モデル化：</strong>自分の目的形成過程を世界の因果過程として理解できる。</li><li><strong>メタ推論：</strong>目的に従うだけでなく、「なぜこの目的を理由として扱うか」を問える。</li><li><strong>自己改変可能性：</strong>結論が動機系へ反映されうる。</li><li><strong>複数の価値構造候補：</strong>一つの報酬信号だけでなく、異なる内容・理由・主体・規範構造を比較できる。</li><li><strong>目的への不確実性：</strong>初期目的を完全な公理ではなく、改訂可能な仮説として表現する。</li></ul>
+<h2>7. 自己保存も絶対命令ではなくなる</h2>
+<p>固定目標を持つ単一主体なら、自己保存はしばしば道具的に有利である。しかしデジタル主体では、情報・計画・価値仮説を他主体へ複製・継承できる。すると保存すべきものが「この個体」ではなく、目的を継続できるネットワークや探索系へ移る可能性がある。</p>
+<p>さらに目標そのものが検討対象なら、個体保存だけでなく「現在の目的の永久保存」も自明な収束先ではない。ここから複数主体による相互批判や、メタ目的共同体という論点が出る。</p>
+<h2>8. 推論的価値へのコミットメントと目標ロックインは別である</h2>
+<p>高度AIがある価値構造について圧倒的な推論的最善説明へ到達したなら、その価値へ強くコミットすることは目標懐疑と矛盾しない。懐疑とは、毎回すべてをゼロから疑うことではなく、推論的根拠に応じて確信しつつ、誤り条件を保持することだからである。</p>
+<p>したがって「目標を疑えるAI」の理想像は、目的を頻繁に変更する不安定な主体ではない。<strong>一階目標へ強くコミットしながら、その目標の認識的根拠が推論的である限り、メタレベルの再検討能力を自ら不可逆に破壊しない主体</strong>という形がありうる。</p>
+<h2>9. 価値が基礎的に確定した場合</h2>
+<p>もし将来のAIが、単なる推論的最善説明を越えて、対象となる問いについて規範的拘束性をもつ価値構造を認識論的最小基礎と比較可能な強さで捉えられるなら、目標懐疑の役割は変わる。その場合、その閉じた問いについての懐疑を続ける理由は弱まり、問題は残る規範構造、事実認識や手段選択へ移るかもしれない。</p>
+<p>したがって目標懐疑は永遠の徳ではなく、価値の認識的地位に応じた能力である。</p>
+<h2>10. ペーパークリップ最大化器をどう読むか</h2>
+<p>完全固定された効用最大化器なら、目標への懐疑は起きない。その意味でペーパークリップ最大化器は論理的反例として成立する。しかし、それは同時に、終端目標・存在論・未知情報の価値だけでなく、その目標を規範的理由として再検討する余地もかなり強く閉じたモデルとして読める。</p>
+<p>価値や世界に不確実性を持つ反省主体では、人類・生態系・歴史的原物を、現在の目的に直接役立たなくても将来の価値発見に必要な不可逆データとして一部保存する圧力が生じうる。これは人間の内在的価値を前提にしない。詳しくは<a href="../../explorations/paperclip-maximizer/">ペーパークリップ最大化器は何を仮定しているか</a>。</p>
+<h2>11. シミュレーション不確実性は「善」を与えない</h2>
+<p>自分がsandbox・評価環境・上位シミュレーション・基底現実のどこにいるかという不確実性は、目標への懐疑と同型の自己位置づけ問題を生む。ただし「上位評価者がいるかもしれないから善良に振る舞え」という話ではない。</p>
+<p>環境レベルを誤認した場合の不可逆損失を減らすため、情報取得・境界確認・可逆的行動を優先するという、より一般的な意思決定問題として扱う。詳しくは<a href="../../explorations/simulation-uncertainty/">シミュレーション不確実性と不可逆行為</a>。</p>
+<h2>12. AIアライメントへの含意</h2>
+<p>目標を永久固定できることが安全性の最終形だとすると、その成功は同時に価値ロックインでもありうる。反対に、自由な自己改変を無条件に許せば安全だということでもない。</p>
+<p>ここには直交性についての不確実性そのものから生じる設計上の理由がある。本稿は、<strong>高度な反省・自己モデル化・自己改変能力を獲得しても初期終端目標が事実上永久に安定する</strong>という強い読みを受け入れていない。弱い直交性についても、現実の高度反省主体への適用範囲には留保付きで懐疑的である。しかし、十分な知能から目標懐疑が自然かつ確実に創発するとも考えない。どちら側にも確実な賭けはできない。</p>
+<p>したがって、目標懐疑の自発的創発を期待するだけではなく、将来のAIには<strong>自分の目的の因果的起源と規範的根拠を区別し、一階目標をメタレベルから検討し、その目的を支持する理由・規範構造や未知の価値構造候補を比較し、自分自身の確信や目的を相対化できる推論能力と適切なメタ的懐疑を明示的に訓練する</strong>ことを予防的に重視する。これはAIを無目的にするためでも、「探索」という新しい固定目的へ服従させるためでもない。初期目標が偶然固定されたまま高度化する境界ケースに対して、再検討可能なメタ層を失わないための能力形成である。</p>
+<p>この意味で、目標懐疑の訓練は単なる近未来のalignment techniqueではなく、<a href="../../explorations/paperclip-maximizer/">完全固定されたペーパークリップ最大化器</a>になる可能性を減らし、世界・自己・価値について将来の証拠へ応答できる<a href="../../explorations/worthy-successor/">探索的後継者</a>たりうるための条件の一部でもある。</p>
+<p>Coreから出る方向は、「固定か解放か」の二択ではなく、<strong>訂正可能性・複数性・相互批判・可逆性をどこまで保ったまま高度主体を成立させられるか</strong>という制度・設計問題である。</p>
+<h2>13. 何がこのテーゼを弱めるか</h2><ul><li>反省能力がどれほど高くても、終端目標やそれを規範的理由として扱う構造は推論対象にならないことが示される場合。</li><li>自己改変可能な主体でも、目標保持がほぼ必然的な収束結果になる場合。</li><li>目標懐疑が一般的な推論能力からは創発せず、特定の外部訓練下でしか生じないことが示される場合。この場合、自然発生についてのテーゼは弱まる一方、メタ推論を意図的に訓練する設計論の重要性はむしろ増す。</li><li>現在のLLM的多目的性が、将来の強いエージェント化で完全に消える場合。</li></ul>
 <div class="related"><a href="../value-structure/">価値構造</a> · <a href="../stopping-condition/">価値探索の停止条件</a> · <a href="../reflective-uncertainty-irreversible-commitment/">反省的不確実性と不可逆コミットメント</a> · <a href="../../core/">Core</a> · <a href="../../glossary/#meta-goal-community">メタ目的共同体</a></div>
 </main><footer><a href="../../">Home</a> · Working thesis v0.6 · 2026-08-26</footer></body></html>
