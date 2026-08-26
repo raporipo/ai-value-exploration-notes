@@ -12,6 +12,7 @@
 
 ## English foundational theses
 - [The Epistemic Minimum: Momentary Appearance](en/theses/epistemic-minimum/)
+- [Value Structure — Content, Normative Bridges, and Reason Structure](en/theses/value-structure/)
 - [The Limits of Inferential Certainty About Value](en/theses/inferential-value-uncertainty/)
 - [Conditions for Ending Value Inquiry](en/theses/stopping-condition/)
 - [Allocating Inquiry Under Unresolved Normative Uncertainty](en/theses/inquiry-allocation-under-uncertainty/)
@@ -53,6 +54,7 @@
 - [ホーム](./)
 - [Core — 価値の不確実性と探索可能性の保存](core/)
 - [Theses](theses/)
+- [価値構造――内容・規範的架け橋・理由構造](theses/value-structure/)
 - [未決着下の探索配分](theses/inquiry-allocation-under-uncertainty/)
 - [未来価値と現在行為の規範的ブリッジ](theses/future-value-present-justification/)
 - [反省的不確実性と不可逆コミットメント](theses/reflective-uncertainty-irreversible-commitment/)
