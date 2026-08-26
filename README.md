@@ -8,7 +8,7 @@ This repository is intentionally open, but it should be read first of all as an 
 
 The project also does not claim to have developed its ideas in isolation. Its formulations stand, both explicitly and implicitly, on prior discussions in philosophy, metaethics, epistemology, decision theory, AI safety, existential-risk studies, futurism, and adjacent fields. Some influences are cited by name; others may enter through inherited concepts, background assumptions, reading history, or AI-assisted synthesis. Missing citation should therefore never be read as a claim of independence, novelty, or priority. Systematic literature comparison remains ongoing.
 
-Languages: Japanese (`ja`) is the source text. A complete English working translation (`en`) is available under `docs/en/`. A Chinese version is deferred.
+Languages: Japanese (`ja`) is the canonical source text. An English working translation (`en`) is maintained under `docs/en/` and is synchronized from the Japanese version when conceptual changes are introduced. A Chinese version is deferred.
 
 Current revision notes: [`CHANGELOG-v0.8.md`](CHANGELOG-v0.8.md)
 
