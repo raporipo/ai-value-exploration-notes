@@ -10,6 +10,10 @@ FAVICON_BLOCK_RE = re.compile(
     r'<!-- generated-favicon:start -->.*?<!-- generated-favicon:end -->\s*',
     re.IGNORECASE | re.DOTALL,
 )
+LEGACY_FAVICON_RE = re.compile(
+    r'<link\b(?=[^>]*\brel=["\'](?:icon|apple-touch-icon)["\'])[^>]*?/?>\s*',
+    re.IGNORECASE,
+)
 
 FAVICON_BLOCK = """<!-- generated-favicon:start -->
 <link rel="icon" href="/ai-value-exploration-notes/favicon.svg" type="image/svg+xml"/>
@@ -22,6 +26,9 @@ FAVICON_BLOCK = """<!-- generated-favicon:start -->
 def update_page(page: Path) -> bool:
     text = page.read_text(encoding="utf-8")
     clean = FAVICON_BLOCK_RE.sub("", text)
+    # Some hand-edited pages predate the generated block markers. Remove
+    # those legacy favicon declarations too so regeneration stays idempotent.
+    clean = LEGACY_FAVICON_RE.sub("", clean)
 
     match = re.search(r"</head>", clean, re.IGNORECASE)
     if match is None:

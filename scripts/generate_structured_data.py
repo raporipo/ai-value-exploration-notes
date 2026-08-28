@@ -24,6 +24,10 @@ SOCIAL_META_RE = re.compile(
     r'<!-- generated-social-meta:start -->.*?<!-- generated-social-meta:end -->\s*',
     re.IGNORECASE | re.DOTALL,
 )
+LEGACY_SOCIAL_META_RE = re.compile(
+    r'<meta\b(?=[^>]*(?:\bproperty=["\']og:[^"\']+["\']|\bname=["\']twitter:card["\']))[^>]*?/?>\s*',
+    re.IGNORECASE,
+)
 
 # Generated commits update machine-readable metadata, not the human-visible
 # article content. Exclude them when deriving Article.dateModified.
@@ -324,6 +328,10 @@ def render_social_meta(page: Path, meta: PageMetadataParser) -> str:
 def update_page(page: Path) -> bool:
     text = page.read_text(encoding="utf-8")
     clean = SOCIAL_META_RE.sub("", text)
+    # Some hand-edited pages contain the same social metadata without the
+    # generated block markers. Remove those declarations before regeneration
+    # so the workflow remains idempotent and cannot create duplicate OG tags.
+    clean = LEGACY_SOCIAL_META_RE.sub("", clean)
     clean = STRUCTURED_DATA_RE.sub("", clean)
 
     parser = PageMetadataParser()
