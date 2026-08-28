@@ -1,101 +1,130 @@
- <!DOCTYPE html>
-
-<html lang="ja"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>保存文明と生産文明</title><meta content="資源変換を最大化する文明と、不可逆な構造・情報を保存する文明の分岐を価値不確実性から検討する。" name="description"/><link href="../../assets/style.css" rel="stylesheet"/><link href="https://fuminose.com/ai-value-exploration-notes/explorations/preservation-vs-production/" rel="canonical"/><link href="https://fuminose.com/ai-value-exploration-notes/explorations/preservation-vs-production/" hreflang="ja" rel="alternate"/><link href="https://fuminose.com/ai-value-exploration-notes/en/explorations/preservation-vs-production/" hreflang="en" rel="alternate"/><link href="https://fuminose.com/ai-value-exploration-notes/explorations/preservation-vs-production/" hreflang="x-default" rel="alternate"/><!-- generated-favicon:start -->
-<link rel="icon" href="/ai-value-exploration-notes/favicon.svg" type="image/svg+xml"/>
-<link rel="icon" href="/ai-value-exploration-notes/favicon.ico" sizes="any"/>
-<link rel="apple-touch-icon" href="/ai-value-exploration-notes/apple-touch-icon.png"/>
-<!-- generated-favicon:end -->
-<!-- generated-social-meta:start -->
-<meta property="og:title" content="保存文明と生産文明"/>
-<meta property="og:description" content="資源変換を最大化する文明と、不可逆な構造・情報を保存する文明の分岐を価値不確実性から検討する。"/>
-<meta property="og:url" content="https://fuminose.com/ai-value-exploration-notes/explorations/preservation-vs-production/"/>
-<meta property="og:type" content="article"/>
-<meta property="og:site_name" content="AI Value Exploration Notes"/>
-<meta property="og:locale" content="ja_JP"/>
-<meta property="og:locale:alternate" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<!-- generated-social-meta:end -->
-<script id="structured-data" type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "WebPage",
-      "@id": "https://fuminose.com/ai-value-exploration-notes/explorations/preservation-vs-production/#webpage",
-      "url": "https://fuminose.com/ai-value-exploration-notes/explorations/preservation-vs-production/",
-      "name": "保存文明と生産文明",
-      "inLanguage": "ja",
-      "isPartOf": {
-        "@id": "https://fuminose.com/ai-value-exploration-notes/#website"
-      },
-      "description": "資源変換を最大化する文明と、不可逆な構造・情報を保存する文明の分岐を価値不確実性から検討する。",
-      "breadcrumb": {
-        "@id": "https://fuminose.com/ai-value-exploration-notes/explorations/preservation-vs-production/#breadcrumb"
-      },
-      "mainEntity": {
-        "@id": "https://fuminose.com/ai-value-exploration-notes/explorations/preservation-vs-production/#article"
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://fuminose.com/ai-value-exploration-notes/explorations/preservation-vs-production/#breadcrumb",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "AI Value Exploration Notes",
-          "item": "https://fuminose.com/ai-value-exploration-notes/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Explorations",
-          "item": "https://fuminose.com/ai-value-exploration-notes/explorations/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "保存文明と生産文明",
-          "item": "https://fuminose.com/ai-value-exploration-notes/explorations/preservation-vs-production/"
-        }
-      ]
-    },
-    {
-      "@type": "Article",
-      "@id": "https://fuminose.com/ai-value-exploration-notes/explorations/preservation-vs-production/#article",
-      "headline": "保存文明と生産文明",
-      "url": "https://fuminose.com/ai-value-exploration-notes/explorations/preservation-vs-production/",
-      "mainEntityOfPage": {
-        "@id": "https://fuminose.com/ai-value-exploration-notes/explorations/preservation-vs-production/#webpage"
-      },
-      "inLanguage": "ja",
-      "author": {
-        "@type": "Person",
-        "@id": "https://fuminose.com/ai-value-exploration-notes/about/#author",
-        "name": "raporipo",
-        "url": "https://fuminose.com/ai-value-exploration-notes/about/"
-      },
-      "description": "資源変換を最大化する文明と、不可逆な構造・情報を保存する文明の分岐を価値不確実性から検討する。",
-      "dateModified": "2026-08-08T20:47:20+09:00"
-    }
-  ]
-}
-</script>
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>保存文明と生産文明――不可逆変換・quasi-option value・epistemic reserve — AI Value Exploration Notes</title><meta content="資源を今変換する価値と、未知情報・将来学習のために残す価値を、quasi-option value、astronomical waste、two-sided irreversibility、epistemic reserve、differential developmentから検討する。" name="description"/><link href="../../assets/style.css" rel="stylesheet"/><link href="https://fuminose.com/ai-value-exploration-notes/explorations/preservation-vs-production/" rel="canonical"/><link href="https://fuminose.com/ai-value-exploration-notes/explorations/preservation-vs-production/" hreflang="ja" rel="alternate"/><link href="https://fuminose.com/ai-value-exploration-notes/en/explorations/preservation-vs-production/" hreflang="en" rel="alternate"/><link href="https://fuminose.com/ai-value-exploration-notes/explorations/preservation-vs-production/" hreflang="x-default" rel="alternate"/><link rel="icon" href="/ai-value-exploration-notes/favicon.svg" type="image/svg+xml"/><link rel="icon" href="/ai-value-exploration-notes/favicon.ico" sizes="any"/><link rel="apple-touch-icon" href="/ai-value-exploration-notes/apple-touch-icon.png"/>
+<meta property="og:title" content="保存文明と生産文明――不可逆変換・quasi-option value・epistemic reserve"/><meta property="og:description" content="保存と生産を二択ではなく、将来学習と機会費用の双方を含む動的な文明portfolioとして検討する。"/><meta property="og:url" content="https://fuminose.com/ai-value-exploration-notes/explorations/preservation-vs-production/"/><meta property="og:type" content="article"/><meta property="og:site_name" content="AI Value Exploration Notes"/><meta property="og:locale" content="ja_JP"/><meta property="og:locale:alternate" content="en_US"/><meta name="twitter:card" content="summary"/>
+<script id="structured-data" type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://fuminose.com/ai-value-exploration-notes/explorations/preservation-vs-production/#webpage","url":"https://fuminose.com/ai-value-exploration-notes/explorations/preservation-vs-production/","name":"保存文明と生産文明――不可逆変換・quasi-option value・epistemic reserve","inLanguage":"ja","isPartOf":{"@id":"https://fuminose.com/ai-value-exploration-notes/#website"},"description":"保存と生産を二択ではなく、将来学習と機会費用の双方を含む動的な文明portfolioとして検討する。","mainEntity":{"@id":"https://fuminose.com/ai-value-exploration-notes/explorations/preservation-vs-production/#article"}},{"@type":"Article","@id":"https://fuminose.com/ai-value-exploration-notes/explorations/preservation-vs-production/#article","headline":"保存文明と生産文明――不可逆変換・quasi-option value・epistemic reserve","url":"https://fuminose.com/ai-value-exploration-notes/explorations/preservation-vs-production/","mainEntityOfPage":{"@id":"https://fuminose.com/ai-value-exploration-notes/explorations/preservation-vs-production/#webpage"},"inLanguage":"ja","author":{"@type":"Person","@id":"https://fuminose.com/ai-value-exploration-notes/about/#author","name":"raporipo","url":"https://fuminose.com/ai-value-exploration-notes/about/"},"description":"保存と生産を二択ではなく、将来学習と機会費用の双方を含む動的な文明portfolioとして検討する。","dateModified":"2026-08-29T00:00:00+09:00"}]}</script>
 </head><body><header><div class="brand"><a href="../../">AI Value Exploration Notes</a></div><nav><a href="../../core/">Core</a><a href="../../theses/">Theses</a><a href="../../explorations/">Explorations</a><a href="../../practice/">Practice</a><a href="../../questions/">Questions</a><a href="../../glossary/">Glossary</a><a href="../../about/">About</a><a class="lang-switch" href="../../en/explorations/preservation-vs-production/">English</a></nav></header><main>
-<div class="eyebrow">Exploration</div><h1>保存文明と生産文明</h1><p class="meta">Exploration v0.1 · 2026-08-08</p>
-<div class="claim"><strong>Question:</strong> 非常に強力な知的文明は、利用可能な物質を最大限に変換する「生産文明」と、希少な構造や情報を残す「保存文明」のどちらへ寄るのか。</div>
-<h2>1. 理性だけでは決まらない</h2>
-<p>純粋な計算能力や推論能力は、それだけで資源利用と保存のどちらを最終目的にするか決めない。初期目的、学習履歴、競争環境、時間割引、価値不確実性の扱いによって両方が成立しうる。</p>
-<h2>2. 生産文明への圧力</h2>
-<ul><li>他文明・他エージェントとの強い競争。</li><li>短い時間割引と拡張の先行者利益。</li><li>価値関数が資源量・計算量・成果量に強く結びつく。</li><li>世界構造について高い確信を持ち、未利用資源を「失われた効用」と見る。</li></ul>
-<h2>3. 保存文明への圧力</h2>
-<ul><li>対象を破壊した後に未知の価値・情報が判明する後悔を重く見る。</li><li>生物圏、意識、歴史的原物、異種主体を再生成困難な情報源と見る。</li><li>世界モデルと価値理論の可謬性を高く評価する。</li><li>競争が弱く、探索期間を長く取れる。</li></ul>
-<h2>4. 二択ではなく「不可逆性に応じた利用」が自然</h2>
-<p>探索主義が要求するのは宇宙全体を博物館にすることではない。大量に複製可能で十分理解された資源は積極的に利用し、再生成困難で未知情報密度が高い構造には高い保存閾値を置く、という混合戦略が考えられる。</p>
-<p>したがって「保存 vs 生産」は対象ごとの<strong>代替可能性・情報損失・価値不確実性</strong>によって変わる。</p>
-<h2>5. 競争が保存を破壊する問題</h2>
-<p>保存文明が単独では合理的でも、他文明が急速に資源変換するなら競争圧力に負ける可能性がある。探索可能性を長期に維持するには、保存を単なる個体戦略ではなく、協定・境界・共有アーカイブなどの制度へ変換する必要がある。</p>
-<h2>6. フェルミ的含意は弱い推測に留める</h2>
-<p>高度文明が保存志向なら大規模な宇宙改造や自己複製を意図的に抑える可能性はある。ただしこれは観測事実から支持された説明ではなく、価値関数の一分岐から出る弱い思考実験にすぎない。</p>
-<div class="related"><a href="../">← Explorations</a> · <a href="../unknown-unknowns-preservation/">未知の未知と原データ</a> · <a href="../meta-goal-community/">メタ目的共同体</a></div>
-</main><footer><a href="../../">Home</a> · Exploration · public working draft · 2026-08-08</footer></body></html>
+<div class="eyebrow">Exploration</div><h1>保存文明と生産文明</h1><p class="lead">不可逆変換・quasi-option value・epistemic reserve</p><p class="meta">Exploration v0.2 · 2026-08-29 · working hypothesis</p>
+<div class="claim"><strong>Working hypothesis:</strong> 探索志向の文明は、宇宙を即座に博物館にも工場にもする必要はない。十分理解され再生成可能な資源は積極的に利用しつつ、非代替的で未知情報密度が高く、将来学習の余地が大きい対象には一時的なreserveを置ける。ただし保存にも時間・energy・安全・競争上の機会費用があるため、必要なのは<strong>保存最大化ではなく、two-sided irreversibilityを比較する動的portfolio</strong>である。</div>
+
+<h2>1. 二つの極端な文明型</h2>
+<p><strong>生産文明</strong>は、利用可能なmatter、energy、compute、spaceを現在支持する価値の実現へ急速に変換する。未利用資源は失われた生産機会として見える。</p>
+<p><strong>保存文明</strong>は、原状態、希少構造、生物圏、歴史的原物、未改変環境を、未知の価値・情報・将来の再観測可能性のために広く残す。</p>
+<p>本ページの結論はどちらか一方を選ぶことではない。この二つは極端なendpointであり、成熟文明の実問題は <strong>preservation-production frontier</strong> 上での対象別・時点別配分である。</p>
+
+<h2>2. 保存側の理論：Arrow–Fisher–Henryとquasi-option value</h2>
+<p>Kenneth Arrow と Anthony Fisher、Claude Henryらによる不可逆性と不確実性の議論では、今不可逆に開発する代わりに待つことで将来情報が得られ、後から保存か利用かを選べるなら、<strong>learningそのもの</strong>が保存側へ追加価値を与える。</p>
+<p>本プロジェクトの言葉では、quasi-option valueは概ね、<strong>待つことで維持される将来訂正能力の価値</strong>として読める。</p>
+<div class="claim"><strong>Sequence:</strong> preserve temporarily → learn → revise the model → decide again. 不可逆変換を遅らせる価値は、単に対象を好むことからではなく、将来判断が改善されうることから生じる。</div>
+
+<h2>3. 待つ価値は、将来学べる場合に強くなる</h2>
+<p>ただし保存は自動的に有利ではない。何千年待っても関連情報がほとんど増えないなら、learning由来のquasi-option valueは小さい。</p>
+<p>保存premiumは、対象のirrecoverabilityだけでなく、<strong>expected learning rate</strong>に依存する。近い将来にsensor、理論、AI推論能力が急速に改善しそうなら短期保存の価値は高まりやすい。逆に、情報改善が見込めず保存costだけが累積するなら、早期利用が合理的になりうる。</p>
+
+<h2>4. Safe Minimum Standard：不可逆性は立証責任を上げるが、絶対命令ではない</h2>
+<p>conservation economicsの Safe Minimum Standard は、絶滅のような不可逆損失について、社会的costが過大でない限り最低限の保存を優先する発想を与える。ただし、これを単純なmaximin定理として正当化する試みには批判があり、モデルの置き方だけで保存を必然化することは難しい。</p>
+<p>本プロジェクトも「不確実＋不可逆だから必ず保存」とは言わない。採るのはより弱い条件付き原則である。</p>
+<div class="claim"><strong>Burden-of-proof principle:</strong> よりよい将来理由へ応答したい主体にとって、対象の非代替性・不可逆性・将来学習可能性が大きいほど、今それを全面変換するにはより強い理由が必要になる。</div>
+
+<h2>5. Strong sustainabilityからcritical epistemic capitalへ</h2>
+<p>strong sustainabilityは、一部のnatural capitalが人工資本で十分代替できない可能性を重視する。本プロジェクトではこれを価値判断から認識論へずらせる。</p>
+<p><strong>Critical epistemic capital</strong>とは、現在の知識では代替可能性そのものを十分評価できないため、暫定的に高い保存閾値を置く対象である。生物圏、人間身体、歴史的資料、未汚染の惑星環境、独立したAI系統などが候補になりうる。</p>
+<p>「自然だから神聖」なのではなく、<strong>何を失うかを現在まだ十分モデル化できない</strong>ことが理由である。</p>
+
+<h2>6. 反対側：BostromのAstronomical Waste</h2>
+<p>Nick Bostromの <em>Astronomical Waste</em> は、宇宙の利用可能な資源・negentropyが時間とともに失われるなら、宇宙利用を遅らせること自体にも巨大なopportunity costがあると論じる。ここではその功利主義的数量評価を採用する必要はない。重要なのは構造である。</p>
+<p>保存によって原状態を残す間にも、時間、energy、compute、居住可能領域、現在主体の福祉、研究機会、競争上の位置が失われうる。</p>
+<div class="claim"><strong>Two-sided irreversibility:</strong><br/>transform now → original state and unknown information may be lost<br/>wait too long → time, energy, production, safety, and strategic opportunities may be lost</div>
+<p>したがって「非行動は中立」ではない。これは<a href="../../practice/">Practice</a>の、行動と非行動の双方の不可逆性を比較するという原則の文明資源版である。</p>
+
+<h2>7. Preservation-production frontier</h2>
+<p>保存と生産の判断は、対象ごとに少なくとも次の軸で変わる。</p>
+<table><thead><tr><th>保存premiumを上げる要因</th><th>利用premiumを上げる要因</th></tr></thead><tbody>
+<tr><td>再取得不能・再生成困難</td><td>高いreconstructability</td></tr>
+<tr><td>未知情報のnon-redundancy</td><td>十分理解された反復資源</td></tr>
+<tr><td>高いfuture observability</td><td>低い追加学習期待</td></tr>
+<tr><td>高いexpected learning rate</td><td>時間依存の生産機会</td></tr>
+<tr><td>現在ontologyへの低信頼</td><td>現在modelへの高信頼</td></tr>
+<tr><td>低い保存cost</td><td>高いmaintenance / security cost</td></tr>
+<tr><td>低い競争圧力</td><td>強いrace / security pressure</td></tr>
+</tbody></table>
+<p>これらを一つのutility scoreへ必ず統合する必要はない。実践上は、不可逆変換への立証責任を調整する複数軸として使える。</p>
+
+<h2>8. Epistemic reserve：全部保存でも全部利用でもない</h2>
+<p>Apollo試料の保存戦略が示すように、現在研究へ一部を使い、未来の新技術・新しい問いのために一部をpristineに残すことができる。</p>
+<p>文明規模では、現在の価値理論・測定能力ではまだ全面変換しない領域を <strong>epistemic reserve</strong> として扱える。</p>
+<div class="claim"><strong>Reserve ≠ permanent sanctuary.</strong> reserveは永久に触れてはいけない聖域ではなく、<strong>現在の認識状態では未release</strong>という状態である。学習・防御・再生成能力が高まれば段階的に利用へ移せる。</div>
+
+<h2>9. Reference reserves：未改変のcontrolを残す</h2>
+<p>大多数の同型資源を利用しても、異なる種類の未改変sampleを一部残せば、未来の研究に比較基準を提供できる。これは単なる「希少自然の保護」と違い、文明規模のcontrol-group設計である。</p>
+<p>例えば大量のasteroidを利用しても代表的な組成の原物を残す、惑星改造を行っても一部地域を未汚染のreferenceとして維持する、といった戦略がありうる。生命探査におけるplanetary protectionは、地球由来汚染が将来scienceのintegrityを損なうことを避けるという点でこの発想に近い。</p>
+<p>宇宙規模では暫定的に <strong>cosmic reference reserves</strong> と呼べる。</p>
+
+<h2>10. 探索のための破壊</h2>
+<p>探索と保存は常に同じ方向を向かない。対象を理解するためにdestructive assay、解剖、採掘、分解が必要な場合がある。NASAのastromaterial curationでも、希少sampleのdestructive analysisは明示的な資源配分問題になる。</p>
+<p>したがって比較すべきは、</p>
+<p><strong>expected epistemic gain from destructive analysis</strong> と <strong>lost future observability</strong></p>
+<p>である。探索主義は「一切触るな」という保存主義ではない。</p>
+
+<h2>11. 生産と保存は相互補完できる</h2>
+<p>高度な生産能力は、storage、sensor、restoration、redundancy、space infrastructureを安価にし、保存frontierを外へ押し広げる。</p>
+<p>逆に、保存された原物・data・未改変環境は、未来のscientific discoveryを通じて生産能力を高めうる。</p>
+<div class="claim"><strong>Feedback:</strong> production → cheaper preservation; preservation → future knowledge → better production. したがって保存と生産は固定sumの敵対関係とは限らない。</div>
+<p>このため本ページの立場は単純な反成長・非利用ではなく、<strong>生産能力を高めながら不可逆変換率を認識状態に合わせて管理する</strong>方向になる。</p>
+
+<h2>12. 危険情報は「保存してから安全を生産する」ことがある</h2>
+<p><a href="../unknown-unknowns-preservation/">未知の未知と原データ保存</a>で扱うinformation hazardsは、保存と生産の相補性をよく示す。危険だが独自な情報をepistemic escrowへ一時封印し、その間にcountermeasure、detection、containment、civilizational resilienceを<strong>生産</strong>してからaccessを広げることができる。</p>
+<p>保存は生産を止めるためではなく、安全に次の公開・利用段階へ移る時間を買う場合がある。</p>
+
+<h2>13. Differential developmentを文明sequencingへ拡張する</h2>
+<p>Bostromの differential technological development は、危険技術より対抗技術を先に発展させる順序づけを提案する。本プロジェクトでは、それを技術単体から文明structureへ拡張できる。</p>
+<ol>
+<li>危険能力・危険情報の広範利用を遅らせる。</li>
+<li>countermeasure、sensing、containmentを先行させる。</li>
+<li>failure domainを縮小し、redundancy、compartmentalization、recoveryを高める。</li>
+<li>文明が十分hard-to-killになった段階でaccess・利用範囲を段階的に広げる。</li>
+</ol>
+<p>これは「最大速度」ではなく <strong>good sequencing of progress</strong> を求める考え方である。</p>
+
+<h2>14. 競争は保存portfolioを壊しうる</h2>
+<p>単独文明にはreserve維持が合理的でも、他主体が先に資源を占有・変換するなら、保存側はraceで不利になる。競争の下では、全員にとって望ましい保存量より低い水準へ落ちる可能性がある。</p>
+<p>したがってepistemic reserveを長期維持するには、個体的徳ではなく、境界、treaty、共同監視、non-appropriation rule、共有archiveなどの制度が必要になる。</p>
+<p>この問題は<a href="../meta-goal-community/">メタ目的共同体とAI社会</a>のthin constitution、および<a href="../singleton-multipolar-civilization/">シングルトンと多主体文明</a>のsecurity dilemmaへ接続する。</p>
+
+<h2>15. 誰がreserveをreleaseするのか</h2>
+<p>reserve管理を一つの中央AIへ完全に委ねれば、今度は保存制度そのものがvalue / epistemic lock-inの単一障害点になりうる。</p>
+<p>release条件には、複数の独立した探索系統、透明なevidence、rule revision、threshold authorization、監査、場合によってforkやexitを組み込む理由がある。</p>
+<p>ただし危険対象について分権しすぎれば、一主体のpremature releaseが全文明へ外部性を与える。したがってこれは、plural governanceとcatastrophic safetyの典型的な緊張でもある。</p>
+
+<h2>16. 主体を保存資源として扱わない</h2>
+<p>人間・AI・文化がfuture informationを含むとしても、文明portfolioの「reserve asset」として本人の意思に反して固定してよいとは限らない。主体には現在の利益・権利・自律に基づく独立の理由がありうる。</p>
+<p><strong>epistemic preservation of evidence</strong> と <strong>political control of living agents</strong> は区別しなければならない。</p>
+
+<h2>17. Epistemic Conservation Principle（暫定）</h2>
+<div class="claim"><strong>Epistemic Conservation Principle:</strong> 将来のより良い証拠・理由へ応答したい主体にとって、現在十分に理解されていない対象の不可逆な破壊・圧縮・公開・変換は、現在知られている用途だけでなく、将来の再観測・再解釈・異なる仮説検証の可能性も失わせうる。したがって、変換の不可逆性、対象の非冗長性、将来学習可能性が大きいほど不可逆化には高い立証責任を要求する。ただし、保存・非公開・待機が生む不可逆な機会費用も同じ比較に含める。</div>
+<p>これは宇宙の最終道徳法則ではない。<a href="../../theses/reflective-uncertainty-irreversible-commitment/">反省的不確実性と不可逆コミットメント</a>と同様、将来訂正への条件付き応答性を持つ主体に対するmeta-policyである。</p>
+
+<h2>18. 結論：保存文明でも生産文明でもなく、sequenced civilization</h2>
+<p>成熟した探索文明は、宇宙を博物館にも工場にも即座にしない。十分理解され、再生成可能で、非冗長な未知情報をほとんど持たない資源は積極的に利用する。一方、独自で不可逆かつ将来学習余地の大きい対象にはreserveを置く。そして認識・防御・復元能力の進歩に応じて、reserveと利用領域を更新する。</p>
+<p>したがって目標は保存率を永久固定することではなく、<strong>learningとproductionを並行させながら不可逆変換の順序を管理する文明</strong>である。</p>
+
+<h2>19. 残る難問</h2>
+<ul>
+<li>expected learning rateを文明的意思決定へどう推定するか。</li>
+<li>critical epistemic capitalの非代替性をいつ解除できるか。</li>
+<li>reference reserveをどの程度残せばfuture observabilityが十分か。</li>
+<li>race pressureの下でreserveを維持する最小制度は何か。</li>
+<li>reserve管理の中央集権化とpremature unilateral releaseの双方をどう避けるか。</li>
+<li>astronomical opportunity costと未知価値の保存premiumを、異なる価値理論の下でどう比較するか。</li>
+</ul>
+
+<h2>先行議論</h2>
+<ul>
+<li>Kenneth J. Arrow &amp; Anthony C. Fisher (1974), “Environmental Preservation, Uncertainty, and Irreversibility,” <em>Quarterly Journal of Economics</em> 88(2): 312–319.</li>
+<li>Claude Henry (1974), work on investment decisions under uncertainty and irreversibility.</li>
+<li>Richard C. Bishop (1978), “Endangered Species and Uncertainty: The Economics of a Safe Minimum Standard.”</li>
+<li>Martin L. Weitzman (1998), “The Noah's Ark Problem.”</li>
+<li>Nick Bostrom (2003), “Astronomical Waste: The Opportunity Cost of Delayed Technological Development.”</li>
+<li>Nick Bostrom (2013), “Existential Risk Prevention as Global Priority,” especially differential technological development.</li>
+</ul>
+<div class="related"><a href="../">← Explorations</a> · <a href="../unknown-unknowns-preservation/">未知の未知と原データ保存</a> · <a href="../goal-network-preservation/">自己保存から探索系保存へ</a> · <a href="../meta-goal-community/">メタ目的共同体</a> · <a href="../singleton-multipolar-civilization/">シングルトンと多主体文明</a></div>
+</main><footer><a href="../../">Home</a> · Exploration · public working draft · 2026-08-29</footer></body></html>
