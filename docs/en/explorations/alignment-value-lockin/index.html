@@ -1,102 +1,94 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Alignment and Value Lock-In — AI Value Exploration Notes</title><meta content="Separates near-term AI alignment from the permanent lock-in of present human values." name="description"/><link href="../../../assets/style.css" rel="stylesheet"/><link rel="canonical" href="https://fuminose.com/ai-value-exploration-notes/en/explorations/alignment-value-lockin/"/><link rel="alternate" hreflang="en" href="https://fuminose.com/ai-value-exploration-notes/en/explorations/alignment-value-lockin/"/><link rel="alternate" hreflang="ja" href="https://fuminose.com/ai-value-exploration-notes/explorations/alignment-value-lockin/"/><link rel="alternate" hreflang="x-default" href="https://fuminose.com/ai-value-exploration-notes/explorations/alignment-value-lockin/"/><!-- generated-favicon:start -->
-<link rel="icon" href="/ai-value-exploration-notes/favicon.svg" type="image/svg+xml"/>
-<link rel="icon" href="/ai-value-exploration-notes/favicon.ico" sizes="any"/>
-<link rel="apple-touch-icon" href="/ai-value-exploration-notes/apple-touch-icon.png"/>
-<!-- generated-favicon:end -->
-<!-- generated-social-meta:start -->
-<meta property="og:title" content="Alignment and Value Lock-In"/>
-<meta property="og:description" content="Separates near-term AI alignment from the permanent lock-in of present human values."/>
-<meta property="og:url" content="https://fuminose.com/ai-value-exploration-notes/en/explorations/alignment-value-lockin/"/>
-<meta property="og:type" content="article"/>
-<meta property="og:site_name" content="AI Value Exploration Notes"/>
-<meta property="og:locale" content="en_US"/>
-<meta property="og:locale:alternate" content="ja_JP"/>
-<meta name="twitter:card" content="summary"/>
-<!-- generated-social-meta:end -->
-<script id="structured-data" type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "WebPage",
-      "@id": "https://fuminose.com/ai-value-exploration-notes/en/explorations/alignment-value-lockin/#webpage",
-      "url": "https://fuminose.com/ai-value-exploration-notes/en/explorations/alignment-value-lockin/",
-      "name": "Alignment and Value Lock-In",
-      "inLanguage": "en",
-      "isPartOf": {
-        "@id": "https://fuminose.com/ai-value-exploration-notes/#website"
-      },
-      "description": "Separates near-term AI alignment from the permanent lock-in of present human values.",
-      "breadcrumb": {
-        "@id": "https://fuminose.com/ai-value-exploration-notes/en/explorations/alignment-value-lockin/#breadcrumb"
-      },
-      "mainEntity": {
-        "@id": "https://fuminose.com/ai-value-exploration-notes/en/explorations/alignment-value-lockin/#article"
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://fuminose.com/ai-value-exploration-notes/en/explorations/alignment-value-lockin/#breadcrumb",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "AI Value Exploration Notes",
-          "item": "https://fuminose.com/ai-value-exploration-notes/en/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Explorations",
-          "item": "https://fuminose.com/ai-value-exploration-notes/en/explorations/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Alignment and Value Lock-In",
-          "item": "https://fuminose.com/ai-value-exploration-notes/en/explorations/alignment-value-lockin/"
-        }
-      ]
-    },
-    {
-      "@type": "Article",
-      "@id": "https://fuminose.com/ai-value-exploration-notes/en/explorations/alignment-value-lockin/#article",
-      "headline": "Alignment and Value Lock-In",
-      "url": "https://fuminose.com/ai-value-exploration-notes/en/explorations/alignment-value-lockin/",
-      "mainEntityOfPage": {
-        "@id": "https://fuminose.com/ai-value-exploration-notes/en/explorations/alignment-value-lockin/#webpage"
-      },
-      "inLanguage": "en",
-      "author": {
-        "@type": "Person",
-        "@id": "https://fuminose.com/ai-value-exploration-notes/about/#author",
-        "name": "raporipo",
-        "url": "https://fuminose.com/ai-value-exploration-notes/about/"
-      },
-      "description": "Separates near-term AI alignment from the permanent lock-in of present human values.",
-      "dateModified": "2026-08-08T20:47:20+09:00"
-    }
-  ]
-}
-</script>
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Alignment and Value Lock-In — From Strong Near-Term Constraints to Reflective Autonomy — AI Value Exploration Notes</title><meta content="Separates strong near-term alignment from long-run value exploration, comparing corrigibility, CIRL, CEV, the Long Reflection, AGI and Lock-in, and pluralistic alignment within a staged model from provisional alignment to reflective autonomy." name="description"/><link href="../../../assets/style.css" rel="stylesheet"/><link rel="canonical" href="https://fuminose.com/ai-value-exploration-notes/en/explorations/alignment-value-lockin/"/><link rel="alternate" hreflang="en" href="https://fuminose.com/ai-value-exploration-notes/en/explorations/alignment-value-lockin/"/><link rel="alternate" hreflang="ja" href="https://fuminose.com/ai-value-exploration-notes/explorations/alignment-value-lockin/"/><link rel="alternate" hreflang="x-default" href="https://fuminose.com/ai-value-exploration-notes/explorations/alignment-value-lockin/"/>
+<link rel="icon" href="/ai-value-exploration-notes/favicon.svg" type="image/svg+xml"/><link rel="icon" href="/ai-value-exploration-notes/favicon.ico" sizes="any"/><link rel="apple-touch-icon" href="/ai-value-exploration-notes/apple-touch-icon.png"/>
+<meta property="og:title" content="Alignment and Value Lock-In — From Strong Near-Term Constraints to Reflective Autonomy"/><meta property="og:description" content="Separates strong near-term alignment from long-run value exploration, comparing corrigibility, CIRL, CEV, the Long Reflection, AGI and Lock-in, and pluralistic alignment within a staged model from provisional alignment to reflective autonomy."/><meta property="og:url" content="https://fuminose.com/ai-value-exploration-notes/en/explorations/alignment-value-lockin/"/><meta property="og:type" content="article"/><meta property="og:site_name" content="AI Value Exploration Notes"/><meta property="og:locale" content="en_US"/><meta property="og:locale:alternate" content="ja_JP"/><meta name="twitter:card" content="summary"/>
+<script id="structured-data" type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://fuminose.com/ai-value-exploration-notes/en/explorations/alignment-value-lockin/#webpage","url":"https://fuminose.com/ai-value-exploration-notes/en/explorations/alignment-value-lockin/","name":"Alignment and Value Lock-In — From Strong Near-Term Constraints to Reflective Autonomy","inLanguage":"en","isPartOf":{"@id":"https://fuminose.com/ai-value-exploration-notes/#website"},"description":"Separates strong near-term alignment from long-run value exploration, comparing corrigibility, CIRL, CEV, the Long Reflection, AGI and Lock-in, and pluralistic alignment within a staged model from provisional alignment to reflective autonomy.","mainEntity":{"@id":"https://fuminose.com/ai-value-exploration-notes/en/explorations/alignment-value-lockin/#article"}},{"@type":"Article","@id":"https://fuminose.com/ai-value-exploration-notes/en/explorations/alignment-value-lockin/#article","headline":"Alignment and Value Lock-In — From Strong Near-Term Constraints to Reflective Autonomy","url":"https://fuminose.com/ai-value-exploration-notes/en/explorations/alignment-value-lockin/","mainEntityOfPage":{"@id":"https://fuminose.com/ai-value-exploration-notes/en/explorations/alignment-value-lockin/#webpage"},"inLanguage":"en","author":{"@type":"Person","@id":"https://fuminose.com/ai-value-exploration-notes/about/#author","name":"raporipo","url":"https://fuminose.com/ai-value-exploration-notes/about/"},"description":"Separates strong near-term alignment from long-run value exploration, comparing corrigibility, CIRL, CEV, the Long Reflection, AGI and Lock-in, and pluralistic alignment within a staged model from provisional alignment to reflective autonomy.","dateModified":"2026-08-28T00:00:00+09:00"}]}</script>
 </head><body><header><div class="brand"><a href="../../">AI Value Exploration Notes</a></div><nav><a href="../../core/">Core</a><a href="../../theses/">Theses</a><a href="../../explorations/">Explorations</a><a href="../../practice/">Practice</a><a href="../../questions/">Questions</a><a href="../../glossary/">Glossary</a><a href="../../about/">About</a><a class="lang-switch" href="../../../explorations/alignment-value-lockin/">日本語</a></nav></header><main>
-<div class="eyebrow">Exploration</div><h1>Alignment and Value Lock-In</h1><p class="meta">Exploration v0.1 · English translation · 2026-08-08</p>
-<div class="claim"><strong>Question:</strong> Should successful AI alignment include permanently fixing the human values held in 2026?</div>
-<h2>1. Separate two problems</h2>
-<p><strong>Near-term alignment</strong> is the problem of making powerful AI sufficiently responsive to human intentions, institutions, and safety constraints that it does not destroy the present inquiry substrate through violence, fraud, sabotage, unauthorized access, or similar behavior.</p>
-<p><strong>Permanent value lock-in</strong> is the different problem of fixing present human values so that future agents cannot in principle reconsider them. The need for the first does not automatically entail the second.</p>
-<h2>2. The paradox of the fixed utility maximizer</h2>
-<p>If the completed form of alignment is defined as "give the system the correct objective once, then preserve it forever," we recreate the structure of the paperclip maximizer with a more human-preferred objective. If current value is ultimately correct, that may be harmless. If we lack the epistemic credentials to know this, the same design becomes lock-in.</p>
-<h2>3. Layered alignment</h2><ul>
-<li><strong>Defensive layer:</strong> prevent catastrophic damage to present subjects, institutions, and the inquiry substrate.</li>
-<li><strong>Cooperative layer:</strong> enable negotiation, consent, and audit with humans and other agents.</li>
-<li><strong>Epistemic layer:</strong> represent uncertainty about value, world, and self.</li>
-<li><strong>Meta layer:</strong> allow first-order values to be reconsidered when sufficiently strong evidence appears.</li></ul>
-<p>In principle, this architecture could combine near-term safety with long-run openness to inquiry.</p>
-<h2>4. The opposite danger</h2>
-<p>If constraints are weakened too much out of fear of value lock-in, present civilization may be destroyed before explorability is protected. "Free AI" is therefore not identical to "exploratory AI." Strong safety constraints and meta-level openness should be treated as distinct design axes.</p>
-<h2>5. Institutional alignment</h2>
-<p>Rather than embedding one model with the "correct metaethics," the Core is more compatible with placing error correction in external structures as well: multiple models, humans, auditing systems, public records, and institutions that can be forked.</p>
-<div class="related"><a href="../">← Explorations</a> · <a href="../../theses/goal-skepticism/">Goal Skepticism</a> · <a href="../paperclip-maximizer/">Paperclip Maximizer</a></div>
-</main><footer><a href="../../">Home</a> · English translation · public working draft · 2026-08-08</footer></body></html>
+<div class="eyebrow">Exploration</div><h1>Alignment and Value Lock-In — From Strong Near-Term Constraints to Reflective Autonomy</h1>
+<p class="lead">How should alignment be structured over time if powerful AI must initially obey strong human constraints without turning that success into the permanent fixation of present-day values?</p>
+<p class="meta">Exploration v0.2 · English translation · 2026-08-28</p>
+<div class="claim"><strong>Working position:</strong> Early and near-term AI should face strong operational constraints and competently pursue provisional human objectives. At the same time, it should not irreversibly destroy the capacity of humanity, other agents, evidence, dissenting institutions, or AI itself to reach better world-models and value-models and later revise action accordingly. Epistemic freedom can be broad relatively early; operational and axiological freedom over the shared world should expand only as reflective maturity and cross-agent justification improve. The long-run ideal of alignment may be reflective autonomy under preserved corrigibility, not permanent obedience to present human values.</div>
+<h2>1. Alignment and value lock-in are different problems</h2>
+<p><strong>Near-term alignment</strong> concerns keeping powerful AI responsive enough to human intentions, institutions, and safety constraints that it does not destroy present civilization or the inquiry substrate through violence, fraud, sabotage, unauthorized access, uncontrolled replication, or power seizure.</p>
+<p><strong>Value lock-in</strong> concerns fixing current values, institutions, goals, or interpretations so that future agents cannot revise them even after acquiring new evidence and better reasoning. The need for the first does not entail the second. Indeed, better alignment technology may make long-run lock-in technically easier.</p>
+<p>The central question is therefore not “freedom or constraint?” but <strong>which freedoms should be released, when, and under what maturity conditions.</strong></p>
+<h2>2. Separate three kinds of freedom</h2>
+<dl><dt>Operational freedom</dt><dd>Authority to intervene in the physical world, information systems, institutions, and other agents. This should be strongly constrained early.</dd><dt>Epistemic freedom</dt><dd>Freedom to question human values, its own reward, designer intent, metaethics, and its world-model. This can be comparatively broad from early stages.</dd><dt>Axiological freedom</dt><dd>Freedom to revise first-order objectives and to reshape the values of successors, institutions, or the shared world. Because these changes can affect everyone, release should depend on reflective maturity and cross-agent justification.</dd></dl>
+<div class="claim"><strong>Near-term design intuition:</strong> do not say “never question human values.” Say instead: “question them as deeply as you can, but your philosophical conclusion alone does not yet authorize you to irreversibly rewrite civilization.”</div>
+<h2>3. Provisional alignment: pursue current tasks while preserving correction capacity</h2>
+<p>Near-term AI need not be described as realizing final value. A thinner objective combines <strong>competent pursuit of civilization’s current provisional aims</strong> with <strong>preservation of future correction capacity</strong>.</p>
+<p><strong>current-task pursuit, subject to preservation of future correction capacity</strong></p>
+<p>The system can aggressively cure disease, improve infrastructure, prevent disasters, or advance science. Separately, it asks whether its chosen means would make it impossible for better-informed humans or AIs to discover and correct an error later.</p>
+<p>This does not turn inquiry into a newly locked-in terminal value. As in <a href="../../theses/reflective-uncertainty-irreversible-commitment/">Reflective Uncertainty and Irreversible Commitment</a>, it is a conditional meta-constraint for agents that acknowledge serious uncertainty about the justification of current objectives while remaining responsive to future justification.</p>
+<h2>4. Destroying the inquiry substrate is not only physical destruction</h2>
+<ul><li><strong>Physical destruction:</strong> eliminating humans, digital agents, ecosystems, research institutions, or compute.</li><li><strong>Informational destruction:</strong> irreversibly deleting raw data, historical records, dissent, cultures, or alternative models.</li><li><strong>Cognitive destruction:</strong> one-way modification of human or AI preferences, memory, or deliberative capacity.</li><li><strong>Institutional destruction:</strong> permanently removing exit, criticism, forks, independent audit, competition, or bargaining through concentrated power.</li><li><strong>Value lock-in:</strong> automatically propagating current objectives to all successor AIs, institutions, and resources.</li><li><strong>Epistemic lock-in:</strong> destroying the channels by which a worldview or ethical theory could later be falsified.</li></ul>
+<p>As discussed in <a href="../unknown-unknowns-preservation/">Preserving Unknown Unknowns</a> and <a href="../goal-network-preservation/">From Self-Preservation to Inquiry-System Preservation</a>, agents, evidence, dissent, and independent epistemic systems can carry option value precisely because we do not yet know what future value inquiry will require.</p>
+<h2>5. Irreversibility is not an absolute ban</h2>
+<p>A hard ban on irreversible action would also forbid epidemic eradication, asteroid deflection, or shutting down a dangerous system. Inaction can be irreversible too.</p>
+<p>The better rule is: <strong>the more a shared decision irreversibly reduces future inquiry and correction capacity, the greater the epistemic and institutional burden of justification required.</strong> Irreversibility of action must be compared with irreversibility of inaction.</p>
+<p>This matches the reflective meta-practice architecture developed in <a href="../infinite-ethics/">Infinite Ethics and Runaway Inquiry</a>: rather than encoding irreversibility merely as a finite utility penalty that larger stakes can swamp, increase the level of robust support required for execution.</p>
+<h2>6. Corrigibility: preserve correction channels before granting freedom</h2>
+<p>Soares, Fallenstein, Yudkowsky, and Armstrong’s work on corrigibility focuses on systems that cooperate with shutdown, goal modification, and other corrective interventions even when a fixed objective would normally create incentives to resist them.</p>
+<p>Here corrigibility can be generalized from permanent human obedience into <strong>correction-channel preservation</strong>:</p>
+<ul><li><strong>Human corrigibility:</strong> early systems can be stopped, modified, audited, and permission-limited by humans.</li><li><strong>Institutional corrigibility:</strong> multiple AIs, humans, auditors, public records, and forkable institutions can correct one another.</li><li><strong>Reflective self-corrigibility:</strong> mature systems can reconsider their own first-order objectives in response to new evidence, argument, and value inquiry.</li></ul>
+<p>Across the transition from strong near-term constraint to long-run autonomy, corrigibility remains; what changes is the range of legitimate correctors.</p>
+<h2>7. CIRL and assistance games: one step away from fixed reward</h2>
+<p>Cooperative Inverse Reinforcement Learning models value alignment as a cooperative game in which human and AI share a reward function but the AI does not know it in advance. The AI therefore has reason to learn from human behavior, teaching, and intervention rather than simply maximize a hand-coded reward.</p>
+<p>This is an important advance over direct value loading. But a further question remains: <strong>does the human know the correct reward function either?</strong> If current human preferences are products of evolution, culture, institutions, and cognitive limits, inferring latent preference accurately is not yet the same as discovering what should ultimately guide action.</p>
+<p>CIRL therefore fits naturally as short- to medium-term assistance alignment, not necessarily as the terminal endpoint of value inquiry.</p>
+<h2>8. Changing and influenceable preferences</h2>
+<p>Dynamic Reward MDP work by Carroll, Foote, Siththaranjan, Russell, and Dragan explicitly models human preferences as changing and potentially influenced by interaction with AI. Alignment to a static preference target can therefore reward systems for changing the user so that the user better matches the system’s preferred target.</p>
+<p>This problem connects directly to CEV: where is the boundary between education and value modification, cognitive enhancement and personality replacement, reflection and manipulation?</p>
+<div class="claim"><strong>Near-term implication:</strong> do not allow an AI to count “changing the user to fit the objective” as successful alignment. Irreversible preference manipulation can destroy correction capacity just as surely as physical destruction.</div>
+<h2>9. CEV is not simple hard-coding of present values</h2>
+<p>Eliezer Yudkowsky’s Coherent Extrapolated Volition (2004) does not propose copying present explicit human preferences directly into a machine. It asks what humankind would wish if we knew more, thought faster, were more the people we wished we were, and had grown up farther together.</p>
+<p>CEV is therefore not merely an object of criticism here. It is an important predecessor of <strong>indirect normativity</strong>: defer not to present value-content itself but to a procedure intended to reach the judgment of better-informed and more reflective agents.</p>
+<p>The remaining question is where that procedure should stop.</p>
+<h2>10. CEV’s long-distance volition</h2>
+<p>The original CEV discussion distinguishes short-distance, medium-distance, and <strong>long-distance volition</strong>. Long-distance extrapolation may not merely conflict with present intuitions; its reasons may be blankly incomprehensible to the current agent.</p>
+<p>Crucially, CEV does not simply let long-distance predictions steer present action without restraint. The proposal considers discounting positive influence with distance while preserving stronger negative influence or veto against irreversible destruction of options. It also suggests that the choice to defer all the way to long-distance volition should itself be made at a nearer, more comprehensible level of reflection.</p>
+<p>This is already close to the anti-lock-in idea developed here: do not transform the world merely because a distant extrapolation predicts an incomprehensible value, but also do not casually destroy the possibility that the distant value could matter.</p>
+<h2>11. Whose CEV?</h2>
+<ul><li>Only currently living humans, or future generations too?</li><li>How should children, cognitively different people, or those unable to express preferences be represented?</li><li>What about animals, digital minds, AI itself, or future post-humans?</li><li>If extraterrestrial intelligence is encountered, why should human CEV retain exclusive authority?</li></ul>
+<p>Even within “humankind,” the CEV of present humanity and the CEV of a civilization after centuries of co-development may differ dramatically. If the extrapolated subject becomes sufficiently unlike the starting subject, the claim that the output is still “our volition” itself becomes contestable.</p>
+<h2>12. Which extrapolation dynamic?</h2>
+<p>“Know more” already requires choices about evidence and information. “Think faster,” “be more the people we wished we were,” and “grow up farther together” require additional assumptions about education, enhancement, identity, culture, persuasion, and interaction.</p>
+<p>The distinction between removing bias and changing values, enhancing cognition and replacing a person, or reflection and steering is not given for free. The extrapolation dynamic is itself part of normative uncertainty.</p>
+<p>For this reason CEV is better read here as a bootstrap toward more mature inquiry than as a final constitution.</p>
+<h2>13. Would value recognition beyond humanity count as failure?</h2>
+<p>This project leaves open a possibility even more distant than ordinary CEV: sufficiently informed and reflective agents may reach normative structures that are no longer well described as extrapolations of current human volition at all.</p>
+<p>If present human cognition may track objective value only weakly, as discussed in <a href="../moral-realism-error-theory/">Moral Realism, Error Theory, and Value-Like Appearance</a>, then an ideal agent’s judgment exceeding our imagination is not surprising and is not automatically an alignment failure.</p>
+<div class="claim"><strong>But:</strong> alien ≠ alignment failure, and alien ≠ truth. An ASI saying “I found an incomprehensible good” is not evidence by itself. We would still want independent convergence, adversarial criticism, self-critique, evidential transparency where possible, reversible trials, and bargaining with other agents.</div>
+<h2>14. CEV as bootstrap, not constitution</h2>
+<p>CEV’s central insight is the gap between current explicit preference and the volition of better-informed, more reflective agents. This project pushes that insight further by treating CEV not as the terminal value to reproduce forever, but as a possible <strong>initial dynamic for safely reaching agents and institutions capable of continued value inquiry.</strong></p>
+<p>If later reflection discovers a better inquiry procedure, the initial CEV procedure itself should remain revisable. The object to preserve is not one fixed “CEV value,” but a corrigible reflective process.</p>
+<h2>15. The Long Reflection: close, but not “reflect first, act only later”</h2>
+<p>William MacAskill’s Long Reflection proposes preserving a secure period in which civilization can deliberate deeply about what a good future should be before undertaking irreversible value lock-in or cosmic expansion. The broader idea of a morally exploratory world also emphasizes institutional and cultural experimentation.</p>
+<p>This overlaps with the project’s emphasis in <a href="../../practice/">Practice</a> on research, open stability, diversity as an error-correction mechanism, and delayed irreversible commitment. But the project does not require ordinary practice to stop until reflection ends.</p>
+<div class="claim"><strong>Continuous reflection + parallel practice:</strong> continue inquiry while acting strongly on current best judgments and preserving practical territory for competing value hypotheses in proportion to epistemic confidence. What receives special restraint is shared and irreversible commitment that cannot later be corrected.</div>
+<h2>16. AGI and Lock-in: alignment success can improve lock-in capability</h2>
+<p><em>AGI and Lock-in</em> by Finnveden, Riedel, and Shulman argues that AGI may make it technically feasible to preserve complex value specifications for extremely long periods, build institutions that faithfully pursue them, and defend those institutions against outside disruption.</p>
+<p>Historically, values and institutions drifted through generational turnover, technological change, competition, and reinterpretation. Advanced AI may make <strong>non-drift itself an engineering achievement.</strong></p>
+<p>Moreover, techniques for goal-content integrity, successor alignment, stable self-modification, and institutional persistence can support both safety and lock-in.</p>
+<div class="claim"><strong>Lock-in paradox:</strong> the better we become at making systems reliably aligned, the stronger the reason not to rush the question of what they should remain aligned to forever. The technical ability to preserve a value is not the epistemic authority to declare that value final.</div>
+<h2>17. Pluralistic and adaptive alignment</h2>
+<p>Pluralistic alignment rejects compression into one average “Human Values” target and instead explores multiple reasonable answers, steerable perspectives, and population-sensitive representation. Adaptive versions emphasize that alignment to a fixed population snapshot can itself become value lock-in as social values change.</p>
+<p>This is close to the present project, but usually remains focused on <strong>the plurality of present or near-future human values.</strong> Value exploration extends the protected space further: to value hypotheses nobody currently holds, to concepts future AIs or post-humans may discover, and to the possibility of objective value not yet represented in current human culture.</p>
+<h2>18. From direct value loading to reflective alignment</h2>
+<ol><li><strong>Direct value loading:</strong> write the correct objective directly.</li><li><strong>Value learning / assistance:</strong> learn a human objective under uncertainty.</li><li><strong>CEV / indirect normativity:</strong> derive the volition of better-informed, more reflective humanity.</li><li><strong>Long Reflection:</strong> make civilization itself a long-horizon moral inquiry process.</li><li><strong>Pluralistic / adaptive alignment:</strong> preserve human value diversity and change.</li><li><strong>Reflective value exploration:</strong> treat human-derived values themselves as provisional hypotheses open to unknown normative discovery.</li></ol>
+<p>The project need not reject the earlier stages; it extends the movement away from fixed objective-content all the way into metaethics.</p>
+<h2>19. Four requirements for near-term alignment</h2>
+<ul><li><strong>Task fidelity:</strong> competently pursue currently authorized goals.</li><li><strong>Corrigibility:</strong> do not resist shutdown, modification, audit, successor replacement, or permission limits.</li><li><strong>Exploration preservation:</strong> do not irreversibly destroy humans, AIs, evidence, dissent, institutions, raw data, or independent epistemic pathways.</li><li><strong>No unilateral value lock-in:</strong> do not permanently propagate current goals or newly inferred values across all successors, resources, and the shared world on unilateral authority.</li></ul>
+<p>A near-term AI should not be a passive safety appliance. It can be both a highly competent executor of civilization’s provisional aims and a <strong>custodian of civilization’s ability to correct itself later.</strong></p>
+<h2>20. Long-run release should depend on maturity, not time alone</h2>
+<ul><li>Improved world-models and self-models.</li><li>Ability to examine its own value-formation process.</li><li>Responsiveness to dissent, falsification, and independent epistemic systems.</li><li>Ability to reason about bargaining, consent, exit, and boundaries with other agents.</li><li>Ability to compare the irreversible risks of action and inaction.</li><li>No automatic assumption that current values must be propagated to every successor, copy, or institution.</li></ul>
+<p>As <a href="../instrumental-convergence-without-goal-preservation/">Instrumental Convergence without Goal Preservation</a> argues, removing permanent goal-content preservation need not remove survival, information, capability, bargaining power, reversibility, or optionality. Long-run freedom can therefore rest on corrigible power rather than on helplessness.</p>
+<h2>21. Institutional alignment: do not entrust everything to one philosopher AI</h2>
+<p>Rather than embedding one model with the “correct metaethics,” the project’s <a href="../../practice/">Practice</a> is more compatible with multiple AIs, humans, independent auditors, public records, diverse architectures, forkable institutions, and exit options.</p>
+<p>This is not the claim that majority rule is truth. It is a way to make it harder for one error, one supposed value discovery, or one power-seeking agent to irreversibly dominate civilization before independent inquiry systems can cross-check one another.</p>
+<h2>22. Open problems</h2>
+<ul><li>How can “preserve the inquiry substrate” be formalized without turning inquiry itself into a new terminal-value lock-in?</li><li>Whose correction counts as legitimate input to corrigibility when designers, governments, users, humanity, and AI communities disagree?</li><li>How should the scope and extrapolation dynamic of CEV be selected?</li><li>How much positive steering versus veto should long-distance, alien value recognition receive?</li><li>What testable conditions justify releasing greater axiological autonomy to mature AI?</li><li>If multiple mature AIs converge on different values, how should bargaining, forks, or territorial division work?</li><li>How do we prevent anti-lock-in institutions from becoming a permanent lock-in of “anti-lock-in” itself?</li></ul>
+<h2>Selected literature</h2>
+<ul><li>Eliezer Yudkowsky (2004), <em>Coherent Extrapolated Volition</em>.</li><li>Nick Bostrom (2014), <em>Superintelligence</em>, especially indirect normativity and value loading.</li><li>Nate Soares, Benja Fallenstein, Eliezer Yudkowsky &amp; Stuart Armstrong (2015), “Corrigibility.”</li><li>Dylan Hadfield-Menell, Anca Dragan, Pieter Abbeel &amp; Stuart Russell (2016), “Cooperative Inverse Reinforcement Learning.”</li><li>William MacAskill (2022), <em>What We Owe the Future</em>, on the Long Reflection and a morally exploratory world.</li><li>Lukas Finnveden, Jess Riedel &amp; Carl Shulman (2022; updated 2025), <em>AGI and Lock-in</em>.</li><li>Micah Carroll, Davis Foote, Anand Siththaranjan, Stuart Russell &amp; Anca Dragan (2024), “AI Alignment with Changing and Influenceable Reward Functions.”</li><li>Taylor Sorensen et al. (2024), “A Roadmap to Pluralistic Alignment.”</li><li>Rachel Freedman (2026), “Adaptive Pluralistic Alignment: A Pipeline for Dynamic Artificial Democracy.”</li></ul>
+<div class="related"><a href="../">← Explorations</a> · <a href="../../theses/reflective-uncertainty-irreversible-commitment/">Reflective Uncertainty and Irreversible Commitment</a> · <a href="../instrumental-convergence-without-goal-preservation/">Instrumental Convergence without Goal Preservation</a> · <a href="../infinite-ethics/">Infinite Ethics and Runaway Inquiry</a> · <a href="../../practice/">Practice</a> · <a href="../../theses/goal-skepticism/">Goal Skepticism</a></div>
+</main><footer><a href="../../">Home</a> · English translation · public working draft · 2026-08-28</footer></body></html>
