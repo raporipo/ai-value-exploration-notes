@@ -11,7 +11,7 @@
 - [Glossary](en/glossary/)
 
 ## English foundational theses
-- [The Epistemic Minimum: Momentary Appearance](en/theses/epistemic-minimum/)
+- [The Momentary Epistemic Minimum](en/theses/epistemic-minimum/)
 - [Value Structure — Content, Normative Bridges, and Reason Structure](en/theses/value-structure/)
 - [The Limits of Inferential Certainty About Value](en/theses/inferential-value-uncertainty/)
 - [Conditions for Ending Value Inquiry](en/theses/stopping-condition/)
@@ -36,6 +36,7 @@
 - [The Material Basis of Political Agency](en/explorations/material-basis-political-agency/)
 - [Can ASI Capability Diffusion Be Made Safe?](en/explorations/asi-diffusion-civilizational-resilience/)
 - [Meta-Goal Communities and AI Society](en/explorations/meta-goal-community/)
+- [Singletons and Multi-Agent Civilization](en/explorations/singleton-multipolar-civilization/)
 - [Cosmic Host and Cosmic Norms](en/explorations/cosmic-host-normativity/)
 - [Terminal / Final Extinction](en/explorations/terminal-final-extinction/)
 - [Worthy Successor](en/explorations/worthy-successor/)
@@ -51,7 +52,7 @@
 - [How Far Can Future Value Justify Present Action? — detailed stress test](en/explorations/future-value-present-justification/)
 - [Normative Judgment and Motivation](en/explorations/moral-motivation-internalism-externalism/)
 - [Expressivism](en/explorations/expressivism/)
-- [Moral Realism / Error Theory](en/explorations/moral-realism-error-theory/)
+- [Moral Realism, Error Theory, and Value-Like Appearance](en/explorations/moral-realism-error-theory/)
 - [What Does Cosmological Extinction Mean?](en/explorations/cosmological-extinction/)
 - [Has Categorical Normativity Been Discovered?](en/explorations/categorical-normativity/)
 - [How Much Ontology Follows Beyond Correlationism?](en/explorations/beyond-correlationism/)
