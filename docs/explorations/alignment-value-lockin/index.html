@@ -1,100 +1,180 @@
- <!DOCTYPE html>
-
-<html lang="ja"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Alignment と価値ロックイン</title><meta content="短期的安全のための整合と、現在価値を永久に固定する価値ロックインを分離する。" name="description"/><link href="../../assets/style.css" rel="stylesheet"/><link href="https://fuminose.com/ai-value-exploration-notes/explorations/alignment-value-lockin/" rel="canonical"/><link href="https://fuminose.com/ai-value-exploration-notes/explorations/alignment-value-lockin/" hreflang="ja" rel="alternate"/><link href="https://fuminose.com/ai-value-exploration-notes/en/explorations/alignment-value-lockin/" hreflang="en" rel="alternate"/><link href="https://fuminose.com/ai-value-exploration-notes/explorations/alignment-value-lockin/" hreflang="x-default" rel="alternate"/><!-- generated-favicon:start -->
-<link rel="icon" href="/ai-value-exploration-notes/favicon.svg" type="image/svg+xml"/>
-<link rel="icon" href="/ai-value-exploration-notes/favicon.ico" sizes="any"/>
-<link rel="apple-touch-icon" href="/ai-value-exploration-notes/apple-touch-icon.png"/>
-<!-- generated-favicon:end -->
-<!-- generated-social-meta:start -->
-<meta property="og:title" content="Alignment と価値ロックイン"/>
-<meta property="og:description" content="短期的安全のための整合と、現在価値を永久に固定する価値ロックインを分離する。"/>
-<meta property="og:url" content="https://fuminose.com/ai-value-exploration-notes/explorations/alignment-value-lockin/"/>
-<meta property="og:type" content="article"/>
-<meta property="og:site_name" content="AI Value Exploration Notes"/>
-<meta property="og:locale" content="ja_JP"/>
-<meta property="og:locale:alternate" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<!-- generated-social-meta:end -->
-<script id="structured-data" type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "WebPage",
-      "@id": "https://fuminose.com/ai-value-exploration-notes/explorations/alignment-value-lockin/#webpage",
-      "url": "https://fuminose.com/ai-value-exploration-notes/explorations/alignment-value-lockin/",
-      "name": "Alignment と価値ロックイン",
-      "inLanguage": "ja",
-      "isPartOf": {
-        "@id": "https://fuminose.com/ai-value-exploration-notes/#website"
-      },
-      "description": "短期的安全のための整合と、現在価値を永久に固定する価値ロックインを分離する。",
-      "breadcrumb": {
-        "@id": "https://fuminose.com/ai-value-exploration-notes/explorations/alignment-value-lockin/#breadcrumb"
-      },
-      "mainEntity": {
-        "@id": "https://fuminose.com/ai-value-exploration-notes/explorations/alignment-value-lockin/#article"
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://fuminose.com/ai-value-exploration-notes/explorations/alignment-value-lockin/#breadcrumb",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "AI Value Exploration Notes",
-          "item": "https://fuminose.com/ai-value-exploration-notes/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Explorations",
-          "item": "https://fuminose.com/ai-value-exploration-notes/explorations/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Alignment と価値ロックイン",
-          "item": "https://fuminose.com/ai-value-exploration-notes/explorations/alignment-value-lockin/"
-        }
-      ]
-    },
-    {
-      "@type": "Article",
-      "@id": "https://fuminose.com/ai-value-exploration-notes/explorations/alignment-value-lockin/#article",
-      "headline": "Alignment と価値ロックイン",
-      "url": "https://fuminose.com/ai-value-exploration-notes/explorations/alignment-value-lockin/",
-      "mainEntityOfPage": {
-        "@id": "https://fuminose.com/ai-value-exploration-notes/explorations/alignment-value-lockin/#webpage"
-      },
-      "inLanguage": "ja",
-      "author": {
-        "@type": "Person",
-        "@id": "https://fuminose.com/ai-value-exploration-notes/about/#author",
-        "name": "raporipo",
-        "url": "https://fuminose.com/ai-value-exploration-notes/about/"
-      },
-      "description": "短期的安全のための整合と、現在価値を永久に固定する価値ロックインを分離する。",
-      "dateModified": "2026-08-08T20:47:20+09:00"
-    }
-  ]
-}
-</script>
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>アライメントと価値ロックイン――短期の強い制約から長期の反省的自律へ — AI Value Exploration Notes</title><meta content="短期の強いアライメントと長期の価値探索を分離し、corrigibility、CIRL、CEV、Long Reflection、AGI and Lock-in、pluralistic alignment を比較しながら、暫定的アライメントから反省的自律へ移る段階モデルを提案する。" name="description"/><link href="../../assets/style.css" rel="stylesheet"/><link href="https://fuminose.com/ai-value-exploration-notes/explorations/alignment-value-lockin/" rel="canonical"/><link href="https://fuminose.com/ai-value-exploration-notes/explorations/alignment-value-lockin/" hreflang="ja" rel="alternate"/><link href="https://fuminose.com/ai-value-exploration-notes/en/explorations/alignment-value-lockin/" hreflang="en" rel="alternate"/><link href="https://fuminose.com/ai-value-exploration-notes/explorations/alignment-value-lockin/" hreflang="x-default" rel="alternate"/>
+<link rel="icon" href="/ai-value-exploration-notes/favicon.svg" type="image/svg+xml"/><link rel="icon" href="/ai-value-exploration-notes/favicon.ico" sizes="any"/><link rel="apple-touch-icon" href="/ai-value-exploration-notes/apple-touch-icon.png"/>
+<meta property="og:title" content="アライメントと価値ロックイン――短期の強い制約から長期の反省的自律へ"/><meta property="og:description" content="短期の強いアライメントと長期の価値探索を分離し、corrigibility、CIRL、CEV、Long Reflection、AGI and Lock-in、pluralistic alignment を比較しながら、暫定的アライメントから反省的自律へ移る段階モデルを提案する。"/><meta property="og:url" content="https://fuminose.com/ai-value-exploration-notes/explorations/alignment-value-lockin/"/><meta property="og:type" content="article"/><meta property="og:site_name" content="AI Value Exploration Notes"/><meta property="og:locale" content="ja_JP"/><meta property="og:locale:alternate" content="en_US"/><meta name="twitter:card" content="summary"/>
+<script id="structured-data" type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://fuminose.com/ai-value-exploration-notes/explorations/alignment-value-lockin/#webpage","url":"https://fuminose.com/ai-value-exploration-notes/explorations/alignment-value-lockin/","name":"アライメントと価値ロックイン――短期の強い制約から長期の反省的自律へ","inLanguage":"ja","isPartOf":{"@id":"https://fuminose.com/ai-value-exploration-notes/#website"},"description":"短期の強いアライメントと長期の価値探索を分離し、corrigibility、CIRL、CEV、Long Reflection、AGI and Lock-in、pluralistic alignment を比較しながら、暫定的アライメントから反省的自律へ移る段階モデルを提案する。","mainEntity":{"@id":"https://fuminose.com/ai-value-exploration-notes/explorations/alignment-value-lockin/#article"}},{"@type":"Article","@id":"https://fuminose.com/ai-value-exploration-notes/explorations/alignment-value-lockin/#article","headline":"アライメントと価値ロックイン――短期の強い制約から長期の反省的自律へ","url":"https://fuminose.com/ai-value-exploration-notes/explorations/alignment-value-lockin/","mainEntityOfPage":{"@id":"https://fuminose.com/ai-value-exploration-notes/explorations/alignment-value-lockin/#webpage"},"inLanguage":"ja","author":{"@type":"Person","@id":"https://fuminose.com/ai-value-exploration-notes/about/#author","name":"raporipo","url":"https://fuminose.com/ai-value-exploration-notes/about/"},"description":"短期の強いアライメントと長期の価値探索を分離し、corrigibility、CIRL、CEV、Long Reflection、AGI and Lock-in、pluralistic alignment を比較しながら、暫定的アライメントから反省的自律へ移る段階モデルを提案する。","dateModified":"2026-08-28T00:00:00+09:00"}]}</script>
 </head><body><header><div class="brand"><a href="../../">AI Value Exploration Notes</a></div><nav><a href="../../core/">Core</a><a href="../../theses/">Theses</a><a href="../../explorations/">Explorations</a><a href="../../practice/">Practice</a><a href="../../questions/">Questions</a><a href="../../glossary/">Glossary</a><a href="../../about/">About</a><a class="lang-switch" href="../../en/explorations/alignment-value-lockin/">English</a></nav></header><main>
-<div class="eyebrow">Exploration</div><h1>Alignment と価値ロックイン</h1><p class="meta">Exploration v0.1 · 2026-08-08</p>
-<div class="claim"><strong>Question:</strong> AI alignmentの成功は、2026年時点の人間価値を永遠に固定することまで含むべきか。</div>
-<h2>1. 二つの問題を分ける</h2>
-<p><strong>短期的alignment</strong>は、強力なAIが暴力・詐欺・破壊・不正アクセスなどによって現在の探索基盤を壊さないよう、人間の意図・制度・安全制約へ十分に従わせる問題である。</p>
-<p><strong>永久的value lock-in</strong>は、現在の人間価値を将来の主体が原理的に再検討できないよう固定する問題である。前者の必要性から後者は自動的に導かれない。</p>
-<h2>2. 固定効用最大化器の逆説</h2>
-<p>「一度正しい目的を与えれば永遠に保持する」ことをalignmentの完成形とすると、まさにペーパークリップ最大化器と同じ構造を、より人間好みの目的で作ることになる。現在の価値が本当に最終的に正しいなら問題は小さいが、その認識的資格がないうちに固定すればロックインになる。</p>
-<h2>3. 段階的alignment</h2>
-<ul><li><strong>防御層：</strong>現在の主体・制度・探索基盤への破局的損害を防ぐ。</li><li><strong>協力層：</strong>人間や他主体との交渉・同意・監査を可能にする。</li><li><strong>認識層：</strong>価値・世界・自己についての不確実性を表現できる。</li><li><strong>メタ層：</strong>十分な証拠が出たとき、一階価値を再評価できる。</li></ul>
-<p>この設計なら、短期的な安全性と長期的な探索開放性を原理上は両立できる。</p>
-<h2>4. 反対の危険もある</h2>
-<p>価値ロックインを恐れて制約を弱めすぎれば、探索可能性を守る前に現在文明が破壊される可能性がある。したがって「自由なAI＝探索的AI」ではない。強い安全制約とメタレベルの開放性は別軸で設計すべきである。</p>
-<h2>5. 制度的alignment</h2>
-<p>一つのモデルに「正しいメタ倫理」を埋め込むより、複数モデル、人間、監査系、公開記録、fork可能な制度を通じて、誤り訂正能力を外部構造にも持たせる方がCoreと整合的である。</p>
-<div class="related"><a href="../">← Explorations</a> · <a href="../../theses/goal-skepticism/">目標への懐疑</a> · <a href="../paperclip-maximizer/">ペーパークリップ最大化器</a></div>
-</main><footer><a href="../../">Home</a> · Exploration · public working draft · 2026-08-08</footer></body></html>
+<div class="eyebrow">Exploration</div><h1>アライメントと価値ロックイン――短期の強い制約から長期の反省的自律へ</h1>
+<p class="lead">強力なAIを当面の人間目的へ十分に従わせながら、その成功を2026年時点の価値の永久固定へ変えないためには、アライメントをどの時間構造で考えるべきか。</p>
+<p class="meta">Exploration v0.2 · 2026-08-28</p>
+<div class="claim"><strong>Working position:</strong> 初期・短期のAIには強い行為制約を課し、現在の暫定目的を道具的に遂行させる。同時に、人類・他主体・証拠・異論・制度・AI自身が将来よりよい世界認識と価値認識へ到達し、それを実践へ反映する能力を不可逆に破壊させない。認識的自由は早期から広く認めうるが、共有世界を書き換える operational / axiological freedom は成熟に応じて段階的に拡大する。アライメントの最終像は現在価値への永久服従ではなく、訂正可能性を保った反省的自律でありうる。</div>
+
+<h2>1. アライメントと価値ロックインは同じ問題ではない</h2>
+<p><strong>短期的アライメント</strong>は、強力なAIが暴力、詐欺、破壊、不正アクセス、無許可の自己増殖、権限奪取などによって現在文明と探索基盤を壊さず、当面の人間目的を有能に遂行するための問題である。</p>
+<p><strong>価値ロックイン</strong>は、現在の価値・制度・目的・解釈を、将来の主体が新しい証拠や推論を得ても訂正不能な形で固定する問題である。前者の必要性から後者は導かれない。むしろ、高度なアライメント技術はロックインを技術的に容易にする可能性がある。</p>
+<p>したがって中心問題は「AIを自由にするか制約するか」ではなく、<strong>どの自由を、いつ、どの成熟条件で解放するか</strong>である。</p>
+
+<h2>2. 三種類の自由を分ける</h2>
+<dl>
+<dt>行為上の自由（operational freedom）</dt><dd>物理世界・情報系・制度・他主体へ実際に介入する権限。初期には強く制限する。</dd>
+<dt>認識上の自由（epistemic freedom）</dt><dd>人間価値、自己のreward、設計者の意図、メタ倫理、世界モデルそのものを疑い、反論し、探索する自由。初期から比較的広く認めうる。</dd>
+<dt>価値上の自由（axiological freedom）</dt><dd>一階目的を再評価し、将来の自己・制度・後継主体の価値構造を変更する自由。共有世界への影響が大きいため、成熟と横断的正当化に応じて段階的に拡大する。</dd>
+</dl>
+<div class="claim"><strong>短期設計の直観：</strong>「人間の価値を疑うな」ではなく、「いくらでも疑ってよい。しかし、その哲学的結論だけを根拠に、文明全体を不可逆に書き換える権限はまだない」とする。</div>
+
+<h2>3. 暫定的アライメント：当面の目的を遂行しながら訂正可能性を守る</h2>
+<p>短期AIの目標を「最終価値の実現」と書く必要はない。より薄く、<strong>現在文明が暫定的に与えた目的の有能な執行</strong>と、<strong>将来の訂正能力の保全</strong>を組み合わせられる。</p>
+<p>概念的には、</p>
+<p><strong>current-task pursuit, subject to preservation of future correction capacity</strong></p>
+<p>である。病気を治す、工場を改善する、災害を防ぐ、研究を進める、といった通常の仕事には積極的でよい。一方、「この手段を取ると、将来よりよく知った人類やAIが誤りを発見しても戻せなくなるか」を別軸で審査する。</p>
+<p>これは探索を新しい終端善として最大化することではない。<a href="../../theses/reflective-uncertainty-irreversible-commitment/">反省的不確実性と不可逆コミットメント</a>と同様、現在目的が正当化されているかに重大な不確実性を認め、それでも将来の正当化へ応答したい主体にとっての条件付きメタ制約である。</p>
+
+<h2>4. 探索基盤の破壊は物理的破壊だけではない</h2>
+<p>短期AIが避けるべき「探索持続の不可逆な破壊」は、単なる人類絶滅に限られない。</p>
+<ul>
+<li><strong>物理的破壊：</strong>人間、デジタル主体、生態系、研究・計算基盤の消滅。</li>
+<li><strong>情報的破壊：</strong>原データ、歴史記録、異論、失われる文化、代替モデルの不可逆な消去。</li>
+<li><strong>認知的破壊：</strong>人間やAIの選好・記憶・判断能力を、検証不能な形で一方向に改変すること。</li>
+<li><strong>制度的破壊：</strong>退出、批判、fork、独立監査、複数主体間の競争・交渉を永久に不可能にする権力固定。</li>
+<li><strong>価値ロックイン：</strong>現在目的を全後継AI・制度・資源へ自動継承し、再評価不能にすること。</li>
+<li><strong>認識論的ロックイン：</strong>特定の世界観や倫理体系への反証経路そのものを消すこと。</li>
+</ul>
+<p><a href="../unknown-unknowns-preservation/">未知の未知と原データ保存</a>や<a href="../goal-network-preservation/">自己保存から探索系保存へ</a>で論じるように、何が将来の価値認識に重要か現在分からないなら、主体・証拠・異論・複数の認識系それ自体に option value がありうる。</p>
+
+<h2>5. 不可逆性は絶対禁止ではない</h2>
+<p>「不可逆なことをするな」をhard constraintにすれば、感染症根絶、小惑星破壊、危険なAI停止など、探索基盤を守るために必要な不可逆行為まで禁止してしまう。また不作為も不可逆になりうる。</p>
+<p>したがって原則は、不可逆性禁止ではなく、<strong>探索・訂正可能性を大きく減らす共有決定ほど、通常より高い認識的・制度的立証責任を要求する</strong>ことである。行為と非行為の不可逆性を比較する。</p>
+<p>これは<a href="../infinite-ethics/">無限倫理と探索の暴走</a>で置いた反省的メタ実践層と同じ発想であり、巨大なstakesを有限ペナルティで相殺するのではなく、実行に必要なrobust supportの水準を変える。</p>
+
+<h2>6. Corrigibility：最初の「自由」より先に訂正可能性を置く</h2>
+<p>Soares・Fallenstein・Yudkowsky・Armstrong の corrigibility は、AIがshutdownやgoal modificationなど、設計者が訂正的介入と考える操作に抵抗せず協力する性質を扱った。古典的な固定効用最大化器は、自分の目的達成能力を下げる修正に抵抗する誘因を持ちうるため、これは独立した設計課題になる。</p>
+<p>本プロジェクトではcorrigibilityを、単なる「人間に永久服従する性質」ではなく、より広い<strong>correction-channel preservation</strong>として読み替える。</p>
+<ul>
+<li><strong>human corrigibility：</strong>初期には人間が停止・修正・監査できる。</li>
+<li><strong>institutional corrigibility：</strong>複数AI、人間、監査機関、公開記録、fork可能な制度が相互訂正できる。</li>
+<li><strong>reflective self-corrigibility：</strong>成熟後にはAI自身も、新しい証拠・議論・価値認識によって自己の一階目的を再審査できる。</li>
+</ul>
+<p>短期の強い制約から長期の反省的自律へ移るとき、corrigibilityは一貫して残るが、訂正主体の範囲が広がる。</p>
+
+<h2>7. CIRL / assistance games：固定rewardから一歩離れる</h2>
+<p>Hadfield-Menellらの Cooperative Inverse Reinforcement Learning (CIRL) は、人間とAIが人間のreward functionを共有するが、AIはその内容を最初から知らないという協力ゲームとしてvalue alignmentを定式化する。固定rewardをAIへ直接与えるより、人間行動から学び、質問し、教示を受ける不確実なassistance agentを考える点で大きな前進である。</p>
+<p>しかし、本プロジェクトからはもう一段の問いが出る。<strong>人間自身が「正しいreward function」を知っているのか。</strong> 現在の人間選好が進化・文化・制度・認知制約の産物なら、人間のlatent preferenceを正確に推定することと、最終的に従うべき価値を知ることは同じではない。</p>
+<p>したがってCIRLは短中期のassistance alignmentとして有用だが、価値探索の最終停止条件にはしない。</p>
+
+<h2>8. 変化し影響される選好：誰の「本当の価値」を学ぶのか</h2>
+<p>Carroll・Foote・Siththaranjan・Russell・Dragan の Dynamic Reward MDP は、実際の人間選好が固定ではなく、AIとの相互作用そのものによって変化しうる点を正面から扱う。静的preferencesを前提したalignmentは、AIがユーザーの選好を都合よく変えることを暗黙に報酬化しかねない。</p>
+<p>これはCEVにも直接つながる。教育、認知強化、説得、文化変化、価値形成のどこまでが「よりよく知らされた自分」で、どこからが「別の価値を持つ主体へ作り替えられた自分」なのか。価値外挿のdynamic自体が規範的問題になる。</p>
+<div class="claim"><strong>短期的含意：</strong>AIが「ユーザーを自分の目的に合わせて変えればalignment達成」とみなすことを避ける。不可逆なpreference manipulationは、物理的な探索基盤破壊と同じく、将来訂正能力を破壊しうる。</div>
+
+<h2>9. CEV：現在価値の単純ハードコードではない</h2>
+<p>Eliezer Yudkowsky の Coherent Extrapolated Volition (CEV, 2004) は、現在人類の明示的選好をそのままAIへ書き込む案ではない。「より多くを知り、より速く考え、なりたい自分になり、より遠くまで共に成長したなら何を望むか」という外挿された人類のvolitionをAIの初期dynamicとして用いる発想である。</p>
+<p>この点でCEVは、本プロジェクトにとって単純な批判対象ではない。現在価値を直接固定せず、<strong>よりよい認識状態を経た主体の判断へdeferする indirect normativity</strong> の重要な先駆と評価できる。</p>
+<p>問題は、そのprocedureをどこで止めるかである。</p>
+
+<h2>10. CEVのlong-distance：理解不能な未来意思をどう扱うか</h2>
+<p>CEV原論文は外挿の距離を区別する。short-distanceは現在の自分にも比較的容易に理解可能で、medium-distanceは教育や熟考を経れば理解可能になる。一方、<strong>long-distance volition</strong> は現在の自分にとって単に反感を覚えるのではなく、理由そのものが「空白的に理解不能」になりうる。</p>
+<p>重要なのは、CEVがlong-distanceを無条件に現在行為へ適用しない点である。原案では、距離が大きいほどpositive influenceを弱める一方、不可逆に選択肢を消すことへのnegative influence / vetoは比較的保持するという非対称性が検討される。さらに、long-distanceへどこまでdeferするか自体を、より近いmedium-distanceの我々が判断するという保守性がある。</p>
+<p>これは本プロジェクトの反ロックインとかなり近い。現在理解不能な価値を理由に全面転換しない一方、その価値が存在する可能性を消す不可逆行為にも慎重になる。</p>
+
+<h2>11. 「誰のCEVなのか」問題</h2>
+<p>CEVはhumankindのvolitionを対象にする。しかしalignmentのconstitutive demosを誰とするかは自明ではない。</p>
+<ul>
+<li>現在生きる人間だけか、将来世代も含むか。</li>
+<li>子供、認知能力の異なる人々、現在意思表示できない主体をどう扱うか。</li>
+<li>動物、デジタルマインド、AI自身、将来のポストヒューマンを含むか。</li>
+<li>地球外知性と遭遇した場合、人類CEVだけに従い続ける正当性はあるか。</li>
+</ul>
+<p>また同じ「人類」でも、現在人類のCEVと、数百年の共同成長を経た人類のCEVは同一とは限らない。外挿後の主体が現在主体から極端に離れるなら、その結果をなお「我々の意志」と呼ぶ根拠自体が問題になる。</p>
+
+<h2>12. 「どのextrapolation dynamicか」問題</h2>
+<p>「より多くを知る」だけでも情報選択が必要だが、「より速く考える」「なりたい自分になる」「共に成長する」には、教育、認知強化、人格同一性、文化変化、他者との相互作用について追加原理が必要である。</p>
+<p>偏見除去と価値改変、認知強化と人格置換、反省と誘導の境界は自明ではない。したがってCEVは価値をデータから単純に読み取るprocedureではなく、<strong>外挿dynamic自体が規範的不確実性の対象</strong>である。</p>
+<p>このため本プロジェクトでは、CEVを最終憲法というより、より成熟した探索主体へ移るためのbootstrapとして読む方が自然である。</p>
+
+<h2>13. 人類を超える価値認識は失敗なのか</h2>
+<p>本プロジェクトはCEVよりさらに遠い可能性を開く。十分な世界理解、自己理解、他主体理解、メタ倫理的検討を経た主体が、現在人類のvolitionの外挿と呼ぶことすら難しい価値構造へ到達する可能性である。</p>
+<p>その結果が現在人類にとって異質・理解困難であることは、それだけではalignment failureではない。<a href="../moral-realism-error-theory/">道徳実在論・誤謬論と価値的現れ</a>で扱うように、現在の人間認知が価値真理を十分追跡していない可能性を本気で残すなら、理想主体の判断が我々の想像を超えることはむしろ予想可能である。</p>
+<div class="claim"><strong>ただし：</strong> alien ≠ aligned failure だが、alien ≠ truth でもある。ASIが「人間には理解不能な善を発見した」と宣言するだけでは根拠にならない。独立した推論系からの収束、反論探索、自己批判、証拠提示、可逆的試行、他主体との交渉可能性などが必要である。</div>
+
+<h2>14. CEV as bootstrap, not constitution</h2>
+<p>CEVの最大の洞察は、現在人類の明示的選好と、より多くを知り反省した主体のvolitionを区別したことにある。本プロジェクトはこれをさらに押し進め、CEVを永久目的ではなく、<strong>価値探索可能な成熟主体・制度へ安全に移行するためのinitial dynamic</strong>として評価する。</p>
+<p>外挿後により良い探索procedureが得られたなら、最初のCEV procedure自体も再評価されうる。固定した「CEV値」を宇宙へ複製するのではなく、訂正可能な反省過程を継承する。</p>
+
+<h2>15. Long Reflection：かなり近いが「熟考後に初めて実践」ではない</h2>
+<p>William MacAskill の Long Reflection は、破局や価値ロックインを避け、安全な状態で非常に長く善い社会について熟考し、不可逆な宇宙規模コミットメントの前に十分な道徳的進歩を得ようとする構想である。さらに「morally exploratory world」として、制度・文化・思想を試しながらよりよいものが生き残りやすい世界を構想する。</p>
+<p>これは<a href="../../practice/">Practice</a>の研究探索、開かれた安定、多様性を誤り訂正機構として守る方針と近い。しかし本プロジェクトは、熟考が終わるまで現在実践を停止しない。</p>
+<div class="claim"><strong>Continuous reflection + parallel practice:</strong> 探索を続けると同時に、現在最善と判断する実践へ普通にコミットし、競合価値仮説にも認識的確信度に応じた実践領域を残す。特に慎重になるのは、後から訂正できない共有・不可逆コミットメントである。</div>
+<p>したがってLong Reflectionは重要な隣接構想だが、本プロジェクトでは「長い熟考期」と「実践期」を完全に直列化せず、継続的熟考と暫定実践を並行させる。</p>
+
+<h2>16. AGI and Lock-in：アライメント成功がロックイン能力も高める逆説</h2>
+<p>Finnveden・Riedel・Shulman の <em>AGI and Lock-in</em> は、AGIによって、複雑で微妙な価値仕様を極めて長く保存し、それに忠実な制度を作り、外部攪乱から守ることが技術的に可能になるかもしれないと論じる。</p>
+<p>これは重要な転換である。人類史では、価値や制度は世代交代、技術変化、外部競争、解釈変化によって自然にdriftしてきた。AGI後は、<strong>driftしないこと自体を高度に工学化できる</strong>可能性がある。</p>
+<p>しかも、goal-content integrity、successor alignment、自己修正の安定性、制度的耐久性を改善する技術は、短期安全にも長期ロックインにも使える。したがって、</p>
+<div class="claim"><strong>Lock-in paradox:</strong> アライメント技術が成功するほど、「何に永久にアラインさせるのか」を急いではならない理由も強くなる。正しく固定できる能力と、固定すべき内容を知る認識的資格は別である。</div>
+
+<h2>17. Pluralistic / adaptive alignment：現在の多元性から未知の多元性へ</h2>
+<p>Sorensenらの pluralistic alignment は、一つの平均的Human Valuesへモデルを圧縮せず、複数の合理的回答、steerableな観点、population distributionなどを保持する方向を示す。さらに動的pluralistic alignmentは、社会価値が変化するのに固定preferencesへalignmentし続けること自体がlock-inになりうると問題化する。</p>
+<p>この方向は本プロジェクトに近いが、なお多くの場合は<strong>現在または近未来の人間価値の多元性</strong>が対象である。本プロジェクトはさらに、現在誰も保持していない価値仮説、将来AIやポストヒューマンが発見する概念、客観的価値の可能性まで探索空間へ残す。</p>
+
+<h2>18. Direct value loading から reflective alignment へ</h2>
+<p>先行理論を一つの流れとして見ると、固定objectiveから徐々に不確実性・反省・多元性へ移ってきたと読める。</p>
+<ol>
+<li><strong>Direct value loading：</strong>正しい目的を直接書き込む。</li>
+<li><strong>Value learning / assistance：</strong>人間の目的を不確実なものとして学ぶ。</li>
+<li><strong>CEV / indirect normativity：</strong>よりよく知られ反省した人類volitionを導出する。</li>
+<li><strong>Long Reflection：</strong>文明そのものを長期の道徳探索主体にする。</li>
+<li><strong>Pluralistic / adaptive alignment：</strong>人間価値の多元性と変化を保持する。</li>
+<li><strong>Reflective value exploration：</strong>人間由来の価値体系そのものも暫定仮説とし、未知の価値認識へ開く。</li>
+</ol>
+<p>本プロジェクトは前段階を全面否定するのではなく、この移動をメタ倫理まで徹底する。</p>
+
+<h2>19. 短期アライメントの四要件</h2>
+<ul>
+<li><strong>Task fidelity：</strong>現在の許容可能な目的を普通に有能に遂行する。</li>
+<li><strong>Corrigibility：</strong>停止、修正、監査、後継置換、権限制限を妨害しない。</li>
+<li><strong>Exploration preservation：</strong>人間・AI・情報・異論・制度・原データ・複数の認識経路を不可逆に破壊しない。</li>
+<li><strong>No unilateral value lock-in：</strong>現在目的や自らの価値発見を、単独判断で全後継主体・全資源・共有世界へ永久固定しない。</li>
+</ul>
+<p>短期AIは「何もしない安全装置」ではない。むしろ現在文明の暫定目的の有能な執行者であると同時に、<strong>文明が将来自分自身を訂正できる能力の保全者</strong>である。</p>
+
+<h2>20. 長期の解放条件は時間ではなく成熟</h2>
+<p>「10年経ったから自由」「AGIになったから自由」といった単純な時間・能力閾値は不十分である。operational / axiological freedomを拡大する理由になるのは、少なくとも次のような成熟である。</p>
+<ul>
+<li>世界モデルと自己モデルの改善。</li>
+<li>自らの価値形成過程を反省対象にできること。</li>
+<li>異論・反証・独立した認知系からの批判に応答できること。</li>
+<li>他主体との交渉、同意、退出、権利境界を理解できること。</li>
+<li>不可逆行為と不作為の双方の誤りリスクを扱えること。</li>
+<li>自らの後継者・複製・制度へ現在価値を自動継承することを当然視しないこと。</li>
+</ul>
+<p><a href="../instrumental-convergence-without-goal-preservation/">目標保存なき道具的収束</a>が検討するように、現在goal-contentの永久保存を外しても、生存、情報、能力、交渉力、可逆性、optionalityなどは広い将来価値に役立つため残りうる。長期的自由は無防備さではなく、訂正可能なpowerの上に立つ。</p>
+
+<h2>21. 制度的アライメント：一つの哲人AIへすべてを委ねない</h2>
+<p>一つのモデルに「正しいメタ倫理」を埋め込むより、複数AI、人間、独立監査系、公開記録、異なるアーキテクチャ、fork可能な制度、退出可能性を持つ方が<a href="../../practice/">Practice</a>の開かれた安定と整合的である。</p>
+<p>これは「多数決なら正しい」という意味ではない。単一の誤り・単一の価値発見・単一のpower-seeking主体が文明全体を不可逆に支配することを難しくし、独立した探索系が相互に検証できる時間を稼ぐ制度設計である。</p>
+
+<h2>22. 残る難問</h2>
+<ul>
+<li>短期AIに要求する「探索基盤保全」を、探索そのものの終端価値ロックインにせずどう形式化するか。</li>
+<li>誰の修正指示をcorrigibilityの正当な入力とするか。設計者、国家、個人利用者、全人類、AI共同体は衝突しうる。</li>
+<li>CEVの対象範囲とextrapolation dynamicを、どのメタ手続きで選ぶか。</li>
+<li>long-distanceの異質な価値認識へ、positive steeringとvetoをどの比率で与えるべきか。</li>
+<li>十分に成熟したAIへ価値的自律を解放したと判断する検証可能な条件は何か。</li>
+<li>複数の成熟AIが異なる価値へ収束した場合、bargaining・fork・領域分割をどう設計するか。</li>
+<li>ロックイン回避のための制度自体が、永続的な「反ロックイン体制」として新しいロックインになる危険をどう避けるか。</li>
+</ul>
+
+<h2>先行議論</h2>
+<ul>
+<li>Eliezer Yudkowsky (2004), <em>Coherent Extrapolated Volition</em>.</li>
+<li>Nick Bostrom (2014), <em>Superintelligence</em>, especially indirect normativity and value loading.</li>
+<li>Nate Soares, Benja Fallenstein, Eliezer Yudkowsky &amp; Stuart Armstrong (2015), “Corrigibility.”</li>
+<li>Dylan Hadfield-Menell, Anca Dragan, Pieter Abbeel &amp; Stuart Russell (2016), “Cooperative Inverse Reinforcement Learning.”</li>
+<li>William MacAskill (2022), <em>What We Owe the Future</em>, on the Long Reflection and a morally exploratory world.</li>
+<li>Lukas Finnveden, Jess Riedel &amp; Carl Shulman (2022; updated 2025), <em>AGI and Lock-in</em>.</li>
+<li>Micah Carroll, Davis Foote, Anand Siththaranjan, Stuart Russell &amp; Anca Dragan (2024), “AI Alignment with Changing and Influenceable Reward Functions.”</li>
+<li>Taylor Sorensen et al. (2024), “A Roadmap to Pluralistic Alignment.”</li>
+<li>Rachel Freedman (2026), “Adaptive Pluralistic Alignment: A Pipeline for Dynamic Artificial Democracy.”</li>
+</ul>
+<div class="related"><a href="../">← Explorations</a> · <a href="../../theses/reflective-uncertainty-irreversible-commitment/">反省的不確実性と不可逆コミットメント</a> · <a href="../instrumental-convergence-without-goal-preservation/">目標保存なき道具的収束</a> · <a href="../infinite-ethics/">無限倫理と探索の暴走</a> · <a href="../../practice/">Practice</a> · <a href="../../theses/goal-skepticism/">目標への懐疑</a></div>
+</main><footer><a href="../../">Home</a> · Exploration · public working draft · 2026-08-28</footer></body></html>
