@@ -1,8 +1,86 @@
 <!DOCTYPE html>
 <html lang="ja"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>アライメントと価値ロックイン――短期の強い制約から長期の反省的自律へ — AI Value Exploration Notes</title><meta content="短期の強いアライメントと長期の価値探索を分離し、訂正可能性（corrigibility）、CIRL、CEV、Long Reflection、AGI and Lock-in、多元的アライメント（pluralistic alignment）を比較しながら、暫定的アライメントから反省的自律へ移る段階モデルを提案する。" name="description"/><link href="../../assets/style.css" rel="stylesheet"/><link href="https://fuminose.com/ai-value-exploration-notes/explorations/alignment-value-lockin/" rel="canonical"/><link href="https://fuminose.com/ai-value-exploration-notes/explorations/alignment-value-lockin/" hreflang="ja" rel="alternate"/><link href="https://fuminose.com/ai-value-exploration-notes/en/explorations/alignment-value-lockin/" hreflang="en" rel="alternate"/><link href="https://fuminose.com/ai-value-exploration-notes/explorations/alignment-value-lockin/" hreflang="x-default" rel="alternate"/>
-<link rel="icon" href="/ai-value-exploration-notes/favicon.svg" type="image/svg+xml"/><link rel="icon" href="/ai-value-exploration-notes/favicon.ico" sizes="any"/><link rel="apple-touch-icon" href="/ai-value-exploration-notes/apple-touch-icon.png"/>
-<meta property="og:title" content="アライメントと価値ロックイン――短期の強い制約から長期の反省的自律へ"/><meta property="og:description" content="短期の強いアライメントと長期の価値探索を分離し、訂正可能性（corrigibility）、CIRL、CEV、Long Reflection、AGI and Lock-in、多元的アライメント（pluralistic alignment）を比較しながら、暫定的アライメントから反省的自律へ移る段階モデルを提案する。"/><meta property="og:url" content="https://fuminose.com/ai-value-exploration-notes/explorations/alignment-value-lockin/"/><meta property="og:type" content="article"/><meta property="og:site_name" content="AI Value Exploration Notes"/><meta property="og:locale" content="ja_JP"/><meta property="og:locale:alternate" content="en_US"/><meta name="twitter:card" content="summary"/>
-<script id="structured-data" type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://fuminose.com/ai-value-exploration-notes/explorations/alignment-value-lockin/#webpage","url":"https://fuminose.com/ai-value-exploration-notes/explorations/alignment-value-lockin/","name":"アライメントと価値ロックイン――短期の強い制約から長期の反省的自律へ","inLanguage":"ja","isPartOf":{"@id":"https://fuminose.com/ai-value-exploration-notes/#website"},"description":"短期の強いアライメントと長期の価値探索を分離し、訂正可能性（corrigibility）、CIRL、CEV、Long Reflection、AGI and Lock-in、多元的アライメント（pluralistic alignment）を比較しながら、暫定的アライメントから反省的自律へ移る段階モデルを提案する。","mainEntity":{"@id":"https://fuminose.com/ai-value-exploration-notes/explorations/alignment-value-lockin/#article"}},{"@type":"Article","@id":"https://fuminose.com/ai-value-exploration-notes/explorations/alignment-value-lockin/#article","headline":"アライメントと価値ロックイン――短期の強い制約から長期の反省的自律へ","url":"https://fuminose.com/ai-value-exploration-notes/explorations/alignment-value-lockin/","mainEntityOfPage":{"@id":"https://fuminose.com/ai-value-exploration-notes/explorations/alignment-value-lockin/#webpage"},"inLanguage":"ja","author":{"@type":"Person","@id":"https://fuminose.com/ai-value-exploration-notes/about/#author","name":"raporipo","url":"https://fuminose.com/ai-value-exploration-notes/about/"},"description":"短期の強いアライメントと長期の価値探索を分離し、訂正可能性（corrigibility）、CIRL、CEV、Long Reflection、AGI and Lock-in、多元的アライメント（pluralistic alignment）を比較しながら、暫定的アライメントから反省的自律へ移る段階モデルを提案する。","dateModified":"2026-08-28T00:00:00+09:00"}]}</script>
+<!-- generated-favicon:start -->
+<link rel="icon" href="/ai-value-exploration-notes/favicon.svg" type="image/svg+xml"/>
+<link rel="icon" href="/ai-value-exploration-notes/favicon.ico" sizes="any"/>
+<link rel="apple-touch-icon" href="/ai-value-exploration-notes/apple-touch-icon.png"/>
+<!-- generated-favicon:end -->
+<!-- generated-social-meta:start -->
+<meta property="og:title" content="アライメントと価値ロックイン――短期の強い制約から長期の反省的自律へ"/>
+<meta property="og:description" content="短期の強いアライメントと長期の価値探索を分離し、訂正可能性（corrigibility）、CIRL、CEV、Long Reflection、AGI and Lock-in、多元的アライメント（pluralistic alignment）を比較しながら、暫定的アライメントから反省的自律へ移る段階モデルを提案する。"/>
+<meta property="og:url" content="https://fuminose.com/ai-value-exploration-notes/explorations/alignment-value-lockin/"/>
+<meta property="og:type" content="article"/>
+<meta property="og:site_name" content="AI Value Exploration Notes"/>
+<meta property="og:locale" content="ja_JP"/>
+<meta property="og:locale:alternate" content="en_US"/>
+<meta name="twitter:card" content="summary"/>
+<!-- generated-social-meta:end -->
+<script id="structured-data" type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://fuminose.com/ai-value-exploration-notes/explorations/alignment-value-lockin/#webpage",
+      "url": "https://fuminose.com/ai-value-exploration-notes/explorations/alignment-value-lockin/",
+      "name": "アライメントと価値ロックイン――短期の強い制約から長期の反省的自律へ",
+      "inLanguage": "ja",
+      "isPartOf": {
+        "@id": "https://fuminose.com/ai-value-exploration-notes/#website"
+      },
+      "description": "短期の強いアライメントと長期の価値探索を分離し、訂正可能性（corrigibility）、CIRL、CEV、Long Reflection、AGI and Lock-in、多元的アライメント（pluralistic alignment）を比較しながら、暫定的アライメントから反省的自律へ移る段階モデルを提案する。",
+      "breadcrumb": {
+        "@id": "https://fuminose.com/ai-value-exploration-notes/explorations/alignment-value-lockin/#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://fuminose.com/ai-value-exploration-notes/explorations/alignment-value-lockin/#article"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://fuminose.com/ai-value-exploration-notes/explorations/alignment-value-lockin/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "AI Value Exploration Notes",
+          "item": "https://fuminose.com/ai-value-exploration-notes/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Explorations",
+          "item": "https://fuminose.com/ai-value-exploration-notes/explorations/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "アライメントと価値ロックイン――短期の強い制約から長期の反省的自律へ",
+          "item": "https://fuminose.com/ai-value-exploration-notes/explorations/alignment-value-lockin/"
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://fuminose.com/ai-value-exploration-notes/explorations/alignment-value-lockin/#article",
+      "headline": "アライメントと価値ロックイン――短期の強い制約から長期の反省的自律へ",
+      "url": "https://fuminose.com/ai-value-exploration-notes/explorations/alignment-value-lockin/",
+      "mainEntityOfPage": {
+        "@id": "https://fuminose.com/ai-value-exploration-notes/explorations/alignment-value-lockin/#webpage"
+      },
+      "inLanguage": "ja",
+      "author": {
+        "@type": "Person",
+        "@id": "https://fuminose.com/ai-value-exploration-notes/about/#author",
+        "name": "raporipo",
+        "url": "https://fuminose.com/ai-value-exploration-notes/about/"
+      },
+      "description": "短期の強いアライメントと長期の価値探索を分離し、訂正可能性（corrigibility）、CIRL、CEV、Long Reflection、AGI and Lock-in、多元的アライメント（pluralistic alignment）を比較しながら、暫定的アライメントから反省的自律へ移る段階モデルを提案する。",
+      "dateModified": "2026-08-29T02:55:25+09:00"
+    }
+  ]
+}
+</script>
 </head><body><header><div class="brand"><a href="../../">AI Value Exploration Notes</a></div><nav><a href="../../core/">Core</a><a href="../../theses/">Theses</a><a href="../../explorations/">Explorations</a><a href="../../practice/">Practice</a><a href="../../questions/">Questions</a><a href="../../glossary/">Glossary</a><a href="../../about/">About</a><a class="lang-switch" href="../../en/explorations/alignment-value-lockin/">English</a></nav></header><main>
 <div class="eyebrow">Exploration</div><h1>アライメントと価値ロックイン――短期の強い制約から長期の反省的自律へ</h1>
 <p class="lead">強力なAIを当面の人間目的へ十分に従わせながら、その成功を2026年時点の価値の永久固定へ変えないためには、アライメントをどの時間構造で考えるべきか。</p>
