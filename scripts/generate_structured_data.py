@@ -11,11 +11,11 @@ import subprocess
 
 DOCS = Path("docs")
 BASE_URL = "https://raporipo.github.io/ai-value-exploration-notes/"
+PUBLIC_BASE_URL = "https://fuminose.com/ai-value-exploration-notes/"
 SITE_NAME = "AI Value Exploration Notes"
 SITE_ID = BASE_URL + "#website"
 AUTHOR_ID = BASE_URL + "about/#author"
 AUTHOR_URL = BASE_URL + "about/"
-
 STRUCTURED_DATA_RE = re.compile(
     r'<script\s+id=["\']structured-data["\']\s+type=["\']application/ld\+json["\']>.*?</script>\s*',
     re.IGNORECASE | re.DOTALL,
@@ -28,7 +28,6 @@ LEGACY_SOCIAL_META_RE = re.compile(
     r'<meta\b(?=[^>]*(?:\bproperty=["\']og:[^"\']+["\']|\bname=["\']twitter:card["\']))[^>]*?/?>\s*',
     re.IGNORECASE,
 )
-
 # Generated commits update machine-readable metadata, not the human-visible
 # article content. Exclude them when deriving Article.dateModified.
 GENERATED_COMMIT_SUBJECTS = {
@@ -45,7 +44,6 @@ SECTION_LABELS = {
     "questions": "Questions",
     "theses": "Theses",
 }
-
 OG_LOCALES = {
     "ja": "ja_JP",
     "en": "en_US",
@@ -68,7 +66,6 @@ class PageMetadataParser(HTMLParser):
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         values = dict(attrs)
         tag = tag.lower()
-
         if tag == "html":
             self.lang = values.get("lang") or self.lang
         elif tag == "title":
@@ -121,7 +118,6 @@ def content_modified_datetime(page: Path) -> str | None:
         ],
         text=True,
     )
-
     for line in output.splitlines():
         if not line.strip():
             continue
@@ -138,6 +134,17 @@ def localized_segments(page: Path) -> tuple[str, list[str]]:
     if parts and parts[0] == "en":
         return "en", parts[1:]
     return "ja", parts
+
+
+def canonical_from_path(page: Path) -> str:
+    """Return the public canonical URL implied by a docs/.../index.html path."""
+    relative = page.relative_to(DOCS)
+    if relative.name != "index.html":
+        raise ValueError(f"Expected index.html page: {page}")
+    parent = relative.parent.as_posix()
+    if parent == ".":
+        return PUBLIC_BASE_URL
+    return PUBLIC_BASE_URL + parent.rstrip("/") + "/"
 
 
 def is_article(segments: list[str]) -> bool:
@@ -172,7 +179,6 @@ def breadcrumb_items(lang: str, segments: list[str], current_name: str) -> list[
             "item": home_url,
         }
     ]
-
     accumulated: list[str] = []
     for index, segment in enumerate(segments, start=2):
         accumulated.append(segment)
@@ -201,7 +207,6 @@ def build_graph(page: Path, meta: PageMetadataParser) -> dict:
 
     webpage_id = canonical + "#webpage"
     graph: list[dict] = []
-
     if not segments and lang == "ja":
         graph.append(
             {
@@ -222,7 +227,6 @@ def build_graph(page: Path, meta: PageMetadataParser) -> dict:
     }
     if description:
         webpage["description"] = description
-
     breadcrumbs = breadcrumb_items(lang, segments, name)
     if breadcrumbs:
         breadcrumb_id = canonical + "#breadcrumb"
@@ -238,7 +242,6 @@ def build_graph(page: Path, meta: PageMetadataParser) -> dict:
     if is_article(segments):
         article_id = canonical + "#article"
         webpage["mainEntity"] = {"@id": article_id}
-
         article: dict = {
             "@type": "Article",
             "@id": article_id,
@@ -255,7 +258,6 @@ def build_graph(page: Path, meta: PageMetadataParser) -> dict:
         }
         if description:
             article["description"] = description
-
         modified = content_modified_datetime(page)
         if modified:
             article["dateModified"] = modified
@@ -295,7 +297,6 @@ def render_social_meta(page: Path, meta: PageMetadataParser) -> str:
 
     if not canonical:
         raise ValueError(f"Missing canonical URL: {page}")
-
     lines = [
         "<!-- generated-social-meta:start -->",
         meta_tag(property_name="og:title", content=title),
@@ -311,12 +312,10 @@ def render_social_meta(page: Path, meta: PageMetadataParser) -> str:
     )
     if locale:
         lines.append(meta_tag(property_name="og:locale", content=locale))
-
     for alternate in sorted(meta.alternate_languages - {lang}):
         alternate_locale = OG_LOCALES.get(alternate)
         if alternate_locale:
             lines.append(meta_tag(property_name="og:locale:alternate", content=alternate_locale))
-
     # X/Twitter can fall back to Open Graph for title/description, but an
     # explicit summary card makes the intended card type deterministic.
     lines.append(meta_tag(name="twitter:card", content="summary"))
@@ -337,9 +336,16 @@ def update_page(page: Path) -> bool:
     parser = PageMetadataParser()
     parser.feed(clean)
 
+    canonical_link = ""
+    if not parser.canonical.strip():
+        parser.canonical = canonical_from_path(page)
+        canonical_link = (
+            f'<link rel="canonical" href="{html.escape(parser.canonical, quote=True)}"/>\n'
+        )
+
     social_block = render_social_meta(page, parser)
     structured_block = render_structured_data(build_graph(page, parser))
-    block = social_block + structured_block
+    block = canonical_link + social_block + structured_block
 
     match = re.search(r"</head>", clean, re.IGNORECASE)
     if match is None:
@@ -366,7 +372,6 @@ def main() -> None:
         changed += int(update_page(page))
         if article:
             print(f"{page}: dateModified={content_modified_datetime(page)}")
-
     print(
         f"Site metadata processed for {len(pages)} pages "
         f"({articles} Article pages); {changed} files changed"
