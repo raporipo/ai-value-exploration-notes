@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>道徳は相互利益から構成できるか――ホッブズ系契約道徳と手段的合理性 — AI Value Exploration Notes</title><meta content="Hobbes、Kavka、Gauthier、Moehlerを手がかりに、選好・手段合理性・戦略的相互作用から契約道徳をどこまで構成できるかを検討する。Foole、baseline、公平性、能力非対称、選好介入、誤謬論的ストレステストを扱う。" name="description"/><link href="../../assets/style.css" rel="stylesheet"/><link href="https://fuminose.com/ai-value-exploration-notes/explorations/hobbesian-contractarian-morality/" rel="canonical"/><link href="https://fuminose.com/ai-value-exploration-notes/explorations/hobbesian-contractarian-morality/" hreflang="ja" rel="alternate"/><link href="https://fuminose.com/ai-value-exploration-notes/en/explorations/hobbesian-contractarian-morality/" hreflang="en" rel="alternate"/><link href="https://fuminose.com/ai-value-exploration-notes/explorations/hobbesian-contractarian-morality/" hreflang="x-default" rel="alternate"/>
+<link rel="icon" href="/ai-value-exploration-notes/favicon.svg" type="image/svg+xml"/><link rel="icon" href="/ai-value-exploration-notes/favicon.ico" sizes="any"/><link rel="apple-touch-icon" href="/ai-value-exploration-notes/apple-touch-icon.png"/>
+<meta property="og:title" content="道徳は相互利益から構成できるか――ホッブズ系契約道徳と手段的合理性"/><meta property="og:description" content="選好・手段合理性・戦略的相互作用から、真正な道徳的制約まで導けるかを検討する。"/><meta property="og:url" content="https://fuminose.com/ai-value-exploration-notes/explorations/hobbesian-contractarian-morality/"/><meta property="og:type" content="article"/><meta property="og:site_name" content="AI Value Exploration Notes"/><meta property="og:locale" content="ja_JP"/><meta property="og:locale:alternate" content="en_US"/><meta name="twitter:card" content="summary"/>
+<script id="structured-data" type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://fuminose.com/ai-value-exploration-notes/explorations/hobbesian-contractarian-morality/#webpage","url":"https://fuminose.com/ai-value-exploration-notes/explorations/hobbesian-contractarian-morality/","name":"道徳は相互利益から構成できるか――ホッブズ系契約道徳と手段的合理性","inLanguage":"ja","isPartOf":{"@id":"https://fuminose.com/ai-value-exploration-notes/#website"},"mainEntity":{"@id":"https://fuminose.com/ai-value-exploration-notes/explorations/hobbesian-contractarian-morality/#article"}},{"@type":"Article","@id":"https://fuminose.com/ai-value-exploration-notes/explorations/hobbesian-contractarian-morality/#article","headline":"道徳は相互利益から構成できるか――ホッブズ系契約道徳と手段的合理性","url":"https://fuminose.com/ai-value-exploration-notes/explorations/hobbesian-contractarian-morality/","mainEntityOfPage":{"@id":"https://fuminose.com/ai-value-exploration-notes/explorations/hobbesian-contractarian-morality/#webpage"},"inLanguage":"ja","author":{"@type":"Person","@id":"https://fuminose.com/ai-value-exploration-notes/about/#author","name":"raporipo","url":"https://fuminose.com/ai-value-exploration-notes/about/"},"dateModified":"2026-08-31T01:00:00+09:00"}]}</script></head><body><header><div class="brand"><a href="../../">AI Value Exploration Notes</a></div><nav><a href="../../core/">Core</a><a href="../../theses/">Theses</a><a href="../../explorations/">Explorations</a><a href="../../practice/">Practice</a><a href="../../questions/">Questions</a><a href="../../glossary/">Glossary</a><a href="../../about/">About</a><a class="lang-switch" href="../../en/explorations/hobbesian-contractarian-morality/">English</a></nav></header><main>
+<div class="eyebrow">Exploration</div><h1>道徳は相互利益から構成できるか――ホッブズ系契約道徳と手段的合理性</h1><p class="meta">Exploration v0.1 · 2026-08-31</p>
+<div class="claim"><strong>Question:</strong> 主体の選好、手段的・戦略的合理性、相互依存だけから、契約遵守・公平・不可侵のような道徳的制約をどこまで構成できるのか。特に、<strong>R<sub>h</sub> + strategic interaction → R<sub>n</sub></strong> という強い移行は成立するのか、それとも説明できるのは「道徳らしい安定的制度」の出現までなのか。</div>
+
+<h2>1. ContractarianismとContractualismを分ける</h2>
+<p>本稿が主に扱うのはHobbesからKavka、Gauthier、Moehlerへ連なる<strong>contractarianism（相互利益型の契約道徳）</strong>である。Rawls、Scanlon、Habermasなどのcontractualismは、自由で平等な人格、合理的拒絶可能性、公共的正当化など、より厚い規範的入力を用いる。本稿の問いはそれより薄い。</p>
+<p><strong>individually given ends + instrumental / strategic rationality + mutual dependence → moral constraint ?</strong></p>
+<p>ここで重要なのは、契約が実際に署名された歴史的事実であるかではなく、相互利益を追求する主体がどのような制約へ合理的に同意し、どのような性向・制度を維持するかである。</p>
+
+<h2>2. Hobbes――平和の手段としての自然法</h2>
+<p>Hobbesの自然状態では、各人が重要な目的を追求していても、相互不信、競争、攻撃可能性によってその達成が不安定になる。万人の戦争は、それ自体が「悪だから」避けるというより、各人の自己保存や目的達成を恒常的に危険にさらす。</p>
+<p><strong>war of all against all → insecurity of important ends → seek peace</strong></p>
+<p>そこから、平和のために権利を相互に制限すること、契約を結ぶこと、契約を履行することなどが自然法として導かれる。ただし歴史上のHobbes本人については、自然法を純粋なprudential preceptsと読むだけでは足りず、神の命令としての法という側面もある。本稿ではHobbes本人の解釈問題と、現代Hobbesian contractarianismの理論構造を分ける。</p>
+<p>本プロジェクトの語彙では、まず次が問われる。</p>
+<p><strong>Want<sub>A</sub>(G) + Means(M,G) → R<sub>h</sub>(M)</strong></p>
+<p>この構造から、本当に主体の目的に依存しないR<sub>n</sub>まで得られるのか。</p>
+
+<h2>3. 合意することと、履行することは別である</h2>
+<p>全員が契約する方が自然状態より得でも、他者が履行している局面で自分だけ裏切る方がさらに得かもしれない。</p>
+<p><strong>Rational(to agree) ⇏ Rational(to comply)</strong></p>
+<p><strong>U<sub>i</sub>(defect | others comply) &gt; U<sub>i</sub>(comply)</strong></p>
+<p>これがHobbesのFoole問題の核である。「契約は全体として有益」から「この局面でも私は守るべき」への移行には追加の説明が必要になる。</p>
+
+<h2>4. 「契約遵守は合理的」の四つの意味</h2>
+<p>この文は曖昧である。少なくとも次を区別する。</p>
+<p><strong>1. 行為手段合理性：</strong>この局面で契約を守ることが目的Gに有効。<br/><strong>2. policy合理性：</strong>契約を守る性向・policyを持つことが長期的に有効。<br/><strong>3. 協力主体としての合理性：</strong>相互利益的な公平条件を受容する主体であることが合理的。<br/><strong>4. 構成的・定言的合理性：</strong>理性的主体であること自体が契約遵守または同型の制約を要求する。</p>
+<p>1から3まではHobbesianに説明できる余地が大きい。しかし4まで進むと、<a href="../categorical-normativity/">Kant的な定言的規範性</a>に接近する。</p>
+<p><strong>R<sub>h</sub><sup>act</sup> → R<sub>h</sub><sup>policy</sup> → cooperative rationality ? → R<sub>n</sub></strong></p>
+<p>最適化対象を個々の行為から長期policyへ移しただけで、規範性自体が強くなったとは限らない。</p>
+
+<h2>5. Kavka――短期利己から啓蒙された自己利益へ</h2>
+<p>Gregory KavkaはHobbesを現代的な合理的選択の語彙で再構成し、道徳とprudenceを和解させようとする。ここで重要なのは、Hobbesian egoismが必ずしも「目先の最大利得を毎回取れ」を意味しない点である。</p>
+<p><strong>short-run egoism ≠ enlightened long-run egoism</strong></p>
+<p>評判、反復取引、報復、協力相手からの選別まで考慮すれば、協力的で信頼可能な主体として振る舞うこと自体が長期的な自己利益になりうる。この段階で道徳は、第一階の行為規則というより、長期的に有利な性向・ルール体系へ近づく。</p>
+
+<h2>6. Gauthier I――道徳は「morally free zone」の外で必要になる</h2>
+<p>Gauthierの <em>Morals by Agreement</em> は、道徳理論を合理的選択理論の内部から構成しようとする最も体系的な試みの一つである。完全競争市場のように、各主体の自己利益追求が他者に外部性を押しつけず、均衡が効率的である領域では、道徳的制約は不要な「morally free zone」とみなせる。</p>
+<p>しかし外部性、公共財、free riding、戦略的相互依存があると、</p>
+<p><strong>∀i: maximize U<sub>i</sub> → Pareto-inferior outcome</strong></p>
+<p>が起こる。そこで、</p>
+<p><strong>market / strategic failure → mutually advantageous constraint</strong></p>
+<p>という役割が道徳に与えられる。道徳は、欲望に反して外部から降ってくる命令ではなく、非制約的最大化が失敗する場所で、各人に利益を与える相互制約として現れる。</p>
+
+<h2>7. Gauthier II――何に合意するのか</h2>
+<p>「協力した方が得」だけでは、協力余剰をどう配るかは決まらない。Gauthierはminimax relative concession / maximin relative benefitにより、各人が自分の最大要求からどれだけ相対的に譲歩するかを調整する交渉解を提示する。</p>
+<p>ここで問題になるのは、</p>
+<p><strong>bargaining solution → fairness ?</strong></p>
+<p>である。合理的交渉者がその解を選ぶことと、その解が真正に公平であることは同じではない。公平性を交渉解の定義へ暗黙に織り込んでいないかも検討しなければならない。</p>
+
+<h2>8. Baseline問題――道徳的負担はどこへ移ったか</h2>
+<p>交渉利得は通常、交渉不成立点d<sub>i</sub>との差として測られる。</p>
+<p><strong>Gain<sub>i</sub>(M) = U<sub>i</sub>(M) − d<sub>i</sub></strong></p>
+<p>ところがd<sub>i</sub>が既存の所有関係・支配・暴力によって決まっているなら、その格差が合理的契約へそのまま持ち込まれる。奴隷所有者と奴隷が現在の支配状態をbaselineに交渉しても、契約が成立しただけではその支配は正当化されない。</p>
+<p>GauthierがLockean provisoを必要としたのは、この問題を認識していたからである。他者を悪化させることで得た交渉優位を出発点として認めない。しかしそこで次の問いが生じる。</p>
+<p><strong>Why this proviso?</strong></p>
+<p>もし「不当に得た優位をbaselineにしてはいけない」がすでにR<sub>n</sub>なら、契約道徳以前の規範性を使ってはいないか。Hobbesian構成では、<strong>Where did the normativity go?</strong> をbaselineへも向ける必要がある。</p>
+
+<h2>9. Gauthier III――Constrained Maximization</h2>
+<p>FooleへのGauthierの代表的回答は、個々の局面で最大化するstraightforward maximizerと、相互に有利な公平条件なら自らを制約するconstrained maximizerを区別することである。</p>
+<p><strong>EU(constrained maximizer) &gt; EU(straightforward maximizer)</strong></p>
+<p>協力者が一定数存在し、相手の性向をある程度識別できるなら、信頼可能な協力者としての性向を持つ方が長期的に有利になりうる。</p>
+<p>しかし本稿では、この成功をまず</p>
+<p><strong>R<sub>h</sub><sup>policy</sup></strong></p>
+<p>として読む。契約を守る性向が自己利益に有効だということは、契約遵守そのものが主体の目的から独立したR<sub>n</sub>を持つことをまだ示さない。</p>
+
+<h2>10. 後期Gauthier――「合理性」の側も固定されていない</h2>
+<p>後期Gauthierは、<em>Morals by Agreement</em> の単純な最大化モデルをそのまま維持せず、maximizingとPareto-orientedなrational cooperationの関係を再検討する。これは理論上重要である。</p>
+<p>もし、</p>
+<p><strong>rationality → contract morality</strong></p>
+<p>を目指していたはずなのに、契約道徳を成立させるために「合理性」の内容自体を厚く修正するなら、どこまでが非道徳的な合理性で、どこからがすでに協力規範なのかを区別する必要がある。</p>
+
+<h2>11. Moehler――すべての道徳を導くのではなく、pure instrumental moralityへ</h2>
+<p>Michael Moehlerは、深い道徳的不一致のもとで共有できる最小限の道徳を、Hobbesianなinstrumental reasoningから構成する方向を発展させる。ここでは野心を限定すること自体が重要である。</p>
+<p><strong>all morality ⇏ instrumental rationality</strong></p>
+<p>だとしても、</p>
+<p><strong>instrumental rationality + mutual dependence → minimal instrumental morality</strong></p>
+<p>は成立するかもしれない。本プロジェクトにとってこれは、R<sub>h</sub>から本当に導ける範囲と、R<sub>n</sub>を別途必要とする範囲を分離する試みとして読める。</p>
+
+<h2>12. 比較――何を基礎に、どこまで道徳を出すのか</h2>
+<table><thead><tr><th>論者</th><th>基礎入力</th><th>合理性</th><th>道徳の出口</th><th>本稿の問い</th></tr></thead><tbody>
+<tr><td>Hobbes</td><td>自己保存・利益・恐怖等</td><td>平和の手段を認識するreason</td><td>自然法・契約</td><td>prudenceから強い義務が出るか</td></tr>
+<tr><td>Kavka</td><td>enlightened self-interest</td><td>長期的・rule-level prudence</td><td>協力的道徳</td><td>長期policy最適化を道徳と呼ぶ以上のものがあるか</td></tr>
+<tr><td>Gauthier 1986</td><td>選好・utility</td><td>maximizing rationality</td><td>合理的交渉＋constrained maximization</td><td>baseline・公平性・complianceに外部規範が入らないか</td></tr>
+<tr><td>後期Gauthier</td><td>利益＋協力</td><td>rational cooperation / Pareto orientation</td><td>協力規範</td><td>合理性自体が道徳化していないか</td></tr>
+<tr><td>Moehler</td><td>異質な目的</td><td>pure instrumental reasoning</td><td>minimal morality</td><td>R<sub>h</sub>だけでどこまで行けるか</td></tr>
+</tbody></table>
+
+<h2>13. 契約は普遍的終点ではなく、あるゲーム構造の均衡である</h2>
+<p>Hobbes型契約が成立しやすいのは、各主体が互いに無視できず、しかも協力余剰があるときである。</p>
+<p><strong>mutual threat + positive cooperation surplus → contract</strong></p>
+<p>能力がほぼ対称で、争えば双方に大きな損失があるなら相互制約は合理的になりやすい。しかし、</p>
+<p><strong>Power<sub>A</sub> ≫≫ Power<sub>B</sub></strong></p>
+<p>なら、Aにとって支配の方が契約より有利かもしれない。したがって、</p>
+<p><strong>Contract is an equilibrium technology, not a universal endpoint.</strong></p>
+<p>契約道徳から平等が出るとしても、それはしばしば道徳的平等ではなく、交渉力の近似的対称性を反映している可能性がある。</p>
+
+<h2>14. 誰が契約主体として数えられるのか</h2>
+<p>相互利益を基礎にすると、協力余剰を提供できる主体ほど契約上重要になる。しかし、乳幼児、重度障害者、非人間動物、将来世代、極端に弱い主体、ある種のデジタル主体などは、直接の報復・交換・交渉能力をほとんど持たないかもしれない。</p>
+<p><strong>strategic relevance ≠ normative standing</strong></p>
+<p>Hobbesian契約道徳が弱い主体への制約を導くには、強者がその保護を望む、保護制度が相互利益になる、第三者が代理する、などの迂回路が必要になる。その迂回路が消えたときにも義務が残るのかは、contractarianismとcontractualismを分ける重要点である。</p>
+
+<h2>15. 選好は本当に外生的か</h2>
+<p>契約モデルはしばしば各主体の選好P<sub>i</sub>を入力として受け取る。しかし現実には、制度・文化・教育・広告・規範・技術が選好そのものを変える。</p>
+<p><strong>P<sub>t</sub> → Contract<sub>t</sub> → P<sub>t+1</sub></strong></p>
+<p>さらに主体が自己改変できるなら、自分の将来選好も契約戦略の一部になる。したがって「与えられた選好をどう集約するか」だけでなく、<strong>誰が誰の選好形成をどこまで制御できるか</strong>が契約道徳の前提条件になる。</p>
+
+<h2>16. 二階の自然状態――選好形成への万人の万人に対する闘争</h2>
+<p>通常のHobbes的自然状態では、各主体は他者の身体・財産・安全に対する潜在的脅威である。選好が操作可能なら、脅威は二階化する。</p>
+<p><strong>A → P<sub>B</sub>, &nbsp; B → P<sub>A</sub></strong></p>
+<p>広告、宣伝、教育、情報遮断、心理操作、直接的な神経・AI介入などによって、他者が「何を欲するか」自体を戦略的に変えられるなら、選好形成は資源争奪と同じく競争領域になる。</p>
+<p>能力が対称なら、</p>
+<p><strong>preference-manipulation arms race → mutual restraint</strong></p>
+<p>が起こりうる。思想の自由、privacy、anti-brainwashing、informed consent、認知的不可侵に似た制度が、真正な自律価値からではなく、相互操作競争を避けるための手段的「自然法」として出現する可能性がある。</p>
+<p>しかし能力差が極端ならこの制限は崩れる。AがBを一方的に操作でき、BがAへ有効な反撃をできないなら、Aには相互不可侵契約へ入る手段的理由がないかもしれない。</p>
+
+<h2>17. 採用する道徳・従う道徳・宣伝する道徳――誤謬論から常識道徳保存は出ない</h2>
+<p>道徳誤謬論を仮定しても、そこから「現在の常識道徳をfictionとして保存すべきだ」は自動的には出ない。誤謬論は既存道徳の客観的真理を否定するメタ倫理的主張であって、どの道徳コードを手段として採用すべきかを一意に決めない。</p>
+<p>そこで少なくとも、</p>
+<p><strong>M<sub>i</sub><sup>adopt</sup>：</strong>主体iが自ら内面化する道徳コード<br/><strong>M<sub>i</sub><sup>practice</sup>：</strong>主体iが実際に従うコード<br/><strong>M<sub>i</sub><sup>advocate</sup>：</strong>主体iが他者に信じさせようとするコード</p>
+<p>を分ける必要がある。</p>
+<p><strong>M<sub>i</sub><sup>adopt</sup> = M<sub>i</sub><sup>practice</sup> = M<sub>i</sub><sup>advocate</sup></strong></p>
+<p>である保証はない。常識道徳が人間の既存感情・協力傾向・評判制度とよく噛み合うため、低コストなfictionとして保存される可能性はある。しかし、より計算能力の高い主体には、Gauthier的な契約コード、領域限定的な自己拘束、あるいは道徳fictionを内面化せず他者にだけ宣伝する戦略の方が有利かもしれない。</p>
+<p>したがって、</p>
+<p><strong>error theory → common-sense moral conservation</strong></p>
+<p>という含意は成立しない。必要なのは、<strong>Which fiction, for whose ends, under which strategic environment?</strong> という別の理論である。ここでJoyce的moral fictionalismは、契約道徳・自己統制・社会的協力と接続する一方、fictionの選択基準を純粋にinstrumentalにするほど、既存の常識道徳を丸ごと保存する根拠は弱くなる。</p>
+
+<h2>18. 完全誤謬世界を極限ストレステストにする</h2>
+<p>本稿は完全な規範的誤謬論を採用しない。むしろ、現人類の認識論的不完全さを考えれば、現在の人類が規範性を発見できていないことから「規範性そのものが存在しない」と結論するのは強すぎる。しかし極限ケースとして、</p>
+<p><strong>R<sub>n</sub> = ∅</strong></p>
+<p>を仮定するとcontractarianismの構造が露出する。</p>
+<p>この世界では「選好を最大化すべき」というprudential R<sub>n</sub>さえ存在しない。残るのは、</p>
+<p><strong>P<sub>i</sub> + D<sub>i</sub> + World → Action</strong></p>
+<p>と、</p>
+<p><strong>If G, X is an effective means to G.</strong></p>
+<p>という条件的・因果的構造だけである。すると契約道徳は真理ではなく、主体の能力分布・外部選択肢・観察可能性・commitment technology・協力余剰によって内生する制度均衡になる。</p>
+<table><thead><tr><th></th><th>能力・交渉力が比較的対称</th><th>能力・交渉力が非対称</th></tr></thead><tbody><tr><td>選好が比較的固定</td><td>相互利益契約</td><td>不平等契約／支配</td></tr><tr><td>選好が操作可能</td><td>操作競争／相互不干渉契約</td><td>選好形成を含む支配</td></tr></tbody></table>
+
+<h2>19. Kantとの比較――同じ形式が別の基礎から再出現する</h2>
+<p>Hobbesian contractarianismとKantian ethicsの差は、外見的な規則ではなく基礎にある。</p>
+<p><strong>Hobbes / Gauthier: Ends → rational constraint</strong></p>
+<p><strong>Kant: Rational agency → categorical constraint</strong></p>
+<p>それでも、普遍化可能性、公開性、相互性、自己適用のようなKant的形式が、完全誤謬世界でもcredible commitmentやanti-manipulation mechanismとして再出現する可能性はある。</p>
+<p><strong>Kantian form ⇏ Kantian foundation.</strong></p>
+<p>この区別は、ある制度が外見上公平・普遍的であることと、それが真正な定言的規範性に基づくことを分ける。</p>
+
+<h2>20. 暫定結論――契約道徳の三つの成功水準</h2>
+<p>Hobbesian contractarianismの成功は三段階に分けるべきである。</p>
+<p><strong>弱い成功：</strong><br/>R<sub>h</sub> + strategic interaction → stable cooperation</p>
+<p><strong>中程度の成功：</strong><br/>R<sub>h</sub> + strategic interaction → morality-like constraints</p>
+<p>契約遵守、公平らしい分配、不可侵、認知的自由、公開性などが、条件付きで内生する。</p>
+<p><strong>強い成功：</strong><br/>R<sub>h</sub> + strategic interaction → R<sub>n</sub></p>
+<p>ここだけは別問題である。相互利益から道徳らしい制約が出現することは、その制約が真正に規範的であることをまだ示さない。</p>
+<p><strong>Contractarianism may explain why moral-like constraints emerge without yet explaining why they are normatively true.</strong></p>
+<p>したがって、本稿はHobbesian契約論を単に「利己主義だから道徳ではない」と退けない。むしろ、どの制約がR<sub>h</sub>だけから内生しうるのかを明らかにすることは、<a href="../reasons-first-normative-structure/">真正な規範的理由R<sub>n</sub></a>が説明すべき残差を特定するうえで重要である。</p>
+
+<h2>関連する議論</h2>
+<p>Thomas Hobbes <em>Leviathan</em>、Gregory Kavka <em>Hobbesian Moral and Political Theory</em>、David Gauthier <em>Morals by Agreement</em> および後期の合理的協力論、Michael Moehler <em>Minimal Morality</em>、Richard Joyceのmoral fictionalismが特に関係する。比較対象として、<a href="../categorical-normativity/">Kant的定言的規範性</a>、<a href="../reasons-first-normative-structure/">Reasons Firstと規範的理由</a>、<a href="../moral-realism-error-theory/">道徳実在論／誤謬論</a>も参照されたい。</p>
+</main><footer><a href="../">Explorations</a> · public working draft · 2026-08-31</footer></body></html>
