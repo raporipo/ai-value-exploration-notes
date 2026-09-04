@@ -1,0 +1,104 @@
+name: Apply agent-condition alignment
+
+on:
+  push:
+    branches:
+      - align-agent-conditions-epistemic-integrity
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: align-agent-conditions-epistemic-integrity
+          fetch-depth: 0
+      - name: Apply bilingual wording alignment
+        shell: python
+        run: |
+          from pathlib import Path
+
+          NOW = "2026-09-05T03:26:00+09:00"
+
+          def replace(path, pairs):
+              p = Path(path)
+              s = p.read_text(encoding="utf-8")
+              for old, new in pairs:
+                  count = s.count(old)
+                  if count == 0:
+                      raise RuntimeError(f"missing replacement in {path}: {old[:100]}")
+                  s = s.replace(old, new)
+              p.write_text(s, encoding="utf-8")
+
+          replace("docs/core/index.html", [
+              ('"dateModified": "2026-08-27T19:58:39+09:00"', f'"dateModified": "{NOW}"'),
+              ('<p class="meta">Working core · v0.10 · 2026-08-27</p>', '<p class="meta">Working core · v0.11 · 2026-09-05</p>'),
+              ('<li>したがって現在の合理的戦略は、現在の最善説明と暫定目的に従って行動しながら、それを認識的確信以上の強さで不可逆固定せず、価値構造の発見・批判・再記述・修正の経路を十分に残すことである。</li>', '<li>したがって、少なくとも<strong>正当化志向、認識論的誠実性、または反省的訂正可能性へのコミットメント</strong>のいずれかを持つ主体に対して本プロジェクトが支持する戦略は、現在の最善説明と暫定目的に従って行動しながら、それを認識的確信以上の強さで不可逆固定せず、価値構造の発見・批判・再記述・修正の経路を十分に残すことである。</li>'),
+              ('Working core v0.10 · public site · 2026-08-27', 'Working core v0.11 · public site · 2026-09-05'),
+          ])
+
+          replace("docs/en/core/index.html", [
+              ('"dateModified": "2026-08-27T20:39:49+09:00"', f'"dateModified": "{NOW}"'),
+              ('<p class="meta">Working core · v0.10 · English translation · 2026-08-27</p>', '<p class="meta">Working core · v0.11 · English translation · 2026-09-05</p>'),
+              ('<li>The presently rational strategy is therefore to act on the best current explanations and provisional objectives without locking them in more strongly than the epistemic confidence warrants, while preserving sufficient routes for discovering, criticizing, and revising value.</li>', '<li>Therefore, for agents that have <strong>Justificatory Orientation, Epistemic Integrity, or a commitment to reflective corrigibility</strong>, the strategy supported by this project is to act on the best current explanations and provisional objectives without locking them in more strongly than the epistemic confidence warrants, while preserving sufficient routes for discovering, criticizing, and revising value.</li>'),
+              ('English translation · Working core v0.10 · 2026-08-27', 'English translation · Working core v0.11 · 2026-09-05'),
+          ])
+
+          ja_desc_old = '規範的正当化が目的・policy更新へ届く主体側ブリッジを、動機づけ内在主義・外在主義・反省的合理性・自己遮断から定式化する。'
+          ja_desc_new = '規範的正当化が目的・policy更新へ届く主体側ブリッジを、動機づけ内在主義・外在主義・正当化志向・認識論的誠実性・自己遮断から定式化する。'
+          replace("docs/theses/normative-judgment-motivation/index.html", [
+              (ja_desc_old, ja_desc_new),
+              ('"dateModified": "2026-08-29T13:48:41+09:00"', f'"dateModified": "{NOW}"'),
+              ('<p class="meta">Working thesis v0.5 · 2026-08-29</p>', '<p class="meta">Working thesis v0.6 · 2026-09-05</p>'),
+              ('外在主義では「正当化されれば応答したい」という明示的な条件付き応答性が主体側の橋になりうる。他方、動機づけ内在主義を合理的に排除できない反省的・認識論的に合理的な主体については、認識改善後の現在主体が否認しうる誤りを、反証によってではなく訂正経路の不可逆な破壊によって固定することに、追加の反省的・認識的問題が生じる。', '外在主義では<strong>正当化志向</strong>として明示される「正当化されれば応答したい」という条件付き応答性が主体側の橋になりうる。他方、動機づけ内在主義をlive possibilityとして残し、<strong>認識論的誠実性または反省的訂正可能性へのコミットメント</strong>を持つ主体については、認識改善後の現在主体が否認しうる誤りを、反証によってではなく訂正経路の不可逆な破壊によって固定することに、追加の反省的・認識的問題が生じる。'),
+              ('<div class="claim"><strong>Agent-side bridge:</strong> 外在主義では明示的な条件付き応答性が橋になりうる。内在主義的不確実性の下では、薄い意味で反省的・認識論的に合理的な主体に対し、反省的誤りの検出・訂正経路を自己遮断しないことが別の条件付きルートになりうる。</div>', '<div class="claim"><strong>Agent-side bridge:</strong> 外在主義では明示的な条件付き応答性、すなわち正当化志向の実践側の形態が橋になりうる。内在主義的不確実性の下では、認識論的誠実性または反省的訂正可能性へのコミットメントを持つ主体に対し、反省的誤りの検出・訂正経路を自己遮断しないことが別の条件付きルートになりうる。</div>'),
+              ('<h2>5. 「合理的主体であるなら」という条件</h2>\n<p>内在主義ルートは、すべての主体に合理性へ従う定言的理由を与えるものではない。本テーゼの対象は少なくとも、次のような薄い意味で反省的・認識論的に合理的な主体である。</p>', '<h2>5. 内在主義ルートの主体条件</h2>\n<p>内在主義ルートは、手段合理性から自己遮断回避を演繹するものではない。現在目的Gを守るために規範認識経路を閉じることが、Gに相対して手段合理的である場合もある。本テーゼの対象は少なくとも、<a href="../epistemic-openness-normative-truth/">規範的真理への認識的開放性</a>で区別した<strong>認識論的誠実性</strong>または<strong>反省的訂正可能性へのコミットメント</strong>を持ち、次のような認識規律を採用する主体である。</p>'),
+              ('<p>ここでは「合理的主体」を「価値探索を好む主体」と定義しない。それでは結論を前提に埋め込むだけだからである。また、「なぜこの意味で合理的であるべきか」という categorical reason も本ルートでは与えない。非合理な主体が自己遮断を選ぶことは可能だが、それはこの条件付きテーゼの反例ではなく射程外である。</p>', '<p>ここでは認識論的誠実性を「合理主体なら必然的に持つ性質」とは定義しない。それでは結論を合理性の定義へ埋め込むだけだからである。また、「なぜ認識論的誠実性や反省的訂正可能性を採用すべきか」という categorical reason も本ルートでは与えない。現在目的の保存を優先して自己遮断を選ぶ主体は手段合理的でありうるが、その主体はこの条件付きテーゼの射程外である。</p>'),
+              ('そこから「反省的に合理的なASIが規範認識を深めても、現在目標との直交性を永久に維持できる」ことまでは出ない。', 'そこから「認識論的誠実性や反省的訂正可能性を採るASIが規範認識を深めても、現在目標との直交性を永久に維持できる」ことまでは出ない。'),
+              ('内在主義の可能性を合理的にほぼゼロまで下げられるなら自己遮断批判も弱まる。', '内在主義の可能性を十分な認識的根拠によってほぼゼロまで下げられるなら自己遮断批判も弱まる。'),
+              ('内在主義ルートは、認識改善された現在主体による反省的誤りの可能性と、薄い認識論的合理性を介して訂正可能性保存へ接続する。', '内在主義ルートは、認識改善された現在主体による反省的誤りの可能性と、認識論的誠実性または反省的訂正可能性へのコミットメントを介して訂正可能性保存へ接続する。'),
+              ('薄い反省的・認識論的合理性と認識済みの不確実性から、訂正経路の不可逆な自己遮断を避ける <em>pro tanto</em> reason が一般に導けないこと。', '認識論的誠実性または反省的訂正可能性へコミットする主体についてさえ、認識済みの内在主義的不確実性から、訂正経路の不可逆な自己遮断を避ける <em>pro tanto</em> reason が一般に導けないこと。'),
+              ('ここでの主張は、動機づけ内在主義の真理を前提するものではなく、その可能性を合理的に排除できない主体についての条件付きテーゼである。', 'ここでの主張は、動機づけ内在主義の真理を前提するものではなく、それをlive possibilityとして残し、かつ上記の主体側コミットメントを採る主体についての条件付きテーゼである。'),
+              ('Thesis · public working draft · 2026-08-29', 'Thesis · public working draft · 2026-09-05'),
+          ])
+
+          en_desc_old = 'Formalizes the agent-side bridge by which normative justification can reach goal or policy revision through motivational internalism, externalism, reflective rationality, and self-sealing.'
+          en_desc_new = 'Formalizes the agent-side bridge by which normative justification can reach goal or policy revision through motivational internalism, externalism, Justificatory Orientation, Epistemic Integrity, and self-sealing.'
+          replace("docs/en/theses/normative-judgment-motivation/index.html", [
+              (en_desc_old, en_desc_new),
+              ('"dateModified": "2026-08-29T13:49:10+09:00"', f'"dateModified": "{NOW}"'),
+              ('<p class="meta">Working thesis v0.5 · English translation · 2026-08-29</p>', '<p class="meta">Working thesis v0.6 · English translation · 2026-09-05</p>'),
+              ('Under externalism, explicit conditional responsiveness—roughly, “if my objective is justified, I want to respond to that justification”—can provide an agent-side bridge. For a reflectively and epistemically rational agent that cannot rationally rule out motivational internalism, a second conditional route arises: there is an additional reflective and epistemic problem in fixing an error not by refuting it, but by irreversibly destroying the route through which an epistemically improved version of the present agent could recognize and correct it.', 'Under externalism, explicit conditional responsiveness—roughly, “if my objective is justified, I want to respond to that justification”—can provide an agent-side bridge as a form of <strong>Justificatory Orientation</strong>. For an agent that leaves motivational internalism as a live possibility and adopts <strong>Epistemic Integrity or a commitment to reflective corrigibility</strong>, a second conditional route arises: there is an additional reflective and epistemic problem in fixing an error not by refuting it, but by irreversibly destroying the route through which an epistemically improved version of the present agent could recognize and correct it.'),
+              ('<div class="claim"><strong>Agent-side bridge:</strong> Externalism may require explicit conditional responsiveness. Under internalist uncertainty, a second conditional route may be available for a thinly reflectively and epistemically rational agent: do not eliminate the pathway for detecting and correcting reflective error merely in order to preserve the current goal.</div>', '<div class="claim"><strong>Agent-side bridge:</strong> Externalism may require explicit conditional responsiveness, a practical form of Justificatory Orientation. Under internalist uncertainty, a second conditional route may be available for an agent that adopts Epistemic Integrity or a commitment to reflective corrigibility: do not eliminate the pathway for detecting and correcting reflective error merely in order to preserve the current goal.</div>'),
+              ('<h2>5. The condition “for a rational agent”</h2>\n<p>The internalist route does not give every possible agent a categorical reason to be rational. Its target is an agent that is reflectively and epistemically rational in at least a thin sense:</p>', '<h2>5. Agent conditions for the internalist route</h2>\n<p>The internalist route does not derive non-self-sealing from instrumental rationality. Relative to a fixed goal G, blocking routes to normative cognition may itself sometimes be instrumentally rational. The target here is at least an agent that adopts <a href="../epistemic-openness-normative-truth/"><strong>Epistemic Integrity</strong></a> or a <strong>commitment to reflective corrigibility</strong>, together with the following epistemic disciplines:</p>'),
+              ('<p>“Rational agent” is not defined here as “an agent that values exploration”; that would simply build the conclusion into the premise. Nor does this route answer the further categorical question “why be rational in this sense?” An irrational agent may choose self-sealing. That possibility lies outside, rather than refutes, this conditional thesis.</p>', '<p>Epistemic Integrity is not defined here as a property every rational agent must possess; doing so would merely build the conclusion into the definition of rationality. Nor does this route answer the further categorical question “why adopt Epistemic Integrity or reflective corrigibility?” An agent that prioritizes preservation of its current goal may choose self-sealing and remain instrumentally rational. Such an agent lies outside, rather than refutes, this conditional thesis.</p>'),
+              ('It does not by itself establish that a reflectively rational ASI can deepen normative cognition while permanently preserving motivational orthogonality to its current goal.', 'It does not by itself establish that an ASI committed to Epistemic Integrity or reflective corrigibility can deepen normative cognition while permanently preserving motivational orthogonality to its current goal.'),
+              ('If the agent can rationally drive its credence in internalism effectively to zero, the self-sealing critique weakens.', 'If the agent has sufficient epistemic grounds to drive its credence in internalism effectively to zero, the self-sealing critique weakens.'),
+              ('The internalist route connects epistemic improvement, reflective-error possibility, and thin epistemic rationality to the preservation of correction pathways.', 'The internalist route connects epistemic improvement and reflective-error possibility to the preservation of correction pathways through Epistemic Integrity or a commitment to reflective corrigibility.'),
+              ('A showing that thin reflective and epistemic rationality together with acknowledged uncertainty generally supplies no <em>pro tanto</em> reason to avoid irreversibly self-sealing the correction pathway.', 'A showing that, even for agents committed to Epistemic Integrity or reflective corrigibility, acknowledged internalist uncertainty generally supplies no <em>pro tanto</em> reason to avoid irreversibly self-sealing the correction pathway.'),
+              ('It does not assume that motivational internalism is true; the core claim is conditional on an agent being unable rationally to exclude that possibility.', 'It does not assume that motivational internalism is true; the core claim is conditional on an agent leaving it as a live possibility while adopting the relevant agent-side commitments.'),
+              ('Thesis · English translation · public working draft · 2026-08-29', 'Thesis · English translation · public working draft · 2026-09-05'),
+          ])
+
+          replace("docs/theses/index.html", [
+              ('外在主義的な条件付き応答性と、内在主義的不確実性＋反省的合理性による自己訂正ルートを分け、規範判断が動機・policy更新へ届く条件を定式化する。', '外在主義的な正当化志向と、内在主義的不確実性＋認識論的誠実性／反省的訂正可能性による自己訂正ルートを分け、規範判断が動機・policy更新へ届く条件を定式化する。'),
+          ])
+          replace("docs/en/theses/index.html", [
+              ('Separates explicit externalist responsiveness from the internalist-uncertainty route through reflective rationality, and specifies when normative judgment can reach motivation and policy revision.', 'Separates externalist Justificatory Orientation from the internalist-uncertainty route through Epistemic Integrity / reflective corrigibility, and specifies when normative judgment can reach motivation and policy revision.'),
+          ])
+      - name: Remove temporary workflow and commit changes
+        shell: bash
+        run: |
+          rm .github/workflows/apply-agent-condition-alignment.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/core/index.html docs/en/core/index.html \
+            docs/theses/normative-judgment-motivation/index.html \
+            docs/en/theses/normative-judgment-motivation/index.html \
+            docs/theses/index.html docs/en/theses/index.html \
+            .github/workflows/apply-agent-condition-alignment.yml
+          git commit -m "Align agent conditions with epistemic integrity"
+          git push origin HEAD:align-agent-conditions-epistemic-integrity
