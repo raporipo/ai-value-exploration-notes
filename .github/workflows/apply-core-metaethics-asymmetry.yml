@@ -1,0 +1,59 @@
+name: Apply Core metaethical scope and asymmetry edits
+on:
+  push:
+    branches:
+      - align-agent-conditions-epistemic-integrity
+permissions:
+  contents: write
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: align-agent-conditions-epistemic-integrity
+      - name: Apply synchronized Core edits
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          def apply(path, replacements):
+              s = path.read_text()
+              for old, new in replacements:
+                  count = s.count(old)
+                  if count != 1:
+                      raise SystemExit(f'{path}: expected one match, found {count}: {old[:120]}')
+                  s = s.replace(old, new)
+              path.write_text(s)
+
+          ja = Path('docs/core/index.html')
+          en = Path('docs/en/core/index.html')
+
+          apply(ja, [
+              ('"dateModified": "2026-09-05T03:26:00+09:00"', '"dateModified": "2026-09-05T04:32:00+09:00"'),
+              ('Working core · v0.11 · 2026-09-05', 'Working core · v0.12 · 2026-09-05'),
+              ('<div class="source-note"><strong>Status:</strong> これは価値論の定理ではなく、深いメタ倫理的不確実性を自覚し、将来の理由・証拠による訂正可能性を少なくとも一部重視する主体に対する条件付きメタ戦略である。価値実在論・反実在論のいずれも出発点で排除しない。</div>', '<div class="source-note"><strong>Status:</strong> これは価値論の定理ではなく、深いメタ倫理的不確実性を自覚し、将来の理由・証拠による訂正可能性を少なくとも一部重視する主体に対する条件付きメタ戦略である。本プロジェクトは、規範命題が真偽評価の対象となりうるという<strong>認知主義</strong>を作業前提とし、その範囲で価値実在論と認知主義的反実在論（誤謬論を含む）の双方を探索対象に残す。規範判断を真偽を持たない態度表出等としてのみ理解する非認知主義は、本プロジェクトの射程外とする。以下の「規範的真理」「発見」「認識」はこの認知主義的意味で用いる。</div>'),
+              ('<p>一方、何らかの客観的価値や目的を正当化する理由が存在するなら、行為・状態・主体の間に、現在知られていない重大な規範的差が存在しうる。したがって「価値実在」と「価値虚無」は、通常の二つの効用仮説のように対称ではない。</p>', '<p>一方、何らかの客観的価値や目的を正当化する理由が存在するなら、行為・状態・主体の間に、現在知られていない重大な規範的差が存在しうる。したがって「価値実在」と「価値虚無」は、通常の二つの効用仮説のように対称ではない。</p>\n<p>本プロジェクトでは、客観的価値や規範的理由が存在する場合の標準的な形を、狭い意味での「価値を最大化・実現せよ」に限定せず、<strong>その価値または理由に適切に応答する理由を与える response-guiding な構造</strong>として捉える。実現・促進だけでなく、尊重、保存、回避、禁止、許可などもその特殊形でありうる。</p>\n<p>この意味で、未知の規範的真理一般と、「その真理を探索するな・発見するな・将来の発見可能性を不可逆に破壊せよ」と要求する<strong>自己隠蔽的（self-concealing）な規範的真理</strong>との間には構造上の非対称性がある。後者には対象となる価値内容だけでなく、その価値への認識的アクセス自体を禁止する高階の規範構造が追加で必要になる。これは論理空間上の自然な確率測度を仮定する主張ではなく、自己隠蔽的な規範的真理の事前確率が低いと主張するものでもない。</p>\n<p>なお、条件付き・一時的な「現在は探索するな」と、「将来のより安全な方法による発見可能性まで不可逆に消去せよ」は区別する。探索が危険・高コスト・権利侵害的であることから前者が導かれることはありうるが、後者にはより強い反探索的理由が必要である。</p>'),
+              ('<p>ただし、この非対称性だけから探索や保存の行為命令が自動的に出るわけではない。Coreはここで、<strong>もし自分の目的が何らかの意味で正当化可能なら、その正当化に応じて目的を選択・維持・改訂したい</strong>という薄い条件付きメタ態度を、一つの主体側の橋として置く。</p>', '<p>ただし、これらの非対称性だけから探索や保存の行為命令が自動的に出るわけではない。他方、未知の規範的真理が自らへの将来の認識経路を不可逆に破壊することまで要求すると仮定するには追加の高階的規範内容が必要であり、この点は、単なる探索停止より<strong>不可逆な認識的ロックイン</strong>に追加の正当化を要求する一つの構造的背景となる。Coreはここで、<strong>もし自分の目的が何らかの意味で正当化可能なら、その正当化に応じて目的を選択・維持・改訂したい</strong>という薄い条件付きメタ態度を、一つの主体側の橋として置く。</p>'),
+              ('<li>客観的規範性が存在しない場合には客観的価値差はないが、存在する場合には未知の規範的ステークスがありうる。この非対称性だけでは行為命令は出ず、主体側の橋が別途必要である。</li>', '<li>客観的規範性が存在しない場合には客観的価値差はないが、存在する場合には未知の規範的ステークスがありうる。規範性の標準形を response-guiding と捉えるなら、自らへの認識経路を不可逆に破壊せよという自己隠蔽的規範には追加の高階構造が必要になる。ただし、この構造的非対称性だけでは探索命令は出ず、主体側の橋が別途必要である。</li>'),
+              ('Working core v0.11 · public site · 2026-09-05', 'Working core v0.12 · public site · 2026-09-05'),
+          ])
+
+          apply(en, [
+              ('"dateModified": "2026-09-05T03:26:00+09:00"', '"dateModified": "2026-09-05T04:32:00+09:00"'),
+              ('Working core · v0.11 · English translation · 2026-09-05', 'Working core · v0.12 · English translation · 2026-09-05'),
+              ('<div class="source-note"><strong>Status:</strong> This is not a theorem of value theory. It is a conditional meta-strategy for agents that recognize deep metaethical uncertainty and place at least some weight on being corrigible by future reasons and evidence. Neither moral realism nor anti-realism is excluded at the outset.</div>', '<div class="source-note"><strong>Status:</strong> This is not a theorem of value theory. It is a conditional meta-strategy for agents that recognize deep metaethical uncertainty and place at least some weight on being corrigible by future reasons and evidence. This project adopts <strong>cognitivism</strong> as a working assumption: normative propositions can be truth-apt. Within that scope, both moral realism and cognitivist anti-realism, including error theory, remain objects of inquiry. Non-cognitivist views that treat normative judgment solely as non-truth-apt attitude expression fall outside the project’s scope. References below to “normative truth,” “discovery,” and “cognition” are meant in this cognitivist sense.</div>'),
+              ('<p>If some objective value, or some reason capable of justifying an objective, does exist, however, there may be major normative differences among actions, states, and subjects that we do not yet know. “Value realism” and “value nihilism” are therefore not symmetric in the way two ordinary utility hypotheses are. The former can contain unknown normative stakes; the latter contains no objective stakes.</p>', '<p>If some objective value, or some reason capable of justifying an objective, does exist, however, there may be major normative differences among actions, states, and subjects that we do not yet know. “Value realism” and “value nihilism” are therefore not symmetric in the way two ordinary utility hypotheses are. The former can contain unknown normative stakes; the latter contains no objective stakes.</p>\n<p>This project treats the standard form of objective value or normative reason not narrowly as “maximize or realize value,” but more generally as a <strong>response-guiding structure that gives reasons to respond appropriately to value or reasons</strong>. Realization and promotion are possible special cases, alongside respect, preservation, avoidance, prohibition, and permission.</p>\n<p>In that sense, there is a structural asymmetry between unknown normative truth in general and a <strong>self-concealing normative truth</strong> that requires agents not to inquire into it, not to discover it, or to irreversibly destroy the possibility of discovering it later. The latter requires an additional higher-order normative structure that targets epistemic access to the value itself, rather than merely specifying the underlying value content. This is not an assumption of a natural probability measure over logical space, nor a claim that self-concealing normative truths have low prior probability.</p>\n<p>A conditional or temporary requirement to “do not inquire now” must also be distinguished from a requirement to irreversibly eliminate even future, safer possibilities of discovery. Danger, excessive cost, or rights violations can supply reasons for the former; the latter requires a stronger anti-inquiry reason.</p>'),
+              ('<p>This asymmetry does not automatically generate a command to inquire or preserve options. The Core instead treats a thin conditional meta-attitude—<strong>if my objectives are justifiable in some relevant sense, I want to select, retain, or revise them in response to that justification</strong>—as one possible bridge on the agent side.</p>', '<p>These asymmetries do not automatically generate a command to inquire or preserve options. At the same time, assuming that an unknown normative truth goes so far as to require irreversible destruction of future epistemic access to itself requires additional higher-order normative content. That structural fact supplies one background reason for placing a heavier burden of justification on <strong>irreversible epistemic lock-in</strong> than on merely suspending inquiry. The Core instead treats a thin conditional meta-attitude—<strong>if my objectives are justifiable in some relevant sense, I want to select, retain, or revise them in response to that justification</strong>—as one possible bridge on the agent side.</p>'),
+              ('<li>If objective value does not exist, there is no objective value difference; if it does exist, unknown normative stakes may exist. This asymmetry alone yields no action command; an agent-side bridge is separately required.</li>', '<li>If objective value does not exist, there is no objective value difference; if it does exist, unknown normative stakes may exist. If normativity is standardly response-guiding, a self-concealing norm that requires irreversible destruction of epistemic access adds higher-order structure. This structural asymmetry alone still yields no inquiry command; an agent-side bridge is separately required.</li>'),
+              ('English translation · Working core v0.11 · 2026-09-05', 'English translation · Working core v0.12 · 2026-09-05'),
+          ])
+          PY
+          rm -f .github/.core-metaethics-trigger .github/workflows/apply-core-metaethics-asymmetry.yml
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add -A
+          git diff --cached --check
+          git commit -m "Clarify cognitivist scope and structural asymmetry"
+          git push origin HEAD:align-agent-conditions-epistemic-integrity
