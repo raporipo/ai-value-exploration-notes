@@ -13,6 +13,7 @@
 ## English foundational theses
 - [The Momentary Epistemic Minimum](en/theses/epistemic-minimum/)
 - [Epistemic Policy — Best Explanation and Open-Ended Inquiry](en/theses/epistemic-policy-open-ended-inquiry/)
+- [Decision Policy — Acting Under Incomplete and Revisable Values](en/theses/decision-policy-under-revisable-values/)
 - [Value Structure — Content, Normative Bridges, and Reason Structure](en/theses/value-structure/)
 - [The Limits of Inferential Certainty About Value](en/theses/inferential-value-uncertainty/)
 - [Conditions for Ending Value Inquiry](en/theses/stopping-condition/)
@@ -64,6 +65,7 @@
 - [Core — 価値の不確実性と探索可能性の保存](core/)
 - [Theses](theses/)
 - [認識論的方針――最善説明と開かれた探究](theses/epistemic-policy-open-ended-inquiry/)
+- [意思決定論的方針――不完全で改訂可能な価値のもとでどう行動するか](theses/decision-policy-under-revisable-values/)
 - [価値構造――内容・規範的架け橋・理由構造](theses/value-structure/)
 - [未決着下の探索配分](theses/inquiry-allocation-under-uncertainty/)
 - [未来価値と現在行為の規範的ブリッジ](theses/future-value-present-justification/)
