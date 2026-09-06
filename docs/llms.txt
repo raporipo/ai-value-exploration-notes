@@ -77,4 +77,4 @@
 - [このサイトについて](about/)
 
 ## Translation note
-The Japanese pages are canonical source texts for conceptual changes. The English version is a working translation intended to preserve argumentative structure and epistemic strength rather than mechanically mirror Japanese syntax.
+The Japanese pages are canonical source texts for conceptual changes. English pages are maintained as close working translations. Terminology is translated for argumentative function rather than word-for-word surface identity where necessary.
