@@ -25,39 +25,18 @@
       "url": "https://fuminose.com/ai-value-exploration-notes/theses/decision-policy-under-revisable-values/",
       "name": "意思決定論的方針――不完全で改訂可能な価値のもとでどう行動するか",
       "inLanguage": "ja",
-      "isPartOf": {
-        "@id": "https://fuminose.com/ai-value-exploration-notes/#website"
-      },
+      "isPartOf": {"@id": "https://fuminose.com/ai-value-exploration-notes/#website"},
       "description": "十分に表現された価値・確率・比較構造のもとでは強く最適化しつつ、不完全・比較不能・未概念化・改訂可能な価値のもとでは、頑健性・情報価値・可逆性・適応可能性を使い分ける意思決定方針。",
-      "breadcrumb": {
-        "@id": "https://fuminose.com/ai-value-exploration-notes/theses/decision-policy-under-revisable-values/#breadcrumb"
-      },
-      "mainEntity": {
-        "@id": "https://fuminose.com/ai-value-exploration-notes/theses/decision-policy-under-revisable-values/#article"
-      }
+      "breadcrumb": {"@id": "https://fuminose.com/ai-value-exploration-notes/theses/decision-policy-under-revisable-values/#breadcrumb"},
+      "mainEntity": {"@id": "https://fuminose.com/ai-value-exploration-notes/theses/decision-policy-under-revisable-values/#article"}
     },
     {
       "@type": "BreadcrumbList",
       "@id": "https://fuminose.com/ai-value-exploration-notes/theses/decision-policy-under-revisable-values/#breadcrumb",
       "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "AI Value Exploration Notes",
-          "item": "https://fuminose.com/ai-value-exploration-notes/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Theses",
-          "item": "https://fuminose.com/ai-value-exploration-notes/theses/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "意思決定論的方針――不完全で改訂可能な価値のもとでどう行動するか",
-          "item": "https://fuminose.com/ai-value-exploration-notes/theses/decision-policy-under-revisable-values/"
-        }
+        {"@type":"ListItem","position":1,"name":"AI Value Exploration Notes","item":"https://fuminose.com/ai-value-exploration-notes/"},
+        {"@type":"ListItem","position":2,"name":"Theses","item":"https://fuminose.com/ai-value-exploration-notes/theses/"},
+        {"@type":"ListItem","position":3,"name":"意思決定論的方針――不完全で改訂可能な価値のもとでどう行動するか","item":"https://fuminose.com/ai-value-exploration-notes/theses/decision-policy-under-revisable-values/"}
       ]
     },
     {
@@ -65,164 +44,104 @@
       "@id": "https://fuminose.com/ai-value-exploration-notes/theses/decision-policy-under-revisable-values/#article",
       "headline": "意思決定論的方針――不完全で改訂可能な価値のもとでどう行動するか",
       "url": "https://fuminose.com/ai-value-exploration-notes/theses/decision-policy-under-revisable-values/",
-      "mainEntityOfPage": {
-        "@id": "https://fuminose.com/ai-value-exploration-notes/theses/decision-policy-under-revisable-values/#webpage"
-      },
+      "mainEntityOfPage": {"@id": "https://fuminose.com/ai-value-exploration-notes/theses/decision-policy-under-revisable-values/#webpage"},
       "inLanguage": "ja",
-      "author": {
-        "@type": "Person",
-        "@id": "https://fuminose.com/ai-value-exploration-notes/about/#author",
-        "name": "raporipo",
-        "url": "https://fuminose.com/ai-value-exploration-notes/about/"
-      },
+      "author": {"@type":"Person","@id":"https://fuminose.com/ai-value-exploration-notes/about/#author","name":"raporipo","url":"https://fuminose.com/ai-value-exploration-notes/about/"},
       "description": "十分に表現された価値・確率・比較構造のもとでは強く最適化しつつ、不完全・比較不能・未概念化・改訂可能な価値のもとでは、頑健性・情報価値・可逆性・適応可能性を使い分ける意思決定方針。",
-      "dateModified": "2026-09-07T04:00:42+09:00"
+      "dateModified": "2026-09-08T16:21:00+09:00"
     }
   ]
 }
 </script>
 </head><body><header><div class="brand"><a href="../../">AI Value Exploration Notes</a></div><nav><a href="../../core/">Core</a><a href="../../theses/">Theses</a><a href="../../explorations/">Explorations</a><a href="../../practice/">Practice</a><a href="../../questions/">Questions</a><a href="../../glossary/">Glossary</a><a href="../../about/">About</a><a class="lang-switch" href="../../en/theses/decision-policy-under-revisable-values/">English</a></nav></header><main>
-<div class="eyebrow">Foundational thesis</div><h1>意思決定論的方針――不完全で改訂可能な価値のもとでどう行動するか</h1><p class="meta">Working draft v0.2 · 2026-09-07</p>
+<div class="eyebrow">Foundational thesis</div><h1>意思決定論的方針――不完全で改訂可能な価値のもとでどう行動するか</h1><p class="meta">Working draft v0.3 · 2026-09-08</p>
 <div class="claim"><strong>Thesis:</strong> 本プロジェクトは、状態空間・確率・価値尺度・比較構造が十分に表現されている局面では、期待効用最大化その他の適切な最適化を強く用いてよい。しかし、価値尺度、理論間比較、候補価値空間、将来の評価主体そのものが不完全・比較不能・未概念化・改訂可能である局面では、存在しない精密さを捏造して単一スカラー最適化へ押し込まない。<strong>現在比較できる範囲では強く決め、残余の不確実性には頑健性、情報価値、可逆性、将来の選択可能性、適応可能性、再検討可能性で応答する。</strong> したがって、強い現在行動と将来の価値訂正可能性は両立しうる。</div>
-
 <h2>1. 射程――認識ではなく選択を扱う</h2>
 <p><a href="../epistemic-policy-open-ended-inquiry/">認識論的方針</a>が扱うのは、何をどの程度信じ、どの世界像・仮説空間・認識方法を採用するかである。本稿が扱うのは、その認識状態と現在の価値状態のもとで、複数の行為・政策・資源配分のどれを選ぶかである。価値論が「何が理由や価値であるか」を問うのに対し、意思決定論は「その価値についての不完全な入力から、いま何をするか」へ進む。</p>
 <p>したがって、意思決定理論自身を価値発見の代替物にしない。ある選好を期待効用関数として表現できても、その選好内容が規範的に正しいことは出ない。同様に、あるdecision ruleが内部的に整合していても、そのruleを究極的な規範原理として採用すべきことは別途の問題である。</p>
 <p>さらに本稿は、Coreでいう<strong>主体側ブリッジ</strong>を持つ主体についての条件付き方針である。たとえば「もし自分の目的がよりよく正当化されるなら、その正当化に応じて目的・policyを改訂したい」という条件付き応答性や、「よりよく知らされた自分が明白な誤りと評価する不可逆選択を避けたい」という反省的誤り回避を持つ主体を想定する。<strong>価値不確実性それ自体が、探索・保存・訂正可能性への動機を自動的に生成するとは主張しない。</strong> 以下でE/P/optionalityが現在の理由になりうるという記述は、この適用条件のもとで読む。</p>
 <div class="claim"><strong>Boundary:</strong> <code>epistemic state + value state + feasible actions + constraints → decision policy → action</code>。<strong>不確実であることは行動不能を意味しない。</strong></div>
-
 <h2>2. 標準ケース――期待効用最大化を否定しない</h2>
 <p>状態 <code>s</code>、行為 <code>a</code>、主観確率 <code>P(s)</code>、結果に対する十分にcardinalな効用 <code>U(a,s)</code> が与えられるなら、標準的な期待効用 <code>EU(a)=Σs P(s)U(a,s)</code> は強力な基準である。von Neumann–MorgensternやSavage型の表現定理は、一定の合理性条件を満たす選好を、期待効用最大化として表現できる条件を明らかにしてきた。</p>
 <p>本稿は「EUか反EUか」という二者択一を採らない。十分に信頼できる確率と価値尺度があり、結果間の差が共通尺度で比較可能なら、EUや通常の最適化を避ける理由はない。むしろ問題は、<strong>その数値表現を使う資格が本当にあるか</strong>である。</p>
 <p>標準モデルは少なくとも、行為空間、状態空間、行為と状態から結果への対応、確率、結果の価値尺度、比較・集約規則が十分に表現されていることを要求する。本プロジェクトが主に扱うのは、このうち一部が未確定な場合である。</p>
 <div class="claim"><strong>Baseline rule:</strong> <code>sufficiently represented decision model → use the strongest justified optimization available</code>。</div>
-
 <h2>3. どこまで定量化・比較してよいか――表現資格</h2>
 <p>数値を置けることと、その数値に任意の演算をしてよいことは同じではない。序数的な選好しか正当化できないなら、<code>A &gt; B</code> という順位は意味を持っても、<code>U(A)-U(B)</code> の差や異なる対象間の平均まで意味を持つとは限らない。区間尺度、比率尺度、主体間比較可能性、理論間比較可能性は、それぞれ追加の構造を要求する。</p>
 <p>また合理的選好が常にcompleteであるとも限らない。複数のcareer、複数の価値軸、全く異なる存在様式のように、現時点でどちらが上か十分な理由を持たない組がありうる。その場合に「無差別」と「比較不能」を同一視すると、存在しないtrade-offを作ってしまう。</p>
 <p>したがって、価値表現は必要に応じて、単一scalar、区間・集合値、multi-attribute vector、ordinal ranking、partial order、明示的incomparabilityのいずれでもよい。多属性効用の加法形 <code>V(a)=Σi wi vi(a)</code> も自動的な真理ではなく、属性間の独立性やtrade-off構造について追加条件を要する。</p>
 <div class="claim"><strong>Representational rule:</strong> <strong>Quantification is conditional on representational entitlement.</strong> 現在の証拠・価値構造が許す以上のcardinality、comparability、aggregationを捏造しない。</div>
-
 <h2>4. 表象済みの価値不確実性――複数理論をどう扱うか</h2>
 <p>価値候補がすでに表象されている場合でも、単純な期待値集約が常に可能とは限らない。たとえば理論 <code>T1</code> と <code>T2</code> にcredenceを置けても、両理論のchoiceworthiness尺度の単位が独立なら、<code>P(T1)U1(a)+P(T2)U2(a)</code> は尺度変換によって答えが変わりうる。moral uncertainty文献のintertheoretic comparison problemは、まさにこの点を扱う。</p>
 <p>比較可能性が十分ならexpected choiceworthinessを用いてよい。一方、moral uncertainty文献には、理論間のcardinal比較が弱い場合にsocial-choice analogyやordinal aggregationを使う提案もある。これとは別に、imprecise decision theoryでは複数のprobability / utility表現を残したままE-admissibility、maximalityなど複数の選択規則を考える。またMCDAのRobust Ordinal Regressionでは、現在の判断と整合する複数モデル全体に対し、すべてでAがB以上となる<strong>necessary preference</strong>と、少なくとも一つで成立する<strong>possible preference</strong>を区別する。</p>
 <p>これらは同一の理論ではないが、共通して「精密な単一尺度がないからといって、意思決定上の構造がゼロになるわけではない」ことを示す。比較不能性は意思決定の失敗ではなく、現在の価値表現についての情報である。比較できる部分だけを使って選択集合を狭め、残る競合には後述する頑健性・情報取得・可逆性を使う。</p>
 <div class="claim"><strong>Represented uncertainty:</strong> <code>uncertain theory ≠ automatically commensurable theory</code>。</div>
-
 <h2>5. 未表象の価値――未知の理論に架空の重みを与えない</h2>
 <p><a href="../../explorations/bayesian-open-hypothesis-space/">ベイズ更新と開いた仮説空間</a>では、まだ仮説空間に入っていない仮説は、通常「事前確率0の仮説」ではなく、現在の確率関数では未定義になりうると整理した。価値理論にも同じ問題がある。現在の価値候補集合 <code>𝒱t</code> にまだ表象されていない <code>V*</code> を、「unknown theoryという5%の政党」として現在の実践配分へ直接入れることはできない。</p>
 <p>本稿が対象とする主体では、未概念化価値の可能性は、現在のXに架空の効用を足すより、<strong>新しい価値候補を発見するE、将来再評価できるP、不可逆行為への慎重さ、将来の選択可能性</strong>へ作用しうる。つまり、表象済み価値不確実性は一階の行為比較へ直接入れられるが、未表象可能性は主としてdecision architectureの開放性へ作用する。</p>
-<div class="claim"><strong>Open-value rule:</strong> <code>unrepresented value possibility → exploration / preservation / optionality</code> であって、<code>→ fictitious scalar utility</code> ではない。</div>
-
+<p>この応答には、Cordascoの2026年のevaluative flexibilityと<strong>endogenous menu</strong>論が近接する。Cordascoは、将来のevaluative outlookが変わりうるなら既存optionを残すだけでなく、将来のoptionを生成・選別するmeta-rules自体を制度的に設計する理由があると論じる。本稿ではこの発想を価値仮説空間へ一般化し、現在の候補を保存するだけでなく、新しい価値概念・仮説・表象形式を生成できる能力――<strong>生成的開放性（generative openness）</strong>――をPの重要な一部として扱う。</p>
+<p>したがって、未表象価値への備えは <code>preserve current options</code> だけでなく、<code>preserve option / hypothesis generation capacity</code> を含む。先行研究との詳しい関係は<a href="../../explorations/from-value-uncertainty-to-normative-discovery/">価値不確実性から規範的発見へ</a>で扱う。</p>
+<div class="claim"><strong>Open-value rule:</strong> <code>unrepresented value possibility → exploration / preservation / generative openness / optionality</code> であって、<code>→ fictitious scalar utility</code> ではない。</div>
 <h2>6. 表現構造はdecision ruleを制約するが、一意には決めない</h2>
 <p>ここまでから、本稿は一つの万能規則を採らない。十分な確率とcardinal utilityがあればEU、確率や効用が集合値ならimprecise/robustなrule family、比較が部分的ならdominanceやpartial order、モデル自体が深く不確実ならRDMやregret、将来情報が重要ならVOIやreal options、時間的適応が必要ならDAPP、価値そのものが改訂されうるならreflective policyが候補になる。</p>
 <p>ただし、表現構造から唯一の正しいdecision ruleが自動的に出るわけではない。同じset-valued utilityを認めても、E-admissibility、maximality、各種dominance ruleなど複数の規則が残りうる。したがって現在の表現が直接与えるのは、単一規則というより<strong>許容可能なrule familyへの制約</strong>である。</p>
 <p>そのrule familyの内部でどの規則を使うかには、dominance、保守性、regret、dynamic consistency、計算費用、optionalityなど追加のdecision criteriaが関わりうる。この二段階目についても本稿は最終解を前提しない。</p>
 <div class="claim"><strong>Representation-admissibility rule:</strong> <code>representation → admissible rule family</code>。<strong>現在正当化された表現が許さない演算を要求するruleは使わないが、表現だけで唯一のruleが決まるとは限らない。</strong></div>
-
 <h2>7. E / P / X――三つの排他的行為ではなく、三つの機能次元</h2>
 <p><a href="../inquiry-allocation-under-uncertainty/">未決着下の探索配分</a>で導入した <strong>E: 能動探索、P: 探索可能性保存、X: 現在価値実現</strong> は、三つの終端価値でも、すべての行為を三箱へ排他的に分類するカテゴリーでもない。むしろ、各行為や制度が持ちうる三つのdecision-relevant functionとして理解する。</p>
 <div class="claim"><strong>Functional representation:</strong> <code>a → { E(a), P(a), X(a) }</code>。一つの行為が同時にE・P・Xへ寄与してよい。</div>
 <p>たとえば研究大学の維持は、現在研究によってEを増やし、教育・制度・記録によってPを保存し、同時に現在の教育・生産・福祉というXを実現しうる。一方、具体的な予算やattentionを配る局面では、便宜的に <code>(Et,Pt,Xt)</code> というresource allocationとして表現できる。</p>
 <p>正当化関連性、情報価値、探索機会の不可逆性、探索リスク、現在価値の機会費用、保存費用などが変われば、各次元への重みも変わる。特にEとPを分けることで、能動探索が危険・高価でも、<strong>今はXを強く進めながらPを維持し、Eは抑える</strong>という政策が成立する。</p>
-
 <h2>8. 深い不確実性――最適な未来より壊れにくい政策</h2>
 <p>確率が単に不鮮明なのではなく、どの未来がplausibleか、因果モデルがどう働くか、どの結果指標を重視するかについて合意できない場合、Decision Making under Deep Uncertaintyの問題になる。Robust Decision Making（RDM）は、一つのbest-estimate futureへ最適化する代わりに、多数のplausible futuresで候補政策を走らせ、どの条件で失敗するかをscenario discoveryによって探し、その脆弱性を減らす戦略を反復的に作る。</p>
 <p>本プロジェクトにとって重要なのは、RDMを単純なworst-case maximinと同一視しないことである。目的は「最悪の想像可能状態だけを見る」ことではなく、複数のもっともらしい世界・価値表現のもとで、許容可能な性能を広く維持する戦略を探すことにある。必要ならsatisficing、regret、複数指標、脆弱性条件を併用する。</p>
 <p>ただしRDMが直接stress-testできるのは、現在<strong>表象されている</strong>world model・value model・performance criterionである。<code>V* ∉ 𝒱t</code> のような未概念化価値それ自体をscenarioとして走らせることはできない。その残余には、P、reopenability、異なる研究経路、記録保存などによって間接的に備える。</p>
 <div class="claim"><strong>Robustness rule:</strong> <code>represented deep uncertainty → stress-test / robustness</code>、<code>unrepresented possibility → preservation / reopenability</code>。</div>
-
 <h2>9. 情報を取りに行くか――VOIと探索の危険</h2>
 <p>能動探索Eはそれ自体が意思決定である。Value of Information（VOI）は、情報を得た後に選べる行為が改善することから、その情報取得へどれだけ支払う価値があるかを評価する。標準的には、情報を得る前後の最適期待価値の差として表現できる。</p>
 <p>価値探索ではこの構造をそのまま使えない場合がある。第一に、情報が既知の状態を識別するだけでなく、<strong>新しい価値モデル・新しい比較軸を生成する</strong>可能性がある。この場合の「meta-VOI」は有用な類推だが、未表象価値を評価する共通尺度を自動的には生成しない。第二に、危険な実験や高能力AIの構築のように、情報取得そのものが重大な損失を生む場合がある。第三に、探索によって対象・主体・原データを破壊し、将来の探索可能性Pを減らす場合がある。</p>
 <p>したがって探索は「情報は多いほどよい」という単調な価値ではない。本稿が対象とする主体では、decision relevance、期待される認識的改善、探索費用、現在価値の機会費用、探索リスク、将来探索能力への影響などを比較してEを選ぶ。</p>
 <div class="claim"><strong>Inquiry rule:</strong> <code>epistemic gain alone ≠ sufficient reason for active inquiry</code>。</div>
-
 <h2>10. 不可逆性と待つ価値――real optionsからreflective optionalityへ</h2>
 <p>投資が不可逆または高コストで、しかも延期可能であり、待つ間に情報が増えるなら、「今実行しない」ことは単なる消極性ではない。real optionsの考えでは、将来条件を見て実行・拡張・縮小・撤退を選べるoption自体が価値を持つ。したがって不可逆行為の機会費用には、実行によって失われる将来の選択権も含まれる。</p>
 <p>ただし本プロジェクトでは、未来主体の評価基準自体が現在と同じとは限らない。そこで、まず価値判断を含まない構造的概念として<strong>reflective optionality</strong>を置く。これは、将来より多くの情報・認知能力・価値理解を得た主体が、現在の決定や価値表現を再評価・変更できる能力である。</p>
 <p>そのreflective optionalityが現在の主体にとってどの程度価値を持つかは自動的には決まらない。本稿の適用条件である主体側ブリッジを持つ主体なら、よりよく正当化された将来判断へ応答できる余地として、そこに派生的な<strong>reflective option value</strong>を認めうる。</p>
 <div class="claim"><strong>Reflective-option distinction:</strong> <code>reflective optionality + agent-side bridge → possible reflective option value</code>。<strong>未来に選択肢があること自体を無条件の終端価値とはしない。</strong></div>
+<p>Cordascoのpreference for flexibilityは、このreflective option valueに近いprudential argumentである。将来のevaluative outlookへの不確実性から、現在主体自身が将来のoptionを残すinstrumental reasonを導く点は本稿と親和的である。ただし彼の査読済み2026年論文では、現在のhigher-order valuesからrecognizableで、feasibleなuptake routeをもつ将来がflexible setの中心になる。本稿はまずreflective optionalityを価値中立的な構造能力として定義し、その現在価値を主体側ブリッジから別途導くため、現在のrecognizabilityそれ自体を規範的候補資格にはしない。</p>
 <p>待つことも無料ではない。現在価値の喪失、技術機会の消滅、競争相手による先行、非行動による不可逆損失がありうる。したがって本稿は「可逆性最大化」ではなく、<strong>実行の不可逆性と待機の不可逆性を比較する</strong>。</p>
-
 <h2>11. 一回の行為ではなく経路を選ぶ――DAPP</h2>
 <p>Dynamic Adaptive Policy Pathways（DAPP）は、深い不確実性のもとで最終政策を一度に決めるのではなく、短期行動へコミットしつつ、将来の観測に応じて次の行動へ移るpolicy pathwayを設計する。政策が既定のobjectiveを満たせなくなるadaptation tipping point、変化を監視するsignpost、次の行動を発動するtriggerを事前に考える。</p>
 <p>この発想は、現在の強い行動と将来の訂正可能性を直接両立させる。policyを <code>π: future evidence/state → future action</code> と見れば、「現在はXを強く実行する」「異常Aが出たらEを増やす」「不可逆閾値Bへ近づいたらPを強化する」といった条件付き計画を作れる。</p>
 <p>ただしDAPP自身が、未知の未来価値やobjectiveを生成してくれるわけではない。adaptation tipping pointを定義するにも、何を満たすべきobjectiveとするかが必要である。本プロジェクトが主に借りるのは、<strong>monitoring・trigger・reassessment・path switchingをpolicy内部に組み込み、将来の再評価手続きを経路として保存する構造</strong>である。</p>
 <div class="claim"><strong>Adaptive rule:</strong> <strong>強い現在行動は、一回限りの最終決定である必要はない。</strong> 行為だけでなく、将来情報と再評価への反応経路を選ぶ。</div>
-
 <h2>12. なぜ早期に可逆性を設計する必要があるか――Collingridge</h2>
 <p>Collingridgeのcontrol dilemmaでは、新技術の初期には変更しやすいが影響を十分に知らず、影響が分かる後期にはsunk cost、技能、制度、インフラ、依存関係、path dependenceによって変更が難しくなる。概念的には、時間とともに <code>knowledge ↑</code> する一方で <code>changeability ↓</code> しうる。</p>
 <p>したがって「十分に理解してから不可逆決定をすればよい」は一般には成立しない。理解を待つ間に、変更可能性そのものが消えるかもしれない。予測精度を上げるだけでなく、初期段階から小さな段階導入、rollback、監視、分岐、代替系統、退出経路などを組み込む理由がここにある。</p>
 <p>ただし、これは単なる情報不足問題でもない。本プロジェクトのようにobjectiveや価値構造自体が未決着なら、将来の事実知識が増えるだけでpolicy selectionが一意に決まるとは限らない。必要なのは、知識を増やすことと、objective自体を再評価できる構造を並行して残すことである。</p>
 <p>この点はAIや価値ロックインで特に強い。社会・経済・安全保障があるAIや価値制度に依存した後では、その問題が明らかになっても変更コストが極端に大きくなりうる。</p>
-
 <h2>13. 反省的意思決定――行為だけでなく、価値改訂経路を選ぶ</h2>
 <p>通常のdynamic choiceでも、未来自己の選好変化に対してcommitmentを使うか、未来の判断を尊重するかは問題になる。本プロジェクトではさらに、<code>Vt → Vt+1</code> が単なる時間選好の変化ではなく、価値についての新しい証拠、情動の直接改変、他主体からの操作、認知拡張、新しい概念体系の獲得など、多様な経路によって生じうる。</p>
 <p>したがって、<strong>future preference is not automatically authoritative, but current preference is not automatically privileged either</strong>。現在自己が未来自己を永久拘束することにも、未来のあらゆる変化を無条件に正当化することにも追加の理由が必要である。</p>
 <p>ここで意思決定対象になるのは、将来の価値 <code>Vt+1</code> を現在直接選ぶことだけではない。主体は、価値がどのような経路を通じて変化しうるかという<strong>value-revision channel</strong> <code>c ∈ 𝒞t</code> を、許可・保存・制約することができる。概念的には、<code>c: (Vt, Kt, At) → (Vt+1, Kt+1, At+1)</code> と置ける。ここで <code>K</code> は認知・認識能力、<code>A</code> は将来の再評価・自己改訂能力を表す。</p>
-<dl>
-<dt>Reason-mediated revision</dt><dd>新しい証拠、議論、自己批判、反省によって価値判断が変わる。</dd>
-<dt>Direct preference modification</dt><dd>欲望、情動、報酬系、選好を直接書き換える。</dd>
-<dt>Externally induced modification</dt><dd>他主体の説得、訓練、操作、環境設計によって価値状態が変わる。</dd>
-<dt>Cognitive transformation</dt><dd>知能、感覚、概念体系、意識構造などの変化に伴い、価値表現や比較能力も変わる。</dd>
-</dl>
+<dl><dt>Reason-mediated revision</dt><dd>新しい証拠、議論、自己批判、反省によって価値判断が変わる。</dd><dt>Direct preference modification</dt><dd>欲望、情動、報酬系、選好を直接書き換える。</dd><dt>Externally induced modification</dt><dd>他主体の説得、訓練、操作、環境設計によって価値状態が変わる。</dd><dt>Cognitive transformation</dt><dd>知能、感覚、概念体系、意識構造などの変化に伴い、価値表現や比較能力も変わる。</dd></dl>
 <p>これらの因果的ラベルだけから、「reason-mediatedなら正当」「direct modificationならcorruption」とは決まらない。直接改変が正当な訂正になる場合も、論証らしい過程がsystematic manipulationになる場合もありうる。<strong>どの変化がlearning、corruption、manipulation、value discoveryなのかという評価自体が、未解決のreflective decision problemである。</strong></p>
 <p><a href="../reflective-uncertainty-irreversible-commitment/">反省的不確実性と不可逆コミットメント</a>で導入したmeta-policy <code>M</code>――慣性、探索、判断保留など――は、このrevision-channel選択へ接続する。目的正当化がNullでも行為は止まらないため、主体は「現在目的をどう暫定使用するか」だけでなく、<strong>どの価値改訂経路を開き、どれを閉じ、どの認知・自己改変能力を保存するか</strong>を決めなければならない。</p>
 <div class="claim"><strong>Reflective rule:</strong> <code>choose not only actions under values, but channels by which values may change</code>。ただし、<code>current value use ≠ current value privilege ≠ future-value surrender</code>。</div>
-
 <h2>14. 複数主体への拡張――単独主体Decision Policyの境界</h2>
 <p>本稿の中心は単独主体または一つの統合されたdecision processである。複数の人間、AI、将来主体、異なる価値探索系統が共存する場合には、社会選択、judgment aggregation、bargaining、mechanism design、constitutional designなど別の問題層が加わる。</p>
 <p>ここで本稿が最低限保持するのは二つの境界である。第一に、主体を複数残すことから正しい集合価値が自動的に得られるわけではない。第二に、ある集合手続きがAを選んだことから、反対主体へAを強制してよいことは自動的には出ない。</p>
 <div class="claim"><strong>Collective boundary:</strong> <code>plurality ≠ automatic aggregation</code>、かつ <code>collective choice ≠ coercive authorization</code>。</div>
 <p><a href="../future-value-present-justification/">未来価値と現在行為の規範的ブリッジ</a>で分けた <code>reason ≠ permission ≠ obligation ≠ coercive authorization</code> は集合意思決定でも維持する。具体的な集約・交渉・退出・fork・分権の設計は、別の社会的意思決定論の課題として扱う。</p>
-
 <h2>15. 全体像――強い行動、偽の精密さなし、訂正経路あり</h2>
 <p>本稿の意思決定方針は一つの固定アルゴリズムではなく、現在の表現構造によって許容されるrule familyを絞り、追加のdecision criteriaを使いながらpolicyを選び、その行為結果によって認識・価値・選択肢・主体自身が変わる反復過程である。</p>
 <div class="claim"><code>{ epistemic state, value state, comparability, feasible actions, constraints }t → admissible rule family → decision policyt → actiont → { new evidence, new options, new value state, new revision channels }t+1</code></div>
 <p>このループでは、十分な比較可能性があるところでは強く最適化し、比較不能なところでは無理なscalarizationを避ける。表象済みの深い不確実性には頑健性を問い、未表象の可能性にはPとreopenabilityで備える。情報が将来増えるならVOIを評価し、不可逆性があるなら待機と実行の双方の失われる選択肢を比べ、時間的にはadaptive pathwayを設計する。</p>
 <p>さらに価値そのものが改訂可能なら、意思決定対象は「現在価値のもとで何をするか」だけではなく、「どの価値改訂経路を将来へ残すか」まで拡張される。本稿の適用対象主体は現在価値を使って強く行動しながらも、その価値をよりよく再評価する能力を不可逆に破壊する行為には追加の理由を要求しうる。</p>
 <p>そして、このdecision policy自身も<a href="../epistemic-policy-open-ended-inquiry/">認識論的方針</a>と同様、自己正当化的な最終規則ではない。将来より良い比較構造・decision theory・認知能力が得られれば改訂してよい。</p>
-
 <h2>本稿が主張しないこと</h2>
-<ul>
-<li>期待効用理論が誤りであること。十分に表現された標準ケースでは中心的な道具である。</li>
-<li>ある表現構造から唯一の正しいdecision ruleが自動的に決まること。</li>
-<li>不完全な価値は常にmaximin、minimax regret、RDMのいずれかで処理すべきこと。</li>
-<li>比較不能性は永久的であること。探索によって新しい比較構造が得られる可能性がある。</li>
-<li>RDMやDAPPが未概念化価値そのものを直接表現・最適化できること。</li>
-<li>可逆性、探索、選択肢保存、多元性がそれ自体で究極的な価値であること。</li>
-<li>不可逆行為を常に延期すべきこと。非行動・競争・機会消滅も不可逆性を持ちうる。</li>
-<li>未来自己の価値が現在自己より自動的に権威を持つこと、またはその逆。</li>
-<li>特定のvalue-revision channelが、その因果形式だけで正当または腐敗的だと判定できること。</li>
-<li>社会的多元性が正しい集合決定を自動生成すること。</li>
-</ul>
-
+<ul><li>期待効用理論が誤りであること。十分に表現された標準ケースでは中心的な道具である。</li><li>ある表現構造から唯一の正しいdecision ruleが自動的に決まること。</li><li>不完全な価値は常にmaximin、minimax regret、RDMのいずれかで処理すべきこと。</li><li>比較不能性は永久的であること。探索によって新しい比較構造が得られる可能性がある。</li><li>RDMやDAPPが未概念化価値そのものを直接表現・最適化できること。</li><li>可逆性、探索、選択肢保存、多元性がそれ自体で究極的な価値であること。</li><li>不可逆行為を常に延期すべきこと。非行動・競争・機会消滅も不可逆性を持ちうる。</li><li>未来自己の価値が現在自己より自動的に権威を持つこと、またはその逆。</li><li>特定のvalue-revision channelが、その因果形式だけで正当または腐敗的だと判定できること。</li><li>社会的多元性が正しい集合決定を自動生成すること。</li></ul>
 <h2>主要文献・入口</h2>
-<ul>
-<li><a href="https://plato.stanford.edu/entries/decision-theory/">Stanford Encyclopedia of Philosophy, “Decision Theory”</a> — 期待効用、不完全選好、imprecise probability / utility。</li>
-<li><a href="https://plato.stanford.edu/entries/rationality-normative-utility/">SEP, “Normative Theories of Rational Choice: Expected Utility”</a> — EU表現とcomplete preferenceの論点。</li>
-<li><a href="https://plato.stanford.edu/entries/rationality-normative-nonutility/">SEP, “Normative Theories of Rational Choice: Rivals to Expected Utility”</a> — imprecise representationと複数の選択規則。</li>
-<li><a href="https://plato.stanford.edu/entries/moral-decision-uncertainty/">SEP, “Moral Decision-Making Under Uncertainty”</a> — expected choiceworthiness、intertheoretic comparison、ordinal/social-choice approaches。</li>
-<li>Ralph L. Keeney, <a href="https://pubsonline.informs.org/doi/10.1287/opre.19.4.875">“Utility Independence and Preferences for Multiattributed Consequences”</a> (1971) — multiattribute utility。</li>
-<li>Robert J. Lempert et al., <a href="https://www.rand.org/content/dam/rand/pubs/research_reports/RR2700/RR2735/RAND_RR2735.pdf">RAND, Decisionmaking Under Deep Uncertainty / Robust Decision Making overview</a> — deep uncertainty、robustness、scenario discovery。</li>
-<li>David Manheim, <a href="https://www.rand.org/pubs/rgs_dissertations/RGSD408.html"><em>Value of Information for Policy Analysis</em></a> (2018) — VOIの政策分析への適用。</li>
-<li>Robert S. Pindyck, <a href="https://www.nber.org/papers/w3307">“Irreversibility, Uncertainty, and Investment”</a> (1990) — irreversible investmentとwait option。</li>
-<li>Marjolijn Haasnoot et al., <a href="https://doi.org/10.1016/j.gloenvcha.2012.12.006">“Dynamic Adaptive Policy Pathways”</a> (2013) — pathways、adaptation tipping points、adaptive planning。</li>
-<li>David Collingridge, <em>The Social Control of Technology</em> (1980) — 情報問題とcontrol problem。現代的整理として <a href="https://www.tandfonline.com/doi/full/10.1080/23299460.2024.2342594">technology assessment and the Collingridge dilemma</a>。</li>
-<li><a href="https://plato.stanford.edu/entries/dynamic-choice/">SEP, “Dynamic Choice”</a> — dynamic inconsistency、commitment、resoluteness。</li>
-<li><a href="https://plato.stanford.edu/entries/social-choice/">SEP, “Social Choice Theory”</a> — preference aggregation、judgment aggregation、impossibility results。</li>
-</ul>
-
+<ul><li><a href="https://plato.stanford.edu/entries/decision-theory/">Stanford Encyclopedia of Philosophy, “Decision Theory”</a> — 期待効用、不完全選好、imprecise probability / utility。</li><li><a href="https://plato.stanford.edu/entries/rationality-normative-utility/">SEP, “Normative Theories of Rational Choice: Expected Utility”</a> — EU表現とcomplete preferenceの論点。</li><li><a href="https://plato.stanford.edu/entries/rationality-normative-nonutility/">SEP, “Normative Theories of Rational Choice: Rivals to Expected Utility”</a> — imprecise representationと複数の選択規則。</li><li><a href="https://plato.stanford.edu/entries/moral-decision-uncertainty/">SEP, “Moral Decision-Making Under Uncertainty”</a> — expected choiceworthiness、intertheoretic comparison、ordinal/social-choice approaches。</li><li>Carlo Ludovico Cordasco, <a href="https://www.cambridge.org/core/journals/economics-and-philosophy/article/abstraction-as-flexibility-the-veil-of-evaluative-uncertainty/FA12D9D5BB3783F8EACF396DFE4B93EB">“Abstraction as Flexibility: The Veil of Evaluative Uncertainty”</a> (2026) — evaluative uncertainty、preference for flexibility、endogenous option menus。</li><li>Ralph L. Keeney, <a href="https://pubsonline.informs.org/doi/10.1287/opre.19.4.875">“Utility Independence and Preferences for Multiattributed Consequences”</a> (1971) — multiattribute utility。</li><li>Robert J. Lempert et al., <a href="https://www.rand.org/content/dam/rand/pubs/research_reports/RR2700/RR2735/RAND_RR2735.pdf">RAND, Decisionmaking Under Deep Uncertainty / Robust Decision Making overview</a> — deep uncertainty、robustness、scenario discovery。</li><li>David Manheim, <a href="https://www.rand.org/pubs/rgs_dissertations/RGSD408.html"><em>Value of Information for Policy Analysis</em></a> (2018) — VOIの政策分析への適用。</li><li>Robert S. Pindyck, <a href="https://www.nber.org/papers/w3307">“Irreversibility, Uncertainty, and Investment”</a> (1990) — irreversible investmentとwait option。</li><li>Marjolijn Haasnoot et al., <a href="https://doi.org/10.1016/j.gloenvcha.2012.12.006">“Dynamic Adaptive Policy Pathways”</a> (2013) — pathways、adaptation tipping points、adaptive planning。</li><li>David Collingridge, <em>The Social Control of Technology</em> (1980) — 情報問題とcontrol problem。現代的整理として <a href="https://www.tandfonline.com/doi/full/10.1080/23299460.2024.2342594">technology assessment and the Collingridge dilemma</a>。</li><li><a href="https://plato.stanford.edu/entries/dynamic-choice/">SEP, “Dynamic Choice”</a> — dynamic inconsistency、commitment、resoluteness。</li><li><a href="https://plato.stanford.edu/entries/social-choice/">SEP, “Social Choice Theory”</a> — preference aggregation、judgment aggregation、impossibility results。</li></ul>
 <h2>関連ページ</h2>
-<ul>
-<li><a href="../epistemic-policy-open-ended-inquiry/">認識論的方針――最善説明と開かれた探究</a></li>
-<li><a href="../value-structure/">価値構造――内容・規範的架け橋・理由構造</a></li>
-<li><a href="../inquiry-allocation-under-uncertainty/">未決着下の探索配分</a></li>
-<li><a href="../stopping-condition/">価値探索の停止条件</a></li>
-<li><a href="../reflective-uncertainty-irreversible-commitment/">反省的不確実性と不可逆コミットメント</a></li>
-<li><a href="../future-value-present-justification/">未来価値と現在行為の規範的ブリッジ</a></li>
-<li><a href="../../explorations/bayesian-open-hypothesis-space/">ベイズ更新と開いた仮説空間</a></li>
-<li><a href="../../practice/">実践――では、いま何をするのか</a></li>
-</ul>
-</main><footer><a href="../../">Home</a> · Working draft · 2026-09-07</footer></body></html>
+<ul><li><a href="../epistemic-policy-open-ended-inquiry/">認識論的方針――最善説明と開かれた探究</a></li><li><a href="../value-structure/">価値構造――内容・規範的架け橋・理由構造</a></li><li><a href="../inquiry-allocation-under-uncertainty/">未決着下の探索配分</a></li><li><a href="../stopping-condition/">価値探索の停止条件</a></li><li><a href="../reflective-uncertainty-irreversible-commitment/">反省的不確実性と不可逆コミットメント</a></li><li><a href="../future-value-present-justification/">未来価値と現在行為の規範的ブリッジ</a></li><li><a href="../../explorations/from-value-uncertainty-to-normative-discovery/">価値不確実性から規範的発見へ</a></li><li><a href="../../explorations/bayesian-open-hypothesis-space/">ベイズ更新と開いた仮説空間</a></li><li><a href="../../practice/">実践――では、いま何をするのか</a></li></ul>
+</main><footer><a href="../../">Home</a> · Working draft v0.3 · 2026-09-08</footer></body></html>
