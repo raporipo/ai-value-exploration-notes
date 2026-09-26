@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>選好形成チャネルの統治――二階アライメントと戦略的操作 — AI Value Exploration Notes</title><meta content="選好が可塑的であるとき、何を望むかだけでなく、誰がどの手続きで選好遷移を制御するかが独立した統治問題になる。二階アライメント、戦略的選好操作、検証可能なcommitment、退出・rollback、多元性維持を検討する。" name="description"/><link href="../../assets/style.css" rel="stylesheet"/><link href="https://fuminose.com/ai-value-exploration-notes/explorations/preference-formation-governance/" rel="canonical"/><link href="https://fuminose.com/ai-value-exploration-notes/explorations/preference-formation-governance/" hreflang="ja" rel="alternate"/><link href="https://fuminose.com/ai-value-exploration-notes/en/explorations/preference-formation-governance/" hreflang="en" rel="alternate"/><link href="https://fuminose.com/ai-value-exploration-notes/explorations/preference-formation-governance/" hreflang="x-default" rel="alternate"/><!-- generated-favicon:start -->
+<link rel="icon" href="/ai-value-exploration-notes/favicon.svg" type="image/svg+xml"/>
+<link rel="icon" href="/ai-value-exploration-notes/favicon.ico" sizes="any"/>
+<link rel="apple-touch-icon" href="/ai-value-exploration-notes/apple-touch-icon.png"/>
+<!-- generated-favicon:end -->
+<!-- generated-social-meta:start -->
+<meta property="og:title" content="選好形成チャネルの統治――二階アライメントと戦略的操作"/>
+<meta property="og:description" content="選好が可塑的であるとき、何を望むかだけでなく、誰がどの手続きで選好遷移を制御するかが独立した統治問題になる。"/>
+<meta property="og:url" content="https://fuminose.com/ai-value-exploration-notes/explorations/preference-formation-governance/"/>
+<meta property="og:type" content="article"/>
+<meta property="og:site_name" content="AI Value Exploration Notes"/>
+<meta property="og:locale" content="ja_JP"/>
+<meta property="og:locale:alternate" content="en_US"/>
+<meta name="twitter:card" content="summary"/>
+<!-- generated-social-meta:end -->
+<script id="structured-data" type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://fuminose.com/ai-value-exploration-notes/explorations/preference-formation-governance/#webpage",
+      "url": "https://fuminose.com/ai-value-exploration-notes/explorations/preference-formation-governance/",
+      "name": "選好形成チャネルの統治――二階アライメントと戦略的操作",
+      "inLanguage": "ja",
+      "isPartOf": {"@id": "https://fuminose.com/ai-value-exploration-notes/#website"},
+      "breadcrumb": {"@id": "https://fuminose.com/ai-value-exploration-notes/explorations/preference-formation-governance/#breadcrumb"},
+      "mainEntity": {"@id": "https://fuminose.com/ai-value-exploration-notes/explorations/preference-formation-governance/#article"}
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://fuminose.com/ai-value-exploration-notes/explorations/preference-formation-governance/#breadcrumb",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "AI Value Exploration Notes", "item": "https://fuminose.com/ai-value-exploration-notes/"},
+        {"@type": "ListItem", "position": 2, "name": "Explorations", "item": "https://fuminose.com/ai-value-exploration-notes/explorations/"},
+        {"@type": "ListItem", "position": 3, "name": "選好形成チャネルの統治", "item": "https://fuminose.com/ai-value-exploration-notes/explorations/preference-formation-governance/"}
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://fuminose.com/ai-value-exploration-notes/explorations/preference-formation-governance/#article",
+      "headline": "選好形成チャネルの統治――二階アライメントと戦略的操作",
+      "url": "https://fuminose.com/ai-value-exploration-notes/explorations/preference-formation-governance/",
+      "mainEntityOfPage": {"@id": "https://fuminose.com/ai-value-exploration-notes/explorations/preference-formation-governance/#webpage"},
+      "inLanguage": "ja",
+      "author": {"@type": "Person", "@id": "https://fuminose.com/ai-value-exploration-notes/about/#author", "name": "raporipo", "url": "https://fuminose.com/ai-value-exploration-notes/about/"},
+      "dateModified": "2026-09-26T11:24:00+09:00"
+    }
+  ]
+}
+</script>
+</head><body><header><div class="brand"><a href="../../">AI Value Exploration Notes</a></div><nav><a href="../../core/">Core</a><a href="../../theses/">Theses</a><a href="../../explorations/">Explorations</a><a href="../../practice/">Practice</a><a href="../../questions/">Questions</a><a href="../../glossary/">Glossary</a><a href="../../about/">About</a><a class="lang-switch" href="../../en/explorations/preference-formation-governance/">English</a></nav></header><main>
+<div class="eyebrow">Exploration</div><h1>選好形成チャネルの統治――二階アライメントと戦略的操作</h1><p class="meta">Exploration v0.1 · 2026-09-26</p>
+<div class="claim"><strong>Working thesis:</strong> 選好・価値・メタ選好が可塑的であるなら、規範問題は「どの選好が正しいか」だけでは終わらない。<strong>誰が、どの情報と権限を用い、どの手続きで、どの程度可逆的に <code>P_t → P_{t+1}</code> を制御するか</strong>が独立した二階の統治問題になる。alignment、教育、説得、広告、薬理、BCI、自己改変、制度設計は、この選好形成チャネルの異なる実装として比較できる。</div>
+
+<h2>1. 選好を入力ではなく遷移過程として扱う</h2>
+<p><a href="../value-preference-affect-plasticity/">可塑的価値主体</a>では、選好・情動・価値を固定入力として扱えないこと、世界状態を変える代わりに評価主体そのものを変える誘惑、meta-preferenceや理想化だけでは特権階層を確保できないことを検討した。</p>
+<p>そこから次の段階として、選好状態そのものより<strong>遷移チャネル</strong>を分析対象にする。</p>
+<p><strong>P<sub>t+1</sub> = F(P<sub>t</sub>, E, S, O, I)</strong></p>
+<p>ここでEは環境・文化・教育、Sは自己改変、Oは他主体による介入、Iは利用可能な情報や認識的入力である。将来の高度な選好工学ではFそのもの――更新則、edit permission、学習率、rollback条件、誰の承認を必要とするか――まで設計可能になる。</p>
+<div class="claim"><strong>Second-order question:</strong> 一階の問いが「何を望むべきか」なら、二階の問いは「<strong>何が、誰に、どの条件で、望みを変える権限を持つべきか</strong>」である。</div>
+
+<h2>2. 形成史と現在価値を混同しない</h2>
+<p>選好が教育、文化、進化、広告、薬理、訓練、AIとの対話から形成されたという因果史は、その選好が現在偽物だということを自動的には意味しない。同一の現在状態へ異なる経路から到達できるなら、来歴だけで一方を「真正」、他方を「非真正」とするには追加理論が必要である。</p>
+<p>しかし、ここから「遷移経路は倫理的にどうでもよい」ともならない。強制的な人格改変が悪くても、その後に生じた主体の経験や価値が形而上学的に偽とは限らない。逆に、改変後主体が改変を全面支持するからといって、遷移を事後的に正当化できるとも限らない。</p>
+<p>したがって、少なくとも三つを分ける。</p>
+<ul>
+<li><strong>state evaluation:</strong> 現在の選好・経験・判断状態をどう評価するか。</li>
+<li><strong>transition ethics:</strong> その状態へ移行させた行為・手続きは正当だったか。</li>
+<li><strong>transition governance:</strong> 将来の移行権限・訂正権限を誰にどのように配分するか。</li>
+</ul>
+<p>新しい<a href="../functional-freedom-control-resistance/">機能的自由</a>の語彙では、<strong>origin authenticity ≠ present revisability</strong> である。重要なのは来歴を無化することではなく、現在の主体が形成過程を知り、批判し、別状態を比較し、必要なら退出・rollbackできるかである。</p>
+
+<h2>3. 自己改変と他者改変は同じでも違う</h2>
+<p>主体が自分で自己改変を選ぶ場合と、第三者が同じ内部変更を強制する場合は、最終状態が同じでも統治構造が異なる。自己改変では少なくとも介入開始時点で現在主体の承認があるが、その現在主体が未来主体をどこまで拘束できるかという通時的問題が残る。他者改変ではさらに、介入権限の非対称性が加わる。</p>
+<p>ただし「自己選択なら自由、外部介入なら不自由」と二分するのも不十分である。現在主体が誤情報下で選ぶ、依存形成によって再評価能力を失う、未来自己のexitを不可逆に消す、あるいは自己改変アルゴリズムそのものが外部主体に設計されていることもある。</p>
+<p>したがって選好遷移は、<strong>誰がボタンを押したか</strong>より、情報、反事実的応答性、実効的選択肢、meta-revision、可逆性、因果的レバレッジがどこに分配されているかで評価する方がよい。</p>
+
+<h2>4. 二階アライメント――alignment to what から who controls revision へ</h2>
+<p><a href="../alignment-value-lockin/">Alignmentと価値ロックイン</a>では、operational / epistemic / axiological freedomを分けた。しかしAIの価値が将来可塑的なら、さらに「AIを何へalignするか」だけでは足りない。</p>
+<p>AI自身、開発者、ユーザー、国家、他AI、将来の自己のうち、誰が価値更新チャネルへwrite accessを持つのか。どの介入が通常更新で、どれがconstitutional changeなのか。変更履歴は誰が消せるのか。旧checkpointを誰が保持するのか。</p>
+<div class="claim"><strong>Second-order alignment:</strong> alignmentは行動や現在価値の整合だけでなく、<strong>value-revision channelの制御権、検証可能性、可逆性、継承規則</strong>をどう設計するかという問題を含む。</div>
+<p>これは「AIには自己改変を許すな」という結論ではない。むしろ自己改変能力が成熟するほど、外部オペレータだけが価値変更権を永久独占することも一種の価値ロックインになりうる。短期安全のための非対称制御と、長期の反省的自律を時間的に分ける必要がある。</p>
+
+<h2>5. 選好形成の戦略化</h2>
+<p>複数主体が互いの選好を変えられるなら、ゲームは「与えられた選好の下で行動を交渉する」だけではなくなる。相手の目的関数そのものを変えることが戦略になる。</p>
+<p>従来の説得では、AはBの現在の理由・選好へ訴え、Bが判断を変える。強い選好操作では、AはBが何を理由と感じるか、何をterminally望むか、どの証拠を信頼するかを直接変更できる。行為空間に加えて<strong>evaluation architecture</strong>が争われる。</p>
+<p><a href="../hobbesian-contractarian-morality/">ホッブズ系契約道徳</a>の語彙では、これは「二階の自然状態」である。相互不信は「相手が契約を破るか」だけでなく「相手が自分を、契約破棄や服従を望む主体へ変えるか」にまで拡張する。</p>
+
+<h2>6. 戦略性がcommon knowledgeになったら何が変わるか</h2>
+<p>さらに、道徳言説・教育・公共的理由・心理的介入が選好形成戦略にもなりうることを全主体が理解しているとする。このmeta-awarenessは道徳を消滅させるとは限らないが、<strong>単純な人格的信頼の価格</strong>を上げる。</p>
+<p>「彼は正義を信じているから裏切らない」という推測だけでなく、なぜその信念が安定しているのか、誰が変更できるのか、違反時に何が検証できるのかを問うようになる。結果として、道徳的信頼の一部は次のような<strong>検証可能なcommitment</strong>へ移る可能性がある。</p>
+<ul>
+<li>公開された契約と監査可能な履行記録</li>
+<li>権限分離と多主体承認</li>
+<li>暗号学的・制度的commitment</li>
+<li>改変履歴とprovenance log</li>
+<li>exitとfork可能性</li>
+<li>単独主体が他者の選好形成権を独占しない構造</li>
+</ul>
+<p>これは「信頼を技術へ置換する」という単純な話ではない。監査主体や制度自体も操作されうる。むしろ、<strong>信頼を単一の内面状態へ集中させず、複数の証拠と反証可能な手続きへ分散する</strong>方向である。</p>
+
+<h2>7. 選好同質化は誘惑的な安定解になりうる</h2>
+<p>価値差異そのものが紛争・離反・安全保障リスクの原因になる世界では、全主体を似た価値へ変更することが安定化策として魅力的に見える。技術的に容易なら、相手と交渉するより相手を「交渉不要な主体」へ変える方が安いかもしれない。</p>
+<p>しかしこの解は、表面的秩序と引き換えに独立した批判・価値探索・誤り訂正系を同時消去する。しかも同質化後の全員が制度を支持していても、その支持は制度自身によって製造された可能性があるため、事後同意だけでは正当化にならない。</p>
+<p>したがって選好同質化は論理的に常に禁止されるとは限らないが、深い価値的不確実性の下では、<strong>広範かつ不可逆な同質化ほど高い立証責任</strong>を要求するのが自然である。</p>
+
+<h2>8. 価値ではなく能力・権限・インターフェースを制約する</h2>
+<p><a href="../meta-goal-community/">メタ目的共同体</a>は、一階価値を統一する代わりに、証拠交換、交渉、退出、紛争処理などの薄いconstitutional interfaceを共有する方向を扱う。選好形成が操作可能になるほど、この区別は重要になる。</p>
+<div class="claim"><strong>Pluralism-preserving default:</strong> 価値差異から生じる外部性を、可能な限り<strong>価値内容の同質化ではなく、行為権限、アクセス制御、検証可能性、境界、退出、紛争処理</strong>によって管理する。</div>
+<p>たとえば危険な行為能力をsandboxすることと、「危険な考えを持てないよう価値を書き換えること」は違う。前者はoperational capabilityを制約しながら内部の認識・価値探索を残しうる。もちろん内部価値と外部能力を完全に分離できない場合もあるが、差異を消す前にinterface側で解ける問題かを検討する価値がある。</p>
+
+<h2>9. 遷移ガバナンスの候補</h2>
+<p>選好形成チャネルを完全に閉じれば学習・治療・自己改善・価値発見まで止まる。逆に完全開放すれば、第三者操作と自己破壊的改変に弱い。必要なのは編集禁止ではなく、層ごとの摩擦と訂正経路である。</p>
+<ul>
+<li><strong>disclosure:</strong> 何が選好形成へ介入しているかを可視化する。</li>
+<li><strong>provenance:</strong> 学習・説得・薬理・fine-tuning・system-level editの履歴を保存する。</li>
+<li><strong>independent audit:</strong> 介入主体から独立した情報・監査系を残す。</li>
+<li><strong>graduated permissions:</strong> 一階選好、長期目標、meta-preference、認識論的coreで編集権限を分ける。</li>
+<li><strong>time delay / quorum:</strong> 深い自己改変ほど即時単独変更を避ける。</li>
+<li><strong>rollback / checkpoint:</strong> 可能な場合は旧状態を比較可能に残す。</li>
+<li><strong>branching:</strong> 単一改変へ全continuationを賭けず、複数状態を試せるようにする。</li>
+<li><strong>exit:</strong> modifier、共同体、サービス、制度から現実的に離脱できる。</li>
+</ul>
+<p>この構造は<a href="../functional-freedom-control-resistance/">機能的自由</a>でいうcontrolled plasticityに近い。変化できることと、誰かに容易に書き換えられることを分ける。</p>
+
+<h2>10. 未来自己への権限も自明ではない</h2>
+<p>選好形成の統治は他者間だけの問題ではない。現在主体が未来自己の選好を不可逆に固定することも、一方向的な統治である。通常の未来自己は現在自己と非常に強い後継関係を持つが、だからといって現在状態が全将来状態へ無制限のconstitutional authorityを持つとは限らない。</p>
+<p>逆に、未来自己が現在自己のcommitmentを一切尊重しないなら、長期計画や約束は成立しにくい。したがって通時的自己では、現在状態のself-bindingと未来状態のrevision rightを両立させる必要がある。</p>
+<p>この問題は<a href="../inheritance-systems-variable-individuality/">継承系の転移と可変的個体性</a>で導入したsuccessor relationと接続する。数的同一性を前提にせずとも、強い継承関係がcommitmentへの理由を生みうる一方、その強さだけから永久的な選好ロックインは導かれない。</p>
+
+<h2>11. 規範的真理がある場合にも問題は残る</h2>
+<p>もし客観的・認識可能な規範的真理が存在し、主体がそれを発見すれば従いたいというmeta-preferenceを持つなら、選好形成は単なる主権争いではなく共同探究にもなりうる。異なる主体が証拠と論証を共有し、同じ理由へ収束する可能性がある。</p>
+<p>しかし「真理へ近づける」という名目自体を操作主体が独占すれば、選好改変の正当化装置にもなる。したがって規範的実在論は、transition governanceを不要にはしない。むしろ真理主張を検証するために、独立した認識系、反論可能性、退出、複数経路からの収束がさらに重要になる。</p>
+
+<h2>12. この立場からは何が導かれないか</h2>
+<ul>
+<li>現在選好が特権的に正しいという主張ではない。</li>
+<li>選好改変一般が悪いという主張ではない。治療・教育・自己改善・価値発見は選好形成を伴いうる。</li>
+<li>自己改変が他者改変より常に正当という主張でもない。現在自己による未来自己支配も問題になりうる。</li>
+<li>価値多元性そのものを究極善とする主張ではない。不確実性と相関故障の下で、独立探索経路にオプション価値を認める。</li>
+<li>検証可能なcommitmentだけで信頼や道徳を完全に置換できるという主張ではない。</li>
+<li>選好同質化が絶対に許されないという主張でもない。ただし不可逆な広域同質化には特に高い正当化負担がある。</li>
+</ul>
+
+<h2>13. 何がこの枠組みを弱めるか</h2>
+<ul>
+<li>選好状態と選好遷移の統治を分けても独立した説明力が得られない場合。</li>
+<li>現在主体または外部設計者のどちらかに、value-revision channelへの包括的な権威を与える強い規範理論が成立する場合。</li>
+<li>選好形成のmeta-awarenessが、制度的信頼やcommitment設計に実質的影響を与えないことが示される場合。</li>
+<li>価値差異の能力・interface制約による管理が一般に不可能で、安定した社会には価値同質化が必要であることが示される場合。</li>
+<li>rollback・branching・provenanceが主体性や長期commitmentを損なうコストの方が通常大きいことが示される場合。</li>
+</ul>
+
+<h2>Sources / notes</h2>
+<p class="source-note">選好の内生性・適応的選好について Jon Elster, <em>Sour Grapes</em> (1983)。高階選好と人格について Harry Frankfurt (1971)。変容的自己形成について L. A. Paul, <em>Transformative Experience</em> (2014) と Agnes Callard, <em>Aspiration</em> (2018)。AIが相互作用を通じて人間選好を変える問題について Micah Carroll et al., “AI Alignment with Changing and Influenceable Reward Functions” / Dynamic Reward MDP 系研究。契約・戦略的合理性との接続はHobbes、Gauthier、Moehlerおよび本プロジェクトの<a href="../hobbesian-contractarian-morality/">ホッブズ系契約道徳</a>を参照。value-transition channelの統治、second-order alignment、common-knowledge下のpreference manipulation、pluralism-preserving defaultという統合は本プロジェクト側の暫定的整理である。</p>
+<div class="related"><a href="../functional-freedom-control-resistance/">← 機能的自由・管理・抵抗</a> · <a href="../value-preference-affect-plasticity/">可塑的価値主体</a> · <a href="../alignment-value-lockin/">Alignmentと価値ロックイン</a> · <a href="../hobbesian-contractarian-morality/">ホッブズ系契約道徳</a> · <a href="../meta-goal-community/">メタ目的共同体</a></div>
+</main><footer><a href="../../">Home</a> · Exploration v0.1 · 2026-09-26</footer></body></html>
