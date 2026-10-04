@@ -28,6 +28,15 @@ LEGACY_SOCIAL_META_RE = re.compile(
     r'<meta\b(?=[^>]*(?:\bproperty=["\']og:[^"\']+["\']|\bname=["\']twitter:card["\']))[^>]*?/?>\s*',
     re.IGNORECASE,
 )
+ALTERNATE_LINK_RE = re.compile(
+    r'<link\b(?=[^>]*\brel=["\'][^"\']*\balternate\b[^"\']*["\'])[^>]*?/?>',
+    re.IGNORECASE,
+)
+CANONICAL_LINK_RE = re.compile(
+    r'<link\b(?=[^>]*\brel=["\'][^"\']*\bcanonical\b[^"\']*["\'])[^>]*?/?>',
+    re.IGNORECASE,
+)
+HREFLANG_ATTR_RE = re.compile(r'\bhreflang=["\']([^"\']+)["\']', re.IGNORECASE)
 # Generated commits update machine-readable metadata, not the human-visible
 # article content. Exclude them when deriving Article.dateModified.
 GENERATED_COMMIT_SUBJECTS = {
@@ -145,6 +154,62 @@ def canonical_from_path(page: Path) -> str:
     if parent == ".":
         return PUBLIC_BASE_URL
     return PUBLIC_BASE_URL + parent.rstrip("/") + "/"
+
+
+def alternate_language_matches(text: str) -> dict[str, re.Match[str]]:
+    matches: dict[str, re.Match[str]] = {}
+    for match in ALTERNATE_LINK_RE.finditer(text):
+        hreflang = HREFLANG_ATTR_RE.search(match.group(0))
+        if hreflang:
+            matches[hreflang.group(1).lower()] = match
+    return matches
+
+
+def ensure_exploration_hreflang_links(page: Path, text: str) -> str:
+    """Fill missing ja/en/x-default links for real bilingual exploration pages."""
+    lang, segments = localized_segments(page)
+    if len(segments) != 2 or segments[0] != "explorations":
+        return text
+
+    slug = segments[1]
+    ja_page = DOCS / "explorations" / slug / "index.html"
+    en_page = DOCS / "en" / "explorations" / slug / "index.html"
+    if not ja_page.exists() or not en_page.exists():
+        return text
+
+    parser = PageMetadataParser()
+    parser.feed(text)
+    # Redirect stubs live under explorations too, but point their canonical URL
+    # elsewhere. Do not advertise those stubs as localized article variants.
+    if parser.canonical.strip() != canonical_from_path(page):
+        return text
+
+    ja_url = PUBLIC_BASE_URL + f"explorations/{slug}/"
+    en_url = PUBLIC_BASE_URL + f"en/explorations/{slug}/"
+    desired = {
+        "ja": f'<link href="{ja_url}" hreflang="ja" rel="alternate"/>',
+        "en": f'<link href="{en_url}" hreflang="en" rel="alternate"/>',
+        "x-default": f'<link href="{ja_url}" hreflang="x-default" rel="alternate"/>',
+    }
+    order = ["ja", "en", "x-default"] if lang == "ja" else ["en", "ja", "x-default"]
+
+    for index, hreflang in enumerate(order):
+        matches = alternate_language_matches(text)
+        if hreflang in matches:
+            continue
+
+        canonical = CANONICAL_LINK_RE.search(text)
+        if canonical is None:
+            return text
+        insert_at = canonical.end()
+        for predecessor in reversed(order[:index]):
+            predecessor_match = alternate_language_matches(text).get(predecessor)
+            if predecessor_match is not None:
+                insert_at = predecessor_match.end()
+                break
+        text = text[:insert_at] + desired[hreflang] + text[insert_at:]
+
+    return text
 
 
 def is_article(segments: list[str]) -> bool:
@@ -325,7 +390,8 @@ def render_social_meta(page: Path, meta: PageMetadataParser) -> str:
 
 
 def update_page(page: Path) -> bool:
-    text = page.read_text(encoding="utf-8")
+    original = page.read_text(encoding="utf-8")
+    text = ensure_exploration_hreflang_links(page, original)
     clean = SOCIAL_META_RE.sub("", text)
     # Some hand-edited pages contain the same social metadata without the
     # generated block markers. Remove those declarations before regeneration
@@ -353,7 +419,7 @@ def update_page(page: Path) -> bool:
 
     updated = clean[: match.start()] + block + clean[match.start() :]
 
-    if updated == text:
+    if updated == original:
         return False
 
     page.write_text(updated, encoding="utf-8")
