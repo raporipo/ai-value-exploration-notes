@@ -10,12 +10,11 @@ import re
 import subprocess
 
 DOCS = Path("docs")
-BASE_URL = "https://raporipo.github.io/ai-value-exploration-notes/"
 PUBLIC_BASE_URL = "https://fuminose.com/ai-value-exploration-notes/"
 SITE_NAME = "AI Value Exploration Notes"
-SITE_ID = BASE_URL + "#website"
-AUTHOR_ID = BASE_URL + "about/#author"
-AUTHOR_URL = BASE_URL + "about/"
+SITE_ID = PUBLIC_BASE_URL + "#website"
+AUTHOR_ID = PUBLIC_BASE_URL + "about/#author"
+AUTHOR_URL = PUBLIC_BASE_URL + "about/"
 STRUCTURED_DATA_RE = re.compile(
     r'<script\s+id=["\']structured-data["\']\s+type=["\']application/ld\+json["\']>.*?</script>\s*',
     re.IGNORECASE | re.DOTALL,
@@ -235,7 +234,7 @@ def breadcrumb_items(lang: str, segments: list[str], current_name: str) -> list[
     if not segments:
         return []
 
-    home_url = BASE_URL + ("en/" if lang == "en" else "")
+    home_url = PUBLIC_BASE_URL + ("en/" if lang == "en" else "")
     items = [
         {
             "@type": "ListItem",
@@ -277,7 +276,7 @@ def build_graph(page: Path, meta: PageMetadataParser) -> dict:
             {
                 "@type": "WebSite",
                 "@id": SITE_ID,
-                "url": BASE_URL,
+                "url": PUBLIC_BASE_URL,
                 "name": SITE_NAME,
             }
         )
