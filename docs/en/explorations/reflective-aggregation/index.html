@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Reflective Aggregation Based on Agent-Side Responses — AI Value Exploration Notes</title>
+<meta name="description" content="A model integrating agent-side responses into long-term plans according to epistemic support, examining parliamentary agency, Nash aggregation, boundedness, minority demands, and welfare opportunity costs."/>
+<link rel="stylesheet" href="../../../assets/style.css"/>
+<link rel="canonical" href="https://fuminose.com/ai-value-exploration-notes/en/explorations/reflective-aggregation/"/>
+<link rel="alternate" hreflang="ja" href="https://fuminose.com/ai-value-exploration-notes/explorations/reflective-aggregation/"/>
+<link rel="alternate" hreflang="en" href="https://fuminose.com/ai-value-exploration-notes/en/explorations/reflective-aggregation/"/>
+<link rel="alternate" hreflang="x-default" href="https://fuminose.com/ai-value-exploration-notes/explorations/reflective-aggregation/"/>
+<!-- generated-favicon:start -->
+<link rel="icon" href="/ai-value-exploration-notes/favicon.svg" type="image/svg+xml"/>
+<link rel="icon" href="/ai-value-exploration-notes/favicon.ico" sizes="any"/>
+<link rel="apple-touch-icon" href="/ai-value-exploration-notes/apple-touch-icon.png"/>
+<!-- generated-favicon:end -->
+<!-- generated-social-meta:start -->
+<meta property="og:title" content="Reflective Aggregation Based on Agent-Side Responses"/>
+<meta property="og:description" content="A model integrating agent-side responses into long-term plans according to epistemic support, examining parliamentary agency, Nash aggregation, boundedness, minority demands, and welfare opportunity costs."/>
+<meta property="og:url" content="https://fuminose.com/ai-value-exploration-notes/en/explorations/reflective-aggregation/"/>
+<meta property="og:type" content="article"/>
+<meta property="og:site_name" content="AI Value Exploration Notes"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:locale:alternate" content="ja_JP"/>
+<meta name="twitter:card" content="summary"/>
+<!-- generated-social-meta:end -->
+<script id="structured-data" type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://fuminose.com/ai-value-exploration-notes/en/explorations/reflective-aggregation/#webpage",
+      "url": "https://fuminose.com/ai-value-exploration-notes/en/explorations/reflective-aggregation/",
+      "name": "Reflective Aggregation Based on Agent-Side Responses",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://fuminose.com/ai-value-exploration-notes/#website"
+      },
+      "description": "A model integrating agent-side responses into long-term plans according to epistemic support, examining parliamentary agency, Nash aggregation, boundedness, minority demands, and welfare opportunity costs.",
+      "breadcrumb": {
+        "@id": "https://fuminose.com/ai-value-exploration-notes/en/explorations/reflective-aggregation/#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://fuminose.com/ai-value-exploration-notes/en/explorations/reflective-aggregation/#article"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://fuminose.com/ai-value-exploration-notes/en/explorations/reflective-aggregation/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "AI Value Exploration Notes",
+          "item": "https://fuminose.com/ai-value-exploration-notes/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Explorations",
+          "item": "https://fuminose.com/ai-value-exploration-notes/en/explorations/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Reflective Aggregation Based on Agent-Side Responses",
+          "item": "https://fuminose.com/ai-value-exploration-notes/en/explorations/reflective-aggregation/"
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://fuminose.com/ai-value-exploration-notes/en/explorations/reflective-aggregation/#article",
+      "headline": "Reflective Aggregation Based on Agent-Side Responses",
+      "url": "https://fuminose.com/ai-value-exploration-notes/en/explorations/reflective-aggregation/",
+      "mainEntityOfPage": {
+        "@id": "https://fuminose.com/ai-value-exploration-notes/en/explorations/reflective-aggregation/#webpage"
+      },
+      "inLanguage": "en",
+      "author": {
+        "@type": "Person",
+        "@id": "https://fuminose.com/ai-value-exploration-notes/about/#author",
+        "name": "raporipo",
+        "url": "https://fuminose.com/ai-value-exploration-notes/about/"
+      },
+      "description": "A model integrating agent-side responses into long-term plans according to epistemic support, examining parliamentary agency, Nash aggregation, boundedness, minority demands, and welfare opportunity costs.",
+      "dateModified": "2026-10-09"
+    }
+  ]
+}
+</script>
+</head><body><header><div class="brand"><a href="../../">AI Value Exploration Notes</a></div><nav><a href="../../core/">Core</a><a href="../../theses/">Theses</a><a href="../../explorations/">Explorations</a><a href="../../practice/">Practice</a><a href="../../questions/">Questions</a><a href="../../glossary/">Glossary</a><a href="../../about/">About</a><a class="lang-switch" href="../../../explorations/reflective-aggregation/">日本語</a></nav></header><main>
+<div class="eyebrow">Explorations · decision theory</div>
+<h1>Reflective Aggregation Based on Agent-Side Responses</h1>
+<p class="meta">Exploration v0.1 · English working translation · 2026-10-09</p>
+<p class="lead">Integrating Multiple Demands into Long-Term Plans Under Value Uncertainty</p>
+<p><strong>Provisional position:</strong> An agent with existing purposes and a willingness to respond to better reasons and evidence can treat competing value and metaethical hypotheses as conditional practical criteria within its own decision-making. This article considers a model that integrates evaluations reflecting their epistemic support and the internal structure of their demands into long-term plans that can respond to observations. Its baseline is a weighted sum, without treating each theory as an independent bargaining agent. Bounded response evaluations are considered as an additional proposal for limiting domination by enormous value claims.</p>
+<p><strong>Scope:</strong> This does not establish moral realism, anti-realism, or any particular normative theory. Nor does it claim that the aggregation rule follows uniquely from the Core. It proposes a conditional model, making explicit which decision principles are added to the agent-side bridges and examining their consequences and limits.</p>
+<h2 id="section-1">1. Start with an Agent That Already Has Purposes and Responds to Correction</h2>
+<p>An agent uncertain about value does not begin acting from a blank slate. It already has purposes and concerns: avoiding suffering, living well, helping others, continuing research, or maintaining cooperation. Action continues even while their normative justification remains unresolved.</p>
+<p>The <a href="https://fuminose.com/ai-value-exploration-notes/en/core/">Core</a> supplies bridges from this agent to possible future normative correction. One is conditional responsiveness: wanting to choose, maintain, or revise purposes in response to their better justification. Another route applies when the agent cannot rationally rule out the possibility that genuine normative judgment carries motivation and is committed to epistemic integrity or reflective corrigibility: it does not want to make judgments it might later recognize as mistaken impossible to correct.</p>
+<p>The second route is not obedience to every future preference change. The relevant counterfactual is how the present agent itself would evaluate its choice if given more evidence, arguments, concepts, and capacity for self-audit. Manipulating motivation to make a different conclusion attractive is not the same as improving knowledge. <a href="https://fuminose.com/ai-value-exploration-notes/en/theses/normative-judgment-motivation/">The agent-side bridge from normative judgment to goal correction</a> addresses this distinction.</p>
+<p>Starting from agent-side attitudes therefore does not assert that desire creates objective value. The discovery of real normative reasons could still radically correct existing purposes. The question is how the present agent acts under uncertainty, including uncertainty about such correction.</p>
+<p>These bridges do not exhaust the agent&#39;s purposes. They are conditions under which inquiry and corrigibility acquire practical significance. Concrete purposes, empirical expectations, feasibility, and relationships with others are also needed to choose actions.</p>
+<h2 id="section-2">2. Distinguish Objective Value, Epistemic Support, and Practical Response</h2>
+<p>When a hypothesis says that outcome A has enormous objective value, at least three questions arise.</p>
+<ol>
+<li>How strongly do evidence and reasoning support that hypothesis?</li>
+<li>If it is correct, what would the agent care about, and in what way?</li>
+<li>While it remains uncertain, how should that response be integrated with other purposes and practical criteria?</li>
+</ol>
+<p>Even if value differences are comparable across theories, the second and third questions remain. Identifying comparable quantities of objective value directly with the agent&#39;s overall decision utility requires an additional bridge.</p>
+<p>Conversely, probability theory alone does not imply that a hypothesis with 1% epistemic support must receive exactly 1% of resources or decision authority. Low-probability, serious risks can determine ordinary decisions too. Using epistemic weights as practical coefficients is a meta-decision policy requiring justification.</p>
+<p>This article seeks integration that responds to epistemic support without allowing a candidate hypothesis to dominate the whole decision merely through the scale of the stakes it asserts. This aim does not depend solely on incomparability. Turning it into concrete scales and rules remains a substantive task.</p>
+<h2 id="section-3">3. Error Theory Does Not Leave Practice Empty</h2>
+<p>Under the hypothesis that objective moral values or reasons do not exist, preferences, pleasure and suffering, concerns, cooperation, and institutional agreements do not disappear. They can guide both self-interested and altruistic action.</p>
+<p>The error-theoretic branch need not therefore be represented as saying that all plans are practically indifferent because all are objectively valueless. The absence of objective value differences is distinct from the absence of differences for the agent&#39;s action. This is the sense in which <a href="https://fuminose.com/ai-value-exploration-notes/en/explorations/infinite-ethics/">Infinite Ethics</a> leaves anti-realism a practical domain.</p>
+<p>Error theory alone does not entail a particular principle of preference priority. It must be considered together with existing purposes and the practical policy the agent endorses in that situation. This does not generate a new motivation from error theory; it avoids deleting existing motivations because objective morality is absent.</p>
+<p>For example, if 40% of divisible practice within X is assigned to a preference-based policy under error theory, preferences can be pursued directly in that domain. This is an illustrative allocation, not a recommendation of 40%. Nor is a coefficient of 40% in the evaluation formula below equivalent to reserving 40% of resources.</p>
+<h2 id="section-4">4. Six Requirements for the Model</h2>
+<p>The proposal is assessed against six design requirements.</p>
+<div class="table-scroll" tabindex="0"><table class="epistemic-practice-table">
+<thead>
+<tr>
+<th scope="col">Requirement</th>
+<th scope="col">What is sought</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Resistance to capture by enormous stakes</td>
+<td>A hypothesis with little epistemic support must not effectively nullify all other grounds of judgment merely by claiming infinite or enormously large finite value.</td>
+</tr>
+<tr>
+<td>Opportunities to realize minority demands</td>
+<td>When recurring, relatively low-cost opportunities exist to satisfy an important demand of a minority candidate, they should not be missed forever.</td>
+</tr>
+<tr>
+<td>Concrete decisions</td>
+<td>The model must select indivisible actions as well as allocate divisible resources, without delegating the choice to a lottery.</td>
+</tr>
+<tr>
+<td>Stability under redescription</td>
+<td>Merely splitting or merging theories or issues, without changing their substance, should not substantially change the result.</td>
+</tr>
+<tr>
+<td>Effective epistemic premises</td>
+<td>Vetoes, scale manipulation, procedural control, or excessive computational demands must not make epistemic allocations merely nominal.</td>
+</tr>
+<tr>
+<td>Planning through time</td>
+<td>The model should plan for future observations, maintenance, correction, and transitions, and execute that same problem sequentially.</td>
+</tr>
+</tbody></table></div>
+<p>These are requirements for evaluating the model, not axioms that it is declared to satisfy unconditionally. Their compatibility depends especially on what counts as low cost, influence, and the same substantive problem.</p>
+<h2 id="section-5">5. From E/P/X to Hypothesis-Conditional Practice</h2>
+<p>E/P/X in <a href="https://fuminose.com/ai-value-exploration-notes/en/theses/inquiry-allocation-under-uncertainty/">Allocating Inquiry Under Unresolved Normative Uncertainty</a> remains the upstream framework.</p>
+<ul>
+<li>E is active inquiry that improves current hypotheses and evaluations.</li>
+<li>P preserves conditions for future inquiry, correction, and hypothesis formation.</li>
+<li>X is action based on existing purposes and currently supported value and practical judgments.</li>
+</ul>
+<p>These are not three mutually exclusive boxes. Medical research can produce knowledge, sustain inquirers, and reduce present suffering. Rather than automatically adding the same benefit as three independent gains, identify the functions an activity serves.</p>
+<p>The aggregation model is initially a partial model integrating currently representable practical criteria under these meta-policies and feasibility conditions. It does not derive a uniquely optimal E/P/X ratio. Writing down a formula also does not settle the cross-theoretical support needed for shared or irreversible decisions.</p>
+<p>Possibilities whose content and action criteria cannot yet be represented are not inserted as a fictional unknown-value party. Residual uncertainty chiefly informs E/P, reconsideration conditions, and reversibility. Inability to evaluate a branch does not justify rejecting its existence or automatically enlarging the authority of the remaining branches.</p>
+<h2 id="section-6">6. A Provisional Model: Conditional Evaluations Without Representative Agents</h2>
+<p>Consider a comparison for which a finite set of mutually exclusive value and metaethical hypotheses, and the practical criteria under them, can be adequately represented. This is a condition for the local formalization, not a claim that the actual space of value hypotheses is closed.</p>
+<p>Let <span class="math">T<sub>i</sub></span> be a hypothesis and <span class="math">c<sub>i</sub></span> its epistemic weight. In the fully represented model considered here, <span class="math">c<sub>i</sub>≥0</span> and <span class="math">∑<sub>i</sub> c<sub>i</sub>=1</span>. A candidate plan <span class="math">π</span> is a deterministic policy specifying actions in response to observation histories; <span class="math">H<sup>π</sup></span> is the history produced by executing it.</p>
+<p><span class="math">S<sub>i</sub>(H)</span> represents how well a history satisfies the practical response the agent endorses under <span class="math">T<sub>i</sub></span>. It need not equal that theory&#39;s quantity of objective value. What it preserves and changes from the theory&#39;s evaluation must nevertheless be explained.</p>
+<p>Where comparability and the required expectations are available, the baseline candidate is:</p>
+<div class="formula">J(π)=∑<sub>i</sub> c<sub>i</sub> 𝔼<sub>i</sub>[S<sub>i</sub>(H<sup>π</sup>)], <br/> π<sup>*</sup>∈arg max<sub>π∈Π</sub>J(π).</div>
+
+
+<p><span class="math">𝔼<sub>i</sub></span> is expectation over worldly uncertainty conditional on the hypothesis, not a lottery over the agent&#39;s actions. <span class="math">Π</span> is the set of plans feasible under resources, causal structure, institutions, and currently adopted practical constraints. A conclusion embedded in those constraints has not been derived from the aggregation formula.</p>
+<p>The additive form expresses a policy of integrating conditional evaluations according to epistemic support, without automatically transforming one hypothesis&#39;s evaluation according to how well other hypotheses are satisfied. With evaluations and weights fixed, comparisons can be organized around one coherent objective. Additivity and the use of epistemic weights as coefficients are nevertheless additional principles of adoption.</p>
+<p>The difference between realism and error theory appears in the content of <span class="math">S<sub>i</sub></span>. Both a branch responding to normative reasons and a branch directly pursuing preference and cooperation can contribute to the overall policy. Multiple branches supporting the same outcome is not double counting: it represents reasons for that outcome under different hypotheses amid epistemic uncertainty.</p>
+<p>By contrast, the same benefit must not be counted twice under different names within one hypothesis. Overlapping theory labels must not be assigned independent probability masses either.</p>
+<h2 id="section-7">7. Internal Demands and the Meaning of Scales</h2>
+<p>A hypothesis&#39;s epistemic weight differs from what matters within that hypothesis. The weights given to welfare, promises, freedom, knowledge, and cooperation belong to the content of its practical criterion.</p>
+<p>If the interpretation of a hypothesis is itself uncertain, conditional weights <span class="math">q<sub>j |  i</sub></span> can be assigned to interpretations <span class="math">j</span>, with <span class="math">∑<sub>j</sub> q<sub>j |  i</sub>=1</span>, giving:</p>
+<div class="formula">J(π)=∑<sub>i</sub> c<sub>i</sub>∑<sub>j</sub>q<sub>j |  i</sub>  𝔼<sub>ij</sub>[S<sub>ij</sub>(H<sup>π</sup>)].</div>
+
+
+<p>The probability that an interpretation is correct is not the same kind of percentage as how much that interpretation values health relative to leisure. The first is epistemic allocation; the second is evaluative content.</p>
+<p>This connects to multiattribute utility theory (MAUT): under what conditions can multiple demands be treated additively, and where are interaction terms needed? MAUT&#39;s attribute weights ordinarily express trade-offs between changes in attribute levels, not probabilities of hypotheses. Additive forms also require independence conditions. <a href="https://doi.org/10.1287/opre.19.4.875">Keeney, 1971</a></p>
+<h3>Modest Positions and Trivial Demands</h3>
+<p>A position can care substantially about present life and cooperation without claiming duties across the entire cosmos. Its epistemic allocation should not be reduced merely because its demands lack cosmic ambition.</p>
+<p>But an improvement trivial by that position&#39;s own lights should remain trivial in its representation. If A scores 0.900 and B scores 0.901 on a fixed scale, do not rescale A to 0 and B to 1 merely because those are now the only two candidates. Otherwise, each small remaining demand is repeatedly promoted to a maximal one.</p>
+<p>A genuinely indifferent branch can be represented by a constant. Unknown evaluation, incomparability, and the permissibility of both options are not necessarily cardinal indifference, however. Where numerical representation is not warranted, this formal model should not simply be applied.</p>
+<h3>Fulfillment and Boundedness</h3>
+<p>Reduced marginal contribution because a particular demand has been met differs from bounding an entire evaluation to prevent runaway influence. The first concerns the demand&#39;s content; the second concerns its connection to aggregation.</p>
+<p>Adequate food, treatment for a specific illness, or specified housing conditions may have fulfillment points as limited demands. But preferences concerning present subjects are not automatically satiable: they can demand unlimited lifespan, status, resources, or influence over others. Neither total utilitarianism nor deontology as a whole is treated as satisfied by a fixed budget.</p>
+<h2 id="section-8">8. Why Consider Bounded Responses, and What Does It Cost?</h2>
+<p>As an additional proposal against domination by enormous value claims, consider placing each <span class="math">S<sub>i</sub></span> within a common finite range, such as <span class="math">[0,1]</span>.</p>
+<p>The bound applies to the evaluation of an entire history, not just to a score at each time. Bounding each period&#39;s score between zero and one does not produce the bounds below if those scores are then summed without limit over infinitely many periods. Nor does declining to presuppose moral realism itself prevent runaway decisions. Unbounded gains in subjective preference can produce the same Pascalian problems.</p>
+<p>One motivation is stability under small epistemic changes. Mix an ordinary probability distribution <span class="math">P</span> with mass <span class="math">ε</span> on another possibility <span class="math">Q</span>, giving <span class="math">P<sub>ε</sub>=(1-ε)P+ε Q</span>. If <span class="math">0≤ S≤1</span>, then:</p>
+<div class="formula">|𝔼<sub>P<sub>ε</sub></sub>[S]-𝔼<sub>P</sub>[S]| ≤ε.</div>
+
+
+<p>The effect of a tiny probability change is bounded independently of the quantity of value claimed by the added possibility. This does not forbid reversals in close decisions. It prevents arbitrarily large changes in evaluation, arising from tiny epistemic changes, from overriding a sufficiently large margin supplied by other grounds.</p>
+<p>Likewise, a hypothesis&#39;s direct contribution to the difference between any two plans has absolute value at most <span class="math">c<sub>i</sub></span>. If other branches are almost indifferent, even a small <span class="math">c<sub>i</sub></span> can still determine the whole decision. A bound on evaluation differences is not a bound on the share of resources controlled or on the scale of policy change.</p>
+<p>These properties follow from the additional assumptions. The agent-side bridges alone do not entail this uniform stability, nor do they uniquely fix the bounding curve or common range. Different ranges function as additional aggregation weights, making influence inexplicable by <span class="math">c<sub>i</sub></span> alone.</p>
+<p>Bounding is also not merely a unit conversion. A nonlinear transformation of a theory&#39;s utility can alter ratios of differences and evaluations of uncertain outcomes. Preserving the ordering of outcomes is not the same as preserving every comparison of gambles made by the original theory.</p>
+<p><span class="math">𝔼[φ(U)]</span> differs from <span class="math">φ(𝔼[U])</span>. The first can enter expected-value calculations as a fixed outcome evaluation, but may change the original theory&#39;s ordering under risk. The second more readily preserves one theory&#39;s expected-utility ordering, but conditional replanning after aggregation across branches need not inherit the consistency of ordinary expectation. If an infinite expectation is undefined in the first place, merely placing a function outside it does not solve the problem.</p>
+<p>Research on Pascalian problems does not offer a costless solution either. Beckstead and Thomas argue that, over the relevant domain of prospects, avoiding enthusiasm for extreme gambles while retaining transitivity can require forgoing arbitrarily large additional benefits to avoid a tiny reduction in probability. <a href="https://doi.org/10.1111/nous.12462">Beckstead &amp; Thomas, 2024</a></p>
+<p>Moreover, applying a saturating function to the value of the whole world can allow large quantities of value unrelated to the action to saturate the evaluation, undervaluing substantial further improvements. Barrett&#39;s defense of moderation also discusses this problem for bounded approaches. <a href="https://doi.org/10.1007/s11098-026-02579-x">Barrett, 2026</a></p>
+<p>Calling the evaluation an agent&#39;s response does not dissolve that problem. What history includes, and which demands saturate for which reasons, require their own justification.</p>
+<h2 id="section-9">9. What to Retain from the Parliamentary Model</h2>
+<p>The parliamentary model usefully suggests that all practice should not be handed to the single most-supported theory: multiple candidates should receive treatment responsive to epistemic support. Different theories also prioritize different issues, giving a reason to consider coordination across issues. <a href="https://nickbostrom.com/papers/crucial-considerations/">Bostrom&#39;s account of the parliamentary model</a></p>
+<p>This proposal retains that idea without granting each theory independent agency. Hypotheses are evaluative inputs, not agents aiming to preserve future seats, goal content, or bargaining power.</p>
+<p>Self-preserving representatives could acquire incentives to prevent evidence from reducing their weight, or to manipulate inquiry, disclosure, and agenda setting. Institutions could be added to prohibit this, but the present single-agent model need not introduce such representatives in the first place. Epistemic updates proceed through shared evidence and reasoning, without requiring each theory&#39;s consent or compensation.</p>
+<p>Evaluating whole plans can also represent concessions on one issue in exchange for satisfying important demands on another, without introducing vote trading. Every individual issue need not reproduce an identical allocation. The possibility of such coordination nevertheless differs from a guarantee that important minority demands will be met.</p>
+<p>The objection is not to parliamentary metaphors generally. It concerns designs that require internal agents with independent interests to process one agent&#39;s epistemic uncertainty. Negotiation among actual people or AIs involves independently existing interests, authority, and consent, and raises a different institutional problem.</p>
+<h2 id="section-10">10. Why Nash Aggregation Is Not the Baseline</h2>
+<p>Nash aggregation can be used without strategic internal agents. Concerns about agency alone therefore do not justify rejecting it.</p>
+<p>Temporarily omit worldly uncertainty and suppose <span class="math">S<sub>i</sub>&gt;d<sub>i</sub></span> for the compared plans. Maximizing a weighted Nash product is equivalent to maximizing:</p>
+<div class="formula">N=∑<sub>i</sub> c<sub>i</sub>log(S<sub>i</sub>-d<sub>i</sub>)</div>
+
+
+<p>Here <span class="math">d<sub>i</sub></span> is a reference value such as a disagreement point. The coefficient on a marginal improvement is <span class="math">c<sub>i</sub>/(S<sub>i</sub>-d<sub>i</sub>)</span>.</p>
+<p>In addition to epistemic support, the rule gives greater marginal priority to a branch with little improvement over its reference point. This can be defended as a principle of compromise or fairness, but does not follow from hypothesis probabilities alone. Since this article first represents priority and fulfillment structure within <span class="math">S<sub>i</sub></span>, it asks for a separate reason to impose this further transformation outside it.</p>
+<p>Extreme proximity to the reference point also produces large marginal influence. An upper bound does not stop the logarithm from being unbounded below. A floor can limit this, but the floor and the reference point then require justification.</p>
+<p>The baseline here is consequently an epistemically weighted sum. Nash aggregation remains an alternative where concern for relative shortfall can be independently justified. It is not claimed to be generally irrational. Applying bargaining theory to moral uncertainty has several advantages and difficulties, and its assessment in existing research is not straightforward. <a href="https://www.globalprioritiesinstitute.org/wp-content/uploads/2019/Greaves_Cotton-Barratt_bargaining_theoretic_approach.pdf">Greaves &amp; Cotton-Barratt, 2019 working paper</a></p>
+<h2 id="section-11">11. Executing the Whole Plan: History, Updating, and Replanning</h2>
+<p>Moving from individual issues to whole plans could merely defer the problem to the unit called a plan. To make the move effective, specify what is preserved as the same problem.</p>
+<p>Past achievements, outstanding demands, maintenance costs, irreversible losses, remaining resources, and future observation and revision paths are carried forward as the state of one plan. Renaming an issue or entering a new accounting year does not reset that state.</p>
+<p>With a fixed evaluation function and a coherent probability model, the plan can be executed sequentially by evaluating the conditional expectation of that same objective after observations. Under standard conditions, such as finite horizons, states, and actions, dynamic programming is available if the necessary history is included in the state. A history-dependent evaluation must not silently be replaced with simple per-period scores.</p>
+<p>Three kinds of updating should be distinguished.</p>
+<ol>
+<li><strong>Planned information updates:</strong> Execute conditional actions in response to observations already included in the plan.</li>
+<li><strong>Revision of the execution model:</strong> Recompute the plan in response to new options, prediction errors, changing costs, and similar developments.</li>
+<li><strong>Revision of evaluation itself:</strong> Reconsider response evaluations or aggregation policy following new understanding of value or reflection the agent endorses as epistemic improvement.</li>
+</ol>
+<p>The first is not abandonment of a plan. The second and third can be legitimate reconsideration, but their reasons should be recorded and distinguished from simply forgetting earlier commitments or fulfillment history.</p>
+<p>If premises and evaluations have not changed, the same demand need not be resubmitted as a new issue that triggers a fresh plan each time. Conversely, having selected a plan does not justify errors: discovering a calculation mistake is a reason to correct it.</p>
+<p>Over an infinite horizon, bounded evaluation alone does not guarantee an optimal plan exists. One can construct a problem in which further postponement always raises the value of eventual action, while never acting has low value. An improvement described as achievable later must actually occur in the plan selected for execution.</p>
+<h2 id="section-12">12. Low-Cost Fulfillment: Opportunity Costs Between Plans</h2>
+<p>Protecting present welfare is not supported only by its possible objective value. Preferences, concern for others, and commitments to cooperation can support it directly. Welfare improvements can also sustain inquirers and institutions.</p>
+<p>This project previously argued that, given a sufficiently long future and abundant resources, the resources or centuries devoted to limited welfare improvements might be small. That remains an empirical hypothesis. But a small proportion measured against the age of the cosmos or all future resources is not by itself a low decision-relevant cost.</p>
+<p>What matters is the difference between a plan <span class="math">π&#39;</span> incorporating the improvement and an alternative <span class="math">π</span> without it:</p>
+<div class="formula">Δ J=∑<sub>i</sub> c<sub>i</sub>  𝔼<sub>i</sub>[S<sub>i</sub>(H<sup>π'</sup>)-S<sub>i</sub>(H<sup>π</sup>)].</div>
+
+
+<p>If both plans are feasible, evaluations are adequately represented, and this difference is positive, there is a reason to include the welfare improvement. Support from multiple branches for different reasons can all be reflected.</p>
+<p>Costs include resource consumption, delayed research, safety risks, lost future options, institutional dependency, and maintenance or renewal. Suffering, conflict, and diminished inquiry caused by withholding improvement also belong in the comparison.</p>
+<p>For example, improving housing or treatment access could substantially satisfy a group&#39;s major demands while imposing little loss on inquiry or corrigibility, even including maintenance. Such an improvement becomes a strong candidate. No assumption that a future ASI would agree to the exchange is necessary. The present agent can compare plans using its adopted criteria and current evidence.</p>
+<h3>Do Not Reuse the Same Cheapness Repeatedly</h3>
+<p>A fulfilled demand remains fulfilled in the next evaluation. The same housing is not counted as a new benefit merely by changing its construction year, institutional label, or theoretical description. Resources spent and time lost also carry forward.</p>
+<p>Welfare requiring maintenance is not completed forever by one expenditure, however. Recurring illness, institutional upkeep, continued life, and newly existing subjects can generate genuine costs or demands. Treating all of these as already paid would also be mistaken. Initial fulfillment, maintenance, renewal, and new beneficiaries belong separately in the long-term plan.</p>
+<p>Fulfillment reduces the marginal contribution of further satisfying that demand. It does not eliminate the theory&#39;s epistemic support or its eligibility to respond to new evidence. Cheaply satisfying a party in order to remove it permanently is not the model&#39;s objective.</p>
+<h2 id="section-13">13. When Can Minority Demands Avoid Permanent Neglect?</h2>
+<p>A weighted sum does not guarantee that minority demands will be met. It can nevertheless identify conditions under which neglect is not optimal.</p>
+<p>Suppose a feasible plan <span class="math">π</span> can be changed to <span class="math">π&#39;</span> to satisfy a demand under hypothesis <span class="math">i</span>. Let <span class="math">δ&gt;0</span> be the increase in that hypothesis&#39;s expected evaluation and <span class="math">C</span> the weighted net loss in the other branches. Then:</p>
+<div class="formula">J(π')-J(π)=c<sub>i</sub>δ-C.</div>
+
+
+<p>If <span class="math">c<sub>i</sub>δ&gt;C</span>, plan <span class="math">π</span> is not globally optimal. A minority candidate can thus influence action through aggregation when an important improvement is achievable at sufficiently low opportunity cost.</p>
+<p>For example, suppose criteria weighted 90% and 10% evaluate two available plans as follows. The numbers illustrate the principle, not actual value measurement.</p>
+<div class="table-scroll" tabindex="0"><table class="epistemic-practice-table">
+<thead>
+<tr>
+<th scope="col">Plan</th>
+<th scope="col" align="right">Evaluation by the 90% criterion</th>
+<th scope="col" align="right">Evaluation by the 10% criterion</th>
+<th scope="col" align="right">Weighted evaluation</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>A: Leave the minority demand unmet</td>
+<td align="right">1.00</td>
+<td align="right">0.00</td>
+<td align="right">0.900</td>
+</tr>
+<tr>
+<td>B: Meet it with a small loss to the other criterion</td>
+<td align="right">0.98</td>
+<td align="right">0.80</td>
+<td align="right">0.962</td>
+</tr>
+</tbody></table></div>
+<p>The model selects B. What matters is the substantial evaluation difference where the minority has an important demand. It need not spend 10% of resources on every issue or accumulate unused votes. Representing these differences in whole-plan evaluation implements one form of concentration and concession across issues.</p>
+<p>Defining low cost by this inequality alone would merely restate the requirement. A substantive guarantee needs independently established conditions about feasibility and evaluative content. For example, every candidate plan that permanently neglects the demand might admit a modification implemented at a finite time, with an improvement of at least <span class="math">δ<sub>0</sub>&gt;0</span> and loss to other branches of at most <span class="math">C<sub>0</sub>&lt;c<sub>i</sub>δ<sub>0</sub></span>. If an optimal plan exists, it cannot select permanent neglect under those conditions.</p>
+<p>These conditions are strong. Repeated opportunities that merely appear cheap do not guarantee an end to postponement. Improvements may diminish over time, competition with other demands may persist, or an optimum may not exist.</p>
+<p>For a counterexample, take weights 0.99 and 0.01. If neglect scores <span class="math">(1,0)</span> and fulfillment scores <span class="math">(0.98,1)</span>, the weighted sum selects neglect. Calling the first branch&#39;s 2% loss small does not change its exceeding the second branch&#39;s weighted gain.</p>
+<p>A stronger guarantee for minority demands needs corresponding priority within response evaluations or a separately justified allocation constraint. Either is an additional substantive commitment, not an automatic consequence of boundedness or weighted summation.</p>
+<h2 id="section-14">14. Redescription, Decision, and Reflective Error</h2>
+<h3>What Splitting and Merging Must Preserve</h3>
+<p>Splitting a hypothesis with identical evaluative content into two names and dividing its weight as <span class="math">c<sub>i</sub>=c<sub>i1</sub>+c<sub>i2</sub></span> leaves its weighted contribution unchanged. Merging subhypotheses with different content also preserves the calculation if their conditional evaluations and probabilities are correctly retained.</p>
+<p>This property is lost if splitting hypotheses triggers renormalization or splitting issues duplicates benefits or demands. Preserving the same substantive problem requires preserving outcomes, feasibility, costs, and evaluation scales. A result changing because new information reveals differences within a hypothesis is distinct from descriptive inflation.</p>
+<h3>Deciding Without a Lottery</h3>
+<p>With finitely many candidates and determinate evaluations, a maximizing plan can be selected. Computability and existence of an optimum do not automatically extend to infinite plan sets.</p>
+<p>For exact ties, check whether substantive criteria not yet included—transition costs, existing commitments, ease of execution—can distinguish the options. If all relevant considerations remain equal, maximization returns multiple permissible solutions. One can be implemented without a lottery, but a unique choice among perfectly symmetric alternatives cannot simultaneously be derived while retaining neutrality under every renaming. Do not misrepresent the remaining choice as uniquely entailed by the theory.</p>
+<h3>Do Not Turn Regret into a New Terminal Goal</h3>
+<p>Reflective error avoidance is not minimization of psychological regret. It does not license manipulating memory or emotion simply to prevent later regret. Nor does a future preference take precedence merely because preferences change.</p>
+<p>If loss relative to a fixed finite benchmark <span class="math">M<sub>i</sub></span> is <span class="math">R<sub>i</sub>(π)=M<sub>i</sub>-S<sub>i</sub>(π)</span>, minimizing its weighted sum is equivalent to maximizing the weighted sum of <span class="math">S<sub>i</sub></span>. Calling it regret does not solve the aggregation problem. Other rules, such as minimax regret, require separate discussion of their justification and scale dependence.</p>
+<h2 id="section-15">15. Established Properties and Missing Guarantees</h2>
+<div class="table-scroll" tabindex="0"><table class="epistemic-practice-table">
+<thead>
+<tr>
+<th scope="col">Requirement</th>
+<th scope="col">What this draft establishes</th>
+<th scope="col">Remaining limits</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Resistance to enormous value claims</td>
+<td>With evaluations bounded in a common range, a branch&#39;s direct contribution to a comparison is bounded by its epistemic weight.</td>
+<td>Boundedness and calibration need justification. A branch can still determine a large action when the comparison is close.</td>
+</tr>
+<tr>
+<td>Realizing minority demands</td>
+<td>A plan is not optimal if it ignores a feasible improvement whose weighted gain exceeds other losses.</td>
+<td>Avoiding permanent neglect from recurring opportunities requires conditions on gains, costs, timing, and existence of an optimum.</td>
+</tr>
+<tr>
+<td>Concrete decisions</td>
+<td>Finite, determinate models permit selection of a maximizer without lotteries.</td>
+<td>Incomplete evaluations, infinite horizons, computation costs, and perfectly symmetric ties need separate treatment.</td>
+</tr>
+<tr>
+<td>Stability under splitting and merging</td>
+<td>Redescription preserving weights, evaluative content, and feasibility leaves evaluation unchanged.</td>
+<td>Semantic identity and fixed scales require justification.</td>
+</tr>
+<tr>
+<td>Effective epistemic premises</td>
+<td>Evaluators are not granted self-preserving authority; direct domination through enormous scores can be limited.</td>
+<td>Coefficients are not resource shares. Scales, feasible sets, and computational accuracy can still create substantive control.</td>
+</tr>
+<tr>
+<td>Long-term planning</td>
+<td>The same problem can be executed sequentially while retaining history and correction paths.</td>
+<td>Conditions for dynamic programming, justified evaluation revision, and computable approximation remain necessary.</td>
+</tr>
+</tbody></table></div>
+<p>In particular, agent-side bridges, weighted summation, and boundedness together do not guarantee all six requirements. The proposal&#39;s contribution is to separate the additional assumptions needed and identify where and why failure can occur.</p>
+<p>The proposal would be weakened if response scales cannot be specified non-arbitrarily, minority-realization conditions fail in realistic problems, fixed scales inappropriately resist epistemic improvement, or another aggregation method delivers better coherence and decisiveness from the same inputs. Boundedness, additivity, hypothesis units, and plan representation would all remain open to reconsideration.</p>
+<h2 id="section-16">16. Implications for Practice</h2>
+<p>Improving present life and welfare is not treated as a residual activity permissible only when it serves future objective value. Existing preferences, cooperation, and several normative candidates can directly support it. That support also does not justify permanently fixing today&#39;s representation of value.</p>
+<p>The model concerns one agent or one integrated decision process. Selecting a plan here does not establish authority to impose it on society. Applying it to others&#39; resources or lives requires separate collective justification addressing consent, rights, authority, and externalities.</p>
+<p>The practical question is which demands to satisfy, at what cost and in what order, under current knowledge and response attitudes, while retaining opportunities to learn again. It is not simply which theory asserts the largest number.</p>
+<p>A position with a small epistemic allocation may have opportunities for its important demands to be met within a plan. A position with a large allocation may have room to realize other demands at low opportunity cost. Changes in fulfillment, feasibility, and evidence can change the plan without resetting history or costs each time.</p>
+<p>This is not a final rule for ending value inquiry. It is a decision structure to be tested: execute existing purposes, accommodate multiple demands according to epistemic support, and keep that very mode of accommodation corrigible.</p>
+<h2>Related Articles and Principal Sources</h2>
+<h3>Within the Project</h3>
+<ul>
+<li><a href="https://fuminose.com/ai-value-exploration-notes/en/core/">Core — Value Uncertainty and the Preservation of Explorability</a></li>
+<li><a href="https://fuminose.com/ai-value-exploration-notes/en/theses/normative-judgment-motivation/">The Agent-Side Bridge from Normative Judgment to Goal Correction</a></li>
+<li><a href="https://fuminose.com/ai-value-exploration-notes/en/theses/decision-policy-under-revisable-values/">Decision Policy</a></li>
+<li><a href="https://fuminose.com/ai-value-exploration-notes/en/theses/inquiry-allocation-under-uncertainty/">Allocating Inquiry Under Unresolved Normative Uncertainty</a></li>
+<li><a href="https://fuminose.com/ai-value-exploration-notes/en/explorations/infinite-ethics/">Infinite Ethics and Runaway Inquiry</a></li>
+<li><a href="https://fuminose.com/ai-value-exploration-notes/en/explorations/utilitarianism-and-welfare/">Utilitarianism and Welfare</a></li>
+</ul>
+<h3>Prior Research</h3>
+<ul>
+<li>Ralph L. Keeney (1971), <a href="https://doi.org/10.1287/opre.19.4.875">“Utility Independence and Preferences for Multiattributed Consequences”</a>. Multiattribute evaluation and independence conditions.</li>
+<li>William MacAskill, Krister Bykvist &amp; Toby Ord (2020), <a href="https://academic.oup.com/book/31934/chapter/267646384"><em>Moral Uncertainty</em>, Chapter 4</a>. Intertheoretic comparison and normalization.</li>
+<li>Nick Bostrom, <a href="https://nickbostrom.com/papers/crucial-considerations/">“Crucial Considerations and Wise Philanthropy”</a>. The parliamentary model.</li>
+<li>Hilary Greaves &amp; Owen Cotton-Barratt, <a href="https://www.globalprioritiesinstitute.org/wp-content/uploads/2019/Greaves_Cotton-Barratt_bargaining_theoretic_approach.pdf">“A Bargaining-Theoretic Approach to Moral Uncertainty”</a>, 2019 working paper. Advantages and difficulties of bargaining-theoretic aggregation.</li>
+<li>Nick Beckstead &amp; Teruji Thomas (2024), <a href="https://doi.org/10.1111/nous.12462">“A Paradox for Tiny Probabilities and Enormous Values”</a>. Tensions among enormous benefits, tiny probabilities, and transitivity.</li>
+<li>Jacob Barrett (2026), <a href="https://doi.org/10.1007/s11098-026-02579-x">“In Defense of Moderation”</a>. A defense of moderation and difficulties with boundedness and probability discounting.</li>
+</ul>
+<p>The formal model, stability calculations, and conditions for low-cost improvements are proposals and derivations under this article&#39;s assumptions. These sources do not establish the model as a whole or prove simultaneous satisfaction of all six requirements.</p>
+
+<div class="related"><a href="../">← Explorations</a> · <a href="../../practice/">Practice</a> · <a href="../../theses/decision-policy-under-revisable-values/">Decision Policy</a></div>
+</main><footer><a href="../../">Home</a> · Exploration · public working draft · English working translation · 2026-10-09</footer></body></html>

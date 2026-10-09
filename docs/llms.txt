@@ -24,6 +24,7 @@
 - [Goal Skepticism in Advanced AI](en/theses/goal-skepticism/)
 
 ## English explorations
+- [Reflective Aggregation Based on Agent-Side Responses](en/explorations/reflective-aggregation/)
 - [Paperclip Maximizer](en/explorations/paperclip-maximizer/)
 - [Simulation Uncertainty](en/explorations/simulation-uncertainty/)
 - [Curated-Environment Hypothesis Space](en/explorations/curated-environment-hypothesis-space/)
@@ -71,6 +72,7 @@
 - [未来価値と現在行為の規範的ブリッジ](theses/future-value-present-justification/)
 - [反省的不確実性と不可逆コミットメント](theses/reflective-uncertainty-irreversible-commitment/)
 - [Explorations](explorations/)
+- [主体側の応答に基づく反省的集約](explorations/reflective-aggregation/)
 - [政治的主体性の物質的基盤](explorations/material-basis-political-agency/)
 - [ASI能力拡散は安全にできるか](explorations/asi-diffusion-civilizational-resilience/)
 - [実践](practice/)
@@ -80,3 +82,4 @@
 
 ## Translation note
 The Japanese pages are canonical source texts for conceptual changes. English pages are maintained as close working translations. Terminology is translated for argumentative function rather than word-for-word surface identity where necessary.
+
