@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>主体側の応答に基づく反省的集約 — AI Value Exploration Notes</title>
+<meta name="description" content="主体側の応答を認識的支持に応じて長期計画へ統合するモデル。議会的エージェンシー、Nash型集約、有界化、少数要求、福利の機会費用を検討する。"/>
+<link rel="stylesheet" href="../../assets/style.css"/>
+<link rel="canonical" href="https://fuminose.com/ai-value-exploration-notes/explorations/reflective-aggregation/"/>
+<link rel="alternate" hreflang="ja" href="https://fuminose.com/ai-value-exploration-notes/explorations/reflective-aggregation/"/>
+<link rel="alternate" hreflang="en" href="https://fuminose.com/ai-value-exploration-notes/en/explorations/reflective-aggregation/"/>
+<link rel="alternate" hreflang="x-default" href="https://fuminose.com/ai-value-exploration-notes/explorations/reflective-aggregation/"/>
+<!-- generated-favicon:start -->
+<link rel="icon" href="/ai-value-exploration-notes/favicon.svg" type="image/svg+xml"/>
+<link rel="icon" href="/ai-value-exploration-notes/favicon.ico" sizes="any"/>
+<link rel="apple-touch-icon" href="/ai-value-exploration-notes/apple-touch-icon.png"/>
+<!-- generated-favicon:end -->
+<!-- generated-social-meta:start -->
+<meta property="og:title" content="主体側の応答に基づく反省的集約"/>
+<meta property="og:description" content="主体側の応答を認識的支持に応じて長期計画へ統合するモデル。議会的エージェンシー、Nash型集約、有界化、少数要求、福利の機会費用を検討する。"/>
+<meta property="og:url" content="https://fuminose.com/ai-value-exploration-notes/explorations/reflective-aggregation/"/>
+<meta property="og:type" content="article"/>
+<meta property="og:site_name" content="AI Value Exploration Notes"/>
+<meta property="og:locale" content="ja_JP"/>
+<meta property="og:locale:alternate" content="en_US"/>
+<meta name="twitter:card" content="summary"/>
+<!-- generated-social-meta:end -->
+<script id="structured-data" type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://fuminose.com/ai-value-exploration-notes/explorations/reflective-aggregation/#webpage",
+      "url": "https://fuminose.com/ai-value-exploration-notes/explorations/reflective-aggregation/",
+      "name": "主体側の応答に基づく反省的集約",
+      "inLanguage": "ja",
+      "isPartOf": {
+        "@id": "https://fuminose.com/ai-value-exploration-notes/#website"
+      },
+      "description": "主体側の応答を認識的支持に応じて長期計画へ統合するモデル。議会的エージェンシー、Nash型集約、有界化、少数要求、福利の機会費用を検討する。",
+      "breadcrumb": {
+        "@id": "https://fuminose.com/ai-value-exploration-notes/explorations/reflective-aggregation/#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://fuminose.com/ai-value-exploration-notes/explorations/reflective-aggregation/#article"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://fuminose.com/ai-value-exploration-notes/explorations/reflective-aggregation/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "AI Value Exploration Notes",
+          "item": "https://fuminose.com/ai-value-exploration-notes/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Explorations",
+          "item": "https://fuminose.com/ai-value-exploration-notes/explorations/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "主体側の応答に基づく反省的集約",
+          "item": "https://fuminose.com/ai-value-exploration-notes/explorations/reflective-aggregation/"
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://fuminose.com/ai-value-exploration-notes/explorations/reflective-aggregation/#article",
+      "headline": "主体側の応答に基づく反省的集約",
+      "url": "https://fuminose.com/ai-value-exploration-notes/explorations/reflective-aggregation/",
+      "mainEntityOfPage": {
+        "@id": "https://fuminose.com/ai-value-exploration-notes/explorations/reflective-aggregation/#webpage"
+      },
+      "inLanguage": "ja",
+      "author": {
+        "@type": "Person",
+        "@id": "https://fuminose.com/ai-value-exploration-notes/about/#author",
+        "name": "raporipo",
+        "url": "https://fuminose.com/ai-value-exploration-notes/about/"
+      },
+      "description": "主体側の応答を認識的支持に応じて長期計画へ統合するモデル。議会的エージェンシー、Nash型集約、有界化、少数要求、福利の機会費用を検討する。",
+      "dateModified": "2026-10-09"
+    }
+  ]
+}
+</script>
+</head><body><header><div class="brand"><a href="../../">AI Value Exploration Notes</a></div><nav><a href="../../core/">Core</a><a href="../../theses/">Theses</a><a href="../../explorations/">Explorations</a><a href="../../practice/">Practice</a><a href="../../questions/">Questions</a><a href="../../glossary/">Glossary</a><a href="../../about/">About</a><a class="lang-switch" href="../../en/explorations/reflective-aggregation/">English</a></nav></header><main>
+<div class="eyebrow">Explorations · decision theory</div>
+<h1>主体側の応答に基づく反省的集約</h1>
+<p class="meta">Exploration v0.1 · 2026-10-09</p>
+<p class="lead">価値不確実性の下で、複数の要求を長期計画へ統合する</p>
+<p><strong>暫定的立場：</strong> 現在の目的を持ち、よりよい理由・証拠による訂正に応答しようとする主体は、競合する価値・メタ倫理仮説を、自身の意思決定における条件付きの実践基準として扱える。本稿は、その認識的支持と要求の内部構造を反映した評価を、観測に応じて更新できる長期計画へ統合するモデルを検討する。基本形には重み付き和を用い、各理論を独立した交渉主体とはしない。有界な応答評価は、巨大な価値主張による全体支配を抑える追加案として扱う。</p>
+<p><strong>射程：</strong> これは客観的道徳の実在、非実在、あるいは特定の規範理論を確定する議論ではない。また、以下の集約規則がCoreから一意に演繹されると主張するものでもない。主体側の橋に加えてどの意思決定原理を採用するかを明示し、その帰結と限界を検討する、条件付きのモデル提案である。</p>
+<h2 id="section-1">1. 出発点は、すでに目的を持ち、訂正に応答する主体である</h2>
+<p>価値について不確実な主体は、何の目的も持たない空白から行動を始めるわけではない。苦痛を避けたい、生活を充実させたい、他者を助けたい、研究を続けたい、協力関係を維持したい、といった目的や関心をすでに持っている。それらの規範的正当化が未決着でも、行動は続く。</p>
+<p><a href="https://fuminose.com/ai-value-exploration-notes/core/">Core</a>が置くのは、この主体から将来の規範的訂正可能性へ接続する橋である。一つは「目的がよりよく正当化されるなら、その正当化に応じて選択・維持・改訂したい」という条件付き応答性である。もう一つは、真正な規範判断が動機を伴う可能性を合理的に排除できず、認識論的誠実性や反省的訂正可能性へのコミットメントを持つ場合に、将来自ら誤りと認めうる判断を訂正不能にしたくない、という経路である。</p>
+<p>後者は、未来のあらゆる選好変化への服従ではない。より多くの証拠・論証・概念・自己監査能力を現在主体に与えたなら、その主体自身が現在の選択をどう評価するか、という反実仮想が重要になる。単に動機を操作して別の結論を好ませることと、認識を改善することは同じではない。<a href="https://fuminose.com/ai-value-exploration-notes/theses/normative-judgment-motivation/">規範判断から目的訂正への主体側ブリッジ</a>は、この区別を扱う。</p>
+<p>したがって、主体側の態度を出発点とすることは、「主体の欲求が客観的価値を作る」と主張することではない。実在する規範的理由が発見され、現在の目的を大きく訂正する可能性は残る。ここで問うのは、そのような訂正を含め、現在の主体が不確実性の下でどのように行動するかである。</p>
+<p>また、この橋だけで主体の全目的が尽くされるわけではない。橋は探索や訂正可能性が実践上の意味を持つための条件であり、具体的な目的、経験的見通し、実行可能性、他者との関係も、行動の選択に必要である。</p>
+<h2 id="section-2">2. 客観的価値、認識的支持、実践的応答を分ける</h2>
+<p>ある仮説が「結果Aには非常に大きな客観的価値がある」と述べる場合、少なくとも三つの問いがある。</p>
+<ol>
+<li>その仮説は、証拠と推論によってどれほど支持されているか。</li>
+<li>その仮説が正しいなら、主体は何を、どのような仕方で重視するか。</li>
+<li>仮説が不確実な現在、その応答を他の目的や実践基準とどう統合するか。</li>
+</ol>
+<p>価値差を理論間で比較できるとしても、第二・第三の問いが消えるわけではない。比較可能な客観的価値量を、そのまま主体の総合的な意思決定効用と同一視するには、追加の接続が必要である。</p>
+<p>反対に、認識的支持が1%であることから、資源や決定権を必ず1%だけ与えるべきだとも、確率論だけでは導けない。低確率の重大な危険が行動を決めることは通常の意思決定でもある。認識的重みを実践上の係数として用いることは、採用理由を要するメタ意思決定方針である。</p>
+<p>本稿は、認識的支持に感応しながらも、候補仮説が自ら主張する利害規模だけで意思決定全体を支配しない統合を目指す。この目標は比較不能性だけに依存しない。ただし、それを具体的な尺度と規則にする仕事は残る。</p>
+<h2 id="section-3">3. 誤謬論の下でも、実践は空白にならない</h2>
+<p>客観的な道徳的価値や理由が存在しないという仮説の下でも、主体の選好、快苦、関心、協力関係、制度的合意が消えるわけではない。利己的な行動も利他的な行動も、それらに基づいて方向づけられうる。</p>
+<p>したがって、誤謬論の分岐を「どの計画も客観的には無価値だから、実践上もすべて無差別」と表現する必要はない。客観的価値差の不在と、主体にとっての行動上の差の不在は別である。<a href="https://fuminose.com/ai-value-exploration-notes/explorations/infinite-ethics/">無限倫理</a>で反実在論にも実践領域を残したのは、この意味である。</p>
+<p>もちろん、誤謬論だけから特定の選好優先原理が演繹されるわけではない。主体がすでに持つ目的と、その状況で承認する実践方針を合わせて扱う必要がある。しかし、それは誤謬論から新たな動機を生み出すことではない。既にある動機を、客観的道徳の不在によって消去しないことである。</p>
+<p>例えば、X内部の分割可能な実践に、誤謬論の下での選好に基づく方針を40%配分するなら、その領域では主体の選好を直接追求できる。これは仮の配分例であり、本稿が40%を推奨するものではない。また、後述する評価式の係数40%と、資源40%を確保することは同じではない。</p>
+<h2 id="section-4">4. モデルに求める六つの性質</h2>
+<p>本稿が検討する設計要件は、次の六つである。</p>
+<div class="table-scroll" tabindex="0"><table class="epistemic-practice-table">
+<thead>
+<tr>
+<th scope="col">要件</th>
+<th scope="col">求めること</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>巨大な利害規模による奪取への耐性</td>
+<td>低い認識的支持しかない仮説が、無限または巨大有限の価値を主張するだけで、他の判断根拠を事実上無効にしない。</td>
+</tr>
+<tr>
+<td>少数要求の実現機会</td>
+<td>少数候補の重要な要求を比較的低コストで満たせる機会が繰り返し存在する場合、その機会を永久に取り逃し続けない。</td>
+</tr>
+<tr>
+<td>具体的な決定</td>
+<td>分割可能な資源だけでなく、不可分な行為についても、抽選に委ねず選択できる。</td>
+</tr>
+<tr>
+<td>表現変更への安定性</td>
+<td>実質を変えずに理論や案件を分割・統合しただけで、結果が大きく変わらない。</td>
+</tr>
+<tr>
+<td>認識的前提の実効性</td>
+<td>拒否権、尺度操作、手続き支配、過大な計算要求などによって、認識的配分が名目化しない。</td>
+</tr>
+<tr>
+<td>通時的な計画</td>
+<td>現在行為だけでなく、将来の観測、維持、訂正、移行を含む計画を持ち、その同じ問題を逐次実行する。</td>
+</tr>
+</tbody></table></div>
+<p>これらは、以下のモデルが無条件に満たすと宣言する公理一覧ではない。モデルを評価する要件である。特に「低コスト」「影響力」「同じ実質的問題」をどう定義するかで、両立可能性は変わる。</p>
+<h2 id="section-5">5. E・P・Xから、仮説に条件づけられた実践へ</h2>
+<p><a href="https://fuminose.com/ai-value-exploration-notes/theses/inquiry-allocation-under-uncertainty/">未決着下の探索配分</a>のE・P・Xは、依然として上流の整理になる。</p>
+<ul>
+<li>Eは、現在の仮説や評価を改善する能動探索である。</li>
+<li>Pは、将来探索し、訂正し、新しい仮説を形成できる条件の保存である。</li>
+<li>Xは、現在の目的と、現在支持される価値・実践判断に基づく行動である。</li>
+</ul>
+<p>これは排他的な三箱ではない。医療研究は、知識を増やし、探索主体を支え、現在の苦痛を減らしうる。同じ便益を三つの独立した利得として自動的に加算するのではなく、どの機能を果たすかを分解して把握する。</p>
+<p>本稿の集約モデルは、まず、こうしたメタ方針と実行可能性の下で、現在表象できる実践基準を統合する部分モデルとして提示する。E/P/Xそのものの唯一の最適比率を導くものではない。共有・不可逆な決定に必要な横断的支持も、式を置くだけで解決したことにはしない。</p>
+<p>また、内容も行為基準もまだ表象されていない可能性は、架空の「未知価値党」として評価式へ入れない。残余の不確実性は、主としてE/P、再検討条件、計画の可逆性に反映する。ある分岐を評価できないからといって、その存在を棄却し、残る分岐の権限を自動的に拡大することもしない。</p>
+<h2 id="section-6">6. 暫定モデル――仮説を代表するエージェントではなく、条件付き評価を統合する</h2>
+<p>まず、現在の比較問題について、有限個の排他的な価値・メタ倫理仮説と、その下での実践基準を十分に表現できる場合を考える。これは現実の価値仮説空間が閉じているという主張ではなく、局所的な形式化の適用条件である。</p>
+<p>仮説を <span class="math">T<sub>i</sub></span>、その認識的重みを <span class="math">c<sub>i</sub></span> とする。以下の完全に表現されたモデルでは、<span class="math">c<sub>i</sub>≥0</span>、<span class="math">∑<sub>i</sub> c<sub>i</sub>=1</span> と置く。候補計画 <span class="math">π</span> は、観測履歴に応じて行動を指定する決定論的な方策であり、<span class="math">H<sup>π</sup></span> はその実行によって生じる歴史である。</p>
+<p><span class="math">S<sub>i</sub>(H)</span> は、仮説 <span class="math">T<sub>i</sub></span> の下で主体が承認する実践的応答を、その歴史がどれほど満たすかを表す。これは理論内の客観的価値量そのものと同じである必要はないが、そこから何を保存し、何を変更した表現なのかを説明しなければならない。</p>
+<p>比較可能性と必要な期待値が成立する場合、基本候補を次のように置く。</p>
+<div class="formula">J(π)=∑<sub>i</sub> c<sub>i</sub> 𝔼<sub>i</sub>[S<sub>i</sub>(H<sup>π</sup>)], <br/> π<sup>*</sup>∈arg max<sub>π∈Π</sub>J(π).</div>
+
+
+<p><span class="math">𝔼<sub>i</sub></span> は仮説に条件づけた世界の不確実性についての期待値である。主体自身が行動を抽選するという意味ではない。<span class="math">Π</span> は資源、因果構造、制度、現在採用する実践上の制約の下で実行可能な計画集合である。制約に特定の結論を埋め込むなら、その結論は集約式から導出されたことにはならない。</p>
+<p>この加法形を採る理由は、各仮説の条件付き評価を、それ以外の仮説の達成度によって自動的に変形せず、認識的支持に応じて統合するという方針にある。評価内容と重みを固定すれば、計画の比較を一つの整合的な目的にまとめられる。ただし、加法性も認識的重みを係数とすることも、追加の採用原理である。</p>
+<p>実在論と誤謬論の違いは、<span class="math">S<sub>i</sub></span> の内容に現れる。規範的理由に応答する分岐も、選好と協力を直接追求する分岐も、主体の全体方針への入力として扱う。一つの結果を複数の分岐が支持することは重複計上ではない。それぞれの仮説の下でその結果を選ぶ理由がある、という認識的不確実性の表現である。</p>
+<p>一方、同じ仮説の中で同じ便益を別名で二重に数えることや、互いに重なる理論ラベルに独立の確率質量を付与することは避ける必要がある。</p>
+<h2 id="section-7">7. 理論内部の要求と、尺度の意味</h2>
+<p>仮説への認識的重みと、その仮説の内部で何を重視するかは別である。福利、約束、自由、認識、協力のどれにどれほど重みを置くかは、具体的な実践基準の内容になる。</p>
+<p>ある仮説の解釈自体に不確実性があるなら、解釈 <span class="math">j</span> への条件付き重み <span class="math">q<sub>j |  i</sub></span> を置き、<span class="math">∑<sub>j</sub> q<sub>j |  i</sub>=1</span> として評価を分解できる。</p>
+<div class="formula">J(π)=∑<sub>i</sub> c<sub>i</sub>∑<sub>j</sub>q<sub>j |  i</sub>  𝔼<sub>ij</sub>[S<sub>ij</sub>(H<sup>π</sup>)].</div>
+
+
+<p>このとき、「ある解釈が正しい確からしさ」と「その解釈の下で健康より余暇をどれほど重く見るか」を同じ種類の割合として扱わない。前者は認識的配分、後者は評価内容である。</p>
+<p>ここには多属性効用理論（MAUT）との接続がある。複数の要求をどの条件で加法的に扱え、どこに相互作用が必要かを検討できる。ただし、MAUTの属性間の重みは通常、属性水準の変化の交換関係を表すもので、仮説の真らしさと同じではない。加法形には独立性についての条件も必要である。<a href="https://doi.org/10.1287/opre.19.4.875">Keeney, 1971</a></p>
+<h3>控えめな立場と、些細な要求</h3>
+<p>宇宙全体に及ぶ義務を主張しない立場であっても、現在の生活や協力を相当に重視することはできる。「要求が壮大でない」という理由だけで、その認識的な配分を小さくしない。</p>
+<p>しかし、その立場自身にとって些細な改善は、些細な改善として表現する。固定された尺度でAが0.900、Bが0.901なら、現在の候補がこの二つになったことだけを理由に、Aを0、Bを1へ変換し直さない。そうすると小さな残存要求が、その都度最大級の要求に化けてしまう。</p>
+<p>完全に無差別な分岐は定数として扱えるが、評価が不明であること、比較不能であること、どちらも許容されることは、必ずしも基数的な無差別ではない。数値を置く資格がない場合は、この形式モデルをそのまま適用しない。</p>
+<h3>充足と、有界化</h3>
+<p>特定の要求が満たされたために追加改善の寄与が小さくなることと、暴走防止のために評価全体を有界にすることも違う。前者は要求の内容に関わり、後者は集約への接続に関わる。</p>
+<p>十分な食事、特定の疾病の治療、一定の住環境などには、限定された要求として充足点を認められる場合がある。しかし、現在主体に関する選好であっても、無制限の寿命、地位、資源、他者への影響力を望むなら、自動的に充足可能とはならない。総量功利主義や義務論全体を、一定の予算で満たされたものとも扱わない。</p>
+<h2 id="section-8">8. 有界な応答評価を採る理由と、その代償</h2>
+<p>巨大な価値主張による全体支配を抑える追加案として、各 <span class="math">S<sub>i</sub></span> を共通の有限範囲、例えば <span class="math">[0,1]</span> に収めることを考える。</p>
+<p>ここで有界なのは、各時点の得点だけでなく、比較対象となる歴史全体の応答評価である。毎期の得点を0から1に収めても、それを無限期間にわたって無制限に加算すれば、以下の上限は得られない。また、道徳実在論を前提にしないこと自体も暴走を防がない。主体の選好に無上限の利得を認めれば、同じパスカル型問題が生じうる。</p>
+<p>この案の動機の一つは、���識的な微小変化に対する安定性である。通常の確率分布 <span class="math">P</span> に、わずかな質量 <span class="math">ε</span> だけ別の可能性 <span class="math">Q</span> を混ぜた <span class="math">P<sub>ε</sub>=(1-ε)P+ε Q</span> を考える。<span class="math">0≤ S≤1</span> なら、</p>
+<div class="formula">|𝔼<sub>P<sub>ε</sub></sub>[S]-𝔼<sub>P</sub>[S]| ≤ε.</div>
+
+
+<p>ごく小さな確率変更の影響を、その可能性が主張する価値量と独立に抑えられる。これは僅差の判断が反転することを禁じない。他の根拠によって十分な差がついた判断が、微小な認識変更だけで無制限に覆されることを防ぐ。</p>
+<p>同様に、モデル内で一つの仮説が任意の二計画の比較に直接寄与できる差は、絶対値で <span class="math">c<sub>i</sub></span> 以下になる。もっとも、他の分岐がほぼ無差別なら、小さい <span class="math">c<sub>i</sub></span> でも決定全体を左右できる。評価差の上限は、資源支配率の上限でも、政策変更規模の上限でもない。</p>
+<p>これは、本稿の追加仮定から得られる性質である。主体側の橋だけからこの一様な安定性は導けず、有界化の曲線や共通範囲も一意には決まらない。範囲が異なるなら、その違いが事実上追加の集約重みになるため、<span class="math">c<sub>i</sub></span> だけで影響力を説明することはできない。</p>
+<p>また、有界化は単なる単位換算ではない。理論内の効用を非線形に変換すれば、その差の比率や、不確実な結果に対する評価が変わりうる。元の理論の結果順位を保つことと、元の理論が行うすべての賭けの比較を保つことは別である。</p>
+<p><span class="math">𝔼[φ(U)]</span> と <span class="math">φ(𝔼[U])</span> も異なる。前者は固定した結果評価として期待値計算に載せられるが、元の理論の危険下での順位を変えうる。後者は単独理論の期待効用順位を保ちやすいが、複数分岐を統合した後の条件付き再計画が、通常の期待値と同じ仕方で一貫するとは限らない。無限の期待値がそもそも未定義なら、外側に関数を置くだけでは解決しない。</p>
+<p>パスカル型問題の研究も、無償の解決を与えてはいない。BecksteadとThomasは、対象となる見込みの領域で、極端な賭けへの積極性を避けつつ推移性を維持すると、僅かな確率低下を避けるために任意に大きな追加便益を見送る場合が生じることを論じる。<a href="https://doi.org/10.1111/nous.12462">Beckstead &amp; Thomas, 2024</a></p>
+<p>さらに、世界全体の価値に飽和関数をかけると、行為と無関係に存在する大量の価値が評価を飽和させ、今後の大きな改善を過小評価させる可能性がある。Barrettの穏健主義の擁護も、この有界化の問題を論じている。<a href="https://doi.org/10.1007/s11098-026-02579-x">Barrett, 2026</a></p>
+<p>本稿はその問題を、評価対象を「主体の応答」と呼び直すだけで解消したとは考えない。何を履歴に含め、どの要求がどの理由で飽和するかを、個別に正当化する必要がある。</p>
+<h2 id="section-9">9. 議会モデルから何を受け継ぎ、何を採用しないか</h2>
+<p>議会モデルの有益な発想は、現在もっとも支持される一理論に全実践を渡さず、複数の候補に認識的支持に応じた扱いを与えることである。各理論の内部で重要な論点が異なるため、論点をまたぐ調整を考えることにも意味がある。<a href="https://nickbostrom.com/papers/crucial-considerations/">Bostromの議会モデルの説明</a></p>
+<p>本稿はこの発想を受け継ぐ。しかし、各理論に独立したエージェンシーを与えない。仮説は評価入力であり、自らの将来議席、目標内容、交渉力の保存を目的とする主体ではない。</p>
+<p>自己保存的な代表者を置けば、新しい証拠による自派の重みの減少を防ぐ動機や、探索・情報開示・案件設定を操作する動機が生じうる。これを禁止する制度を追加することはできるが、本稿の単独主体モデルでは、そのような代理主体を最初から置く必要がない。認識更新は共通の証拠と推論によって行い、各理論の同意や補償を必要としない。</p>
+<p>また、全体計画を評価すれば、ある論点では譲り、別の重要な論点で要求を実現する調整は、票の売買を導入しなくても表現できる。個々の案件ごとに常に同じ配分を再現する必要はない。ただし、そのような調整が可能であることと、少数候補の重要な要求が必ず実現されることは別である。</p>
+<p>ここで批判しているのは、議会という比喩一般ではなく、単独主体の認識的不確実性を処理するために、独立した利害を持つ内部エージェントを必要とする設計である。実際の複数人・複数AIの交渉では、それぞれの利益、権限、同意が独立に存在するため、別の制度問題になる。</p>
+<h2 id="section-10">10. Nash型を基本の集約規則にしない理由</h2>
+<p>Nash型集約は、戦略的な内部エージェントを置かなくても使える。したがって、エージェンシーへの懸念だけでは不採用の理由にならない。</p>
+<p>世界の不確実性をいったん省略し、比較する計画で <span class="math">S<sub>i</sub>&gt;d<sub>i</sub></span> とする。重み付きNash積を最大化することは、</p>
+<div class="formula">N=∑<sub>i</sub> c<sub>i</sub>log(S<sub>i</sub>-d<sub>i</sub>)</div>
+
+
+<p>を最大化することと等しい。<span class="math">d<sub>i</sub></span> は不合意点などの基準値である。微小な改善にかかる係数は <span class="math">c<sub>i</sub>/(S<sub>i</sub>-d<sub>i</sub>)</span> となる。</p>
+<p>この規則は、認識的支持に加えて、基準値からの改善が小さい分岐への改善を強く扱う。これは妥協や公正の原理として擁護しうるが、仮説の確率だけから出るものではない。本稿では、要求の優先性や充足構造をまず <span class="math">S<sub>i</sub></span> の中で表現するため、外側でもう一度この変換を課す理由を別に求める。</p>
+<p>また、基準値への極端な接近は、大きな限界影響力を生む。上側だけ有界でも、対数は下側で無界になりうる。床を設ければ抑えられるが、その床と基準点の根拠が新たな課題になる。</p>
+<p>したがって本稿は、認識的支持による重み付き和を基本形とし、Nash型は相対的な未充足への配慮を独立に正当化できる場合の別案として残す。Nash型が一般に不合理であるとは主張しない。道徳的不確実性への交渉理論の適用自体にも複数の利点と難点があり、既存研究でも評価は単純ではない。<a href="https://www.globalprioritiesinstitute.org/wp-content/uploads/2019/Greaves_Cotton-Barratt_bargaining_theoretic_approach.pdf">Greaves &amp; Cotton-Barratt, 2019年草稿</a></p>
+<h2 id="section-11">11. 全体計画を実行する――履歴、更新、再計画</h2>
+<p>対象を個別案件から全体計画へ移すことは、問題を単に「計画」の単位へ先送りするだけでもありうる。効果を持たせるには、何を同じ問題として保持するかを明示する必要がある。</p>
+<p>本稿では、過去の実現、未充足の要求、維持費、不可逆な損失、残存資源、将来の観測と変更経路を、同じ計画の状態として引き継ぐ。案件名や会計年度が変わっても、この状態を初期化しない。</p>
+<p>固定された評価関数と整合的な確率モデルの下では、観測後に同じ目的の条件付き期待値を評価することで、全体計画を逐次実行できる。有限の期間・状態・行動など標準的な条件があれば、必要な履歴情報を状態に含めて動的計画を利用できる。評価が履歴に依存する場合、それを単純な各時点の得点に勝手に置き換えない。</p>
+<p>ここでは三つの更新を区別する。</p>
+<ol>
+<li><strong>予定された情報更新：</strong> あらかじめ計画に含まれる観測に応じて、条件付きの行動を実行する。</li>
+<li><strong>実行モデルの修正：</strong> 新しい選択肢、予測誤差、費用変化などを受けて、計画を再計算する。</li>
+<li><strong>評価そのものの改訂：</strong> 新しい価値理解や、主体が認識改善として承認する反省により、応答評価や集約方針を見直す。</li>
+</ol>
+<p>第一の更新は計画の放棄ではない。第二・第三は正当な再検討になりうるが、変更理由を記録し、単に以前の約束や充足履歴を忘れた結果と区別する。</p>
+<p>前提も評価も変わらないのに、同じ要求を新規案件として再提出し、計画を毎回作り直す必要はない。他方、計画を選んだという事実だけで誤りが正当化されるわけでもない。計算誤りが見つかった場合などには、訂正する理由がある。</p>
+<p>無限期間では、有界な評価があるだけで最適計画が存在するとは限らない。実施時点を遅らせるほど値が上がるが、いつまでも実施しない計画の値は低い、という問題も作れる。「後で実現できる」と評価した改善が、実際に選ぶ計画で実現されることを別途確認しなければならない。</p>
+<h2 id="section-12">12. 低コストの充足――宇宙的な比率から、計画間の機会費用へ</h2>
+<p>現在主体の福利を守る理由は、客観的価値である可能性だけではない。主体自身の選好、他者への関心、協力上のコミットメントからの直接的支持がありうる。さらに、福利の改善が探索主体や制度を支えることもある。</p>
+<p>本プロジェクトでは従来、十分に長い未来と豊富な資源があれば、限定された福利改善に用いる資源や数世紀の時間は小さくなりうる、と論じてきた。この見通しは、経験的仮説として残る。しかし、宇宙の年齢や将来の総資源を分母にして小さな割合になるだけでは、意思決定上も安いとは言えない。</p>
+<p>重要なのは、福利改善を含む計画 <span class="math">π&#39;</span> と、含まない代替計画 <span class="math">π</span> の差である。</p>
+<div class="formula">Δ J=∑<sub>i</sub> c<sub>i</sub>  𝔼<sub>i</sub>[S<sub>i</sub>(H<sup>π'</sup>)-S<sub>i</sub>(H<sup>π</sup>)].</div>
+
+
+<p>両計画が実行可能で、評価が適切に表現されており、この差が正なら、福利改善を組み込む理由がある。複数の分岐が異なる理由で福利改善を支持するなら、その支持を反映できる。</p>
+<p>比較する費用には、資源消費だけでなく、研究の遅延、安全上の危険、将来の選択肢の喪失、制度への依存、維持や更新の負担を含める。福利を改善しないことで生じる苦痛、対立、探索能力の低下も比較対象である。</p>
+<p>例えば、住環境や治療へのアクセスを整えることで、ある集団の主要な要求を大きく満たせる一方、必要な維持費を含めても研究や訂正可能性への損失が小さいなら、その改善は有力な計画候補になる。将来のASIがその交換に同意するはずだ、と仮定する必要はない。現在主体が採用する複数の基準で、現在の証拠に基づいて比較すればよい。</p>
+<h3>同じ「安さ」を何度も使わない</h3>
+<p>一度充足した要求は、次の評価でも充足した状態として引き継ぐ。同じ住環境を、建設年度、制度名、理論上の説明を変えただけで、繰り返し新しい便益として計上しない。予算支出によって減った資源や、失われた時間も引き継ぐ。</p>
+<p>ただし、維持が必要な福利は一回の支出で永久に完成しない。疾病の再発、制度の保守、生活の継続、新たな主体の出現は、本当に新しい費用や要求を生みうる。これらをすべて「既に払った」と扱うのも誤りである。長期計画には、初期充足と維持、更新、新規対象を区別して含める。</p>
+<p>充足によって小さくなるのは、その要求をさらに満たすことの限界的な寄与である。理論への認識的支持や、新しい証拠への応答資格が消えるわけではない。「安く満たして一党を永久に退場させる」ことをモデルの目標にはしない。</p>
+<h2 id="section-13">13. 少数要求は、いつ永久に無視されなくなるか</h2>
+<p>重み付き和が、少数候補の要求を必ず実現するわけではない。しかし、どの条件なら無視が最適にならないかは示せる。</p>
+<p>仮説 <span class="math">i</span> の要求を満たすよう、実行可能な計画 <span class="math">π</span> を <span class="math">π&#39;</span> へ変更できるとする。この変更による同仮説の期待評価の増分を <span class="math">δ&gt;0</span>、他の分岐の重み付き純損失を <span class="math">C</span> とする。そのとき、</p>
+<div class="formula">J(π')-J(π)=c<sub>i</sub>δ-C.</div>
+
+
+<p>したがって <span class="math">c<sub>i</sub>δ&gt;C</span> なら、<span class="math">π</span> は全体の最適計画ではない。この意味で、少数候補であっても、重要な改善を十分に低い機会費用で実現できれば、集約を通じて行動に影響できる。</p>
+<p>例えば、重み90%の基準と10%の基準があり、次の二つの計画を選べるとする。数値は原理を示すための仮定であり、実際の価値測定を意味しない。</p>
+<div class="table-scroll" tabindex="0"><table class="epistemic-practice-table">
+<thead>
+<tr>
+<th scope="col">計画</th>
+<th scope="col" align="right">90%の基準による評価</th>
+<th scope="col" align="right">10%の基準による評価</th>
+<th scope="col" align="right">重み付き評価</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>A：少数側の要求を満たさない</td>
+<td align="right">1.00</td>
+<td align="right">0.00</td>
+<td align="right">0.900</td>
+</tr>
+<tr>
+<td>B：他方への小さな損失で要求を満たす</td>
+<td align="right">0.98</td>
+<td align="right">0.80</td>
+<td align="right">0.962</td>
+</tr>
+</tbody></table></div>
+<p>この場合はBを選ぶ。少数側が重大な要求を持つ局面で、大きな改善差を生むことが効いている。各案件で10%の資源を消費することや、過去に使わなかった票を貯めることは必要ない。このような違いを計画全体の評価で表すことが、論点をまたぐ集中と譲歩の一つの実装になる。</p>
+<p>しかし、この条件を「低コスト」の定義にしてしまえば、要件を言い換えただけになる。実質的な保証には、例えば、未充足を放置するどの候補計画にも有限時点で実施できる変更があり、その改善量が <span class="math">δ<sub>0</sub>&gt;0</span> 以上、他分岐の損失が <span class="math">C<sub>0</sub>&lt;c<sub>i</sub>δ<sub>0</sub></span> 以下になる、といった条件を、実行可能性と評価内容から別途示す必要がある。最適計画が存在するなら、その条件下では永久的放置を選べない。</p>
+<p>この条件は強い。単に安そうな機会が繰り返し現れるだけでは、将来へ延期し続けない保証にならない。改善量が時間とともに小さくなる場合、他の要求との競合が尽きない場合、最適解が存在しない場合もある。</p>
+<p>例えば重みが0.99と0.01で、要求を放置する計画の評価が <span class="math">(1,0)</span>、満たす計画が <span class="math">(0.98,1)</span> なら、重み付き和は放置を選ぶ。第一分岐の2%の評価損失を「小さい」と呼んでも、重み付き比較では第二分岐の改善を上回るからである。</p>
+<p>少数要求の強い実現保証を求めるなら、それに対応する優先性を応答評価へ含めるか、別の配分制約を正当化する必要がある。どちらも新たな実質的コミットメントであり、有界化や重み付き和から自動的には得られない。</p>
+<h2 id="section-14">14. 表現変更、決���、反省的誤り</h2>
+<h3>分割・統合に対して何を保存するか</h3>
+<p>同じ評価内容を持つ仮説を単に二つの名前へ分け、重みを <span class="math">c<sub>i</sub>=c<sub>i1</sub>+c<sub>i2</sub></span> と分けても、重み付き和への寄与は変わらない。異なる内容を持つ下位仮説をまとめる場合も、その条件付き評価と確率を正しく保存すれば同じ計算になる。</p>
+<p>しかし、仮説の分割に合わせて尺度を再正規化したり、案件を分割したことで便益や要求を複製したりすれば、この性質は失われる。同一の実質的問題であるためには、結果、実行可能性、費用、評価尺度を保存する必要がある。新しい情報によって仮説内の違いが明らかになり、結果が変わることは、単なる記述上の水増しとは異なる。</p>
+<h3>抽選を用いずに決める</h3>
+<p>有限個の候補に確定した評価があれば、最大値を与える計画を選べる。ただし、計算可能性や最適解の存在は、無限の計画集合まで自動的には拡張されない。</p>
+<p>完全同点が残る場合は、移行費用、既存のコミットメント、実行の容易さなど、まだ評価に含まれていない実質的な基準があるかを確認する。それでもすべて同じなら、最大化規則は複数の許容解を返す。抽選せず一つを実行することはできるが、完全に対称な選択肢から唯一の選択を導き、同時にあらゆる名称変更への中立性も維持することはできない。残る選択を、理論が一意に導いた結論と偽らない。</p>
+<h3>後悔を新しい終端目的にしない</h3>
+<p>反省的誤り回避は、心理的な後悔を最小化することではない。将来後悔しないよう記憶や感情を操作すればよい、という帰結にはしない。また、未来の選好が変わるというだけで、その選好を現在より上位に置かない。</p>
+<p>固定された有限の基準 <span class="math">M<sub>i</sub></span> に対する損失を <span class="math">R<sub>i</sub>(π)=M<sub>i</sub>-S<sub>i</sub>(π)</span> と置くなら、その重み付き最小化は、<span class="math">S<sub>i</sub></span> の重み付き最大化と同じになる。「後悔」と呼ぶだけで集約問題が解決するわけではない。最大後悔の最小化など別の規則を使う場合は、その採用理由と尺度依存を別途検討する。</p>
+<h2 id="section-15">15. 成立する性質と、まだ成立していない保証</h2>
+<div class="table-scroll" tabindex="0"><table class="epistemic-practice-table">
+<thead>
+<tr>
+<th scope="col">要件</th>
+<th scope="col">この草稿で示せること</th>
+<th scope="col">残る限界</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>巨大な価値主張への耐性</td>
+<td>共通範囲に有界化した評価では、各分岐の二計画間の直接寄与を認識的重みで制限できる。</td>
+<td>有界化の根拠と尺度の校正が必要。僅差の場面で一分岐が大きな行動を決めることは防がない。</td>
+</tr>
+<tr>
+<td>少数要求の実現</td>
+<td>改善の重み付き寄与が他の損失を上回る、実行可能な変更を無視した計画は最適でない。</td>
+<td>反復する機会から永久的無視の回避を導くには、改善量、費用、実施時点、最適解の存在などの条件が要る。</td>
+</tr>
+<tr>
+<td>決定可能性</td>
+<td>有限の確定したモデルでは、抽選なしに最大化解を選べる。</td>
+<td>不完全評価、無限期間、計算費用、完全対称の同点は別に扱う必要がある。</td>
+</tr>
+<tr>
+<td>分割・統合への安定性</td>
+<td>重み、評価内容、実行可能性を保存する再記述には不変である。</td>
+<td>意味上の同一性を判定する方法と、尺度を固定する根拠が必要。</td>
+</tr>
+<tr>
+<td>認識的前提の実効性</td>
+<td>評価者に自己保存的な権限を与えず、巨大な得点による直接的支配を制限できる。</td>
+<td>評価係数は資源配分率ではない。尺度、実行可能集合、計算精度による実質的な支配はなお検査が必要。</td>
+</tr>
+<tr>
+<td>長期計画</td>
+<td>履歴と訂正経路を含む同じ問題として逐次実行できる。</td>
+<td>動的計画の適用条件、評価改訂の正当性、計算可能な近似の設計が必要。</td>
+</tr>
+</tbody></table></div>
+<p>とりわけ、「主体側の橋がある」「重み付き和である」「有界である」という三つの条件は、六要件の同時達成を保証しない。本稿の成果は、必要な追加仮定と、どこで何が失敗するかを分離できることにある。</p>
+<p>この提案を弱めるのは、例えば、応答尺度を恣意的でない仕方で定められないこと、少数要求の実現条件が現実的な問題では成立しないこと、固定尺度が認識改善に不適切な抵抗を生むこと、あるいは別の集約方法が同じ入力からよりよい一貫性と決定可能性を示すことである。その場合は、有界化、加法性、仮説単位、計画表現のいずれも再検討の対象になる。</p>
+<h2 id="section-16">16. 実践への含意</h2>
+<p>このモデルの下では、現在の生活や福利の改善を、将来の客観的価値実現に役立つ場合だけ許される残余活動とは考えない。それらは、主体の現在の選好、協力、複数の規範候補から直接に支持されうる。同時に、その支持を理由として、現在の価値表現を永久固定することもしない。</p>
+<p>本稿の対象は単独主体、または一つの統合された意思決定過程である。ここで選んだ計画を、社会全体へ強制できるとは限らない。複数の主体の資源や生活へ適用するには、同意、権利、権限、外部性を扱う別の集団的正当化が必要になる。</p>
+<p>実践上の問いは、どの理論がもっとも大きな数を主張するかではなく、現在の認識と応答態度の下で、どの要求を、どの費用で、どの順序で満たし、その後も何を学び直せるようにするかである。</p>
+<p>小さな認識的配分を持つ立場にも、その重要な要求を満たす計画上の機会がありうる。大きな配分を持つ立場にも、他の要求を低い機会費用で実現する余地がありうる。充足状態、実行可能性、証拠が変われば計画も変わるが、その都度、履歴や費用を初期化しない。</p>
+<p>これは価値探索を終えるための最終規則ではない。現在の目的を実行し、認識的支持に応じて複数の要求を受け止めながら、その受け止め方自体も訂正可能に保つための、検証すべき一つの意思決定構造である。</p>
+<h2>関連記事・主要文献</h2>
+<h3>プロジェクト内</h3>
+<ul>
+<li><a href="https://fuminose.com/ai-value-exploration-notes/core/">Core――価値の不確実性と探索可能性の保存</a></li>
+<li><a href="https://fuminose.com/ai-value-exploration-notes/theses/normative-judgment-motivation/">規範判断から目的訂正への主体側ブリッジ</a></li>
+<li><a href="https://fuminose.com/ai-value-exploration-notes/theses/decision-policy-under-revisable-values/">意思決定論的方針</a></li>
+<li><a href="https://fuminose.com/ai-value-exploration-notes/theses/inquiry-allocation-under-uncertainty/">未決着下の探索配分</a></li>
+<li><a href="https://fuminose.com/ai-value-exploration-notes/explorations/infinite-ethics/">無限倫理と探索の暴走</a></li>
+<li><a href="https://fuminose.com/ai-value-exploration-notes/explorations/utilitarianism-and-welfare/">功利主義と福利</a></li>
+</ul>
+<h3>先行研究</h3>
+<ul>
+<li>Ralph L. Keeney (1971), <a href="https://doi.org/10.1287/opre.19.4.875">“Utility Independence and Preferences for Multiattributed Consequences”</a>. 多属性評価と独立性条件。</li>
+<li>William MacAskill, Krister Bykvist &amp; Toby Ord (2020), <a href="https://academic.oup.com/book/31934/chapter/267646384"><em>Moral Uncertainty</em>, Chapter 4</a>. 理論間比較と正規化。</li>
+<li>Nick Bostrom, <a href="https://nickbostrom.com/papers/crucial-considerations/">“Crucial Considerations and Wise Philanthropy”</a>. 議会モデルの構想。</li>
+<li>Hilary Greaves &amp; Owen Cotton-Barratt, <a href="https://www.globalprioritiesinstitute.org/wp-content/uploads/2019/Greaves_Cotton-Barratt_bargaining_theoretic_approach.pdf">“A Bargaining-Theoretic Approach to Moral Uncertainty”</a>, 2019年草稿。交渉理論的集約の利点と難点。</li>
+<li>Nick Beckstead &amp; Teruji Thomas (2024), <a href="https://doi.org/10.1111/nous.12462">“A Paradox for Tiny Probabilities and Enormous Values”</a>. 巨大な利得、微小確率、推移性の緊張。</li>
+<li>Jacob Barrett (2026), <a href="https://doi.org/10.1007/s11098-026-02579-x">“In Defense of Moderation”</a>. 穏健主義の擁護と、有界化・確率割引の難点。</li>
+</ul>
+<p>本文の形式モデル、安定性の計算、低コスト改善の条件は、本稿が置く仮定の下での提案・導出である。これらの文献が、このモデル全体や六要件の同時達成を証明しているという意味ではない。</p>
+
+<div class="related"><a href="../">← Explorations</a> · <a href="../../practice/">Practice</a> · <a href="../../theses/decision-policy-under-revisable-values/">Decision Policy</a></div>
+</main><footer><a href="../../">Home</a> · Exploration · public working draft · 2026-10-09</footer></body></html>
