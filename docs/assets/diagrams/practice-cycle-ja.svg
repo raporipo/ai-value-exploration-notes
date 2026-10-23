@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" role="img" aria-labelledby="02-practice-title 02-practice-desc" lang="ja">
+<title id="02-practice-title">判断を、見直せる実践へ</title><desc id="02-practice-desc">目的・応答態度、世界認識、選択肢と制約を入力に候補計画を比較する。現在行動、訂正経路、見直し条件を含む計画を実行し観測する。関連する変化があれば入力や計画を再評価し、なければ履歴を継承して継続する。これは論理的演繹ではなく意思決定の運用を図示する。</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#80939c"/></marker><marker id="teal-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#227b76"/></marker></defs>
+<rect width="1200" height="800" fill="#fbfcfa"/>
+<g font-family="Hiragino Sans, Noto Sans JP, Yu Gothic, sans-serif" fill="#243746">
+<text x="56" y="42" font-size="13" fill="#526674" text-anchor="start" font-weight="600"><tspan x="56" dy="0">02 / PRACTICE</tspan></text>
+<text x="56" y="91" font-size="32" fill="#243746" text-anchor="start" font-weight="600"><tspan x="56" dy="0">判断を、見直せる実践へ</tspan></text>
+<text x="56" y="128" font-size="17" fill="#526674" text-anchor="start" font-weight="400"><tspan x="56" dy="0">現在の最善判断で行動し、観測と記録を通じて必要な前提を更新する。</tspan></text>
+<rect x="56" y="226" width="248" height="252" rx="15" fill="white" stroke="#cfdbd8" stroke-width="1.5"/>
+<text x="80" y="264" font-size="16" fill="#227b76" text-anchor="start" font-weight="600"><tspan x="80" dy="0">01</tspan></text>
+<text x="80" y="311" font-size="24" fill="#243746" text-anchor="start" font-weight="600"><tspan x="80" dy="0">判断の入力</tspan></text>
+<text x="80" y="359" font-size="15" fill="#243746" text-anchor="start" font-weight="400"><tspan x="80" dy="0">目的・応答態度</tspan><tspan x="80" dy="35">世界認識・因果仮説</tspan><tspan x="80" dy="35">選択肢・資源・制約</tspan></text>
+<path d="M 304 350 H 330" fill="none" stroke="#80939c" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="336" y="226" width="248" height="252" rx="15" fill="white" stroke="#cfdbd8" stroke-width="1.5"/>
+<text x="360" y="264" font-size="16" fill="#227b76" text-anchor="start" font-weight="600"><tspan x="360" dy="0">02</tspan></text>
+<text x="360" y="311" font-size="24" fill="#243746" text-anchor="start" font-weight="600"><tspan x="360" dy="0">候補の比較</tspan></text>
+<text x="360" y="359" font-size="15" fill="#243746" text-anchor="start" font-weight="400"><tspan x="360" dy="0">E・P・Xを組み合わせる</tspan><tspan x="360" dy="35">代替案・不作為と比較</tspan><tspan x="360" dy="35">効果・費用・負担・不可逆性</tspan></text>
+<path d="M 584 350 H 610" fill="none" stroke="#80939c" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="616" y="226" width="248" height="252" rx="15" fill="#edf5f1" stroke="#227b76" stroke-width="1.5"/>
+<text x="640" y="264" font-size="16" fill="#227b76" text-anchor="start" font-weight="600"><tspan x="640" dy="0">03</tspan></text>
+<text x="640" y="311" font-size="24" fill="#243746" text-anchor="start" font-weight="600"><tspan x="640" dy="0">条件付き計画</tspan></text>
+<text x="640" y="359" font-size="15" fill="#243746" text-anchor="start" font-weight="400"><tspan x="640" dy="0">今することを選ぶ</tspan><tspan x="640" dy="35">訂正・退出・復旧の経路</tspan><tspan x="640" dy="35">観測項目・見直し条件</tspan></text>
+<path d="M 864 350 H 890" fill="none" stroke="#80939c" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="896" y="226" width="248" height="252" rx="15" fill="white" stroke="#cfdbd8" stroke-width="1.5"/>
+<text x="920" y="264" font-size="16" fill="#227b76" text-anchor="start" font-weight="600"><tspan x="920" dy="0">04</tspan></text>
+<text x="920" y="311" font-size="24" fill="#243746" text-anchor="start" font-weight="600"><tspan x="920" dy="0">実行・観測</tspan></text>
+<text x="920" y="359" font-size="15" fill="#243746" text-anchor="start" font-weight="400"><tspan x="920" dy="0">行動と結果を記録</tspan><tspan x="920" dy="35">前提の変化を観測</tspan><tspan x="920" dy="35">達成履歴を引き継ぐ</tspan></text>
+<text x="600" y="194" font-size="17" fill="#526674" text-anchor="middle" font-weight="400"><tspan x="600" dy="0">前提を明示する → 比較する → 計画する → 実行する</tspan></text>
+<path d="M 1020 478 V 573 H 180 V 488" fill="none" stroke="#227b76" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#teal-arrow)"/>
+<rect x="286" y="547" width="623" height="54" rx="0" fill="#fbfcfa" stroke="#fbfcfa" stroke-width="1.5"/>
+<text x="600" y="570" font-size="17" fill="#227b76" text-anchor="middle" font-weight="600"><tspan x="600" dy="0">新しい証拠・誤り・実行可能性や価値理解の変化</tspan></text>
+<text x="600" y="596" font-size="15" fill="#526674" text-anchor="middle" font-weight="400"><tspan x="600" dy="0">関連する入力を更新し、候補と計画を再評価する</tspan></text>
+<path d="M 1080 226 V 174 H 1167 V 397 H 1148" fill="none" stroke="#80939c" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)" stroke-dasharray="5 5"/>
+<text x="1009" y="165" font-size="14" fill="#526674" text-anchor="middle" font-weight="400"><tspan x="1009" dy="0">変化なし：継続</tspan></text>
+<rect x="56" y="650" width="1088" height="105" rx="15" fill="#f0f3f1" stroke="#e0e7e2" stroke-width="1.5"/>
+<text x="80" y="683" font-size="15" fill="#227b76" text-anchor="start" font-weight="600"><tspan x="80" dy="0">比較と実行の条件</tspan></text>
+<text x="80" y="714" font-size="17" fill="#243746" text-anchor="start" font-weight="400"><tspan x="80" dy="0">比較できる範囲で評価する。正当化できない精密な点数へ押し込まない。</tspan></text>
+<text x="80" y="741" font-size="17" fill="#243746" text-anchor="start" font-weight="400"><tspan x="80" dy="0">共有資源・制度では、権限・参加・同意・外部性も点検する。</tspan></text>
+</g>
+<metadata>{
+  &quot;format&quot;: &quot;diagram-semantics/v1&quot;,
+  &quot;id&quot;: &quot;practice-cycle&quot;,
+  &quot;notation&quot;: {
+    &quot;relation_tuple&quot;: [
+      &quot;source&quot;,
+      &quot;relation&quot;,
+      &quot;target&quot;
+    ],
+    &quot;transition_tuple&quot;: [
+      &quot;source&quot;,
+      &quot;relation&quot;,
+      &quot;target&quot;,
+      &quot;optional condition&quot;
+    ],
+    &quot;omission&quot;: &quot;Unspecified, not false.&quot;,
+    &quot;judgment_domain&quot;: &quot;Maps a judgment to the domain in which it is made.&quot;,
+    &quot;mutual_revision&quot;: &quot;Listed models are revised in relation to one another.&quot;,
+    &quot;relation_definitions&quot;: {
+      &quot;next&quot;: &quot;Next procedural step, not logical entailment.&quot;,
+      &quot;revises&quot;: &quot;Reassesses or revises the target.&quot;
+    }
+  },
+  &quot;states&quot;: {
+    &quot;INPUT&quot;: [
+      &quot;goals and responsiveness&quot;,
+      &quot;worldviews and causal hypotheses&quot;,
+      &quot;options, resources, and constraints&quot;
+    ],
+    &quot;COMPARE&quot;: [
+      &quot;combine E, P, and X&quot;,
+      &quot;compare alternatives and inaction&quot;,
+      &quot;assess effects, costs, burdens, and irreversibility&quot;
+    ],
+    &quot;PLAN&quot;: [
+      &quot;select present action&quot;,
+      &quot;preserve routes for revision, exit, and recovery&quot;,
+      &quot;specify observations and review triggers&quot;
+    ],
+    &quot;ACT&quot;: [
+      &quot;act, record outcomes, and monitor premises&quot;,
+      &quot;retain achievement history&quot;
+    ]
+  },
+  &quot;transitions&quot;: [
+    [
+      &quot;INPUT&quot;,
+      &quot;next&quot;,
+      &quot;COMPARE&quot;
+    ],
+    [
+      &quot;COMPARE&quot;,
+      &quot;next&quot;,
+      &quot;PLAN&quot;
+    ],
+    [
+      &quot;PLAN&quot;,
+      &quot;next&quot;,
+      &quot;ACT&quot;
+    ],
+    [
+      &quot;ACT&quot;,
+      &quot;revises&quot;,
+      &quot;INPUT&quot;,
+      &quot;relevant evidence, error, or change&quot;
+    ],
+    [
+      &quot;ACT&quot;,
+      &quot;next&quot;,
+      &quot;ACT&quot;,
+      &quot;no relevant change&quot;
+    ]
+  ],
+  &quot;constraints&quot;: [
+    &quot;Transitions describe a revisable procedure, not logical entailments.&quot;,
+    &quot;Use only justified comparisons and numerical precision.&quot;,
+    &quot;Do not reset history and recount an achieved benefit as new.&quot;,
+    &quot;Shared decisions also require examination of authority, participation, consent, and externalities.&quot;
+  ]
+}</metadata>
+</svg>

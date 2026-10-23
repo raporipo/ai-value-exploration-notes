@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" role="img" aria-labelledby="02-practice-title 02-practice-desc" lang="en">
+<title id="02-practice-title">From judgment to revisable action</title><desc id="02-practice-desc">Goals and responsiveness, worldviews, and feasible options and constraints inform comparison. The plan includes present action, routes for revision, and review triggers. Act, record, and observe; revise relevant inputs when evidence, errors, or conditions change. Otherwise continue while retaining achievement history. This is a procedural flow, not logical entailment.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#80939c" /></marker><marker id="teal-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#227b76" /></marker></defs>
+<rect width="1200" height="800" fill="#fbfcfa" />
+<g font-family="Arial, Helvetica, sans-serif" fill="#243746">
+<text x="56" y="42" font-size="13.0" fill="#526674" text-anchor="start" font-weight="600"><tspan x="56" dy="0">02 / PRACTICE</tspan></text>
+<text x="56" y="91" font-size="32.0" fill="#243746" text-anchor="start" font-weight="600"><tspan x="56" dy="0">From judgment to revisable action</tspan></text>
+<text x="56" y="128" font-size="17.0" fill="#526674" text-anchor="start" font-weight="400"><tspan x="56" dy="0">Act on the best current judgment; use observation and records to revise relevant premises.</tspan></text>
+<rect x="56" y="226" width="248" height="252" rx="15" fill="white" stroke="#cfdbd8" stroke-width="1.5" />
+<text x="80" y="264" font-size="16.0" fill="#227b76" text-anchor="start" font-weight="600"><tspan x="80" dy="0">01</tspan></text>
+<text x="80" y="311" font-size="22" fill="#243746" text-anchor="start" font-weight="600"><tspan x="80" dy="0">Decision inputs</tspan></text>
+<text x="80" y="359" font-size="14" fill="#243746" text-anchor="start" font-weight="400"><tspan x="80" dy="0">Goals and responsiveness</tspan><tspan x="80" dy="23">Worldviews and</tspan><tspan x="80" dy="23">causal hypotheses</tspan><tspan x="80" dy="23">Options, resources,</tspan><tspan x="80" dy="23">and constraints</tspan></text>
+<path d="M 304 350 H 330" fill="none" stroke="#80939c" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)" />
+<rect x="336" y="226" width="248" height="252" rx="15" fill="white" stroke="#cfdbd8" stroke-width="1.5" />
+<text x="360" y="264" font-size="16.0" fill="#227b76" text-anchor="start" font-weight="600"><tspan x="360" dy="0">02</tspan></text>
+<text x="360" y="311" font-size="22" fill="#243746" text-anchor="start" font-weight="600"><tspan x="360" dy="0">Compare options</tspan></text>
+<text x="360" y="359" font-size="14" fill="#243746" text-anchor="start" font-weight="400"><tspan x="360" dy="0">Combine E, P, and X</tspan><tspan x="360" dy="23">Compare alternatives</tspan><tspan x="360" dy="23">and inaction</tspan><tspan x="360" dy="23">Effects, costs, burdens,</tspan><tspan x="360" dy="23">and irreversibility</tspan></text>
+<path d="M 584 350 H 610" fill="none" stroke="#80939c" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)" />
+<rect x="616" y="226" width="248" height="252" rx="15" fill="#edf5f1" stroke="#227b76" stroke-width="1.5" />
+<text x="640" y="264" font-size="16.0" fill="#227b76" text-anchor="start" font-weight="600"><tspan x="640" dy="0">03</tspan></text>
+<text x="640" y="311" font-size="22" fill="#243746" text-anchor="start" font-weight="600"><tspan x="640" dy="0">Conditional plan</tspan></text>
+<text x="640" y="359" font-size="14" fill="#243746" text-anchor="start" font-weight="400"><tspan x="640" dy="0">Choose what to do now</tspan><tspan x="640" dy="23">Routes for revision,</tspan><tspan x="640" dy="23">exit, and recovery</tspan><tspan x="640" dy="23">Monitoring and</tspan><tspan x="640" dy="23">review triggers</tspan></text>
+<path d="M 864 350 H 890" fill="none" stroke="#80939c" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)" />
+<rect x="896" y="226" width="248" height="252" rx="15" fill="white" stroke="#cfdbd8" stroke-width="1.5" />
+<text x="920" y="264" font-size="16.0" fill="#227b76" text-anchor="start" font-weight="600"><tspan x="920" dy="0">04</tspan></text>
+<text x="920" y="311" font-size="22" fill="#243746" text-anchor="start" font-weight="600"><tspan x="920" dy="0">Act and observe</tspan></text>
+<text x="920" y="359" font-size="14" fill="#243746" text-anchor="start" font-weight="400"><tspan x="920" dy="0">Record actions and outcomes</tspan><tspan x="920" dy="23">Monitor changes in premises</tspan><tspan x="920" dy="23">Retain the record</tspan><tspan x="920" dy="23">of achievements</tspan></text>
+<text x="600" y="194" font-size="17.0" fill="#526674" text-anchor="middle" font-weight="400"><tspan x="600" dy="0">State premises → Compare → Plan → Act</tspan></text>
+<path d="M 1020 478 V 573 H 180 V 488" fill="none" stroke="#227b76" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#teal-arrow)" />
+<rect x="286" y="547" width="623" height="54" rx="0" fill="#fbfcfa" stroke="#fbfcfa" stroke-width="1.5" />
+<text x="600" y="570" font-size="16" fill="#227b76" text-anchor="middle" font-weight="600"><tspan x="600" dy="0">New evidence, errors, or changes in feasibility or value understanding</tspan></text>
+<text x="600" y="596" font-size="15.0" fill="#526674" text-anchor="middle" font-weight="400"><tspan x="600" dy="0">Update relevant inputs; reassess options and the plan</tspan></text>
+<path d="M 1080 226 V 174 H 1167 V 397 H 1148" fill="none" stroke="#80939c" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)" stroke-dasharray="5 5" />
+<text x="1009" y="165" font-size="14.0" fill="#526674" text-anchor="middle" font-weight="400"><tspan x="1009" dy="0">No change: continue</tspan></text>
+<rect x="56" y="650" width="1088" height="105" rx="15" fill="#f0f3f1" stroke="#e0e7e2" stroke-width="1.5" />
+<text x="80" y="683" font-size="15.0" fill="#227b76" text-anchor="start" font-weight="600"><tspan x="80" dy="0">CONDITIONS FOR COMPARISON AND ACTION</tspan></text>
+<text x="80" y="714" font-size="17.0" fill="#243746" text-anchor="start" font-weight="400"><tspan x="80" dy="0">Evaluate where comparison is justified. Do not force judgments into unjustifiably precise scores.</tspan></text>
+<text x="80" y="741" font-size="17.0" fill="#243746" text-anchor="start" font-weight="400"><tspan x="80" dy="0">For shared resources and institutions, also examine authority, participation, consent, and externalities.</tspan></text>
+</g>
+<metadata>{
+  &quot;format&quot;: &quot;diagram-semantics/v1&quot;,
+  &quot;id&quot;: &quot;practice-cycle&quot;,
+  &quot;notation&quot;: {
+    &quot;relation_tuple&quot;: [
+      &quot;source&quot;,
+      &quot;relation&quot;,
+      &quot;target&quot;
+    ],
+    &quot;transition_tuple&quot;: [
+      &quot;source&quot;,
+      &quot;relation&quot;,
+      &quot;target&quot;,
+      &quot;optional condition&quot;
+    ],
+    &quot;omission&quot;: &quot;Unspecified, not false.&quot;,
+    &quot;judgment_domain&quot;: &quot;Maps a judgment to the domain in which it is made.&quot;,
+    &quot;mutual_revision&quot;: &quot;Listed models are revised in relation to one another.&quot;,
+    &quot;relation_definitions&quot;: {
+      &quot;next&quot;: &quot;Next procedural step, not logical entailment.&quot;,
+      &quot;revises&quot;: &quot;Reassesses or revises the target.&quot;
+    }
+  },
+  &quot;states&quot;: {
+    &quot;INPUT&quot;: [
+      &quot;goals and responsiveness&quot;,
+      &quot;worldviews and causal hypotheses&quot;,
+      &quot;options, resources, and constraints&quot;
+    ],
+    &quot;COMPARE&quot;: [
+      &quot;combine E, P, and X&quot;,
+      &quot;compare alternatives and inaction&quot;,
+      &quot;assess effects, costs, burdens, and irreversibility&quot;
+    ],
+    &quot;PLAN&quot;: [
+      &quot;select present action&quot;,
+      &quot;preserve routes for revision, exit, and recovery&quot;,
+      &quot;specify observations and review triggers&quot;
+    ],
+    &quot;ACT&quot;: [
+      &quot;act, record outcomes, and monitor premises&quot;,
+      &quot;retain achievement history&quot;
+    ]
+  },
+  &quot;transitions&quot;: [
+    [
+      &quot;INPUT&quot;,
+      &quot;next&quot;,
+      &quot;COMPARE&quot;
+    ],
+    [
+      &quot;COMPARE&quot;,
+      &quot;next&quot;,
+      &quot;PLAN&quot;
+    ],
+    [
+      &quot;PLAN&quot;,
+      &quot;next&quot;,
+      &quot;ACT&quot;
+    ],
+    [
+      &quot;ACT&quot;,
+      &quot;revises&quot;,
+      &quot;INPUT&quot;,
+      &quot;relevant evidence, error, or change&quot;
+    ],
+    [
+      &quot;ACT&quot;,
+      &quot;next&quot;,
+      &quot;ACT&quot;,
+      &quot;no relevant change&quot;
+    ]
+  ],
+  &quot;constraints&quot;: [
+    &quot;Transitions describe a revisable procedure, not logical entailments.&quot;,
+    &quot;Use only justified comparisons and numerical precision.&quot;,
+    &quot;Do not reset history and recount an achieved benefit as new.&quot;,
+    &quot;Shared decisions also require examination of authority, participation, consent, and externalities.&quot;
+  ]
+}</metadata>
+</svg>

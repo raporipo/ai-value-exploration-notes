@@ -85,6 +85,97 @@
 <p>以下は、<a href="../core/">Core</a>でいう主体側の橋を持つ場合の実践方針である。その橋には、「自分の目的がよりよく正当化されるなら、それに応じて選択や目的を改訂したい」という条件付き応答性や、「よりよく知らされた自分が明白な誤りと評価する不可逆的選択を避けたい」という反省的誤り回避がありうる。</p>
 <p>価値不確実性だけから、探索や保存の義務が自動的に生じるとは主張しない。また、出発点となる主体は、客観的な価値の実在を確定していない。誤謬論の下でも、現在の選好、他者への関心、協力や合意に基づく実践は残りうる。</p>
 <p>本稿では、何を信じ、何を実現したいかという認識と応答態度から、世界についての見通し、実行可能な選択肢、費用と危険を加えて、現在の方策へ進む。理論的な根拠は<a href="../theses/decision-policy-under-revisable-values/">意思決定論的方針</a>、E/P/Xの区別は<a href="../theses/inquiry-allocation-under-uncertainty/">未決着下の探索配分</a>、集約モデルの形式と限界は<a href="../explorations/reflective-aggregation/">主体側の応答に基づく反省的集約</a>で扱う。</p>
+<!-- diagram-practice-cycle:start -->
+<figure class="concept-diagram" id="diagram-practice-cycle">
+<a class="concept-diagram-image" href="../assets/diagrams/practice-cycle-ja.svg"><img src="../assets/diagrams/practice-cycle-ja.svg" width="1200" height="800" loading="lazy" decoding="async" alt="判断を、見直せる実践へ" aria-describedby="diagram-practice-cycle-caption"/></a>
+<figcaption id="diagram-practice-cycle-caption">現在の最善判断で行動し、観測・記録を通じて必要な前提を更新する。 <a href="../assets/diagrams/practice-cycle-ja.svg">図を拡大して読む（SVG）</a></figcaption>
+<details class="concept-diagram-description"><summary>図の内容を文章で読む</summary>
+<p>目的と応答態度、世界認識と因果仮説、選択肢・資源・制約を入力とする。E・P・Xを組み合わせた候補を、代替案と不作為の効果、費用、負担、不可逆性に照らして比較する。</p><p>計画には今すること、訂正・退出・復旧の経路、観測項目、見直し条件を含める。実行して結果を記録し、前提の変化を観測する。</p><p>関連する新しい証拠、誤り、実行可能性や価値理解の変化があれば入力を更新して比較・計画に戻る。なければ履歴を引き継いで継続する。達成済みの便益を新規の便益として数え直さない。</p><p>矢印は手続きであり論理的含意ではない。比較・数値化には正当化できる範囲を用い、共有資源では権限・参加・同意・外部性も点検する。</p>
+</details>
+<script type="application/json" id="diagram-practice-cycle-semantics">
+{
+  "format": "diagram-semantics/v1",
+  "id": "practice-cycle",
+  "notation": {
+    "relation_tuple": [
+      "source",
+      "relation",
+      "target"
+    ],
+    "transition_tuple": [
+      "source",
+      "relation",
+      "target",
+      "optional condition"
+    ],
+    "omission": "Unspecified, not false.",
+    "judgment_domain": "Maps a judgment to the domain in which it is made.",
+    "mutual_revision": "Listed models are revised in relation to one another.",
+    "relation_definitions": {
+      "next": "Next procedural step, not logical entailment.",
+      "revises": "Reassesses or revises the target."
+    }
+  },
+  "states": {
+    "INPUT": [
+      "goals and responsiveness",
+      "worldviews and causal hypotheses",
+      "options, resources, and constraints"
+    ],
+    "COMPARE": [
+      "combine E, P, and X",
+      "compare alternatives and inaction",
+      "assess effects, costs, burdens, and irreversibility"
+    ],
+    "PLAN": [
+      "select present action",
+      "preserve routes for revision, exit, and recovery",
+      "specify observations and review triggers"
+    ],
+    "ACT": [
+      "act, record outcomes, and monitor premises",
+      "retain achievement history"
+    ]
+  },
+  "transitions": [
+    [
+      "INPUT",
+      "next",
+      "COMPARE"
+    ],
+    [
+      "COMPARE",
+      "next",
+      "PLAN"
+    ],
+    [
+      "PLAN",
+      "next",
+      "ACT"
+    ],
+    [
+      "ACT",
+      "revises",
+      "INPUT",
+      "relevant evidence, error, or change"
+    ],
+    [
+      "ACT",
+      "next",
+      "ACT",
+      "no relevant change"
+    ]
+  ],
+  "constraints": [
+    "Transitions describe a revisable procedure, not logical entailments.",
+    "Use only justified comparisons and numerical precision.",
+    "Do not reset history and recount an achieved benefit as new.",
+    "Shared decisions also require examination of authority, participation, consent, and externalities."
+  ]
+}
+</script>
+</figure>
+<!-- diagram-practice-cycle:end -->
 <h2 id="section-2">2. 現在の最善判断に従い、不可逆な閉鎖には追加の理由を求める</h2>
 <h3>確実性を待たずに行動する</h3>
 <p>物理世界、他者、科学的知見、現在の倫理的判断が最善説明として十分に支持されるなら、それに応じて強く行動してよい。可謬性は、すべての判断を弱く扱う理由ではない。</p>
@@ -345,4 +436,5 @@
 </details>
 <div class="related"><strong>Related:</strong> <a href="../core/">Core</a> · <a href="../theses/stopping-condition/">価値探索の停止条件</a> · <a href="../theses/inquiry-allocation-under-uncertainty/">未決着下の探索配分</a> · <a href="../explorations/infinite-ethics/">無限倫理</a> · <a href="../theses/reflective-uncertainty-irreversible-commitment/">反省的不確実性</a> · <a href="../explorations/moral-motivation-internalism-externalism/">規範判断と動機</a> · <a href="../explorations/alignment-value-lockin/">Alignmentと価値ロックイン</a> · <a href="../explorations/meta-goal-community/">メタ目的共同体</a></div>
 </main><footer><a href="../">Home</a> · Practice v0.14 · 2026-10-16</footer></body></html>
+
 

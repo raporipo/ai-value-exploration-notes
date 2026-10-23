@@ -116,6 +116,100 @@
 <p>この批判は受け入れる。非概念的な生起から「ゆえに外界がある」「ゆえに物理主義が正しい」という理由の矢印を直接引かない。外界や物理主義の正当化は、整合性、説明力、予測、他の証拠との関係など、推論の層で行われる。</p>
 <div class="claim"><strong>Sellarsへの中心応答：</strong> 最小基底は、それ自体が単独で不可謬な正当化命題でも、単独で上位信念へ理由を供給するsourceでもない。ここでの「基底」は、<strong>推論と正当化の活動がすでに何らかの仕方で生起し、拘束されているという認識的限界点</strong>を指す。</div>
 <p>さらに、直接的経験によってその対象の究極的カテゴリーまで改訂不能に知られると考える「categorial Given」の問題もある。しかし第4節のカテゴリー中立性は、この反論への後付けの逃げではない。本テーゼ自身の最小化から、意識・物質・qualia・process・主体などのカテゴリーを最初から固定しない、という結論が先に出る。</p>
+<!-- diagram-epistemic-minimum:start -->
+<figure class="concept-diagram" id="diagram-epistemic-minimum">
+<a class="concept-diagram-image" href="../../assets/diagrams/epistemic-minimum-ja.svg"><img src="../../assets/diagrams/epistemic-minimum-ja.svg" width="1200" height="1340" loading="lazy" decoding="async" alt="生起・関係構造・反省的な最小化" aria-describedby="diagram-epistemic-minimum-caption"/></a>
+<figcaption id="diagram-epistemic-minimum-caption">推論に必要な関係構造と、その推論による最小点の同定を区別する。 <a href="../../assets/diagrams/epistemic-minimum-ja.svg">図を拡大して読む（SVG）</a></figcaption>
+<details class="concept-diagram-description"><summary>図の内容を文章で読む</summary>
+<p>中央を離した七枚の縦長フレームは瞬間の模式表現である。フレーム間の結びつきは差異・保持・相互拘束を表す。その関係構造から推論の領域へ必要条件の矢印が向く。関係構造があるだけで推論が成立するという十分条件は主張しない。</p><p>概念・推論・正当化の領域では、証拠、整合性、説明力、予測、介入成功を用いて世界像・主体像・価値像を支持・改訂する。三者は相互に改訂される。</p><p>反省的な最小化によって現在的生起を認識的限界点として捉え直す。「それが最小点である」というメタ判断も推論の領域に属し、生起そのものとは区別する。最小点だけから世界像・主体像・価値像を正当化しない。</p><p>生起のカテゴリー・実現基盤・主体境界は未指定である。左から右への時間軸は推論的モデル内の模式表現であり、最小点から時間が直接確定するとはしない。七枚は独立した最小実体の数ではなく、線の太さや距離も結びつきの強さの定量値ではない。</p>
+</details>
+<script type="application/json" id="diagram-epistemic-minimum-semantics">
+{
+  "format": "diagram-semantics/v1",
+  "id": "epistemic-minimum",
+  "notation": {
+    "relation_tuple": [
+      "source",
+      "relation",
+      "target"
+    ],
+    "transition_tuple": [
+      "source",
+      "relation",
+      "target",
+      "optional condition"
+    ],
+    "omission": "Unspecified, not false.",
+    "judgment_domain": "Maps a judgment to the domain in which it is made.",
+    "mutual_revision": "Listed models are revised in relation to one another.",
+    "relation_definitions": {
+      "requires": "The target is necessary for the source, not necessarily sufficient.",
+      "supports_or_revises": "Supports or revises through reasons and evidence.",
+      "reflectively_identifies": "Identifies the target through reflective judgment."
+    }
+  },
+  "nodes": {
+    "O": "Present occurrence or constraint",
+    "R": "Relational structure: difference, retention, mutual constraint",
+    "I": "Conceptual inference and justification",
+    "W": "World model",
+    "S": "Subject model",
+    "V": "Value model",
+    "M": "Meta-judgment identifying O as the epistemic minimum"
+  },
+  "relations": [
+    [
+      "I",
+      "requires",
+      "R"
+    ],
+    [
+      "I",
+      "supports_or_revises",
+      "W"
+    ],
+    [
+      "I",
+      "supports_or_revises",
+      "S"
+    ],
+    [
+      "I",
+      "supports_or_revises",
+      "V"
+    ],
+    [
+      "M",
+      "reflectively_identifies",
+      "O"
+    ]
+  ],
+  "judgment_domain": {
+    "M": "I"
+  },
+  "mutual_revision": [
+    "W",
+    "S",
+    "V"
+  ],
+  "visual_encoding": {
+    "frames": "Schematic moments; the central frame highlights O",
+    "connections": "Depict R; nearby connections are emphasized",
+    "time_arrow": "Left-to-right time within an inferential model"
+  },
+  "constraints": [
+    "R is necessary for I; sufficiency is not asserted.",
+    "O and the judgment M about O are distinct.",
+    "O alone does not justify W, S, or V.",
+    "The category, substrate, and subject boundary of O remain unspecified.",
+    "Seven frames do not assert seven independent minimal entities.",
+    "O does not directly establish the temporal model.",
+    "Visual distance and line thickness encode no quantitative strength."
+  ]
+}
+</script>
+</figure>
+<!-- diagram-epistemic-minimum:end -->
 <h2>8. 主体性も同じく固定しない――for-me-nessとminimal self</h2>
 <p>Dan Zahaviらのminimal experiential self論では、経験には反省以前から一人称的な与えられ方、すなわち <em>for-me-ness</em> が内在し、その一人称的様態そのものをminimal selfと呼ぶ。この立場は、経験とは別個に存在する不変の主体実体を置くものではない。そのため「物理主義なら魂が消える」というだけでは反論にならない。</p>
 <p>しかし、少なくとも三つの主張は区別できる。第一に、<strong>現象的主張</strong>――現在の経験には一人称的な組織化がある。第二に、<strong>個体化主張</strong>――その一人称性によって経験は一つのminimal subjectに属するものとして区切られる。第三に、<strong>存在論的主張</strong>――そのsubjectには世界の因果過程の中で非恣意的な「ここまでが私」という境界がある。</p>
