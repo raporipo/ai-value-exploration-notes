@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1150" width="1200" height="1150" role="img" aria-labelledby="01-epx-title 01-epx-desc" lang="ja">
+<title id="01-epx-title">E・P・Xを支える判断の構造</title><desc id="01-epx-desc">認識論的支持、意思決定論的支持、主体側の選好・応答態度を入力として、E・P・Xの配分と計画を検討する。三者は相互に関係し、独立した十分条件ではない。E・P・Xは重なりうる機能であり、X内部の評価重みは資源配分率ではない。</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#80939c"/></marker><marker id="teal-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#227b76"/></marker></defs>
+<rect width="1200" height="1150" fill="#fbfcfa"/>
+<g font-family="Hiragino Sans, Noto Sans JP, Yu Gothic, sans-serif" fill="#243746">
+<text x="56" y="42" font-size="13" fill="#526674" text-anchor="start" font-weight="600"><tspan x="56" dy="0">01 / EPX</tspan></text>
+<text x="56" y="91" font-size="32" fill="#243746" text-anchor="start" font-weight="600"><tspan x="56" dy="0">E・P・Xを支える判断の構造</tspan></text>
+<text x="56" y="128" font-size="17" fill="#526674" text-anchor="start" font-weight="400"><tspan x="56" dy="0">三つの入力を区別し、探索・保存・現在の実践を一つの計画へ組み合わせる。</tspan></text>
+<rect x="56" y="175" width="344" height="143" rx="15" fill="#f0f3f1" stroke="#e1e7e3" stroke-width="1.5"/>
+<text x="78" y="204" font-size="13" fill="#526674" text-anchor="start" font-weight="600"><tspan x="78" dy="0">前提・検討材料</tspan></text>
+<text x="78" y="237" font-size="18" fill="#243746" text-anchor="start" font-weight="400"><tspan x="78" dy="0">証拠・推論</tspan><tspan x="78" dy="28">仮説空間の不完全性</tspan><tspan x="78" dy="28">未概念化の可能性</tspan></text>
+<path d="M 228 318 V 341" fill="none" stroke="#80939c" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="56" y="345" width="344" height="93" rx="15" fill="white" stroke="#476d9b" stroke-width="1.5"/>
+<text x="228" y="382" font-size="21" fill="#476d9b" text-anchor="middle" font-weight="600"><tspan x="228" dy="0">認識論的支持</tspan></text>
+<text x="228" y="413" font-size="16" fill="#526674" text-anchor="middle" font-weight="400"><tspan x="228" dy="0">何を、どの程度信じるか</tspan></text>
+<path d="M 228 438 V 469 H 600" fill="none" stroke="#80939c" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="428" y="175" width="344" height="143" rx="15" fill="#f0f3f1" stroke="#e1e7e3" stroke-width="1.5"/>
+<text x="450" y="204" font-size="13" fill="#526674" text-anchor="start" font-weight="600"><tspan x="450" dy="0">前提・検討材料</tspan></text>
+<text x="450" y="237" font-size="18" fill="#243746" text-anchor="start" font-weight="400"><tspan x="450" dy="0">比較可能性・情報価値</tspan><tspan x="450" dy="28">不可逆性・危険</tspan><tspan x="450" dy="28">機会費用・保存費用</tspan></text>
+<path d="M 600 318 V 341" fill="none" stroke="#80939c" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="428" y="345" width="344" height="93" rx="15" fill="white" stroke="#227b76" stroke-width="1.5"/>
+<text x="600" y="382" font-size="21" fill="#227b76" text-anchor="middle" font-weight="600"><tspan x="600" dy="0">意思決定論的支持</tspan></text>
+<text x="600" y="413" font-size="16" fill="#526674" text-anchor="middle" font-weight="400"><tspan x="600" dy="0">どの選択を支持できるか</tspan></text>
+<path d="M 600 438 V 469 H 600" fill="none" stroke="#80939c" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="800" y="175" width="344" height="143" rx="15" fill="#f0f3f1" stroke="#e1e7e3" stroke-width="1.5"/>
+<text x="822" y="204" font-size="13" fill="#526674" text-anchor="start" font-weight="600"><tspan x="822" dy="0">前提・検討材料</tspan></text>
+<text x="822" y="237" font-size="18" fill="#243746" text-anchor="start" font-weight="400"><tspan x="822" dy="0">現在の目的・選好・関心</tspan><tspan x="822" dy="28">正当化への条件付き応答性</tspan><tspan x="822" dy="28">反省的誤り回避</tspan></text>
+<path d="M 972 318 V 341" fill="none" stroke="#80939c" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="800" y="345" width="344" height="93" rx="15" fill="white" stroke="#9a7134" stroke-width="1.5"/>
+<text x="972" y="382" font-size="21" fill="#9a7134" text-anchor="middle" font-weight="600"><tspan x="972" dy="0">主体側の選好・応答態度</tspan></text>
+<text x="972" y="413" font-size="16" fill="#526674" text-anchor="middle" font-weight="400"><tspan x="972" dy="0">何を望み、何に応答したいか</tspan></text>
+<path d="M 972 438 V 469 H 600" fill="none" stroke="#80939c" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 600 469 V 501" fill="none" stroke="#80939c" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)"/>
+<text x="578" y="494" font-size="13" fill="#526674" text-anchor="end" font-weight="400"><tspan x="578" dy="0">三者を照らし合わせる</tspan></text>
+<rect x="354" y="510" width="492" height="82" rx="15" fill="#eaf3ef" stroke="#227b76" stroke-width="1.5"/>
+<text x="600" y="544" font-size="25" fill="#227b76" text-anchor="middle" font-weight="600"><tspan x="600" dy="0">反省的な配分・計画</tspan></text>
+<text x="600" y="574" font-size="17" fill="#526674" text-anchor="middle" font-weight="400"><tspan x="600" dy="0">何を今調べ、何を残し、何を実行するか</tspan></text>
+<path d="M 600 592 V 623" fill="none" stroke="#80939c" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 264 623 H 936" fill="none" stroke="#80939c" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 264 623 V 650" fill="none" stroke="#80939c" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="120" y="655" width="288" height="142" rx="15" fill="white" stroke="#476d9b" stroke-width="1.5"/>
+<text x="264" y="701" font-size="33" fill="#476d9b" text-anchor="middle" font-weight="600"><tspan x="264" dy="0">E</tspan></text>
+<text x="264" y="739" font-size="21" fill="#476d9b" text-anchor="middle" font-weight="600"><tspan x="264" dy="0">能動探索</tspan></text>
+<text x="264" y="774" font-size="15" fill="#526674" text-anchor="middle" font-weight="400"><tspan x="264" dy="0">今、調べる</tspan></text>
+<path d="M 600 623 V 650" fill="none" stroke="#80939c" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="456" y="655" width="288" height="142" rx="15" fill="white" stroke="#227b76" stroke-width="1.5"/>
+<text x="600" y="701" font-size="33" fill="#227b76" text-anchor="middle" font-weight="600"><tspan x="600" dy="0">P</tspan></text>
+<text x="600" y="739" font-size="21" fill="#227b76" text-anchor="middle" font-weight="600"><tspan x="600" dy="0">探索可能性保存</tspan></text>
+<text x="600" y="774" font-size="15" fill="#526674" text-anchor="middle" font-weight="400"><tspan x="600" dy="0">後で調べ、変更できる条件を残す</tspan></text>
+<path d="M 936 623 V 650" fill="none" stroke="#80939c" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="792" y="655" width="288" height="142" rx="15" fill="white" stroke="#9a7134" stroke-width="1.5"/>
+<text x="936" y="701" font-size="33" fill="#9a7134" text-anchor="middle" font-weight="600"><tspan x="936" dy="0">X</tspan></text>
+<text x="936" y="739" font-size="21" fill="#9a7134" text-anchor="middle" font-weight="600"><tspan x="936" dy="0">現在の実践</tspan></text>
+<text x="936" y="774" font-size="15" fill="#526674" text-anchor="middle" font-weight="400"><tspan x="936" dy="0">現在の目的・価値判断で行動する</tspan></text>
+<path d="M 936 797 V 823 H 600 V 851" fill="none" stroke="#9a7134" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="804" y="846" font-size="13" fill="#9a7134" text-anchor="middle" font-weight="400"><tspan x="804" dy="0">X内部を展開</tspan></text>
+<rect x="224" y="861" width="752" height="171" rx="15" fill="#fbf7ef" stroke="#d8c8a8" stroke-width="1.5"/>
+<text x="600" y="896" font-size="21" fill="#9a7134" text-anchor="middle" font-weight="600"><tspan x="600" dy="0">各仮説の下で承認する実践基準</tspan></text>
+<text x="600" y="932" font-size="17" fill="#243746" text-anchor="middle" font-weight="400"><tspan x="600" dy="0">選好・関心・協力　／　主体の存在を条件とする福利重視</tspan><tspan x="600" dy="29">契約主義　／　義務論　／　総量功利主義　／　徳倫理　など</tspan></text>
+<text x="600" y="1007" font-size="14" fill="#526674" text-anchor="middle" font-weight="400"><tspan x="600" dy="0">例示であり、排他的・網羅的な学説分類ではない</tspan></text>
+<text x="600" y="1071" font-size="16" fill="#526674" text-anchor="middle" font-weight="400"><tspan x="600" dy="0">同じ活動がE・P・Xに寄与しうる。箱の面積は配分率を表さない。</tspan></text>
+<text x="600" y="1101" font-size="16" fill="#243746" text-anchor="middle" font-weight="600"><tspan x="600" dy="0">認識的支持 ≠ 実践基準への評価重み ≠ 資源配分率</tspan></text>
+</g>
+<metadata>{
+  &quot;format&quot;: &quot;diagram-semantics/v1&quot;,
+  &quot;id&quot;: &quot;epx-structure&quot;,
+  &quot;notation&quot;: {
+    &quot;relation_tuple&quot;: [
+      &quot;source&quot;,
+      &quot;relation&quot;,
+      &quot;target&quot;
+    ],
+    &quot;transition_tuple&quot;: [
+      &quot;source&quot;,
+      &quot;relation&quot;,
+      &quot;target&quot;,
+      &quot;optional condition&quot;
+    ],
+    &quot;omission&quot;: &quot;Unspecified, not false.&quot;,
+    &quot;judgment_domain&quot;: &quot;Maps a judgment to the domain in which it is made.&quot;,
+    &quot;mutual_revision&quot;: &quot;Listed models are revised in relation to one another.&quot;,
+    &quot;relation_definitions&quot;: {
+      &quot;informs&quot;: &quot;Provides input to a judgment; does not determine it alone.&quot;,
+      &quot;coordinates&quot;: &quot;Combines functions within one plan.&quot;,
+      &quot;uses_criteria&quot;: &quot;Uses practical criteria in evaluation.&quot;
+    }
+  },
+  &quot;nodes&quot;: {
+    &quot;K&quot;: &quot;Epistemic support: what to believe and how strongly&quot;,
+    &quot;D&quot;: &quot;Decision-theoretic support: which choices are justified&quot;,
+    &quot;A&quot;: &quot;Agent preferences and responsiveness&quot;,
+    &quot;PLAN&quot;: &quot;Reflective allocation and planning&quot;,
+    &quot;E&quot;: &quot;Active inquiry&quot;,
+    &quot;P&quot;: &quot;Preservation of future inquiry and revision capacities&quot;,
+    &quot;X&quot;: &quot;Present practice under current goals and value judgments&quot;,
+    &quot;XC&quot;: &quot;Practical criteria endorsed under represented hypotheses&quot;
+  },
+  &quot;considerations&quot;: {
+    &quot;K&quot;: [
+      &quot;evidence and reasoning&quot;,
+      &quot;incomplete hypothesis space&quot;,
+      &quot;unconceptualized possibilities&quot;
+    ],
+    &quot;D&quot;: [
+      &quot;comparability and value of information&quot;,
+      &quot;irreversibility and risk&quot;,
+      &quot;opportunity and preservation costs&quot;
+    ],
+    &quot;A&quot;: [
+      &quot;current goals, preferences, and concerns&quot;,
+      &quot;conditional responsiveness to justification&quot;,
+      &quot;avoidance of reflective error&quot;
+    ]
+  },
+  &quot;relations&quot;: [
+    [
+      &quot;K&quot;,
+      &quot;informs&quot;,
+      &quot;PLAN&quot;
+    ],
+    [
+      &quot;D&quot;,
+      &quot;informs&quot;,
+      &quot;PLAN&quot;
+    ],
+    [
+      &quot;A&quot;,
+      &quot;informs&quot;,
+      &quot;PLAN&quot;
+    ],
+    [
+      &quot;PLAN&quot;,
+      &quot;coordinates&quot;,
+      &quot;E&quot;
+    ],
+    [
+      &quot;PLAN&quot;,
+      &quot;coordinates&quot;,
+      &quot;P&quot;
+    ],
+    [
+      &quot;PLAN&quot;,
+      &quot;coordinates&quot;,
+      &quot;X&quot;
+    ],
+    [
+      &quot;X&quot;,
+      &quot;uses_criteria&quot;,
+      &quot;XC&quot;
+    ]
+  ],
+  &quot;criteria_examples&quot;: [
+    &quot;preferences, concerns, and cooperation&quot;,
+    &quot;welfare conditional on subjects existing&quot;,
+    &quot;contractualism&quot;,
+    &quot;deontology&quot;,
+    &quot;total utilitarianism&quot;,
+    &quot;virtue ethics&quot;
+  ],
+  &quot;constraints&quot;: [
+    &quot;E, P, and X are overlapping functions, not exclusive action classes.&quot;,
+    &quot;Epistemic support, evaluation weights, and resource shares are distinct.&quot;,
+    &quot;Unconceptualized possibilities supply no determinate action criterion.&quot;,
+    &quot;Criteria examples are neither exhaustive nor mutually exclusive.&quot;,
+    &quot;Box size encodes no allocation ratio.&quot;,
+    &quot;Uncertainty alone does not entail motivation for inquiry or preservation.&quot;
+  ]
+}</metadata>
+</svg>

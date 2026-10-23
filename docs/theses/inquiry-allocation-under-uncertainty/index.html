@@ -90,6 +90,122 @@
 <h2>4. Xは残る――ただしXも一枚岩ではない</h2><p>目的正当化が未解決でも、現在の最善判断に従って行動する必要は消えない。苦痛軽減、安全確保、社会維持を待つことにも費用がある。本稿は「価値構造が確定するまで生産や実践を停止せよ」と要求しない。</p><p>現在の倫理理論や価値概念が将来も同じ形で残る保証がなくても、それらは現在の証拠のもとでlive candidateかつ実践的入力である。Xはその現在の認識状態に従う実践であり、候補空間への表象上の特権付与とは区別される。ただし、ここでいう「現在の最善説明に従う」を、最も確信度の高い一理論へXの全量をwinner-take-allで渡すことと同一視しない。</p>
 <h3>4.1 認識的重み → E/P/X → X内部の実践基準</h3><p>本プロジェクトの現在の意思決定アーキテクチャは、概念的には次の順序で整理できる。</p><ol><li><strong>認識層：</strong>証拠と推論から、世界・価値・メタ倫理仮説への確信度または不精密な認識的重みを形成する。仮説内部のstakesの大きさは、その仮説の真らしさを自動的に増やさない。</li><li><strong>反省的メタ配分：</strong>その認識状態を入力として、総実践資源をE（能動探索）・P（探索可能性保存）・X（現在価値実現）へ配分する。未概念化仮説への残余不確実性、探索の情報価値、不可逆性、危険、保存費用などは主としてここで効く。</li><li><strong>X内部の仮説別実践：</strong>認識的に支持される複数の仮説に応じた実践を考える。分割可能な資源の比例配分と、認識的重みを係数として実践基準を統合する全体計画は、異なる実装候補である。</li><li><strong>仮説内部：</strong>各仮説の下で承認する善・義務・理由・選好・合意などが、実践基準の内容を与える。</li></ol><div class="claim"><strong>Architecture:</strong> Evidence → epistemic weights → reflective E / P / X allocation → practical criteria inside X → allocation or integrated planning.</div>
 <p>この区別は、現在の最善判断への強い実践的コミットメントと、他のlive candidateの消去を分ける。認識的支持を資源へ直接比例配分する方式と、評価係数へ反映する方式は同じではない。後者では係数だけから一定の資源領域や少数要求の実現は保証されず、その条件を別途検討する。鋭い一点確率を正当化できない場合は、不精密な重みと、その下で許される意思決定規則を検討する。</p>
+<!-- diagram-epx-structure:start -->
+<figure class="concept-diagram" id="diagram-epx-structure">
+<a class="concept-diagram-image" href="../../assets/diagrams/epx-structure-ja.svg"><img src="../../assets/diagrams/epx-structure-ja.svg" width="1200" height="1150" loading="lazy" decoding="async" alt="E・P・Xを支える判断の構造" aria-describedby="diagram-epx-structure-caption"/></a>
+<figcaption id="diagram-epx-structure-caption">認識的支持、意思決定上の理由、主体側の応答態度を区別し、E・P・Xを一つの計画へ組み合わせる。 <a href="../../assets/diagrams/epx-structure-ja.svg">図を拡大して読む（SVG）</a></figcaption>
+<details class="concept-diagram-description"><summary>図の内容を文章で読む</summary>
+<p>証拠・推論、仮説空間の不完全性、未概念化の可能性は認識論的支持に関係する。比較可能性、情報価値、不可逆性、危険、機会費用、保存費用は意思決定上の検討材料となる。現在の目的・選好・関心、正当化への条件付き応答性、反省的誤り回避は主体側の前提である。</p><p>三つの入力を照らし合わせ、E（能動探索）、P（探索可能性保存）、X（現在の実践）を組み合わせる。一つの活動が複数の機能に寄与しうる。</p><p>Xでは表象可能な各仮説の下で承認する実践基準を用いる。選好・関心・協力、主体の存在を条件とする福利重視、契約主義、義務論、総量功利主義、徳倫理は例示であり、排他的・網羅的な分類ではない。</p><p>認識的支持、評価重み、資源配分率は別である。箱の面積は配分率を表さない。未概念化の可能性は具体的な行為基準を与えず、不確実性だけから探索・保存の動機は生じない。</p>
+</details>
+<script type="application/json" id="diagram-epx-structure-semantics">
+{
+  "format": "diagram-semantics/v1",
+  "id": "epx-structure",
+  "notation": {
+    "relation_tuple": [
+      "source",
+      "relation",
+      "target"
+    ],
+    "transition_tuple": [
+      "source",
+      "relation",
+      "target",
+      "optional condition"
+    ],
+    "omission": "Unspecified, not false.",
+    "judgment_domain": "Maps a judgment to the domain in which it is made.",
+    "mutual_revision": "Listed models are revised in relation to one another.",
+    "relation_definitions": {
+      "informs": "Provides input to a judgment; does not determine it alone.",
+      "coordinates": "Combines functions within one plan.",
+      "uses_criteria": "Uses practical criteria in evaluation."
+    }
+  },
+  "nodes": {
+    "K": "Epistemic support: what to believe and how strongly",
+    "D": "Decision-theoretic support: which choices are justified",
+    "A": "Agent preferences and responsiveness",
+    "PLAN": "Reflective allocation and planning",
+    "E": "Active inquiry",
+    "P": "Preservation of future inquiry and revision capacities",
+    "X": "Present practice under current goals and value judgments",
+    "XC": "Practical criteria endorsed under represented hypotheses"
+  },
+  "considerations": {
+    "K": [
+      "evidence and reasoning",
+      "incomplete hypothesis space",
+      "unconceptualized possibilities"
+    ],
+    "D": [
+      "comparability and value of information",
+      "irreversibility and risk",
+      "opportunity and preservation costs"
+    ],
+    "A": [
+      "current goals, preferences, and concerns",
+      "conditional responsiveness to justification",
+      "avoidance of reflective error"
+    ]
+  },
+  "relations": [
+    [
+      "K",
+      "informs",
+      "PLAN"
+    ],
+    [
+      "D",
+      "informs",
+      "PLAN"
+    ],
+    [
+      "A",
+      "informs",
+      "PLAN"
+    ],
+    [
+      "PLAN",
+      "coordinates",
+      "E"
+    ],
+    [
+      "PLAN",
+      "coordinates",
+      "P"
+    ],
+    [
+      "PLAN",
+      "coordinates",
+      "X"
+    ],
+    [
+      "X",
+      "uses_criteria",
+      "XC"
+    ]
+  ],
+  "criteria_examples": [
+    "preferences, concerns, and cooperation",
+    "welfare conditional on subjects existing",
+    "contractualism",
+    "deontology",
+    "total utilitarianism",
+    "virtue ethics"
+  ],
+  "constraints": [
+    "E, P, and X are overlapping functions, not exclusive action classes.",
+    "Epistemic support, evaluation weights, and resource shares are distinct.",
+    "Unconceptualized possibilities supply no determinate action criterion.",
+    "Criteria examples are neither exhaustive nor mutually exclusive.",
+    "Box size encodes no allocation ratio.",
+    "Uncertainty alone does not entail motivation for inquiry or preservation."
+  ]
+}
+</script>
+</figure>
+<!-- diagram-epx-structure:end -->
 <h3>4.2 「未知の価値」は架空の一党としてXを直接使わない</h3><p><a href="../../explorations/open-world-moral-uncertainty/">開いた世界での道徳的不確実性</a>が残す未概念化仮説への認識的余地は、具体的な行為基準をまだ持たない。したがって「未知の価値へ20%の確信度があるから、Xの20%を未知価値党に渡す」という処理はしない。何を実現すべきか記述できない残余不確実性は、主として<strong>EやPを増やす理由、あるいはXの不可逆性を抑える理由</strong>として働く。</p><p>一方、未知だった候補が部分的に具体化し、証拠評価と行為比較が可能になれば、その時点でX内部のlive candidateとして暫定的代表を持ちうる。したがって、<strong>仮説空間から排除しないことは、現在の実践への拒否権を与えることではない。</strong> 未概念化の反対理由が論理的にありうるという事実だけで、現在もっとも強く支持される判断を自動的に敗北させない。</p>
 <h3>4.3 比例代表は通常の分割可能な実践の初期案である</h3><p>X内部では、認識的に支持される複数の仮説に応じた実践を考える。分割可能な通常実践についての比例配分は一つの初期案である。別案として、各仮説の下で主体が承認する要求を、認識的支持に応じて重みづけした全体計画へ統合することもできる。後者の係数は、そのまま資源配分率を意味しない。いずれの場合も、仮説内部の巨大な価値主張だけで、認識更新や探索・保存の方針まで無制限に支配させないための条件を検討する。</p><p><a href="../../explorations/reflective-aggregation/">主体側の応答に基づく反省的集約</a>で後者の具体案と限界を扱う。</p><p><a href="../../explorations/infinite-ethics/">無限倫理と探索の暴走</a>で採る議会的・比例的アプローチでは、理論ラベルの個数ではなく、排他的な仮説集合へ配分された<strong>確信度質量</strong>を見る。理論を細分化しても総発言権は増えない。また、低確信仮説が内部で無限大・極端なstakesを主張しても、その主張だけで他の仮説の領域を奪わない。</p><p>ただしこの比例代表を、文明全体を一度だけ変更する共有・不可分・不可逆な決定へ機械的に適用しない。その種の決定は反省的メタ配分へ戻し、複数仮説に対する頑健性、行為と不作為双方の不可逆性、要求される横断的支持を別途評価する。</p><p>また、<a href="../reflective-uncertainty-irreversible-commitment/">反省的不確実性と不可逆コミットメント</a>が論じるように、現在目的を暫定的に使うことと、その目的に基づいて将来の訂正能力を永久に消すことは別である。</p>
 <h2>5. E=0でも問いは閉じない</h2><p>ある条件では、能動探索Eを一時的に0まで落とすことがありうる。たとえば利用可能な全探索経路が圧倒的な存続危機を伴う場合である。</p><p>しかしこれは認識的な結論ではない。問いは未決着のまま、配分上Eが0になっただけである。条件が改善すれば再開でき、可能ならPを維持する。終端停止との区別は<a href="../stopping-condition/">停止条件</a>で扱う。</p>
@@ -99,3 +215,4 @@
 <h2>9. 何がこのテーゼを弱めるか</h2><ul><li>E/P/Xを区別する実践的意味がないことが示される。</li><li>主体側の橋を持つ場合にも、探索機会の不可逆性や代替不能性が目的正当化に関する意思決定へ追加理由を全く与えないことが示される。</li><li>低コストなPが一般に存在せず、保存が常に同程度以上の不可逆損失を生むことが示される。</li><li>目的尺度や仮説空間自体が未確定でも、通常のexpected utility / value of informationだけで追加前提なく完全処理できることが示される。</li></ul>
 <div class="related"><a href="../value-structure/">価値構造</a> · <a href="../stopping-condition/">価値探索の停止条件</a> · <a href="../reflective-uncertainty-irreversible-commitment/">反省的不確実性と不可逆コミットメント</a> · <a href="../../explorations/open-world-moral-uncertainty/">開いた世界での道徳的不確実性</a> · <a href="../../explorations/infinite-ethics/">無限倫理</a> · <a href="../../explorations/moral-motivation-internalism-externalism/">規範判断と動機</a> · <a href="../../explorations/exploratory-extinction/">探索的絶滅</a> · <a href="../../explorations/preservation-vs-production/">保存文明と生産文明</a></div>
 </main><footer><a href="../../">Home</a> · Foundational thesis · public working draft · 2026-10-09</footer></body></html>
+

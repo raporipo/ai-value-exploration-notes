@@ -146,3 +146,15 @@ dd { margin: .35rem 0 0 0; color: #3d3b37; }
 }
 .formula, .math { font-family: Georgia, "Times New Roman", serif; }
 .math { overflow-wrap: anywhere; }
+
+
+/* Static concept diagrams, with readable text alternatives and no script dependency. */
+.concept-diagram { margin: 2rem 0; padding: 16px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
+.concept-diagram-image { display: block; }
+.concept-diagram img { display: block; width: 100%; height: auto; }
+.concept-diagram figcaption { margin-top: 12px; color: var(--muted); font-size: 14px; line-height: 1.7; }
+.concept-diagram-description { margin-top: 12px; border-top: 1px solid var(--line); padding-top: 10px; }
+.concept-diagram-description summary { cursor: pointer; font-size: 14px; }
+.concept-diagram-description p { font-size: 15px; line-height: 1.8; }
+.concept-diagram a:focus-visible, .concept-diagram summary:focus-visible { outline: 2px solid var(--link); outline-offset: 3px; }
+@media (max-width: 600px) { .concept-diagram { padding: 8px; } }

@@ -84,6 +84,97 @@
 <p>The guidance below applies when an agent has an agent-side bridge of the kind described in the <a href="../core/">Core</a>. Such bridges may include conditional responsiveness — wanting to revise choices and purposes if those purposes become better justified — or reflective error avoidance — wanting to avoid irreversible choices that one&#39;s better-informed self would judge to be clear mistakes.</p>
 <p>Value uncertainty alone is not claimed to generate an obligation to inquire or preserve. Nor does the agent at the starting point already know that objective value exists. Even under error theory, practices based on current preferences, concern for others, cooperation, and agreement may remain.</p>
 <p>This page moves from beliefs and response attitudes concerning what to pursue to present policies by adding expectations about the world, feasible options, costs, and risks. The theoretical grounds are discussed in <a href="../theses/decision-policy-under-revisable-values/">Decision-Theoretic Policy</a>; the E/P/X distinction in <a href="../theses/inquiry-allocation-under-uncertainty/">Inquiry Allocation under Uncertainty</a>; and the aggregation model&#39;s form and limits in <a href="../explorations/reflective-aggregation/">Reflective Aggregation Based on Agent-Side Responses</a>.</p>
+<!-- diagram-practice-cycle:start -->
+<figure class="concept-diagram" id="diagram-practice-cycle">
+<a class="concept-diagram-image" href="../../assets/diagrams/practice-cycle-en.svg"><img src="../../assets/diagrams/practice-cycle-en.svg" width="1200" height="800" loading="lazy" decoding="async" alt="From judgment to revisable action" aria-describedby="diagram-practice-cycle-caption"/></a>
+<figcaption id="diagram-practice-cycle-caption">Act on the best current judgment and update relevant premises through observation and records. <a href="../../assets/diagrams/practice-cycle-en.svg">Open the full-size diagram (SVG)</a></figcaption>
+<details class="concept-diagram-description"><summary>Read a text description of the diagram</summary>
+<p>Inputs are goals and responsiveness, worldviews and causal hypotheses, and options, resources, and constraints. Compare plans combining E, P, and X with alternatives and inaction in terms of effects, costs, burdens, and irreversibility.</p><p>The plan specifies present action, routes for revision, exit, and recovery, observations, and review triggers. Act, record outcomes, and monitor premises.</p><p>Relevant new evidence, errors, or changes in feasibility or value understanding trigger updated inputs and renewed comparison and planning. Otherwise continue with the existing history; do not count an achieved benefit again as new.</p><p>Arrows describe procedure, not entailment. Use justified comparisons and numerical precision. Shared decisions also require attention to authority, participation, consent, and externalities.</p>
+</details>
+<script type="application/json" id="diagram-practice-cycle-semantics">
+{
+  "format": "diagram-semantics/v1",
+  "id": "practice-cycle",
+  "notation": {
+    "relation_tuple": [
+      "source",
+      "relation",
+      "target"
+    ],
+    "transition_tuple": [
+      "source",
+      "relation",
+      "target",
+      "optional condition"
+    ],
+    "omission": "Unspecified, not false.",
+    "judgment_domain": "Maps a judgment to the domain in which it is made.",
+    "mutual_revision": "Listed models are revised in relation to one another.",
+    "relation_definitions": {
+      "next": "Next procedural step, not logical entailment.",
+      "revises": "Reassesses or revises the target."
+    }
+  },
+  "states": {
+    "INPUT": [
+      "goals and responsiveness",
+      "worldviews and causal hypotheses",
+      "options, resources, and constraints"
+    ],
+    "COMPARE": [
+      "combine E, P, and X",
+      "compare alternatives and inaction",
+      "assess effects, costs, burdens, and irreversibility"
+    ],
+    "PLAN": [
+      "select present action",
+      "preserve routes for revision, exit, and recovery",
+      "specify observations and review triggers"
+    ],
+    "ACT": [
+      "act, record outcomes, and monitor premises",
+      "retain achievement history"
+    ]
+  },
+  "transitions": [
+    [
+      "INPUT",
+      "next",
+      "COMPARE"
+    ],
+    [
+      "COMPARE",
+      "next",
+      "PLAN"
+    ],
+    [
+      "PLAN",
+      "next",
+      "ACT"
+    ],
+    [
+      "ACT",
+      "revises",
+      "INPUT",
+      "relevant evidence, error, or change"
+    ],
+    [
+      "ACT",
+      "next",
+      "ACT",
+      "no relevant change"
+    ]
+  ],
+  "constraints": [
+    "Transitions describe a revisable procedure, not logical entailments.",
+    "Use only justified comparisons and numerical precision.",
+    "Do not reset history and recount an achieved benefit as new.",
+    "Shared decisions also require examination of authority, participation, consent, and externalities."
+  ]
+}
+</script>
+</figure>
+<!-- diagram-practice-cycle:end -->
 <h2 id="section-2">2. Act on current best judgment, and require additional reasons for irreversible closure</h2>
 <h3>Act without waiting for certainty</h3>
 <p>When the physical world, other agents, scientific findings, and current ethical judgments are sufficiently supported as our best explanations, we may act strongly on them. Fallibility is not a reason to treat every judgment weakly.</p>
@@ -344,4 +435,5 @@
 </details>
 <div class="related"><strong>Related:</strong> <a href="../core/">Core</a> · <a href="../theses/stopping-condition/">Conditions for Ending Value Inquiry</a> · <a href="../theses/inquiry-allocation-under-uncertainty/">Allocating Inquiry Under Uncertainty</a> · <a href="../explorations/infinite-ethics/">Infinite Ethics</a> · <a href="../theses/reflective-uncertainty-irreversible-commitment/">Reflective Uncertainty</a> · <a href="../explorations/moral-motivation-internalism-externalism/">Normative Judgment and Motivation</a> · <a href="../explorations/alignment-value-lockin/">Alignment and Value Lock-In</a> · <a href="../explorations/meta-goal-community/">Meta-Goal Communities</a></div>
 </main><footer><a href="../">Home</a> · English translation · Practice v0.14 · 2026-10-16</footer></body></html>
+
 

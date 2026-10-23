@@ -1,0 +1,262 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1340" width="1200" height="1340" role="img" aria-labelledby="03-minimum-b-relations-title 03-minimum-b-relations-desc" lang="en">
+<title id="03-minimum-b-relations-title">Occurrence, relations, and reflective minimization</title><desc id="03-minimum-b-relations-desc">Seven portrait frames form a fan around a separated central frame labeled Momentary epistemic minimum. Arcs connect the frames. Points on those arcs lead to difference, retention, and mutual constraint as relational conditions necessary for inference. Reflective minimization identifies the central occurrence as an epistemic limit point. The relations are not claimed to suffice for inference. The time axis is a schematic inferential model, not a claim that the minimum directly establishes time or independent minimal entities.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#80939c" /></marker><marker id="teal-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#227b76" /></marker></defs>
+<rect width="1200" height="1340" fill="#fbfcfa" />
+<g font-family="Arial, Helvetica, sans-serif" fill="#243746">
+<text x="56" y="42" font-size="13.0" fill="#526674" text-anchor="start" font-weight="600"><tspan x="56" dy="0">03 / EPISTEMIC / MINIMUM — B</tspan></text>
+<text x="56" y="91" font-size="32.0" fill="#243746" text-anchor="start" font-weight="600"><tspan x="56" dy="0">Occurrence, relations, and reflective minimization</tspan></text>
+<text x="56" y="128" font-size="17.0" fill="#526674" text-anchor="start" font-weight="400"><tspan x="56" dy="0">Distinguish the relations inference requires from its reflective identification of the epistemic minimum.</tspan></text>
+<rect x="224" y="176" width="752" height="421" rx="22" fill="#f0f5f3" stroke="#9eb7ad" stroke-width="1.5" />
+<text x="256" y="213" font-size="21.0" fill="#227b76" text-anchor="start" font-weight="600"><tspan x="256" dy="0">The domain of concepts, inference, and justification</tspan></text>
+<rect x="280" y="238" width="640" height="65" rx="15" fill="white" stroke="#bbccc5" stroke-width="1.5" />
+<text x="600" y="266" font-size="16" fill="#243746" text-anchor="middle" font-weight="600"><tspan x="600" dy="0">Evidence, coherence, explanatory power, prediction, and successful intervention</tspan></text>
+<text x="600" y="289" font-size="15.0" fill="#526674" text-anchor="middle" font-weight="400"><tspan x="600" dy="0">The work of supporting and revising</tspan></text>
+<path d="M 378 303 V 329" fill="none" stroke="#80939c" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)" />
+<rect x="280" y="334" width="196" height="85" rx="15" fill="white" stroke="#d5dedc" stroke-width="1.5" />
+<text x="378" y="369" font-size="22.0" fill="#243746" text-anchor="middle" font-weight="600"><tspan x="378" dy="0">World model</tspan></text>
+<text x="378" y="397" font-size="12" fill="#526674" text-anchor="middle" font-weight="400"><tspan x="378" dy="0">External world, time, causation</tspan></text>
+<path d="M 600 303 V 329" fill="none" stroke="#80939c" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)" />
+<rect x="502" y="334" width="196" height="85" rx="15" fill="white" stroke="#d5dedc" stroke-width="1.5" />
+<text x="600" y="369" font-size="22.0" fill="#243746" text-anchor="middle" font-weight="600"><tspan x="600" dy="0">Subject model</tspan></text>
+<text x="600" y="397" font-size="15.0" fill="#526674" text-anchor="middle" font-weight="400"><tspan x="600" dy="0">Body, memory, self</tspan></text>
+<path d="M 822 303 V 329" fill="none" stroke="#80939c" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)" />
+<rect x="724" y="334" width="196" height="85" rx="15" fill="white" stroke="#d5dedc" stroke-width="1.5" />
+<text x="822" y="369" font-size="22.0" fill="#243746" text-anchor="middle" font-weight="600"><tspan x="822" dy="0">Value model</tspan></text>
+<text x="822" y="397" font-size="12" fill="#526674" text-anchor="middle" font-weight="400"><tspan x="822" dy="0">Understanding values and reasons</tspan></text>
+<path d="M 476 374 H 500" fill="none" stroke="#80939c" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)" />
+<path d="M 502 391 H 478" fill="none" stroke="#80939c" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)" />
+<path d="M 698 374 H 722" fill="none" stroke="#80939c" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)" />
+<path d="M 724 391 H 700" fill="none" stroke="#80939c" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)" />
+<text x="600" y="448" font-size="16.0" fill="#526674" text-anchor="middle" font-weight="400"><tspan x="600" dy="0">World, subject, and value models are revised in relation to one another</tspan></text>
+<rect x="280" y="472" width="640" height="96" rx="15" fill="#fffaf0" stroke="#d6c49d" stroke-width="1.5" />
+<text x="600" y="506" font-size="19" fill="#9a7134" text-anchor="middle" font-weight="600"><tspan x="600" dy="0">Meta-judgment: “Present occurrence is the epistemic minimum”</tspan></text>
+<text x="600" y="541" font-size="15" fill="#526674" text-anchor="middle" font-weight="400"><tspan x="600" dy="0">This identification and its articulation also belong within concepts and inference</tspan></text>
+
+<path d="M 600 660 V 606" fill="none" stroke="#227b76" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#teal-arrow)" />
+<text x="620" y="638" font-size="16.0" fill="#227b76" text-anchor="start" font-weight="600"><tspan x="620" dy="0">Required for inference</tspan></text>
+<rect x="356" y="666" width="488" height="83" rx="15" fill="#e8f3ed" stroke="#227b76" stroke-width="1.5" />
+<text x="600" y="700" font-size="22" fill="#227b76" text-anchor="middle" font-weight="600"><tspan x="600" dy="0">Difference, retention, and mutual constraint</tspan></text>
+<text x="600" y="730" font-size="17" fill="#227b76" text-anchor="middle" font-weight="400"><tspan x="600" dy="0">The relational structure that makes inference possible</tspan></text>
+<path d="M 600 818 V 756" fill="none" stroke="#227b76" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#teal-arrow)" />
+<text x="620" y="790" font-size="15.0" fill="#227b76" text-anchor="start" font-weight="400"><tspan x="620" dy="0">Connections between frames</tspan></text>
+<rect x="200" y="847" width="800" height="349" rx="22" fill="#f8faf8" stroke="#c7d8d2" stroke-width="1.5" stroke-dasharray="6 5" />
+<path d="M 314 818 H 885" fill="none" stroke="#227b76" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M 288.3339041660771 940.7958098437123 Q 343.4544400526924 847 398.5749759393077 913.7805029785086" fill="none" stroke="#227b76" stroke-width="1.2" opacity="0.15" />
+<path d="M 340.75767039539267 928.6458455014507 Q 474.37883519769633 847 608.0 906.0" fill="none" stroke="#227b76" stroke-width="1.2" opacity="0.15" />
+<path d="M 398.5749759393077 913.7805029785086 Q 604.9951266161528 847 811.4152772929979 914.3388949257487" fill="none" stroke="#227b76" stroke-width="1.2" opacity="0.15" />
+<path d="M 608.0 906.0 Q 734.5773399652498 847 861.1546799304997 930.3183009137332" fill="none" stroke="#227b76" stroke-width="1.2" opacity="0.15" />
+<path d="M 811.4152772929979 914.3388949257487 Q 860.4191485875581 847 909.4230198821182 943.5741806863832" fill="none" stroke="#227b76" stroke-width="1.2" opacity="0.15" />
+<path d="M 288.3339041660771 940.7958098437123 Q 314.5457872807349 850 340.75767039539267 928.6458455014507" fill="none" stroke="#227b76" stroke-width="2.8" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M 314.5457872807349 818 V 892.3604138362907" fill="none" stroke="#227b76" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round" />
+<circle cx="314.5457872807349" cy="892.3604138362907" r="4" fill="#227b76" />
+<path d="M 340.75767039539267 928.6458455014507 Q 369.6663231673502 850 398.5749759393077 913.7805029785086" fill="none" stroke="#227b76" stroke-width="2.8" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M 398.5749759393077 913.7805029785086 Q 503.28748796965385 850 608.0 906.0" fill="none" stroke="#227b76" stroke-width="2.8" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M 503.28748796965385 818 V 879.9451257446271" fill="none" stroke="#227b76" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round" />
+<circle cx="503.28748796965385" cy="879.9451257446271" r="4" fill="#227b76" />
+<path d="M 608.0 906.0 Q 709.7076386464989 850 811.4152772929979 914.3388949257487" fill="none" stroke="#227b76" stroke-width="2.8" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M 709.7076386464989 818 V 880.0847237314372" fill="none" stroke="#227b76" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round" />
+<circle cx="709.7076386464989" cy="880.0847237314372" r="4" fill="#227b76" />
+<path d="M 811.4152772929979 914.3388949257487 Q 836.2849786117488 850 861.1546799304997 930.3183009137332" fill="none" stroke="#227b76" stroke-width="2.8" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M 861.1546799304997 930.3183009137332 Q 885.288849906309 850 909.4230198821182 943.5741806863832" fill="none" stroke="#227b76" stroke-width="2.8" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M 885.288849906309 818 V 893.4731204000291" fill="none" stroke="#227b76" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round" />
+<circle cx="885.288849906309" cy="893.4731204000291" r="4" fill="#227b76" />
+<g transform="rotate(-10 294.0 1019.0)">
+<polygon points="264,934 348,944 330,1104 240,1087" fill="#d5e5dd" fill-opacity="0.62" stroke="#87a89b" stroke-width="1.5" />
+<rect x="258.78823529411767" y="960.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="333.4" y="960.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="255.9470588235294" y="983.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="331.1" y="983.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="253.10588235294117" y="1006.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="328.8" y="1006.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="250.26470588235293" y="1029.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="326.5" y="1029.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="247.42352941176472" y="1052.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="324.2" y="1052.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="244.58235294117648" y="1075.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="321.9" y="1075.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+</g>
+<g transform="rotate(-6 342.0 1017.0)">
+<polygon points="310,922 398,932 380,1112 286,1095" fill="#d5e5dd" fill-opacity="0.62" stroke="#87a89b" stroke-width="1.5" />
+<rect x="305.12631578947367" y="948.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="383.6736842105263" y="948.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="302.1421052631579" y="975.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="381.2578947368421" y="975.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="299.1578947368421" y="1002.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="378.8421052631579" y="1002.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="296.1736842105263" y="1029.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="376.4263157894737" y="1029.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="293.1894736842105" y="1056.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="374.0105263157895" y="1056.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="290.20526315789476" y="1083.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="371.59473684210525" y="1083.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+</g>
+<g transform="rotate(-2 394.0 1012.0)">
+<polygon points="358,907 454,917 436,1117 334,1100" fill="#d5e5dd" fill-opacity="0.62" stroke="#87a89b" stroke-width="1.5" />
+<rect x="353.4" y="933.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="439.8952380952381" y="933.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="350.3" y="964.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="437.3857142857143" y="964.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="347.2" y="995.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="434.87619047619046" y="995.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="344.1" y="1026.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="432.3666666666667" y="1026.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="341.0" y="1057.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="429.85714285714283" y="1057.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="337.9" y="1088.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="427.34761904761905" y="1088.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+</g>
+<g transform="rotate(0 600.0 1011.5)">
+<polygon points="554,899 670,909 652,1124 530,1107" fill="#fff3d7" fill-opacity="1" stroke="#ad823e" stroke-width="2.4" />
+<rect x="549.5733333333334" y="925.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="656.0355555555556" y="925.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="546.4" y="959.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="653.4666666666667" y="959.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="543.2266666666667" y="993.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="650.8977777777778" y="993.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="540.0533333333333" y="1027.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="648.3288888888889" y="1027.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="536.88" y="1061.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="645.76" y="1061.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="533.7066666666667" y="1095.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="643.1911111111111" y="1095.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<text x="600.0" y="985" font-size="17" fill="#9a7134" text-anchor="middle" font-weight="600"><tspan x="600.0" dy="0">Momentary</tspan><tspan x="600.0" dy="25">epistemic</tspan><tspan x="600.0" dy="25">minimum</tspan></text>
+</g>
+<g transform="rotate(2 800.0 1012.0)">
+<polygon points="764,907 860,917 842,1117 740,1100" fill="#d5e5dd" fill-opacity="0.62" stroke="#87a89b" stroke-width="1.5" />
+<rect x="759.4" y="933.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="845.8952380952381" y="933.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="756.3" y="964.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="843.3857142857142" y="964.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="753.2" y="995.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="840.8761904761905" y="995.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="750.1" y="1026.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="838.3666666666667" y="1026.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="747.0" y="1057.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="835.8571428571429" y="1057.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="743.9" y="1088.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="833.347619047619" y="1088.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+</g>
+<g transform="rotate(6 844.0 1017.0)">
+<polygon points="812,922 900,932 882,1112 788,1095" fill="#d5e5dd" fill-opacity="0.62" stroke="#87a89b" stroke-width="1.5" />
+<rect x="807.1263157894737" y="948.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="885.6736842105263" y="948.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="804.1421052631579" y="975.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="883.2578947368421" y="975.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="801.1578947368421" y="1002.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="880.8421052631579" y="1002.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="798.1736842105263" y="1029.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="878.4263157894737" y="1029.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="795.1894736842105" y="1056.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="876.0105263157894" y="1056.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="792.2052631578947" y="1083.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="873.5947368421052" y="1083.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+</g>
+<g transform="rotate(10 888.0 1019.0)">
+<polygon points="858,934 942,944 924,1104 834,1087" fill="#d5e5dd" fill-opacity="0.62" stroke="#87a89b" stroke-width="1.5" />
+<rect x="852.7882352941176" y="960.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="927.4" y="960.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="849.9470588235295" y="983.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="925.1" y="983.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="847.1058823529412" y="1006.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="922.8" y="1006.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="844.2647058823529" y="1029.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="920.5" y="1029.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="841.4235294117647" y="1052.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="918.2" y="1052.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="838.5823529411765" y="1075.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+<rect x="915.9" y="1075.0" width="5" height="8" rx="1" fill="#fbfcfa" opacity="0.85" />
+</g>
+<path d="M 920 518 H 1080 V 882 H 600 V 896" fill="none" stroke="#9a7134" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)" stroke-dasharray="7 6" />
+<text x="1068" y="685" font-size="18.0" fill="#9a7134" text-anchor="end" font-weight="600"><tspan x="1068" dy="0">Reflective</tspan><tspan x="1068" dy="28.0">minimization</tspan></text>
+<text x="1068" y="753" font-size="14" fill="#526674" text-anchor="end" font-weight="400"><tspan x="1068" dy="0">Reidentify the central moment</tspan><tspan x="1068" dy="25.0">as an epistemic limit point</tspan></text>
+<path d="M 254 1155 H 950" fill="none" stroke="#80939c" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)" />
+<rect x="521" y="1136" width="158" height="33" rx="0" fill="#f8faf8" stroke="#f8faf8" stroke-width="1.5" />
+<text x="600" y="1159" font-size="17.0" fill="#526674" text-anchor="middle" font-weight="400"><tspan x="600" dy="0">Flow of time</tspan></text>
+<text x="600" y="1238" font-size="21.0" fill="#227b76" text-anchor="middle" font-weight="600"><tspan x="600" dy="0">Inference requires relations, not merely the existence of individual moments.</tspan></text>
+<text x="600" y="1275" font-size="15.0" fill="#526674" text-anchor="middle" font-weight="400"><tspan x="600" dy="0">Relational structure is shown as necessary; it is not claimed to be sufficient for inference.</tspan></text>
+<text x="600" y="1307" font-size="14.0" fill="#526674" text-anchor="middle" font-weight="400"><tspan x="600" dy="0">Time is schematic within an inferential model; the frames do not assert a series of independent minimal entities.</tspan></text>
+</g>
+<metadata>{
+  &quot;format&quot;: &quot;diagram-semantics/v1&quot;,
+  &quot;id&quot;: &quot;epistemic-minimum&quot;,
+  &quot;notation&quot;: {
+    &quot;relation_tuple&quot;: [
+      &quot;source&quot;,
+      &quot;relation&quot;,
+      &quot;target&quot;
+    ],
+    &quot;transition_tuple&quot;: [
+      &quot;source&quot;,
+      &quot;relation&quot;,
+      &quot;target&quot;,
+      &quot;optional condition&quot;
+    ],
+    &quot;omission&quot;: &quot;Unspecified, not false.&quot;,
+    &quot;judgment_domain&quot;: &quot;Maps a judgment to the domain in which it is made.&quot;,
+    &quot;mutual_revision&quot;: &quot;Listed models are revised in relation to one another.&quot;,
+    &quot;relation_definitions&quot;: {
+      &quot;requires&quot;: &quot;The target is necessary for the source, not necessarily sufficient.&quot;,
+      &quot;supports_or_revises&quot;: &quot;Supports or revises through reasons and evidence.&quot;,
+      &quot;reflectively_identifies&quot;: &quot;Identifies the target through reflective judgment.&quot;
+    }
+  },
+  &quot;nodes&quot;: {
+    &quot;O&quot;: &quot;Present occurrence or constraint&quot;,
+    &quot;R&quot;: &quot;Relational structure: difference, retention, mutual constraint&quot;,
+    &quot;I&quot;: &quot;Conceptual inference and justification&quot;,
+    &quot;W&quot;: &quot;World model&quot;,
+    &quot;S&quot;: &quot;Subject model&quot;,
+    &quot;V&quot;: &quot;Value model&quot;,
+    &quot;M&quot;: &quot;Meta-judgment identifying O as the epistemic minimum&quot;
+  },
+  &quot;relations&quot;: [
+    [
+      &quot;I&quot;,
+      &quot;requires&quot;,
+      &quot;R&quot;
+    ],
+    [
+      &quot;I&quot;,
+      &quot;supports_or_revises&quot;,
+      &quot;W&quot;
+    ],
+    [
+      &quot;I&quot;,
+      &quot;supports_or_revises&quot;,
+      &quot;S&quot;
+    ],
+    [
+      &quot;I&quot;,
+      &quot;supports_or_revises&quot;,
+      &quot;V&quot;
+    ],
+    [
+      &quot;M&quot;,
+      &quot;reflectively_identifies&quot;,
+      &quot;O&quot;
+    ]
+  ],
+  &quot;judgment_domain&quot;: {
+    &quot;M&quot;: &quot;I&quot;
+  },
+  &quot;mutual_revision&quot;: [
+    &quot;W&quot;,
+    &quot;S&quot;,
+    &quot;V&quot;
+  ],
+  &quot;visual_encoding&quot;: {
+    &quot;frames&quot;: &quot;Schematic moments; the central frame highlights O&quot;,
+    &quot;connections&quot;: &quot;Depict R; nearby connections are emphasized&quot;,
+    &quot;time_arrow&quot;: &quot;Left-to-right time within an inferential model&quot;
+  },
+  &quot;constraints&quot;: [
+    &quot;R is necessary for I; sufficiency is not asserted.&quot;,
+    &quot;O and the judgment M about O are distinct.&quot;,
+    &quot;O alone does not justify W, S, or V.&quot;,
+    &quot;The category, substrate, and subject boundary of O remain unspecified.&quot;,
+    &quot;Seven frames do not assert seven independent minimal entities.&quot;,
+    &quot;O does not directly establish the temporal model.&quot;,
+    &quot;Visual distance and line thickness encode no quantitative strength.&quot;
+  ]
+}</metadata>
+</svg>
