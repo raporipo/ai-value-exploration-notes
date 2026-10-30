@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" role="img" aria-labelledby="core-partial-title core-partial-desc" lang="ja">
+<title id="core-partial-title">探索主義の部分的採用――主体の選好と条件付き方法論</title>
+<desc id="core-partial-desc">主体の既存選好から、方法論に委ねない選好の側面と、正しさへの応答や反省的誤り回避など方法論を採用する動機となる志向を分けて示す。後者の範囲で探索と訂正可能性の条件付き方法論を採用し、前者の独立した実践評価と合わせて現在の行為を選択する。両経路は排他的な分類ではなく、方法論が全選好を支配することも固定的な資源配分も意味しない。条件によっては方法論側の評価も単純な選好実現と一致する。</desc>
+<defs>
+  <marker id="core-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#80939c"/></marker>
+  <marker id="core-teal-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#227b76"/></marker>
+</defs>
+<rect width="1200" height="800" fill="#fbfcfa"/>
+<g font-family="Noto Sans CJK JP, Hiragino Sans, Yu Gothic, sans-serif" fill="#243746">
+  <text x="56" y="44" font-size="13" fill="#526674" font-weight="600">01 / CORE</text>
+  <text x="56" y="91" font-size="32" font-weight="600">探索主義の部分的採用</text>
+  <text x="56" y="127" font-size="17" fill="#526674">左右の経路は排他的な分類ではなく、主体の選好を評価する異なる側面を示す。</text>
+
+  <rect x="56" y="154" width="1088" height="100" rx="15" fill="#f0f3f1" stroke="#e0e7e2" stroke-width="1.5"/>
+  <text x="86" y="193" font-size="25" font-weight="600">主体の既存選好・メタ選好</text>
+  <text x="86" y="227" font-size="17" fill="#526674">方法論を採用するか、どの目的に適用するか、どれほど重視するかは主体側で決まる</text>
+
+  <path d="M 600 254 V 278 H 308 V 292" fill="none" stroke="#80939c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#core-arrow)"/>
+  <path d="M 600 278 H 892 V 292" fill="none" stroke="#80939c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#core-arrow)"/>
+
+  <rect x="56" y="298" width="504" height="165" rx="15" fill="white" stroke="#cfdbd8" stroke-width="1.5"/>
+  <text x="80" y="330" font-size="15" fill="#227b76" font-weight="600">独立に扱う側面</text>
+  <text x="80" y="370" font-size="23" font-weight="600">方法論に委ねない選好</text>
+  <text x="80" y="405" font-size="16">生活・関係・創作など</text>
+  <text x="80" y="436" font-size="16" fill="#526674">探索への貢献がなくても目的となりうる</text>
+
+  <rect x="640" y="298" width="504" height="165" rx="15" fill="#edf5f1" stroke="#227b76" stroke-width="1.5"/>
+  <text x="664" y="330" font-size="15" fill="#227b76" font-weight="600">選択的な適用対象</text>
+  <text x="664" y="370" font-size="23" font-weight="600">方法論を採用する志向</text>
+  <text x="664" y="405" font-size="16">正しさへの応答・取り逃がし回避</text>
+  <text x="664" y="436" font-size="16" fill="#526674">反省的誤り回避など（重なりうる）</text>
+
+  <path d="M 308 463 V 496" fill="none" stroke="#80939c" stroke-width="2" stroke-linecap="round" marker-end="url(#core-arrow)"/>
+  <path d="M 892 463 V 496" fill="none" stroke="#227b76" stroke-width="2" stroke-linecap="round" marker-end="url(#core-teal-arrow)"/>
+
+  <rect x="56" y="502" width="504" height="124" rx="15" fill="white" stroke="#cfdbd8" stroke-width="1.5"/>
+  <text x="80" y="541" font-size="22" font-weight="600">独立した実践の評価</text>
+  <text x="80" y="576" font-size="16">既存の目的を直接追求する</text>
+  <text x="80" y="603" font-size="15" fill="#526674">方法論の採用を義務づけられない</text>
+
+  <rect x="640" y="502" width="504" height="124" rx="15" fill="#edf5f1" stroke="#227b76" stroke-width="1.5"/>
+  <text x="664" y="541" font-size="22" font-weight="600">条件付き方法論を適用</text>
+  <text x="664" y="576" font-size="16">認識改善・訂正可能性・費用を比較</text>
+  <text x="664" y="603" font-size="15" fill="#526674">選好実現と一致する帰結もありうる</text>
+
+  <path d="M 308 626 V 653 H 468 V 681" fill="none" stroke="#80939c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#core-arrow)"/>
+  <path d="M 892 626 V 653 H 732 V 681" fill="none" stroke="#227b76" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#core-teal-arrow)"/>
+
+  <rect x="246" y="687" width="708" height="91" rx="15" fill="#f0f3f1" stroke="#cfdbd8" stroke-width="1.5"/>
+  <text x="600" y="725" font-size="24" font-weight="600" text-anchor="middle">現在の行為選択</text>
+  <text x="600" y="756" font-size="16" fill="#526674" text-anchor="middle">独立した選好と、方法論を経た評価を併せて考える</text>
+</g>
+<metadata>{
+  &quot;format&quot;: &quot;diagram-semantics/v1&quot;,
+  &quot;id&quot;: &quot;core-conditional-adoption&quot;,
+  &quot;notation&quot;: {
+    &quot;relation_tuple&quot;: [
+      &quot;source&quot;,
+      &quot;relation&quot;,
+      &quot;target&quot;,
+      &quot;optional condition&quot;
+    ],
+    &quot;omission&quot;: &quot;Unspecified, not false.&quot;,
+    &quot;relation_definitions&quot;: {
+      &quot;retains&quot;: &quot;Keeps goals as independently assessable inputs; no normative ranking implied.&quot;,
+      &quot;motivates&quot;: &quot;An agent may choose to apply a method to a specified concern.&quot;,
+      &quot;informs&quot;: &quot;Supplies an assessment that may guide action without controlling all goals.&quot;,
+      &quot;integrates&quot;: &quot;Considers the relevant assessments jointly; no numerical aggregation rule is prescribed.&quot;
+    }
+  },
+  &quot;nodes&quot;: {
+    &quot;PREFS&quot;: &quot;Agent existing preferences and meta-preferences&quot;,
+    &quot;DIRECT&quot;: &quot;Preference aspects not delegated to this method&quot;,
+    &quot;MOTIVE&quot;: &quot;Concerns supporting conditional adoption: responsiveness to reasons; avoiding missed opportunities or reflective error&quot;,
+    &quot;DIRECT_EVAL&quot;: &quot;Independent practical assessment of preferences&quot;,
+    &quot;METHOD&quot;: &quot;Conditional inquiry and preservation approach, with costs and risks&quot;,
+    &quot;ACTION&quot;: &quot;Present action selection based on all relevant considerations&quot;
+  },
+  &quot;relations&quot;: [
+    [
+      &quot;PREFS&quot;,
+      &quot;retains&quot;,
+      &quot;DIRECT&quot;
+    ],
+    [
+      &quot;PREFS&quot;,
+      &quot;motivates&quot;,
+      &quot;MOTIVE&quot;,
+      &quot;agent has and values such concerns&quot;
+    ],
+    [
+      &quot;DIRECT&quot;,
+      &quot;informs&quot;,
+      &quot;DIRECT_EVAL&quot;
+    ],
+    [
+      &quot;MOTIVE&quot;,
+      &quot;motivates&quot;,
+      &quot;METHOD&quot;,
+      &quot;agent adopts for a specified scope&quot;
+    ],
+    [
+      &quot;DIRECT_EVAL&quot;,
+      &quot;integrates&quot;,
+      &quot;ACTION&quot;
+    ],
+    [
+      &quot;METHOD&quot;,
+      &quot;integrates&quot;,
+      &quot;ACTION&quot;
+    ]
+  ],
+  &quot;constraints&quot;: [
+    &quot;The branches represent aspects or decision routes, not necessarily exclusive sets of preferences.&quot;,
+    &quot;The method can be fully adopted for a limited concern without being applied to every preference.&quot;,
+    &quot;Adoption scope and preference weight are distinct from allocations of resources and epistemic confidence.&quot;,
+    &quot;The method may converge on ordinary preference satisfaction under an error-theoretic assessment if the agent endorses that fallback.&quot;,
+    &quot;The diagram does not establish a universal duty to inquire or preserve options.&quot;,
+    &quot;Arrows depict conceptual/procedural relationships, not logical entailment or cardinal utility addition.&quot;
+  ]
+}</metadata>
+</svg>
